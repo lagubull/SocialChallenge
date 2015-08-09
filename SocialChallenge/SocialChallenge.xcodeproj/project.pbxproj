@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B31118A1B6E110B008E374E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111891B6E110B008E374E /* main.m */; };
 		3B3111AA1B6E110B008E374E /* SocialChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111A91B6E110B008E374E /* SocialChallengeTests.m */; };
-		3B3111C71B6E127D008E374E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111B31B6E127D008E374E /* AppDelegate.m */; };
+		3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111B31B6E127D008E374E /* JSCAppDelegate.m */; };
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
 		3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
@@ -18,6 +18,16 @@
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281EC1B6F92350097B452 /* JSCTableView.m */; };
+		3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
+		3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */; };
+		3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */; };
+		3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C621B776C460084FA63 /* JSCWindow.m */; };
+		3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9632C1B76CD27005365EF /* JSCFeedAPIManager.m */; };
+		3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9632F1B76CD95005365EF /* JSCFeedRetrieveOperation.m */; };
+		3BD963351B76D034005365EF /* JSCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963341B76D034005365EF /* JSCOperation.m */; };
+		3BD963391B76D382005365EF /* JSCFeedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963381B76D382005365EF /* JSCFeedRequest.m */; };
+		3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9633C1B76DD15005365EF /* JSCSession.m */; };
+		3BD963421B76E067005365EF /* JSCCDSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963411B76E067005365EF /* JSCCDSOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +47,8 @@
 		3B3111A31B6E110B008E374E /* SocialChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111A81B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B3111A91B6E110B008E374E /* SocialChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialChallengeTests.m; sourceTree = "<group>"; };
-		3B3111B21B6E127D008E374E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3B3111B31B6E127D008E374E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B3111B21B6E127D008E374E /* JSCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCAppDelegate.h; sourceTree = "<group>"; };
+		3B3111B31B6E127D008E374E /* JSCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCAppDelegate.m; sourceTree = "<group>"; };
 		3B3111BC1B6E127D008E374E /* SocialChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialChallenge.xcdatamodel; sourceTree = "<group>"; };
 		3B3111BF1B6E127D008E374E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -54,6 +64,28 @@
 		3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostTableViewCell.m; sourceTree = "<group>"; };
 		3BD281EB1B6F92350097B452 /* JSCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCTableView.h; sourceTree = "<group>"; };
 		3BD281EC1B6F92350097B452 /* JSCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCTableView.m; sourceTree = "<group>"; };
+		3BD52D861B77BA37000783E3 /* JSCSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSplashViewController.h; sourceTree = "<group>"; };
+		3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSplashViewController.m; sourceTree = "<group>"; };
+		3BD52D8A1B77BBC5000783E3 /* JSCRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCRootNavigationController.h; sourceTree = "<group>"; };
+		3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCRootNavigationController.m; sourceTree = "<group>"; };
+		3BD89C561B775F580084FA63 /* JSCOperationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationCoordinator.h; sourceTree = "<group>"; };
+		3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCOperationCoordinator.m; sourceTree = "<group>"; };
+		3BD89C5A1B7761690084FA63 /* JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationScheduler.h; sourceTree = "<group>"; };
+		3BD89C5C1B7769360084FA63 /* NSOperationQueue+JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+JSCOperationScheduler.h"; sourceTree = "<group>"; };
+		3BD89C611B776C460084FA63 /* JSCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCWindow.h; sourceTree = "<group>"; };
+		3BD89C621B776C460084FA63 /* JSCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCWindow.m; sourceTree = "<group>"; };
+		3BD9632B1B76CD27005365EF /* JSCFeedAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFeedAPIManager.h; sourceTree = "<group>"; };
+		3BD9632C1B76CD27005365EF /* JSCFeedAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFeedAPIManager.m; sourceTree = "<group>"; };
+		3BD9632E1B76CD95005365EF /* JSCFeedRetrieveOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFeedRetrieveOperation.h; sourceTree = "<group>"; };
+		3BD9632F1B76CD95005365EF /* JSCFeedRetrieveOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFeedRetrieveOperation.m; sourceTree = "<group>"; };
+		3BD963331B76D034005365EF /* JSCOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperation.h; sourceTree = "<group>"; };
+		3BD963341B76D034005365EF /* JSCOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCOperation.m; sourceTree = "<group>"; };
+		3BD963371B76D382005365EF /* JSCFeedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFeedRequest.h; sourceTree = "<group>"; };
+		3BD963381B76D382005365EF /* JSCFeedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFeedRequest.m; sourceTree = "<group>"; };
+		3BD9633B1B76DD15005365EF /* JSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSession.h; sourceTree = "<group>"; };
+		3BD9633C1B76DD15005365EF /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
+		3BD963401B76E067005365EF /* JSCCDSOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCCDSOperation.h; sourceTree = "<group>"; };
+		3BD963411B76E067005365EF /* JSCCDSOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCCDSOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +127,10 @@
 		3B3111861B6E110B008E374E /* SocialChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				3BD52D891B77BB85000783E3 /* NavigationController */,
+				3BD52D851B77B9FD000783E3 /* SplashViewController */,
 				3B3111B11B6E127D008E374E /* AppDelegate */,
+				3BD89C5B1B7768D90084FA63 /* categories */,
 				3B3111B51B6E127D008E374E /* Managers */,
 				3B3111B71B6E127D008E374E /* Model */,
 				3B3111BD1B6E127D008E374E /* Resources */,
@@ -103,6 +138,7 @@
 				3B3111C01B6E127D008E374E /* Utilities */,
 				3B3111C11B6E127D008E374E /* ViewControllers */,
 				3BD281E91B6F91150097B452 /* Views */,
+				3BD89C5F1B776C170084FA63 /* Window */,
 			);
 			path = SocialChallenge;
 			sourceTree = "<group>";
@@ -138,8 +174,8 @@
 		3B3111B11B6E127D008E374E /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				3B3111B21B6E127D008E374E /* AppDelegate.h */,
-				3B3111B31B6E127D008E374E /* AppDelegate.m */,
+				3B3111B21B6E127D008E374E /* JSCAppDelegate.h */,
+				3B3111B31B6E127D008E374E /* JSCAppDelegate.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -155,6 +191,7 @@
 		3B3111B51B6E127D008E374E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				3BD963281B76CC6D005365EF /* APIs */,
 				3BC04A701B73868F00AB0B66 /* CoreData */,
 				3B3111B61B6E127D008E374E /* Parser */,
 			);
@@ -222,6 +259,10 @@
 		3B3111C01B6E127D008E374E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3BD89C591B7761180084FA63 /* OperationScheduler */,
+				3BD89C551B775EEC0084FA63 /* OperationCoordinator */,
+				3BD9633A1B76DBC5005365EF /* Session */,
+				3BD963311B76CFF2005365EF /* Operation */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -281,6 +322,7 @@
 		3BC04A701B73868F00AB0B66 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3BD9633E1B76E030005365EF /* Operation */,
 				3BC04A711B7386B700AB0B66 /* JSCCDSServiceManager.h */,
 				3BC04A721B7386B700AB0B66 /* JSCCDSServiceManager.m */,
 			);
@@ -320,6 +362,123 @@
 				3BD281EC1B6F92350097B452 /* JSCTableView.m */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		3BD52D851B77B9FD000783E3 /* SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BD52D861B77BA37000783E3 /* JSCSplashViewController.h */,
+				3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */,
+			);
+			path = SplashViewController;
+			sourceTree = "<group>";
+		};
+		3BD52D891B77BB85000783E3 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				3BD52D8A1B77BBC5000783E3 /* JSCRootNavigationController.h */,
+				3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		3BD89C551B775EEC0084FA63 /* OperationCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3BD89C561B775F580084FA63 /* JSCOperationCoordinator.h */,
+				3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */,
+			);
+			path = OperationCoordinator;
+			sourceTree = "<group>";
+		};
+		3BD89C591B7761180084FA63 /* OperationScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				3BD89C5A1B7761690084FA63 /* JSCOperationScheduler.h */,
+			);
+			path = OperationScheduler;
+			sourceTree = "<group>";
+		};
+		3BD89C5B1B7768D90084FA63 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				3BD89C5C1B7769360084FA63 /* NSOperationQueue+JSCOperationScheduler.h */,
+			);
+			name = categories;
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		3BD89C5F1B776C170084FA63 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				3BD89C611B776C460084FA63 /* JSCWindow.h */,
+				3BD89C621B776C460084FA63 /* JSCWindow.m */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		3BD963281B76CC6D005365EF /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				3BD963291B76CCAF005365EF /* Feed */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		3BD963291B76CCAF005365EF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				3BD963361B76D32D005365EF /* Requests */,
+				3BD9632A1B76CCE8005365EF /* Operations */,
+				3BD9632B1B76CD27005365EF /* JSCFeedAPIManager.h */,
+				3BD9632C1B76CD27005365EF /* JSCFeedAPIManager.m */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		3BD9632A1B76CCE8005365EF /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				3BD9632E1B76CD95005365EF /* JSCFeedRetrieveOperation.h */,
+				3BD9632F1B76CD95005365EF /* JSCFeedRetrieveOperation.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		3BD963311B76CFF2005365EF /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				3BD963331B76D034005365EF /* JSCOperation.h */,
+				3BD963341B76D034005365EF /* JSCOperation.m */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		3BD963361B76D32D005365EF /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				3BD963371B76D382005365EF /* JSCFeedRequest.h */,
+				3BD963381B76D382005365EF /* JSCFeedRequest.m */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		3BD9633A1B76DBC5005365EF /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				3BD9633B1B76DD15005365EF /* JSCSession.h */,
+				3BD9633C1B76DD15005365EF /* JSCSession.m */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		3BD9633E1B76E030005365EF /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				3BD963401B76E067005365EF /* JSCCDSOperation.h */,
+				3BD963411B76E067005365EF /* JSCCDSOperation.m */,
+			);
+			path = Operation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,15 +579,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B3111C71B6E127D008E374E /* AppDelegate.m in Sources */,
+				3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */,
+				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
+				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
 				3BC04A731B7386B700AB0B66 /* JSCCDSServiceManager.m in Sources */,
 				3BC04A771B7390BA00AB0B66 /* JSCPost.m in Sources */,
 				3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */,
+				3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */,
 				3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */,
+				3BD963421B76E067005365EF /* JSCCDSOperation.m in Sources */,
 				3B31118A1B6E110B008E374E /* main.m in Sources */,
+				3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */,
+				3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */,
+				3BD963391B76D382005365EF /* JSCFeedRequest.m in Sources */,
+				3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */,
 				3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */,
+				3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */,
 				3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */,
 				3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */,
+				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

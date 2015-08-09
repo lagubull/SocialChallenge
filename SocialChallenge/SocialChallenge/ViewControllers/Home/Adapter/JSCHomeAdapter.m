@@ -10,6 +10,7 @@
 
 #import "JSCCDSServiceManager.h"
 #import "JSCPost.h"
+#import "JSCFeedAPIManager.h"
 
 @interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,7 +34,15 @@
 
 - (void)refresh
 {
-    //Fetch content
+    [JSCFeedAPIManager retrieveFeedWithMode:JSCDataRetrievalOperationModeFirstPage
+                                    Success:^(id result)
+     {
+         //TODO: success block
+     }
+                                    failure:^(NSError *error)
+     {
+         //TODO: failure block
+     }];
 }
 
 - (void)paginate

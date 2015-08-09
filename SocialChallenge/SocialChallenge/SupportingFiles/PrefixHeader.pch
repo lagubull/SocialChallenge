@@ -22,4 +22,13 @@
 #import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
 
+/**
+ A set of possible feed retrieval options.
+ */
+typedef NS_ENUM(NSUInteger, JSCDataRetrievalOperationMode)
+{
+    JSCDataRetrievalOperationModeFirstPage = 0,
+    JSCDataRetrievalOperationModeNextPage = 1
+};
+
 #endif
