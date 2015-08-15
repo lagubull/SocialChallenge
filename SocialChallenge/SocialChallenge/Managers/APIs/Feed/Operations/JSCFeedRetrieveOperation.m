@@ -10,6 +10,7 @@
 
 #import "JSCFeedRequest.h"
 #import "JSCSession.h"
+#import "JSCJSONManager.h"
 
 @interface JSCFeedRetrieveOperation ()
 
@@ -84,6 +85,7 @@
     {
         if (!error)
         {
+            NSDictionary *feed = [JSCJSONManager processJSONData:data];
             //SERIALIZE RESPONSE
             //PARSE FEED
             [weakSelf saveContextAndFinishWithResult:nil];

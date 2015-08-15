@@ -20,6 +20,7 @@
 		3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281EC1B6F92350097B452 /* JSCTableView.m */; };
 		3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
 		3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */; };
+		3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD850D91B7F3BE10077868E /* JSCJSONManager.m */; };
 		3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */; };
 		3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C621B776C460084FA63 /* JSCWindow.m */; };
 		3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9632C1B76CD27005365EF /* JSCFeedAPIManager.m */; };
@@ -68,6 +69,8 @@
 		3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSplashViewController.m; sourceTree = "<group>"; };
 		3BD52D8A1B77BBC5000783E3 /* JSCRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCRootNavigationController.h; sourceTree = "<group>"; };
 		3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCRootNavigationController.m; sourceTree = "<group>"; };
+		3BD850D81B7F3BE10077868E /* JSCJSONManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCJSONManager.h; sourceTree = "<group>"; };
+		3BD850D91B7F3BE10077868E /* JSCJSONManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCJSONManager.m; sourceTree = "<group>"; };
 		3BD89C561B775F580084FA63 /* JSCOperationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationCoordinator.h; sourceTree = "<group>"; };
 		3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCOperationCoordinator.m; sourceTree = "<group>"; };
 		3BD89C5A1B7761690084FA63 /* JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationScheduler.h; sourceTree = "<group>"; };
@@ -191,18 +194,12 @@
 		3B3111B51B6E127D008E374E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				3BD850D71B7F3BC50077868E /* JSON */,
+				3BD850D51B7F3A880077868E /* Parsers */,
 				3BD963281B76CC6D005365EF /* APIs */,
 				3BC04A701B73868F00AB0B66 /* CoreData */,
-				3B3111B61B6E127D008E374E /* Parser */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		3B3111B61B6E127D008E374E /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Parser;
 			sourceTree = "<group>";
 		};
 		3B3111B71B6E127D008E374E /* Model */ = {
@@ -380,6 +377,22 @@
 				3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		3BD850D51B7F3A880077868E /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		3BD850D71B7F3BC50077868E /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				3BD850D81B7F3BE10077868E /* JSCJSONManager.h */,
+				3BD850D91B7F3BE10077868E /* JSCJSONManager.m */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		3BD89C551B775EEC0084FA63 /* OperationCoordinator */ = {
@@ -583,6 +596,7 @@
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
 				3BC04A731B7386B700AB0B66 /* JSCCDSServiceManager.m in Sources */,
+				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
 				3BC04A771B7390BA00AB0B66 /* JSCPost.m in Sources */,
 				3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */,
 				3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */,
