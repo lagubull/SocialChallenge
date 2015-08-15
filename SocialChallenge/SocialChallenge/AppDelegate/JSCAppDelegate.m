@@ -77,7 +77,6 @@
         _window.splashViewController = [[JSCSplashViewController alloc] init];
         _window.rootViewController = self.navigationController;
         
-        //This solves the bug with the magnifying glass in UserAcquisition Views
         _window.windowLevel = 1.2f;
     }
     

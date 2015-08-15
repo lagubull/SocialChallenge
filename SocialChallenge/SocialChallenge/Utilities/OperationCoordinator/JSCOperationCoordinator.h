@@ -18,7 +18,6 @@ extern NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier;
 
 @property (nonatomic, strong, readonly) NSArray *schedulers;
 
-
 /**
  Creates or returns an instance of the class
  
@@ -42,6 +41,6 @@ extern NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier;
  @param schedulerIdentifier Scheduler identifier to register the coordinator under.
  */
 - (void)registerScheduler:(id<JSCOperationScheduler>)scheduler
-schedulerIdentifier:(NSString *)schedulerIdentifier;
+      schedulerIdentifier:(NSString *)schedulerIdentifier;
 
 @end
