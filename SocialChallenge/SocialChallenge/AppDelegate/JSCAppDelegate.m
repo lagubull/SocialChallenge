@@ -1,24 +1,38 @@
 //
-//  AppDelegate.m
+//  JSCAppDelegate.m
 //  SocialChallenge
 //
 //  Created by Javier Laguna on 02/08/2015.
 //
 //
 
-#import "AppDelegate.h"
+#import "JSCAppDelegate.h"
 
 #import "JSCCDSServiceManager.h"
+#import "JSCOperationCoordinator.h"
+#import "NSOperationQueue+JSCOperationScheduler.h"
+#import "JSCWindow.h"
+#import "JSCSplashViewController.h"
+#import "JSCRootNavigationController.h"
 
-@interface AppDelegate ()
+@interface JSCAppDelegate ()
 
 @end
 
-@implementation AppDelegate
-
+@implementation JSCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSOperationQueue *networkDataOperationQueue = [[NSOperationQueue alloc] init];
+    
+    [[JSCOperationCoordinator sharedInstance] registerScheduler:networkDataOperationQueue
+                                            schedulerIdentifier:kJSCNetworkDataOperationSchedulerTypeIdentifier];
+
+    self.window.backgroundColor = [UIColor clearColor];
+    self.window.clipsToBounds = NO;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -49,6 +63,37 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [[JSCCDSServiceManager sharedInstance] saveManagedObjectContext];
+}
+
+#pragma mark - Window
+
+- (JSCWindow *)window
+{
+    if (!_window)
+    {
+        _window = [[JSCWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _window.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+        
+        _window.splashViewController = [[JSCSplashViewController alloc] init];
+        _window.rootViewController = self.navigationController;
+        
+        _window.windowLevel = 1.2f;
+    }
+    
+    return _window;
+}
+
+#pragma mark - Root
+
+- (UINavigationController *)navigationController
+{
+    if (!_navigationController)
+    {
+        _navigationController = [[JSCRootNavigationController alloc] init];
+        [_navigationController setNavigationBarHidden:YES];
+    }
+    
+    return _navigationController;
 }
 
 @end

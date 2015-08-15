@@ -31,6 +31,8 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
     self.adapter.tableView = self.tableView;
     self.adapter.delegate = self;
     
+    self.view.backgroundColor = [UIColor redColor];
+    
     [self.adapter refresh];
 }
 
