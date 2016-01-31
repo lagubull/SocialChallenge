@@ -13,7 +13,7 @@
 
 @implementation JSCPost (CoreDataProperties)
 
-@dynamic postId;
+@dynamic postID;
 @dynamic page;
 
 @end

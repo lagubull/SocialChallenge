@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
     <entity name="JSCPost" representedClassName="JSCPost" syncable="YES">
-        <attribute name="postId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="page" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSCPostPage" inverseName="post" inverseEntity="JSCPostPage" syncable="YES"/>
     </entity>
     <entity name="JSCPostPage" representedClassName="JSCPostPage" syncable="YES">

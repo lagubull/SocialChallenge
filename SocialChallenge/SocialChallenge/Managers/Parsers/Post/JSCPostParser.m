@@ -36,7 +36,7 @@
     if (postDictionary[@"id"])
     {
         NSString *postID = [NSString stringWithFormat:@"%@", postDictionary[@"id"]];
-        
+
         post = [JSCPost fetchPostWithID:postID
                           managedObjectContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
         if (!post)
@@ -44,7 +44,7 @@
             post = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([JSCPost class])
                                                   inManagedObjectContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
             
-            post.postId = postID;
+            post.postID = postID;
 
         }
     }

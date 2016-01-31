@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSCPost (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *postId;
+@property (nullable, nonatomic, retain) NSString *postID;
 @property (nullable, nonatomic, retain) JSCPostPage *page;
 
 @end

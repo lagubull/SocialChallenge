@@ -18,7 +18,7 @@
 
 - (JSCPostPage *)parsePage:(NSDictionary *)pageDictionary
 {
-    NSArray *postsDictionaries = pageDictionary[@"posts"];
+    NSArray *postsDictionaries = pageDictionary[@"posts"][@"data"];
     
     JSCPostPage *page = nil;
     
@@ -35,7 +35,7 @@
             {
                 if (!page)
                 {
-                    NSDictionary *metaDictionary = pageDictionary[@"meta"];
+                    NSDictionary *metaDictionary = pageDictionary[@"posts"][@"pagination"];
                     
                     page = [self parseMetaDictionary:metaDictionary];
                 }
