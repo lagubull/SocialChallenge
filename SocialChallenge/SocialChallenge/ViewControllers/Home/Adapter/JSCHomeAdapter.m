@@ -8,9 +8,9 @@
 
 #import "JSCHomeAdapter.h"
 
-#import "JSCCDSServiceManager.h"
 #import "JSCPost.h"
 #import "JSCFeedAPIManager.h"
+#import "CDSServiceManager.h"
 
 @interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate>
 
@@ -73,7 +73,7 @@
     if (!_fetchedResultsController)
     {
         _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:self.fetchRequest
-                                                                        managedObjectContext:[[JSCCDSServiceManager sharedInstance] managedObjectContext]
+                                                                        managedObjectContext:[[CDSServiceManager sharedInstance] mainManagedObjectContext]
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
         
@@ -88,7 +88,7 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
     fetchRequest.entity = [NSEntityDescription entityForName:NSStringFromClass([JSCPost class])
-                                      inManagedObjectContext:[[JSCCDSServiceManager sharedInstance] managedObjectContext]];
+                                      inManagedObjectContext:[[CDSServiceManager sharedInstance] mainManagedObjectContext]];
     
     fetchRequest.predicate = self.predicateForFetchRequest;
     fetchRequest.sortDescriptors = self.sortDescriptorsForFetchRequest;

@@ -10,8 +10,6 @@
 
 @interface JSCCDSOperation : JSCOperation
 
-@property (nonatomic, strong) NSManagedObjectContext *localManagedObjectContext;
-
 /**
  Saves the local managed object context and finishes the execution of the operation.
  

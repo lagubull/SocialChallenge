@@ -13,8 +13,6 @@
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
 		3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
-		3BC04A731B7386B700AB0B66 /* JSCCDSServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC04A721B7386B700AB0B66 /* JSCCDSServiceManager.m */; };
-		3BC04A771B7390BA00AB0B66 /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC04A761B7390BA00AB0B66 /* JSCPost.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281EC1B6F92350097B452 /* JSCTableView.m */; };
@@ -29,6 +27,14 @@
 		3BD963391B76D382005365EF /* JSCFeedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963381B76D382005365EF /* JSCFeedRequest.m */; };
 		3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9633C1B76DD15005365EF /* JSCSession.m */; };
 		3BD963421B76E067005365EF /* JSCCDSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963411B76E067005365EF /* JSCCDSOperation.m */; };
+		3BF13B091C5E375300B32627 /* JSCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B081C5E375300B32627 /* JSCParser.m */; };
+		3BF13B0C1C5E379F00B32627 /* JSCPostParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B0B1C5E379F00B32627 /* JSCPostParser.m */; };
+		3BF13B0F1C5E37B200B32627 /* JSCPostPageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B0E1C5E37B200B32627 /* JSCPostPageParser.m */; };
+		3BF13B451C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B3E1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m */; };
+		3BF13B461C5E3DCC00B32627 /* JSCPostPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B401C5E3DCC00B32627 /* JSCPostPage.m */; };
+		3BF13B471C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B421C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m */; };
+		3BF13B481C5E3DCC00B32627 /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B441C5E3DCC00B32627 /* JSCPost.m */; };
+		CC733320D31556AD5F4C1950 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC51405265E948251228B921 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20A57988DFC58A5A00472ED3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3B3111841B6E110B008E374E /* SocialChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111881B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B3111891B6E110B008E374E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,8 +64,6 @@
 		3B3111D01B6E171F008E374E /* JSCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeViewController.m; sourceTree = "<group>"; };
 		3BC04A711B7386B700AB0B66 /* JSCCDSServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCCDSServiceManager.h; sourceTree = "<group>"; };
 		3BC04A721B7386B700AB0B66 /* JSCCDSServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCCDSServiceManager.m; sourceTree = "<group>"; };
-		3BC04A751B7390BA00AB0B66 /* JSCPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPost.h; sourceTree = "<group>"; };
-		3BC04A761B7390BA00AB0B66 /* JSCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPost.m; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
 		3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeAdapter.m; sourceTree = "<group>"; };
 		3BD281E61B6F8ACF0097B452 /* JSCPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostTableViewCell.h; sourceTree = "<group>"; };
@@ -74,7 +79,6 @@
 		3BD89C561B775F580084FA63 /* JSCOperationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationCoordinator.h; sourceTree = "<group>"; };
 		3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCOperationCoordinator.m; sourceTree = "<group>"; };
 		3BD89C5A1B7761690084FA63 /* JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationScheduler.h; sourceTree = "<group>"; };
-		3BD89C5C1B7769360084FA63 /* NSOperationQueue+JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+JSCOperationScheduler.h"; sourceTree = "<group>"; };
 		3BD89C611B776C460084FA63 /* JSCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCWindow.h; sourceTree = "<group>"; };
 		3BD89C621B776C460084FA63 /* JSCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCWindow.m; sourceTree = "<group>"; };
 		3BD9632B1B76CD27005365EF /* JSCFeedAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFeedAPIManager.h; sourceTree = "<group>"; };
@@ -89,6 +93,23 @@
 		3BD9633C1B76DD15005365EF /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
 		3BD963401B76E067005365EF /* JSCCDSOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCCDSOperation.h; sourceTree = "<group>"; };
 		3BD963411B76E067005365EF /* JSCCDSOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCCDSOperation.m; sourceTree = "<group>"; };
+		3BF13B071C5E375300B32627 /* JSCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCParser.h; sourceTree = "<group>"; };
+		3BF13B081C5E375300B32627 /* JSCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCParser.m; sourceTree = "<group>"; };
+		3BF13B0A1C5E379F00B32627 /* JSCPostParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostParser.h; sourceTree = "<group>"; };
+		3BF13B0B1C5E379F00B32627 /* JSCPostParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParser.m; sourceTree = "<group>"; };
+		3BF13B0D1C5E37B200B32627 /* JSCPostPageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostPageParser.h; sourceTree = "<group>"; };
+		3BF13B0E1C5E37B200B32627 /* JSCPostPageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostPageParser.m; sourceTree = "<group>"; };
+		3BF13B3D1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPost+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3BF13B3E1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPost+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3BF13B3F1C5E3DCC00B32627 /* JSCPostPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostPage.h; sourceTree = "<group>"; };
+		3BF13B401C5E3DCC00B32627 /* JSCPostPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostPage.m; sourceTree = "<group>"; };
+		3BF13B411C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPostPage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3BF13B421C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPostPage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3BF13B431C5E3DCC00B32627 /* JSCPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPost.h; sourceTree = "<group>"; };
+		3BF13B441C5E3DCC00B32627 /* JSCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPost.m; sourceTree = "<group>"; };
+		3BF13B4C1C5E473600B32627 /* NSOperationQueue+JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+JSCOperationScheduler.h"; sourceTree = "<group>"; };
+		AC51405265E948251228B921 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC733320D31556AD5F4C1950 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +137,8 @@
 				3B3111861B6E110B008E374E /* SocialChallenge */,
 				3B3111A61B6E110B008E374E /* SocialChallengeTests */,
 				3B3111851B6E110B008E374E /* Products */,
+				E329036832D4BECC41E1C2D0 /* Pods */,
+				E5C92224D8C24ABAB9801BE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,13 +154,13 @@
 		3B3111861B6E110B008E374E /* SocialChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				3BD52D891B77BB85000783E3 /* NavigationController */,
-				3BD52D851B77B9FD000783E3 /* SplashViewController */,
 				3B3111B11B6E127D008E374E /* AppDelegate */,
 				3BD89C5B1B7768D90084FA63 /* categories */,
 				3B3111B51B6E127D008E374E /* Managers */,
 				3B3111B71B6E127D008E374E /* Model */,
+				3BD52D891B77BB85000783E3 /* NavigationController */,
 				3B3111BD1B6E127D008E374E /* Resources */,
+				3BD52D851B77B9FD000783E3 /* SplashViewController */,
 				3B3111871B6E110B008E374E /* Supporting Files */,
 				3B3111C01B6E127D008E374E /* Utilities */,
 				3B3111C11B6E127D008E374E /* ViewControllers */,
@@ -222,8 +246,14 @@
 		3B3111B91B6E127D008E374E /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				3BC04A751B7390BA00AB0B66 /* JSCPost.h */,
-				3BC04A761B7390BA00AB0B66 /* JSCPost.m */,
+				3BF13B3D1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.h */,
+				3BF13B3E1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m */,
+				3BF13B3F1C5E3DCC00B32627 /* JSCPostPage.h */,
+				3BF13B401C5E3DCC00B32627 /* JSCPostPage.m */,
+				3BF13B411C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.h */,
+				3BF13B421C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m */,
+				3BF13B431C5E3DCC00B32627 /* JSCPost.h */,
+				3BF13B441C5E3DCC00B32627 /* JSCPost.m */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -382,6 +412,9 @@
 		3BD850D51B7F3A880077868E /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				3BF13B061C5E371400B32627 /* Abstract */,
+				3BF13B051C5E359500B32627 /* PostPage */,
+				3BF13B041C5E358700B32627 /* Post */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -415,7 +448,7 @@
 		3BD89C5B1B7768D90084FA63 /* categories */ = {
 			isa = PBXGroup;
 			children = (
-				3BD89C5C1B7769360084FA63 /* NSOperationQueue+JSCOperationScheduler.h */,
+				3BF13B4B1C5E473600B32627 /* NSOperation */,
 			);
 			name = categories;
 			path = Categories;
@@ -494,6 +527,58 @@
 			path = Operation;
 			sourceTree = "<group>";
 		};
+		3BF13B041C5E358700B32627 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				3BF13B0A1C5E379F00B32627 /* JSCPostParser.h */,
+				3BF13B0B1C5E379F00B32627 /* JSCPostParser.m */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		3BF13B051C5E359500B32627 /* PostPage */ = {
+			isa = PBXGroup;
+			children = (
+				3BF13B0D1C5E37B200B32627 /* JSCPostPageParser.h */,
+				3BF13B0E1C5E37B200B32627 /* JSCPostPageParser.m */,
+			);
+			path = PostPage;
+			sourceTree = "<group>";
+		};
+		3BF13B061C5E371400B32627 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				3BF13B071C5E375300B32627 /* JSCParser.h */,
+				3BF13B081C5E375300B32627 /* JSCParser.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		3BF13B4B1C5E473600B32627 /* NSOperation */ = {
+			isa = PBXGroup;
+			children = (
+				3BF13B4C1C5E473600B32627 /* NSOperationQueue+JSCOperationScheduler.h */,
+			);
+			path = NSOperation;
+			sourceTree = "<group>";
+		};
+		E329036832D4BECC41E1C2D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20A57988DFC58A5A00472ED3 /* Pods.debug.xcconfig */,
+				DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5C92224D8C24ABAB9801BE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC51405265E948251228B921 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -501,9 +586,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B3111AB1B6E110B008E374E /* Build configuration list for PBXNativeTarget "SocialChallenge" */;
 			buildPhases = (
+				38F5A9356B0110BAEEC9B438 /* Check Pods Manifest.lock */,
 				3B3111801B6E110B008E374E /* Sources */,
 				3B3111811B6E110B008E374E /* Frameworks */,
 				3B3111821B6E110B008E374E /* Resources */,
+				7573DD2821CE151FA49FA95D /* Embed Pods Frameworks */,
+				36E9D7E2BAAA1A9C330C9E76 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -587,30 +675,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36E9D7E2BAAA1A9C330C9E76 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38F5A9356B0110BAEEC9B438 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7573DD2821CE151FA49FA95D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B3111801B6E110B008E374E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */,
+				3BF13B091C5E375300B32627 /* JSCParser.m in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
-				3BC04A731B7386B700AB0B66 /* JSCCDSServiceManager.m in Sources */,
 				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
-				3BC04A771B7390BA00AB0B66 /* JSCPost.m in Sources */,
+				3BF13B0C1C5E379F00B32627 /* JSCPostParser.m in Sources */,
 				3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */,
 				3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */,
 				3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */,
 				3BD963421B76E067005365EF /* JSCCDSOperation.m in Sources */,
+				3BF13B461C5E3DCC00B32627 /* JSCPostPage.m in Sources */,
 				3B31118A1B6E110B008E374E /* main.m in Sources */,
 				3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */,
 				3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */,
 				3BD963391B76D382005365EF /* JSCFeedRequest.m in Sources */,
 				3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */,
 				3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */,
+				3BF13B481C5E3DCC00B32627 /* JSCPost.m in Sources */,
 				3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */,
 				3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */,
+				3BF13B451C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m in Sources */,
+				3BF13B471C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */,
+				3BF13B0F1C5E37B200B32627 /* JSCPostPageParser.m in Sources */,
 				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,6 +790,7 @@
 		};
 		3B3111AC1B6E110B008E374E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20A57988DFC58A5A00472ED3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -700,6 +842,7 @@
 		};
 		3B3111AD1B6E110B008E374E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

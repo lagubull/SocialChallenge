@@ -11,6 +11,8 @@
 #import "JSCFeedRequest.h"
 #import "JSCSession.h"
 #import "JSCJSONManager.h"
+#import "JSCPostPage.h"
+#import "JSCPostPageParser.h"
 
 @interface JSCFeedRetrieveOperation ()
 
@@ -86,6 +88,11 @@
         if (!error)
         {
             NSDictionary *feed = [JSCJSONManager processJSONData:data];
+            
+            JSCPostPageParser *pageParser = [JSCPostPageParser parser];
+            
+            JSCPostPage *page = [pageParser parsePage:feed];
+            
             //SERIALIZE RESPONSE
             //PARSE FEED
             [weakSelf saveContextAndFinishWithResult:nil];
