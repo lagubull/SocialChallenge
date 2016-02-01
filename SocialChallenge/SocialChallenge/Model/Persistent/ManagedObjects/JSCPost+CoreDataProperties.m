@@ -1,8 +1,8 @@
 //
 //  JSCPost+CoreDataProperties.m
-//  SocialChallenge
+//  
 //
-//  Created by Javier Laguna on 31/01/2016.
+//  Created by Javier Laguna on 01/02/2016.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,7 +13,12 @@
 
 @implementation JSCPost (CoreDataProperties)
 
+@dynamic created_at;
+@dynamic like_count;
+@dynamic commentCount;
 @dynamic postID;
 @dynamic page;
+@dynamic user;
+@dynamic content;
 
 @end

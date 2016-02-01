@@ -25,7 +25,7 @@
 /**
  Parse Post.
  
- @param postsDictionary - JSON containing a post.
+ @param postDictionary - JSON containing a post.
  
  @return JSCPostPage instance that was parsed.
  */

@@ -7,6 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+
+#pragma mark - ValueOrDefault
+
+static inline id JSCValueOrDefault(id value, id defaultValue)
+{
+    if (value == nil)
+    {
+        return defaultValue;
+    }
+    
+    return value;
+}
 
 @interface JSCParser : NSObject
 

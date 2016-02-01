@@ -1,5 +1,5 @@
 //
-//  JSCPostPage+CoreDataProperties.m
+//  JSCUser+CoreDataProperties.m
 //  
 //
 //  Created by Javier Laguna on 01/02/2016.
@@ -9,12 +9,14 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "JSCPostPage+CoreDataProperties.h"
+#import "JSCUser+CoreDataProperties.h"
 
-@implementation JSCPostPage (CoreDataProperties)
+@implementation JSCUser (CoreDataProperties)
 
-@dynamic nextPageRequestPath;
-@dynamic postPageID;
+@dynamic userID;
+@dynamic firstName;
+@dynamic lastName;
+@dynamic avatarRemoteURL;
 @dynamic post;
 
 @end

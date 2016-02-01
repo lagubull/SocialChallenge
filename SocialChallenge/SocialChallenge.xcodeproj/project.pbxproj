@@ -13,6 +13,13 @@
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
 		3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
+		3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */; };
+		3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */; };
+		3B37AFE31C5F50000055428D /* JSCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDA1C5F50000055428D /* JSCUser.m */; };
+		3B37AFE41C5F50000055428D /* JSCUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDC1C5F50000055428D /* JSCUser+CoreDataProperties.m */; };
+		3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDE1C5F50000055428D /* JSCPostPage.m */; };
+		3B37AFE61C5F50000055428D /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE01C5F50000055428D /* JSCPost.m */; };
+		3B37AFEA1C5F54700055428D /* JSCUserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE91C5F54700055428D /* JSCUserParser.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281EC1B6F92350097B452 /* JSCTableView.m */; };
@@ -30,10 +37,6 @@
 		3BF13B091C5E375300B32627 /* JSCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B081C5E375300B32627 /* JSCParser.m */; };
 		3BF13B0C1C5E379F00B32627 /* JSCPostParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B0B1C5E379F00B32627 /* JSCPostParser.m */; };
 		3BF13B0F1C5E37B200B32627 /* JSCPostPageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B0E1C5E37B200B32627 /* JSCPostPageParser.m */; };
-		3BF13B451C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B3E1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m */; };
-		3BF13B461C5E3DCC00B32627 /* JSCPostPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B401C5E3DCC00B32627 /* JSCPostPage.m */; };
-		3BF13B471C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B421C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m */; };
-		3BF13B481C5E3DCC00B32627 /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B441C5E3DCC00B32627 /* JSCPost.m */; };
 		CC733320D31556AD5F4C1950 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC51405265E948251228B921 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,20 @@
 		3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B3111CF1B6E171F008E374E /* JSCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeViewController.h; sourceTree = "<group>"; };
 		3B3111D01B6E171F008E374E /* JSCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeViewController.m; sourceTree = "<group>"; };
+		3B37AFD51C5F50000055428D /* JSCPost+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPost+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPost+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3B37AFD71C5F50000055428D /* JSCPostPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPostPage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPostPage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3B37AFD91C5F50000055428D /* JSCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCUser.h; sourceTree = "<group>"; };
+		3B37AFDA1C5F50000055428D /* JSCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCUser.m; sourceTree = "<group>"; };
+		3B37AFDB1C5F50000055428D /* JSCUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3B37AFDC1C5F50000055428D /* JSCUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3B37AFDD1C5F50000055428D /* JSCPostPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostPage.h; sourceTree = "<group>"; };
+		3B37AFDE1C5F50000055428D /* JSCPostPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostPage.m; sourceTree = "<group>"; };
+		3B37AFDF1C5F50000055428D /* JSCPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPost.h; sourceTree = "<group>"; };
+		3B37AFE01C5F50000055428D /* JSCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPost.m; sourceTree = "<group>"; };
+		3B37AFE81C5F54700055428D /* JSCUserParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCUserParser.h; sourceTree = "<group>"; };
+		3B37AFE91C5F54700055428D /* JSCUserParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCUserParser.m; sourceTree = "<group>"; };
 		3BC04A711B7386B700AB0B66 /* JSCCDSServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCCDSServiceManager.h; sourceTree = "<group>"; };
 		3BC04A721B7386B700AB0B66 /* JSCCDSServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCCDSServiceManager.m; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
@@ -99,14 +116,6 @@
 		3BF13B0B1C5E379F00B32627 /* JSCPostParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParser.m; sourceTree = "<group>"; };
 		3BF13B0D1C5E37B200B32627 /* JSCPostPageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostPageParser.h; sourceTree = "<group>"; };
 		3BF13B0E1C5E37B200B32627 /* JSCPostPageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostPageParser.m; sourceTree = "<group>"; };
-		3BF13B3D1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPost+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3BF13B3E1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPost+CoreDataProperties.m"; sourceTree = "<group>"; };
-		3BF13B3F1C5E3DCC00B32627 /* JSCPostPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostPage.h; sourceTree = "<group>"; };
-		3BF13B401C5E3DCC00B32627 /* JSCPostPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostPage.m; sourceTree = "<group>"; };
-		3BF13B411C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPostPage+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3BF13B421C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPostPage+CoreDataProperties.m"; sourceTree = "<group>"; };
-		3BF13B431C5E3DCC00B32627 /* JSCPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPost.h; sourceTree = "<group>"; };
-		3BF13B441C5E3DCC00B32627 /* JSCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPost.m; sourceTree = "<group>"; };
 		3BF13B4C1C5E473600B32627 /* NSOperationQueue+JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+JSCOperationScheduler.h"; sourceTree = "<group>"; };
 		AC51405265E948251228B921 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,14 +255,18 @@
 		3B3111B91B6E127D008E374E /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				3BF13B3D1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.h */,
-				3BF13B3E1C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m */,
-				3BF13B3F1C5E3DCC00B32627 /* JSCPostPage.h */,
-				3BF13B401C5E3DCC00B32627 /* JSCPostPage.m */,
-				3BF13B411C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.h */,
-				3BF13B421C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m */,
-				3BF13B431C5E3DCC00B32627 /* JSCPost.h */,
-				3BF13B441C5E3DCC00B32627 /* JSCPost.m */,
+				3B37AFDF1C5F50000055428D /* JSCPost.h */,
+				3B37AFE01C5F50000055428D /* JSCPost.m */,
+				3B37AFD51C5F50000055428D /* JSCPost+CoreDataProperties.h */,
+				3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */,
+				3B37AFDD1C5F50000055428D /* JSCPostPage.h */,
+				3B37AFDE1C5F50000055428D /* JSCPostPage.m */,
+				3B37AFD71C5F50000055428D /* JSCPostPage+CoreDataProperties.h */,
+				3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */,
+				3B37AFD91C5F50000055428D /* JSCUser.h */,
+				3B37AFDA1C5F50000055428D /* JSCUser.m */,
+				3B37AFDB1C5F50000055428D /* JSCUser+CoreDataProperties.h */,
+				3B37AFDC1C5F50000055428D /* JSCUser+CoreDataProperties.m */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -346,6 +359,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3B37AFE71C5F54510055428D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3B37AFE81C5F54700055428D /* JSCUserParser.h */,
+				3B37AFE91C5F54700055428D /* JSCUserParser.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		3BC04A701B73868F00AB0B66 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +434,7 @@
 		3BD850D51B7F3A880077868E /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				3B37AFE71C5F54510055428D /* User */,
 				3BF13B061C5E371400B32627 /* Abstract */,
 				3BF13B051C5E359500B32627 /* PostPage */,
 				3BF13B041C5E358700B32627 /* Post */,
@@ -627,7 +650,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JSC;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 				TargetAttributes = {
 					3B3111831B6E110B008E374E = {
 						CreatedOnToolsVersion = 6.3;
@@ -730,6 +753,9 @@
 			files = (
 				3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */,
 				3BF13B091C5E375300B32627 /* JSCParser.m in Sources */,
+				3B37AFEA1C5F54700055428D /* JSCUserParser.m in Sources */,
+				3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */,
+				3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
 				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
@@ -738,21 +764,21 @@
 				3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */,
 				3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */,
 				3BD963421B76E067005365EF /* JSCCDSOperation.m in Sources */,
-				3BF13B461C5E3DCC00B32627 /* JSCPostPage.m in Sources */,
 				3B31118A1B6E110B008E374E /* main.m in Sources */,
+				3B37AFE41C5F50000055428D /* JSCUser+CoreDataProperties.m in Sources */,
 				3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */,
 				3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */,
 				3BD963391B76D382005365EF /* JSCFeedRequest.m in Sources */,
 				3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */,
 				3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */,
-				3BF13B481C5E3DCC00B32627 /* JSCPost.m in Sources */,
 				3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */,
 				3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */,
-				3BF13B451C5E3DCC00B32627 /* JSCPost+CoreDataProperties.m in Sources */,
-				3BF13B471C5E3DCC00B32627 /* JSCPostPage+CoreDataProperties.m in Sources */,
+				3B37AFE61C5F50000055428D /* JSCPost.m in Sources */,
+				3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */,
 				3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */,
 				3BF13B0F1C5E37B200B32627 /* JSCPostPageParser.m in Sources */,
 				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
+				3B37AFE31C5F50000055428D /* JSCUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +804,7 @@
 		3B31117E1B6E1095008E374E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				ONLY_ACTIVE_ARCH = YES;
 			};
@@ -840,6 +867,7 @@
 					"$(inherited)",
 				);
 				OTHER_LIBTOOLFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -888,6 +916,7 @@
 					"$(inherited)",
 				);
 				OTHER_LIBTOOLFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -939,6 +968,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialChallenge.app/SocialChallenge";
@@ -983,6 +1013,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialChallenge.app/SocialChallenge";

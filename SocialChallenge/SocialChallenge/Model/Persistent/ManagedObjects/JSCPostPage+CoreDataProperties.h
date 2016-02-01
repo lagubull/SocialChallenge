@@ -1,8 +1,8 @@
 //
 //  JSCPostPage+CoreDataProperties.h
-//  SocialChallenge
+//  
 //
-//  Created by Javier Laguna on 31/01/2016.
+//  Created by Javier Laguna on 01/02/2016.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSCPostPage (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *postPageID;
 @property (nullable, nonatomic, retain) NSString *nextPageRequestPath;
+@property (nullable, nonatomic, retain) NSString *postPageID;
 @property (nullable, nonatomic, retain) JSCPost *post;
 
 @end
