@@ -16,5 +16,6 @@
 @dynamic nextPageRequestPath;
 @dynamic postPageID;
 @dynamic post;
+@dynamic index;
 
 @end

@@ -24,4 +24,15 @@ static NSString * const kJSCHTTPRequestMethodGet = @"GET";
     return request;
 }
 
++ (instancetype)requestToRetrieveFeedNexPageWithURL:(NSString *)URL
+{
+    JSCFeedRequest *request = [[self alloc] init];
+    
+    request.HTTPMethod = kJSCHTTPRequestMethodGet;
+    
+    request.URL = [NSURL URLWithString:URL];
+    
+    return request;
+}
+
 @end

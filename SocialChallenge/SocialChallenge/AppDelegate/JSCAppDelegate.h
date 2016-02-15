@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class JSCWindow;
+#import "JSCWindow.h"
+
 @class JSCRootNavigationController;
 
 @interface JSCAppDelegate : UIResponder <UIApplicationDelegate>
 
-//TODO: solve warning JSCWindow incompatible with UIWindow
 @property (nonatomic, strong) JSCWindow *window;
 
 @property (nonatomic, strong) JSCRootNavigationController *navigationController;
 
 @end
-

@@ -13,8 +13,8 @@
 
 @implementation JSCPost (CoreDataProperties)
 
-@dynamic created_at;
-@dynamic like_count;
+@dynamic createdAt;
+@dynamic likeCount;
 @dynamic commentCount;
 @dynamic postID;
 @dynamic page;

@@ -8,8 +8,22 @@
 
 #import "JSCPostPage.h"
 
+#import "NSManagedObjectContext+CDSRetrieval.h"
+
 @implementation JSCPostPage
 
-// Insert code here to add functionality to your managed object subclass
+#pragma mark - LastPage
+
++ (JSCPostPage *)fetchLastPageInContext:(NSManagedObjectContext *)managedObjectContext
+{
+    NSSortDescriptor *retrievedPagesSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"index"
+                                                                                   ascending:NO];
+    
+    NSArray *sortDescriptor = @[retrievedPagesSortDescriptor];
+    
+    return (JSCPostPage *) [managedObjectContext cds_retrieveFirstEntryForEntityClass:[JSCPostPage class]
+                                                                            predicate:nil
+                                                                      sortDescriptors:sortDescriptor];
+}
 
 @end

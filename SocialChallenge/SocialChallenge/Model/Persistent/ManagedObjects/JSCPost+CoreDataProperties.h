@@ -11,15 +11,12 @@
 
 #import "JSCPost.h"
 
-@class JSCPostPage;
-@class JSCUser;
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JSCPost (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSDate *created_at;
-@property (nullable, nonatomic, retain) NSNumber *like_count;
+@property (nullable, nonatomic, retain) NSDate *createdAt;
+@property (nullable, nonatomic, retain) NSNumber *likeCount;
 @property (nullable, nonatomic, retain) NSNumber *commentCount;
 @property (nullable, nonatomic, retain) NSString *postID;
 @property (nullable, nonatomic, retain) JSCPostPage *page;

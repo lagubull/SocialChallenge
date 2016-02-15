@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *nextPageRequestPath;
 @property (nullable, nonatomic, retain) NSString *postPageID;
 @property (nullable, nonatomic, retain) JSCPost *post;
+@property (nullable, nonatomic, retain) NSNumber *index;
 
 @end
 

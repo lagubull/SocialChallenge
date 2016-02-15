@@ -13,7 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSCPostPage : NSManagedObject
 
-// Insert code here to declare functionality of your managed object subclass
+/**
+ Retrieves the last page of posts stored in the context.
+ 
+ @param context in which we want to perform the search.
+ 
+ @return JSCPostPage - instace of the JSCPostPage class
+ */
++ (JSCPostPage *)fetchLastPageInContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end
 

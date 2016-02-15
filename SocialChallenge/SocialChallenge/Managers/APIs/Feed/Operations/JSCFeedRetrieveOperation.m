@@ -85,33 +85,32 @@
     
     self.task = [[JSCSession session] dataTaskWithRequest:request
                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-    {
-        if (!error)
-        {
-            NSDictionary *feed = [JSCJSONManager processJSONData:data];
-            
-            JSCPostPageParser *pageParser = [JSCPostPageParser parser];
-            [[CDSServiceManager sharedInstance].backgroundManagedObjectContext performBlockAndWait:^
-            {
-                JSCPostPage *page = [pageParser parsePage:feed];
-            }];
-            
-            //SERIALIZE RESPONSE
-            //PARSE FEED
-            [weakSelf saveContextAndFinishWithResult:nil];
-        }
-        else
-        {
-            [weakSelf didFailWithError:error];
-        }
-    }];
+                 {
+                     if (!error)
+                     {
+                         NSDictionary *feed = [JSCJSONManager processJSONData:data];
+                         
+                         JSCPostPageParser *pageParser = [JSCPostPageParser parser];
+                         
+                         [[CDSServiceManager sharedInstance].backgroundManagedObjectContext performBlockAndWait:^
+                          {
+                              [pageParser parsePage:feed];
+                          }];
+                         
+                         [weakSelf saveContextAndFinishWithResult:nil];
+                     }
+                     else
+                     {
+                         [weakSelf didFailWithError:error];
+                     }
+                 }];
     
     [self.task resume];
 }
 
 - (JSCFeedRequest *)requestForMode:(JSCDataRetrievalOperationMode)mode
 {
-    JSCFeedRequest *request = nil;
+    __block JSCFeedRequest *request = nil;
     
     switch (self.mode)
     {
@@ -123,7 +122,12 @@
         }
         case JSCDataRetrievalOperationModeNextPage:
         {
-            //todo: create request for a different than the first page
+            [[CDSServiceManager sharedInstance].backgroundManagedObjectContext performBlockAndWait:^
+             {
+                 JSCPostPage *page = [JSCPostPage fetchLastPageInContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
+                 
+                 request = [JSCFeedRequest requestToRetrieveFeedNexPageWithURL:page.nextPageRequestPath];
+             }];
             
             break;
         }

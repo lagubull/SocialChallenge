@@ -20,6 +20,7 @@
 		3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDE1C5F50000055428D /* JSCPostPage.m */; };
 		3B37AFE61C5F50000055428D /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE01C5F50000055428D /* JSCPost.m */; };
 		3B37AFEA1C5F54700055428D /* JSCUserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE91C5F54700055428D /* JSCUserParser.m */; };
+		3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281EC1B6F92350097B452 /* JSCTableView.m */; };
@@ -79,6 +80,8 @@
 		3B37AFE01C5F50000055428D /* JSCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPost.m; sourceTree = "<group>"; };
 		3B37AFE81C5F54700055428D /* JSCUserParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCUserParser.h; sourceTree = "<group>"; };
 		3B37AFE91C5F54700055428D /* JSCUserParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCUserParser.m; sourceTree = "<group>"; };
+		3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JSCDateFormatter.h"; sourceTree = "<group>"; };
+		3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JSCDateFormatter.m"; sourceTree = "<group>"; };
 		3BC04A711B7386B700AB0B66 /* JSCCDSServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCCDSServiceManager.h; sourceTree = "<group>"; };
 		3BC04A721B7386B700AB0B66 /* JSCCDSServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCCDSServiceManager.m; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
@@ -368,6 +371,15 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		3B3FAA3D1C60B5950019D0D0 /* NSDateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */,
+				3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */,
+			);
+			path = NSDateFormatter;
+			sourceTree = "<group>";
+		};
 		3BC04A701B73868F00AB0B66 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +483,7 @@
 		3BD89C5B1B7768D90084FA63 /* categories */ = {
 			isa = PBXGroup;
 			children = (
+				3B3FAA3D1C60B5950019D0D0 /* NSDateFormatter */,
 				3BF13B4B1C5E473600B32627 /* NSOperation */,
 			);
 			name = categories;
@@ -772,6 +785,7 @@
 				3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */,
 				3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */,
 				3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */,
+				3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */,
 				3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */,
 				3B37AFE61C5F50000055428D /* JSCPost.m in Sources */,
 				3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */,
@@ -862,10 +876,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -911,10 +922,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

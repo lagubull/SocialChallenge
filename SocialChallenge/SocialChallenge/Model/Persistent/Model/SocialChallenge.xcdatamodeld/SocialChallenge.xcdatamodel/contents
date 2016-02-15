@@ -3,13 +3,14 @@
     <entity name="JSCPost" representedClassName="JSCPost" syncable="YES">
         <attribute name="commentCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="like_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="likeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="postID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="page" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSCPostPage" inverseName="post" inverseEntity="JSCPostPage" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSCUser" inverseName="post" inverseEntity="JSCUser" syncable="YES"/>
     </entity>
     <entity name="JSCPostPage" representedClassName="JSCPostPage" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="nextPageRequestPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="postPageID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSCPost" inverseName="page" inverseEntity="JSCPost" syncable="YES"/>
@@ -23,7 +24,7 @@
     </entity>
     <elements>
         <element name="JSCPost" positionX="25" positionY="45" width="128" height="150"/>
-        <element name="JSCPostPage" positionX="214" positionY="-18" width="128" height="90"/>
+        <element name="JSCPostPage" positionX="214" positionY="-18" width="128" height="105"/>
         <element name="JSCUser" positionX="225" positionY="126" width="128" height="118"/>
     </elements>
 </model>

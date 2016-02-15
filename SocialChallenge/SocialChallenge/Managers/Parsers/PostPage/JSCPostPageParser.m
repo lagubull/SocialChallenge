@@ -11,6 +11,7 @@
 #import "JSCPostPage.h"
 #import "JSCPost.h"
 #import "JSCPostParser.h"
+#import "CDSServiceManager.h"
 
 @implementation JSCPostPageParser
 
@@ -25,7 +26,6 @@
     if (postsDictionaries.count > 0)
     {
         JSCPostParser *parser = [JSCPostParser parser];
-      //  parser.feedID = self.feedID;
         
         NSArray *parsedPosts = [parser parsePosts:postsDictionaries];
         
@@ -58,16 +58,12 @@
 
 - (JSCPostPage *)parseMetaDictionary:(NSDictionary *)metaDictionary
 {
-//    JSCPostPage *page = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([JSCPostPage class])
-//                                                           inManagedObjectContext:[JSCCDSServiceManager sharedInstance].localManagedObjectContext];
-//    
-    //page.nextPageRequestPath = FSNValueOrDefault(metaDictionary[@"next_href"], nil);
+    JSCPostPage *page = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([JSCPostPage class])
+                                                      inManagedObjectContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
     
-   // return page;
+    page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[@"next_href"], nil);
     
-    return nil;
+    return page;
 }
-
-
 
 @end
