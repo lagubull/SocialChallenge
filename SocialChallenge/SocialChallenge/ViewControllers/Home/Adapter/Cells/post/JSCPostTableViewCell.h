@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSCPost;
+
 @interface JSCPostTableViewCell : UITableViewCell
+
+/**
+ Identifies the cell type.
+ */
++ (NSString *)reuseIdentifier;
+
+/**
+ Sets up the Cell with post data.
+ 
+ @param post -
+ */
+- (void)updateWithPost:(JSCPost *)post;
 
 @end

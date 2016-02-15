@@ -21,6 +21,7 @@
 
 #import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
+#import <PureLayout/PureLayout.h>
 
 /**
  A set of possible feed retrieval options.

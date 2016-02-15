@@ -1,10 +1,19 @@
 PODS:
   - CoreDataServices (1.1.3)
+  - EasyAlert (1.0.1)
+  - PureLayout (3.0.1)
+  - Reveal-iOS-SDK (1.6.2)
 
 DEPENDENCIES:
-  - CoreDataServices
+  - CoreDataServices (~> 1.1.3)
+  - EasyAlert
+  - PureLayout
+  - Reveal-iOS-SDK (~> 1.6)
 
 SPEC CHECKSUMS:
   CoreDataServices: ca1e442e4d7b3913886f2293f92568f995d0e3e4
+  EasyAlert: 837fa8d271786f3feedd83ca6bccc2e090abd091
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
 
 COCOAPODS: 0.39.0
