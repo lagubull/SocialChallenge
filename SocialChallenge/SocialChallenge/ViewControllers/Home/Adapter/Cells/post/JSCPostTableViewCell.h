@@ -10,6 +10,24 @@
 
 @class JSCPost;
 
+@protocol JSCPostTableViewCellDelegate <NSObject>
+
+/**
+ User pressed on the favorites button.
+ 
+ @parameter post - post cell is showing.
+ */
+- (void)didPressFavoritesButton:(JSCPost *)post;
+
+/**
+ User pressed on the comments button.
+ 
+ @parameter post - post cell is showing.
+ */
+- (void)didPressCommentsButton:(JSCPost *)post;
+
+@end
+
 @interface JSCPostTableViewCell : UITableViewCell
 
 /**
@@ -23,5 +41,10 @@
  @param post -
  */
 - (void)updateWithPost:(JSCPost *)post;
+
+/**
+ Delegate of the protocol JSCPostTableViewCellDelegate.
+ */
+@property (nonatomic, weak) id<JSCPostTableViewCellDelegate> delegate;
 
 @end

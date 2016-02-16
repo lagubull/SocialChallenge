@@ -22,7 +22,10 @@ static const CGFloat JSCMarginConstraint = 10.0f;
 
 @interface JSCPostTableViewCell ()
 
-@property (nonatomic, strong)JSCPost *post;
+/**
+ Post shown in the cell.
+*/
+@property (nonatomic, strong) JSCPost *post;
 
 /**
  View on which the content is located, we need it to be on top of the edit options.
@@ -45,14 +48,14 @@ static const CGFloat JSCMarginConstraint = 10.0f;
 @property (nonatomic, strong) UILabel *authorLabel;
 
 /**
- Button for favourites.
+ Button for favorites.
  */
-@property (nonatomic, strong) UIButton *favouritesButton;
+@property (nonatomic, strong) UIButton *favoritesButton;
 
 /**
  Shows the number of times post was made favourtie.
  */
-@property (nonatomic, strong) UILabel *favouritesCountLabel;
+@property (nonatomic, strong) UILabel *favoritesCountLabel;
 
 /**
  Button for comments.
@@ -91,8 +94,8 @@ static const CGFloat JSCMarginConstraint = 10.0f;
         [self.baseContentView addSubview:self.contentLabel];
         [self.baseContentView addSubview:self.avatar];
         [self.baseContentView addSubview:self.authorLabel];
-        [self.baseContentView addSubview:self.favouritesButton];
-        [self.baseContentView addSubview:self.favouritesCountLabel];
+        [self.baseContentView addSubview:self.favoritesButton];
+        [self.baseContentView addSubview:self.favoritesCountLabel];
         [self.baseContentView addSubview:self.commentsButton];
         [self.baseContentView addSubview:self.commentsCountLabel];
         
@@ -165,35 +168,35 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     return _authorLabel;
 }
 
-- (UIButton *)favouritesButton
+- (UIButton *)favoritesButton
 {
-    if (!_favouritesButton)
+    if (!_favoritesButton)
     {
-        _favouritesButton = [UIButton newAutoLayoutView];
+        _favoritesButton = [UIButton newAutoLayoutView];
         
-        [_favouritesButton setImage:[UIImage imageNamed:@"favouritesIcon"]
+        [_favoritesButton setImage:[UIImage imageNamed:@"favoritesIcon"]
                            forState:UIControlStateNormal];
         
-        [_favouritesButton addTarget:self
-                              action:@selector(didPressOnFavaourtiesButton)
+        [_favoritesButton addTarget:self
+                              action:@selector(favoritesButtonPressed)
                     forControlEvents:UIControlEventTouchUpInside];
     }
     
-    return _favouritesButton;
+    return _favoritesButton;
 }
 
-- (UILabel *)favouritesCountLabel
+- (UILabel *)favoritesCountLabel
 {
-    if (!_favouritesCountLabel)
+    if (!_favoritesCountLabel)
     {
-        _favouritesCountLabel = [UILabel newAutoLayoutView];
+        _favoritesCountLabel = [UILabel newAutoLayoutView];
         
-        _favouritesCountLabel.backgroundColor = [UIColor clearColor];
-        _favouritesCountLabel.textColor = [UIColor blackColor];
-        _favouritesCountLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+        _favoritesCountLabel.backgroundColor = [UIColor clearColor];
+        _favoritesCountLabel.textColor = [UIColor blackColor];
+        _favoritesCountLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     }
     
-    return _favouritesCountLabel;
+    return _favoritesCountLabel;
 }
 
 - (UIButton *)commentsButton
@@ -206,7 +209,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
                            forState:UIControlStateNormal];
         
         [_commentsButton addTarget:self
-                              action:@selector(didPressOnCommentsButton)
+                              action:@selector(commentsButtonPressed)
                     forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -304,24 +307,24 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     
     /*------------------*/
     
-    [self.favouritesCountLabel autoPinEdge:ALEdgeRight
+    [self.favoritesCountLabel autoPinEdge:ALEdgeRight
                                  toEdge:ALEdgeLeft
                                  ofView:self.commentsButton
                              withOffset:-JSCMarginConstraint];
     
-    [self.favouritesCountLabel autoPinEdge:ALEdgeTop
+    [self.favoritesCountLabel autoPinEdge:ALEdgeTop
                                 toEdge:ALEdgeTop
                                 ofView:self.avatar
                             withOffset:JSCBottomConstraint];
     
     /*------------------*/
     
-    [self.favouritesButton autoPinEdge:ALEdgeRight
+    [self.favoritesButton autoPinEdge:ALEdgeRight
                                 toEdge:ALEdgeLeft
-                                ofView:self.favouritesCountLabel
+                                ofView:self.favoritesCountLabel
                             withOffset:-5.0f];
     
-    [self.favouritesButton autoPinEdge:ALEdgeTop
+    [self.favoritesButton autoPinEdge:ALEdgeTop
                                 toEdge:ALEdgeTop
                                 ofView:self.avatar
                             withOffset:JSCBottomConstraint];
@@ -334,14 +337,14 @@ static const CGFloat JSCMarginConstraint = 10.0f;
 
 #pragma mark - ButtonActions
 
-- (void)didPressOnFavaourtiesButton
+- (void)favoritesButtonPressed
 {
-    
+    [self.delegate didPressFavoritesButton:self.post];
 }
 
-- (void)didPressOnCommentsButton
+- (void)commentsButtonPressed
 {
-    
+    [self.delegate didPressCommentsButton:self.post];
 }
 
 #pragma mark - UpdateWithPost
@@ -357,7 +360,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     
     self.authorLabel.text = post.userName;
     
-    self.favouritesCountLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
+    self.favoritesCountLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
     
     self.commentsCountLabel.text = [NSString stringWithFormat:@"%@", post.commentCount];
 }

@@ -14,7 +14,7 @@
 @interface NSDateFormatter (JSCDateFormatter)
 
 /**
- Convinient method to create a date formatter per thread.
+ Convenient method to create a date formatter per thread.
  
  @return NSDateFormmater of the thread we are on.
  */
