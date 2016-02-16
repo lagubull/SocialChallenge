@@ -15,11 +15,8 @@
 		3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
 		3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */; };
 		3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */; };
-		3B37AFE31C5F50000055428D /* JSCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDA1C5F50000055428D /* JSCUser.m */; };
-		3B37AFE41C5F50000055428D /* JSCUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDC1C5F50000055428D /* JSCUser+CoreDataProperties.m */; };
 		3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDE1C5F50000055428D /* JSCPostPage.m */; };
 		3B37AFE61C5F50000055428D /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE01C5F50000055428D /* JSCPost.m */; };
-		3B37AFEA1C5F54700055428D /* JSCUserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE91C5F54700055428D /* JSCUserParser.m */; };
 		3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
@@ -70,16 +67,10 @@
 		3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPost+CoreDataProperties.m"; sourceTree = "<group>"; };
 		3B37AFD71C5F50000055428D /* JSCPostPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPostPage+CoreDataProperties.h"; sourceTree = "<group>"; };
 		3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPostPage+CoreDataProperties.m"; sourceTree = "<group>"; };
-		3B37AFD91C5F50000055428D /* JSCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCUser.h; sourceTree = "<group>"; };
-		3B37AFDA1C5F50000055428D /* JSCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCUser.m; sourceTree = "<group>"; };
-		3B37AFDB1C5F50000055428D /* JSCUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCUser+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3B37AFDC1C5F50000055428D /* JSCUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		3B37AFDD1C5F50000055428D /* JSCPostPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostPage.h; sourceTree = "<group>"; };
 		3B37AFDE1C5F50000055428D /* JSCPostPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostPage.m; sourceTree = "<group>"; };
 		3B37AFDF1C5F50000055428D /* JSCPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPost.h; sourceTree = "<group>"; };
 		3B37AFE01C5F50000055428D /* JSCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPost.m; sourceTree = "<group>"; };
-		3B37AFE81C5F54700055428D /* JSCUserParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCUserParser.h; sourceTree = "<group>"; };
-		3B37AFE91C5F54700055428D /* JSCUserParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCUserParser.m; sourceTree = "<group>"; };
 		3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JSCDateFormatter.h"; sourceTree = "<group>"; };
 		3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JSCDateFormatter.m"; sourceTree = "<group>"; };
 		3BC04A711B7386B700AB0B66 /* JSCCDSServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCCDSServiceManager.h; sourceTree = "<group>"; };
@@ -266,10 +257,6 @@
 				3B37AFDE1C5F50000055428D /* JSCPostPage.m */,
 				3B37AFD71C5F50000055428D /* JSCPostPage+CoreDataProperties.h */,
 				3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */,
-				3B37AFD91C5F50000055428D /* JSCUser.h */,
-				3B37AFDA1C5F50000055428D /* JSCUser.m */,
-				3B37AFDB1C5F50000055428D /* JSCUser+CoreDataProperties.h */,
-				3B37AFDC1C5F50000055428D /* JSCUser+CoreDataProperties.m */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -362,15 +349,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		3B37AFE71C5F54510055428D /* User */ = {
-			isa = PBXGroup;
-			children = (
-				3B37AFE81C5F54700055428D /* JSCUserParser.h */,
-				3B37AFE91C5F54700055428D /* JSCUserParser.m */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 		3B3FAA3D1C60B5950019D0D0 /* NSDateFormatter */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,7 +424,6 @@
 		3BD850D51B7F3A880077868E /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				3B37AFE71C5F54510055428D /* User */,
 				3BF13B061C5E371400B32627 /* Abstract */,
 				3BF13B051C5E359500B32627 /* PostPage */,
 				3BF13B041C5E358700B32627 /* Post */,
@@ -766,7 +743,6 @@
 			files = (
 				3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */,
 				3BF13B091C5E375300B32627 /* JSCParser.m in Sources */,
-				3B37AFEA1C5F54700055428D /* JSCUserParser.m in Sources */,
 				3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */,
 				3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
@@ -778,7 +754,6 @@
 				3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */,
 				3BD963421B76E067005365EF /* JSCCDSOperation.m in Sources */,
 				3B31118A1B6E110B008E374E /* main.m in Sources */,
-				3B37AFE41C5F50000055428D /* JSCUser+CoreDataProperties.m in Sources */,
 				3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */,
 				3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */,
 				3BD963391B76D382005365EF /* JSCFeedRequest.m in Sources */,
@@ -792,7 +767,6 @@
 				3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */,
 				3BF13B0F1C5E37B200B32627 /* JSCPostPageParser.m in Sources */,
 				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
-				3B37AFE31C5F50000055428D /* JSCUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,6 @@
 
 #import "JSCPost.h"
 #import "CDSServiceManager.h"
-#import "JSCUser.h"
-#import "JSCUserParser.h"
 #import "NSDateFormatter+JSCDateFormatter.h"
 #import "JSCPost+CoreDataProperties.h"
 

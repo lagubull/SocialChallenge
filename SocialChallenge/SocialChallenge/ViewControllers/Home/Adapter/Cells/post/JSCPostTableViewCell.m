@@ -9,7 +9,6 @@
 #import "JSCPostTableViewCell.h"
 
 #import "JSCPost.h"
-#import "JSCUser.h"
 
 /**
  Constant to indicate the distance to the lower margin
