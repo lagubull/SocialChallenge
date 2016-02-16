@@ -36,6 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)fetchPostWithID:(NSString *)postID;
 
+/**
+ Convenient method to shape the user's name into the desired format.
+ */
+- (NSString *)userName;
+
 @end
 
 NS_ASSUME_NONNULL_END

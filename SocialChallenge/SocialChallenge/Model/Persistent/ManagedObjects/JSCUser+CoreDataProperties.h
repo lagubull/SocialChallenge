@@ -19,16 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *firstName;
 @property (nullable, nonatomic, retain) NSString *lastName;
 @property (nullable, nonatomic, retain) NSString *avatarRemoteURL;
-@property (nullable, nonatomic, retain) NSSet<JSCPost *> *post;
-
-@end
-
-@interface JSCUser (CoreDataGeneratedAccessors)
-
-- (void)addPostObject:(JSCPost *)value;
-- (void)removePostObject:(JSCPost *)value;
-- (void)addPost:(NSSet<JSCPost *> *)values;
-- (void)removePost:(NSSet<JSCPost *> *)values;
 
 @end
 

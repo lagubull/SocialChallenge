@@ -20,8 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *commentCount;
 @property (nullable, nonatomic, retain) NSString *postID;
 @property (nullable, nonatomic, retain) JSCPostPage *page;
-@property (nullable, nonatomic, retain) JSCUser *user;
 @property (nullable, nonatomic, retain) NSString *content;
+@property (nullable, nonatomic, retain) NSString *userFirstName;
+@property (nullable, nonatomic, retain) NSString *userLastName;
+@property (nullable, nonatomic, retain) NSString *userAvatarRemoteURL;
 
 @end
 

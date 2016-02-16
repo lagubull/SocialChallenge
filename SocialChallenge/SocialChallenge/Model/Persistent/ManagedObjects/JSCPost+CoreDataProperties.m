@@ -18,7 +18,9 @@
 @dynamic commentCount;
 @dynamic postID;
 @dynamic page;
-@dynamic user;
 @dynamic content;
+@dynamic userFirstName;
+@dynamic userLastName;
+@dynamic userAvatarRemoteURL;
 
 @end

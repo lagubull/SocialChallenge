@@ -30,4 +30,12 @@
                managedObjectContext:[CDSServiceManager sharedInstance].mainManagedObjectContext];
 }
 
+#pragma mark - UserName
+
+- (NSString *)userName
+{
+    return [NSString stringWithFormat:@"%@ %@.", self.userFirstName, [self.userLastName substringWithRange:NSMakeRange(0,
+                                                                                                               1)]];
+}
+
 @end

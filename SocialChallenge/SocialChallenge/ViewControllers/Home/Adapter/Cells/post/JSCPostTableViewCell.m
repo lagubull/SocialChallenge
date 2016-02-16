@@ -11,9 +11,15 @@
 #import "JSCPost.h"
 #import "JSCUser.h"
 
-static const CGFloat JSCBottomConstraint = 6.0f;
+/**
+ Constant to indicate the distance to the lower margin
+ */
+static const CGFloat JSCBottomConstraint = 8.0f;
 
-static const CGFloat JSCMarginConstraint = 5.0f;
+/**
+ Constant to inidicate the margin between components and sides
+ */
+static const CGFloat JSCMarginConstraint = 10.0f;
 
 @interface JSCPostTableViewCell ()
 
@@ -138,6 +144,9 @@ static const CGFloat JSCMarginConstraint = 5.0f;
     if (!_avatar)
     {
         _avatar = [UIImageView newAutoLayoutView];
+        
+        _avatar.contentMode = UIViewContentModeScaleToFill;
+        _avatar.clipsToBounds = YES;
     }
     
     return _avatar;
@@ -182,7 +191,7 @@ static const CGFloat JSCMarginConstraint = 5.0f;
         
         _favouritesCountLabel.backgroundColor = [UIColor clearColor];
         _favouritesCountLabel.textColor = [UIColor blackColor];
-        _favouritesCountLabel.font = [UIFont boldSystemFontOfSize:9.0f];
+        _favouritesCountLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     }
     
     return _favouritesCountLabel;
@@ -213,7 +222,7 @@ static const CGFloat JSCMarginConstraint = 5.0f;
         
         _commentsCountLabel.backgroundColor = [UIColor clearColor];
         _commentsCountLabel.textColor = [UIColor blackColor];
-        _commentsCountLabel.font = [UIFont boldSystemFontOfSize:9.0f];
+        _commentsCountLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     }
     
     return _commentsCountLabel;
@@ -241,10 +250,10 @@ static const CGFloat JSCMarginConstraint = 5.0f;
     [self.contentLabel autoPinEdgeToSuperviewEdge:ALEdgeTop];
     
     [self.contentLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft
-                                        withInset:10.0f];
+                                        withInset:JSCMarginConstraint];
     
     [self.contentLabel autoPinEdgeToSuperviewEdge:ALEdgeRight
-                                        withInset:10.0f];
+                                        withInset:JSCMarginConstraint];
     
     [self.contentLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom
                                         withInset:58.0f];
@@ -252,52 +261,38 @@ static const CGFloat JSCMarginConstraint = 5.0f;
     /*------------------*/
     
     [self.avatar autoPinEdgeToSuperviewEdge:ALEdgeBottom
-                                  withInset:4.0f];
+                                  withInset:15.0f];
 
     [self.avatar autoPinEdgeToSuperviewEdge:ALEdgeLeft
                                   withInset:JSCMarginConstraint];
     
-    [self.avatar autoPinEdge:ALEdgeTop
-                      toEdge:ALEdgeBottom
-                      ofView:self.contentLabel
-                  withOffset:10.0f];
-    
-    [self.avatar autoSetDimensionsToSize:CGSizeMake(44.0f,
-                                                    44.0f)];
+    [self.avatar autoSetDimensionsToSize:CGSizeMake(25.0f,
+                                                    25.0f)];
     
     /*------------------*/
-    
-    [self.authorLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom
-                                  withInset:JSCBottomConstraint];
     
     [self.authorLabel autoPinEdge:ALEdgeTop
                       toEdge:ALEdgeTop
                       ofView:self.avatar
-                  withOffset:4.0f];
+                  withOffset:JSCBottomConstraint];
     
     [self.authorLabel autoPinEdge:ALEdgeLeft
                            toEdge:ALEdgeRight
                            ofView:self.avatar
-                       withOffset:4.0f];
+                       withOffset:6.0f];
     
     /*------------------*/
 
-    [self.commentsCountLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom
-                                       withInset:JSCBottomConstraint];
-    
     [self.commentsCountLabel autoPinEdgeToSuperviewEdge:ALEdgeRight
                                                 withInset:JSCMarginConstraint];
     
     [self.commentsCountLabel autoPinEdge:ALEdgeTop
                            toEdge:ALEdgeTop
                            ofView:self.avatar
-                       withOffset:4.0f];
+                       withOffset:JSCBottomConstraint];
     
     /*------------------*/
-    
-    [self.commentsButton autoPinEdgeToSuperviewEdge:ALEdgeBottom
-                                                withInset:JSCBottomConstraint];
-    
+
     [self.commentsButton autoPinEdge:ALEdgeRight
                               toEdge:ALEdgeLeft
                               ofView:self.commentsCountLabel
@@ -306,12 +301,9 @@ static const CGFloat JSCMarginConstraint = 5.0f;
     [self.commentsButton autoPinEdge:ALEdgeTop
                                     toEdge:ALEdgeTop
                                     ofView:self.avatar
-                                withOffset:4.0f];
+                                withOffset:JSCBottomConstraint];
     
     /*------------------*/
-    
-    [self.favouritesCountLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom
-                                            withInset:JSCBottomConstraint];
     
     [self.favouritesCountLabel autoPinEdge:ALEdgeRight
                                  toEdge:ALEdgeLeft
@@ -321,12 +313,9 @@ static const CGFloat JSCMarginConstraint = 5.0f;
     [self.favouritesCountLabel autoPinEdge:ALEdgeTop
                                 toEdge:ALEdgeTop
                                 ofView:self.avatar
-                            withOffset:4.0f];
+                            withOffset:JSCBottomConstraint];
     
     /*------------------*/
-    
-    [self.favouritesButton autoPinEdgeToSuperviewEdge:ALEdgeBottom
-                                            withInset:JSCBottomConstraint];
     
     [self.favouritesButton autoPinEdge:ALEdgeRight
                                 toEdge:ALEdgeLeft
@@ -336,7 +325,7 @@ static const CGFloat JSCMarginConstraint = 5.0f;
     [self.favouritesButton autoPinEdge:ALEdgeTop
                                 toEdge:ALEdgeTop
                                 ofView:self.avatar
-                            withOffset:4.0f];
+                            withOffset:JSCBottomConstraint];
 
     /*------------------*/
     
@@ -364,9 +353,10 @@ static const CGFloat JSCMarginConstraint = 5.0f;
     
     self.contentLabel.text = post.content;
     
-    self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:post.user.avatarRemoteURL]]];
+    //TODO:download media in a thread
+    //self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:post.userAvatarRemoteURL]]];
     
-    self.authorLabel.text = post.user.name;
+    self.authorLabel.text = post.userName;
     
     self.favouritesCountLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
     

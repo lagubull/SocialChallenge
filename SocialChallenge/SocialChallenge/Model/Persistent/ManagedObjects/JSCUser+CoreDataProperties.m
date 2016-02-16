@@ -17,6 +17,5 @@
 @dynamic firstName;
 @dynamic lastName;
 @dynamic avatarRemoteURL;
-@dynamic post;
 
 @end

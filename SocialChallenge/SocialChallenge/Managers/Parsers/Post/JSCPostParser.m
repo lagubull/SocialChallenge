@@ -65,12 +65,9 @@
         post.commentCount = JSCValueOrDefault(postDictionary[@"comment_count"],
                                               post.commentCount);
         
-        JSCUserParser *userParser = [JSCUserParser parser];
-        
-        JSCUser *user = [userParser parseUser:postDictionary[@"user"]];
-        
-        post.user = JSCValueOrDefault(user,
-                                      post.user);
+        post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[@"user"][@"avatar"], post.userAvatarRemoteURL);
+        post.userFirstName = JSCValueOrDefault(postDictionary[@"user"][@"first_name"], post.userFirstName);
+        post.userLastName = JSCValueOrDefault(postDictionary[@"user"][@"last_name"], post.userLastName);
     }
     
     return post;
