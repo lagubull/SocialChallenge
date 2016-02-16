@@ -8,8 +8,34 @@
 
 #import "JSCPost.h"
 
+#import "CDSServiceManager.h"
+#import "NSManagedObjectContext+CDSRetrieval.h"
+
 @implementation JSCPost
 
-@dynamic postId;
+#pragma mark - Post
+
++ (instancetype)fetchPostWithID:(NSString *)postID
+           managedObjectContext:(NSManagedObjectContext *)managedObjectContext
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"postID MATCHES %@", postID];
+    
+    return (JSCPost *)[managedObjectContext cds_retrieveFirstEntryForEntityClass:[JSCPost class]
+                                                                       predicate:predicate];
+}
+
++ (instancetype)fetchPostWithID:(NSString *)postID
+{
+    return [JSCPost fetchPostWithID:postID
+               managedObjectContext:[CDSServiceManager sharedInstance].mainManagedObjectContext];
+}
+
+#pragma mark - UserName
+
+- (NSString *)userName
+{
+    return [NSString stringWithFormat:@"%@ %@.", self.userFirstName, [self.userLastName substringWithRange:NSMakeRange(0,
+                                                                                                               1)]];
+}
 
 @end

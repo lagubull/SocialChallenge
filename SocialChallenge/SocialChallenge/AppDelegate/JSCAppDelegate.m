@@ -8,7 +8,7 @@
 
 #import "JSCAppDelegate.h"
 
-#import "JSCCDSServiceManager.h"
+#import "CDSServiceManager.h"
 #import "JSCOperationCoordinator.h"
 #import "NSOperationQueue+JSCOperationScheduler.h"
 #import "JSCWindow.h"
@@ -23,6 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[CDSServiceManager sharedInstance] setupModelURLWithModelName:@"SocialChallenge"];
+    
     NSOperationQueue *networkDataOperationQueue = [[NSOperationQueue alloc] init];
     
     [[JSCOperationCoordinator sharedInstance] registerScheduler:networkDataOperationQueue
@@ -62,7 +64,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    [[JSCCDSServiceManager sharedInstance] saveManagedObjectContext];
+    [[CDSServiceManager sharedInstance] saveMainManagedObjectContext];
 }
 
 #pragma mark - Window

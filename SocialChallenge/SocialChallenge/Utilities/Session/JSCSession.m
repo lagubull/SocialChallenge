@@ -22,7 +22,6 @@
         [configuration setHTTPMaximumConnectionsPerHost:1];
         
         session = [NSURLSession sessionWithConfiguration:configuration];
-        
     });
     
     return session;

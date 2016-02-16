@@ -8,7 +8,7 @@
 
 #import "JSCCDSOperation.h"
 
-#import "JSCCDSServiceManager.h"
+#import "CDSServiceManager.h"
 
 @interface JSCCDSOperation ()
 
@@ -21,48 +21,48 @@
 
 @implementation JSCCDSOperation
 
-#pragma mark - ManagedObjectContext
-
-- (NSManagedObjectContext *)localManagedObjectContext
-{
-    if (!_localManagedObjectContext)
-    {
-        _localManagedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSConfinementConcurrencyType];
-        [_localManagedObjectContext setParentContext:[JSCCDSServiceManager sharedInstance].managedObjectContext];
-        
-        [_localManagedObjectContext setUndoManager:nil];
-        [_localManagedObjectContext setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
-    }
-    
-    return _localManagedObjectContext;
-}
-
 #pragma mark - Save
 
 - (void)saveLocalContextChangesToMainContext:(id)result
 {
-    NSError *localManagedObjectContentSaveError = nil;
-    
-    if (![self.localManagedObjectContext save:&localManagedObjectContentSaveError])
-    {
-        NSLog(@"Error to saving local context: %@", [localManagedObjectContentSaveError userInfo]);
-        
-        [self didFailWithError:localManagedObjectContentSaveError];
-    }
-    else
-    {
-        /*
-         Coredata will delay cascading deletes for performance
-         so we force them to happen.
-         */
-        [self.localManagedObjectContext processPendingChanges];
-        [self didSucceedWithResult:result];
-    }
+    [[CDSServiceManager sharedInstance].backgroundManagedObjectContext performBlockAndWait:^
+     {
+         NSError *localManagedObjectContentSaveError = nil;
+         
+         if (![[CDSServiceManager sharedInstance].backgroundManagedObjectContext save:&localManagedObjectContentSaveError])
+         {
+             NSLog(@"Error to saving local context: %@", [localManagedObjectContentSaveError userInfo]);
+             
+             [self didFailWithError:localManagedObjectContentSaveError];
+         }
+         else
+         {
+             /*
+              Coredata will delay cascading deletes for performance
+              so we force them to happen.
+              */
+             [[CDSServiceManager sharedInstance].backgroundManagedObjectContext processPendingChanges];
+             
+             [[CDSServiceManager sharedInstance].mainManagedObjectContext performBlockAndWait:^
+              {
+                  [[CDSServiceManager sharedInstance].mainManagedObjectContext save:nil];
+              }];
+             
+             if ([result isKindOfClass:[NSError class]])
+             {
+                 [self didFailWithError:result];
+             }
+             else
+             {
+                 [self didSucceedWithResult:result];
+             }
+         }
+     }];
 }
 
 - (void)saveContextAndFinishWithResult:(id)result
 {
-    BOOL hasChanges = self.localManagedObjectContext.hasChanges;
+    BOOL hasChanges = [CDSServiceManager sharedInstance].backgroundManagedObjectContext.hasChanges;
     
     if (hasChanges)
     {
@@ -70,7 +70,14 @@
     }
     else
     {
-        [self didSucceedWithResult:result];
+        if ([result isKindOfClass:[NSError class]])
+        {
+            [self didFailWithError:result];
+        }
+        else
+        {
+            [self didSucceedWithResult:result];
+        }
     }
 }
 

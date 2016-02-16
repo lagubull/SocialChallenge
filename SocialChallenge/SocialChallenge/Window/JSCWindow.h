@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class FSNSplashViewController;
-
 @interface JSCWindow : UIWindow
 
+/**
+ View controller to show when the app starts up.
+ */
 @property (nonatomic, strong) UIViewController *splashViewController;
 
 /**
