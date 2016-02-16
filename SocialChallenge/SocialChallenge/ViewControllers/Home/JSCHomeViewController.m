@@ -54,7 +54,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
                                                                    self.view.bounds.size.width,
                                                                    self.view.bounds.size.height - kJSCNavigationBarHeight)];
         
-        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.backgroundColor = [UIColor lightGrayColor];
         
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.allowsSelection = NO;

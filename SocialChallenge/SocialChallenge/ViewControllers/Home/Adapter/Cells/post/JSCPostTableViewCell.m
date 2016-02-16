@@ -85,7 +85,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     
     if (self)
     {
-        self.contentView.backgroundColor = [UIColor lightGrayColor];
+        self.backgroundColor = [UIColor lightGrayColor];
         
         [self.contentView addSubview:self.baseContentView];
         
