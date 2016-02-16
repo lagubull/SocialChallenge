@@ -10,4 +10,4 @@ before_script:
 osx_image: xcode7.2
 
 script:    
-    xctool -workspace ./SocialChallenge/SocialChallenge.xcworkspace -scheme SocialChallenge build -sdk iphonesimulator
+    xctool -workspace SocialChallenge.xcworkspace -scheme SocialChallenge build -sdk iphonesimulator
