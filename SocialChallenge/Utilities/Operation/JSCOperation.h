@@ -10,22 +10,52 @@
 
 typedef void (^JSCOperationOnSuccessCallback)(id result);
 
+typedef void (^JSCOperationOnCompletionCallback)(id result);
+
 typedef void (^JSCOperationOnFailureCallback)(NSError *error);
 
 @interface JSCOperation : NSOperation <NSCoding, NSCopying>
 
+/**
+ Identifies the operation.
+ */
 @property (atomic, copy) NSString *identifier;
 
+/**
+ Identifies the scheduler for the operation.
+ */
 @property (atomic, copy) NSString *targetSchedulerIdentifier;
 
+/**
+ Callback called when the operation completes successfully.
+ */
 @property (nonatomic, copy) JSCOperationOnSuccessCallback onSuccess;
 
+/**
+ Callback called when the operation completes with an error.
+ */
 @property (nonatomic, copy) JSCOperationOnFailureCallback onFailure;
 
+/**
+ Callback called when the operation completes.
+ 
+ The completion block is used instead of the success/failure blocks not alongside.
+ */
+@property (nonatomic, copy) JSCOperationOnCompletionCallback onCompletion;
+
+/**
+ The result of the operation.
+ */
 @property (nonatomic, strong, readonly) id result;
 
+/**
+ The error of the operation.
+ */
 @property (nonatomic, strong, readonly) NSError *error;
 
+/**
+ Progress object used to indicate the progress of the operation.
+ */
 @property (nonatomic, strong, readonly) NSProgress *progress;
 
 /**
