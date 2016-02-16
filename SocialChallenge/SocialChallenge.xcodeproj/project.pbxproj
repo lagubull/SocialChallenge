@@ -73,8 +73,6 @@
 		3B37AFE01C5F50000055428D /* JSCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPost.m; sourceTree = "<group>"; };
 		3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JSCDateFormatter.h"; sourceTree = "<group>"; };
 		3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JSCDateFormatter.m"; sourceTree = "<group>"; };
-		3BC04A711B7386B700AB0B66 /* JSCCDSServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCCDSServiceManager.h; sourceTree = "<group>"; };
-		3BC04A721B7386B700AB0B66 /* JSCCDSServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCCDSServiceManager.m; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
 		3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeAdapter.m; sourceTree = "<group>"; };
 		3BD281E61B6F8ACF0097B452 /* JSCPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostTableViewCell.h; sourceTree = "<group>"; };
@@ -362,8 +360,6 @@
 			isa = PBXGroup;
 			children = (
 				3BD9633E1B76E030005365EF /* Operation */,
-				3BC04A711B7386B700AB0B66 /* JSCCDSServiceManager.h */,
-				3BC04A721B7386B700AB0B66 /* JSCCDSServiceManager.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
