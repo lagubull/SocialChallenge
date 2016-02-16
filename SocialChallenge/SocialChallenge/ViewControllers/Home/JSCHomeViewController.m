@@ -24,12 +24,21 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
 #pragma mark - Lifecycle
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor redColor];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
     self.adapter.tableView = self.tableView;
     self.adapter.delegate = self;
+    
+    [self.view addSubview:self.tableView];
     
     [self.adapter refresh];
 }
@@ -45,10 +54,10 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
                                                                    self.view.bounds.size.width,
                                                                    self.view.bounds.size.height - kJSCNavigationBarHeight)];
         
-        _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.backgroundColor = [UIColor lightGrayColor];
         
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
+        _tableView.allowsSelection = NO;
     }
     
     return _tableView;

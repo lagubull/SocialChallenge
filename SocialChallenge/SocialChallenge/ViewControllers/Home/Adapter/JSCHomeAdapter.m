@@ -8,8 +8,10 @@
 
 #import "JSCHomeAdapter.h"
 
-#import "JSCCDSServiceManager.h"
 #import "JSCPost.h"
+#import "JSCFeedAPIManager.h"
+#import "CDSServiceManager.h"
+#import "JSCPostTableViewCell.h"
 
 @interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate>
 
@@ -27,18 +29,37 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+    [self.tableView registerClass:[JSCPostTableViewCell class]
+           forCellReuseIdentifier:[JSCPostTableViewCell reuseIdentifier]];
 }
 
 #pragma mark - JSCHomeAdapterDelegate
 
 - (void)refresh
 {
-    //Fetch content
+    [JSCFeedAPIManager retrieveFeedWithMode:JSCDataRetrievalOperationModeFirstPage
+                                    Success:^(id result)
+     {
+         //TODO: success block
+     }
+                                    failure:^(NSError *error)
+     {
+         //TODO: failure block
+     }];
 }
 
 - (void)paginate
 {
-    //fetch next page
+    [JSCFeedAPIManager retrieveFeedWithMode:JSCDataRetrievalOperationModeNextPage
+                                    Success:^(id result)
+     {
+         //TODO: success block
+     }
+                                    failure:^(NSError *error)
+     {
+         //TODO: failure block
+     }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -52,10 +73,34 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    JSCPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[JSCPostTableViewCell reuseIdentifier]
+                                                                         forIndexPath:indexPath];
+    
+    [self configureCell:cell
+           forIndexPath:indexPath];
+    
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 220.0f;
+}
+
+#pragma mark - CDSTableViewFetchedResultsControllerDataDelegate
+
+- (void)didUpdateContent
+{
+    
+}
+
+- (void)didUpdateItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self configureCell:[self.tableView cellForRowAtIndexPath:indexPath]
+           forIndexPath:indexPath];
+}
 
 #pragma mark - FetchResultsController
 
@@ -64,7 +109,7 @@
     if (!_fetchedResultsController)
     {
         _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:self.fetchRequest
-                                                                        managedObjectContext:[[JSCCDSServiceManager sharedInstance] managedObjectContext]
+                                                                        managedObjectContext:[[CDSServiceManager sharedInstance] mainManagedObjectContext]
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
         
@@ -79,7 +124,7 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
     fetchRequest.entity = [NSEntityDescription entityForName:NSStringFromClass([JSCPost class])
-                                      inManagedObjectContext:[[JSCCDSServiceManager sharedInstance] managedObjectContext]];
+                                      inManagedObjectContext:[[CDSServiceManager sharedInstance] mainManagedObjectContext]];
     
     fetchRequest.predicate = self.predicateForFetchRequest;
     fetchRequest.sortDescriptors = self.sortDescriptorsForFetchRequest;
@@ -94,10 +139,24 @@
 
 - (NSArray *)sortDescriptorsForFetchRequest
 {
-    NSSortDescriptor *postIdSort = [NSSortDescriptor sortDescriptorWithKey:@"postId"
+    NSSortDescriptor *postIdSort = [NSSortDescriptor sortDescriptorWithKey:@"postID"
                                                                  ascending:YES];
     
     return @[postIdSort];
 }
+
+#pragma mark - CellSetup
+
+- (void)configureCell:(JSCPostTableViewCell *)cell
+         forIndexPath:(NSIndexPath *)indexPath
+{
+    JSCPost *post = self.fetchedResultsController.fetchedObjects[indexPath.row];
+    
+//    cell.delegate = self;
+
+    
+    [cell updateWithPost:post];
+}
+
 
 @end
