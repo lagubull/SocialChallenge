@@ -12,6 +12,7 @@ xcuserdata
 DerivedData
 *.hmap
 *.ipa
+SocialChallenge.xcworkspace/
 
 # CocoaPods
 Pods/
