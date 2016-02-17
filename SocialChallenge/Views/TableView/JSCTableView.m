@@ -46,7 +46,6 @@ static NSUInteger const kJSCPaginationOffset = 5;
     return cell;
 }
 
-
 #pragma mark - Pagination
 
 - (void)willPaginate
