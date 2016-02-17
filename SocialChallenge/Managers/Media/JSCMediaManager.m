@@ -10,6 +10,8 @@
 
 #import "JSCPost.h"
 #import "JSCLocalImageAssetRetrievalOperation.h"
+#import "JSCSession.h"
+#import "JSCMediaStorageOperation.h"
 
 @implementation JSCMediaManager
 
@@ -20,7 +22,7 @@
 {
     if (post.userAvatarRemoteURL)
     {
-        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] init];
+        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postID];
         
         operation.onCompletion = ^(UIImage *imageMedia)
         {
@@ -38,9 +40,25 @@
                     retrievalRequired(post);
                 }
                 
-                //ScheduleTask
-                //crear task success
-                //crear task failure
+                [JSCSession scheduleDownloadFromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
+                                    completionBlock:^(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error)
+                {
+                    if (error)
+                    {
+                        if (failure)
+                        {
+                            failure(error);
+                        }
+                    }
+                    else
+                    {
+                        JSCMediaStorageOperation *storageOperation = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
+                                                                                                             location:location];
+                        
+                        storageOperation.onSuccess = success;
+                        storageOperation.onFailure = failure;
+                    }
+                }];
             }
         };
     }

@@ -9,6 +9,7 @@
 #import "JSCPostTableViewCell.h"
 
 #import "JSCPost.h"
+#import "JSCMediaManager.h"
 
 /**
  Constant to indicate the distance to the lower margin
@@ -355,8 +356,18 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     
     self.contentLabel.text = post.content;
     
-    //TODO:download media in a thread
-    //self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:post.userAvatarRemoteURL]]];
+    __weak typeof (self) weakSelf = self;
+    
+    [JSCMediaManager retrieveMediaForPost:post
+                        retrievalRequired:nil
+                                  Success:^(id result)
+     {
+         weakSelf.avatar.image = result;
+     }
+                                  failure:^(NSError *error)
+     {
+         NSLog(@"ERROR: %@",error);
+     }];
     
     self.authorLabel.text = post.userName;
     

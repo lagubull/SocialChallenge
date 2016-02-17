@@ -136,6 +136,12 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
     if (error &&
         error.code != kCancelled)
     {
+        if (self.inProgressDownload.task.taskIdentifier == task.taskIdentifier &&
+            self.inProgressDownload.completionHandler)
+        {
+            self.inProgressDownload.completionHandler(self.inProgressDownload, nil, error);
+        }
+
         //  Handle error
         NSLog(@"task: %@ Error: %@", @(task.taskIdentifier), error);
         [JSCSession resumeDownloads];

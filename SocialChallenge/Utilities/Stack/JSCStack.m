@@ -10,9 +10,15 @@
 
 @interface JSCStack ()
 
+/**
+ Number of items in the stack.
+ */
 @property (nonatomic, assign, readwrite) NSInteger count;
 
-@property (nonatomic, strong) NSMutableArray* objectsArray;
+/**
+ Items in the stack.
+ */
+@property (nonatomic, strong, readwrite) NSMutableArray* objectsArray;
 
 @end
 

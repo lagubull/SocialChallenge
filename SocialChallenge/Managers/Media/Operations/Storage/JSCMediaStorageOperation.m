@@ -1,39 +1,44 @@
 //
-//  JSCLocalImageAssetRetrievalOperation.m
+//  JSCMediaStorageOperation.m
 //  SocialChallenge
 //
-//  Created by Javier Laguna on 16/02/2016.
+//  Created by Javier Laguna on 17/02/2016.
 //
 //
 
-#import "JSCLocalImageAssetRetrievalOperation.h"
+#import "JSCMediaStorageOperation.h"
 
-#import "CDSServiceManager.h"
-#import "JSCPost.h"
 #import "JSCFileManager.h"
 
-@interface JSCLocalImageAssetRetrievalOperation ()
+@interface JSCMediaStorageOperation ()
 
 /**
  ID of the post the media is related to.
  */
 @property (nonatomic, copy) NSString *postID;
 
+/**
+ Indicates where the object has been stored by default.
+ */
+@property (nonatomic, strong) NSURL *location;;
+
 @end
 
-@implementation JSCLocalImageAssetRetrievalOperation
+@implementation JSCMediaStorageOperation
 
 @synthesize identifier = _identifier;
 
 #pragma mark - Init
 
-- (instancetype)initWithPostID:(NSString *)postID;
+- (instancetype)initWithPostID:(NSString *)postID
+                      location:(NSURL *)location;
 {
     self = [super init];
     
     if (self)
     {
         self.postID = postID;
+        self.location = location;
     }
     
     return self;
@@ -45,7 +50,7 @@
 {
     if (!_identifier)
     {
-        _identifier = [NSString stringWithFormat:@"retrieveLocalImageAssetForPostID %@", self.postID];
+        _identifier = [NSString stringWithFormat:@"storeLocalImageAssetForPostID %@", self.postID];
     }
     
     return _identifier;
@@ -60,6 +65,7 @@
     if (self)
     {
         self.postID = [decoder decodeObjectForKey:NSStringFromSelector(@selector(postID))];
+        self.location = [decoder decodeObjectForKey:NSStringFromSelector(@selector(location))];
     }
     
     return self;
@@ -68,7 +74,10 @@
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
     [encoder encodeObject:self.postID
-                    forKey:NSStringFromSelector(@selector(postID))];
+                   forKey:NSStringFromSelector(@selector(postID))];
+    
+    [encoder encodeObject:self.location
+                   forKey:NSStringFromSelector(@selector(location))];
 }
 
 #pragma mark - Start
@@ -77,15 +86,10 @@
 {
     [super start];
     
-    UIImage *imageFromDisk = nil;
-    
-    NSData *imageData = [JSCFileManager retrieveDataFromDocumentsDirectoryWithPath:self.postID];
-    
-    if (imageData)
+    if ([JSCFileManager moveFileFromSourcePath:[self.location absoluteString]
+                             toDestinationPath:self.postID])
     {
-        imageFromDisk = [UIImage imageWithData:imageData];
-        
-        [self didSucceedWithResult:imageFromDisk];
+        [self didSucceedWithResult:nil];
     }
     else
     {

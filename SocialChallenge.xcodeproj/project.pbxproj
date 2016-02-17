@@ -13,6 +13,8 @@
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
 		3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
+		3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */; };
+		3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
 		3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */; };
 		3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */; };
 		3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDE1C5F50000055428D /* JSCPostPage.m */; };
@@ -67,6 +69,10 @@
 		3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B3111CF1B6E171F008E374E /* JSCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeViewController.h; sourceTree = "<group>"; };
 		3B3111D01B6E171F008E374E /* JSCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeViewController.m; sourceTree = "<group>"; };
+		3B37819C1C74756100D12BB3 /* JSCMediaStorageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCMediaStorageOperation.h; sourceTree = "<group>"; };
+		3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaStorageOperation.m; sourceTree = "<group>"; };
+		3B3781A01C748DB300D12BB3 /* JSCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFileManager.h; sourceTree = "<group>"; };
+		3B3781A11C748DB300D12BB3 /* JSCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFileManager.m; sourceTree = "<group>"; };
 		3B37AFD51C5F50000055428D /* JSCPost+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPost+CoreDataProperties.h"; sourceTree = "<group>"; };
 		3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPost+CoreDataProperties.m"; sourceTree = "<group>"; };
 		3B37AFD71C5F50000055428D /* JSCPostPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPostPage+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -231,6 +237,7 @@
 		3B3111B51B6E127D008E374E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				3B37819F1C748D9300D12BB3 /* FIleManager */,
 				3B3EF64E1C7395F700223E5A /* Media */,
 				3BD850D71B7F3BC50077868E /* JSON */,
 				3BD850D51B7F3A880077868E /* Parsers */,
@@ -362,6 +369,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3B37819B1C74753400D12BB3 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3B37819C1C74756100D12BB3 /* JSCMediaStorageOperation.h */,
+				3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		3B37819F1C748D9300D12BB3 /* FIleManager */ = {
+			isa = PBXGroup;
+			children = (
+				3B3781A01C748DB300D12BB3 /* JSCFileManager.h */,
+				3B3781A11C748DB300D12BB3 /* JSCFileManager.m */,
+			);
+			name = FIleManager;
+			path = FileManager;
+			sourceTree = "<group>";
+		};
 		3B3EF64E1C7395F700223E5A /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +401,7 @@
 		3B3EF6521C7398B300223E5A /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				3B37819B1C74753400D12BB3 /* Storage */,
 				3B3EF6561C73990600223E5A /* LocalRetrieval */,
 			);
 			path = Operations;
@@ -803,6 +830,7 @@
 				3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */,
 				3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
+				3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */,
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
 				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
 				3BF13B0C1C5E379F00B32627 /* JSCPostParser.m in Sources */,
@@ -818,6 +846,7 @@
 				3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */,
 				3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */,
 				3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */,
+				3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */,
 				3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */,
 				3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */,
 				3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */,
