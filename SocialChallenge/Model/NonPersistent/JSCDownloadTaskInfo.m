@@ -20,7 +20,7 @@
 
 - (instancetype)initWithDownloadID:(NSString *)downloadId
                                URL:(NSURL *)url
-                   completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler
+                   completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error))completionHandler
 {
     self = [super init];
     

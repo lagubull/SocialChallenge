@@ -64,7 +64,7 @@
  */
 + (void)scheduleDownloadWithID:(NSString *)downloadID
                        fromURL:(NSURL *)url
-                completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler;
+                completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error))completionHandler;
 
 /**
  Stops the current download and adds it to the stack, the it begins executing this new download.
@@ -74,7 +74,7 @@
  */
 + (void)forceDownloadWithID:(NSString *)downloadID
                     fromURL:(NSURL *)url
-             completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler;
+             completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error))completionHandler;
 
 /**
  Creates a download task to download the contents of the given URL.

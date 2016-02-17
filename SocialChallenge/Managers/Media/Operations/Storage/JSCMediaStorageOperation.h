@@ -19,6 +19,6 @@
  @return an instance of the class.
  */
 - (instancetype)initWithPostID:(NSString *)postID
-                      location:(NSURL *)location;
+                      data:(NSData *)data;
 
 @end

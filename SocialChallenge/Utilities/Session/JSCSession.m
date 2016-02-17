@@ -80,7 +80,7 @@ static NSInteger const kCancelled = -999;
 
 + (void)scheduleDownloadWithID:(NSString *)downloadID
                        fromURL:(NSURL *)url
-                completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler
+                completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error))completionHandler
 {
     JSCDownloadTaskInfo *task = [[JSCDownloadTaskInfo alloc] initWithDownloadID:downloadID
                                                                      URL:url
@@ -95,7 +95,7 @@ static NSInteger const kCancelled = -999;
 
 + (void)forceDownloadWithID:(NSString *)downloadID
                     fromURL:(NSURL *)url
-             completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler
+             completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error))completionHandler
 {
     [JSCSession pauseDownloads];
     
@@ -112,7 +112,9 @@ static NSInteger const kCancelled = -999;
     {
         if (self.inProgressDownload.completionHandler)
         {
-            self.inProgressDownload.completionHandler(self.inProgressDownload, location, nil);
+            NSData * data  = [NSData dataWithContentsOfFile:[location path]];
+            
+            self.inProgressDownload.completionHandler(self.inProgressDownload, data, location, nil);
         }
         
         self.inProgressDownload = nil;
@@ -142,7 +144,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
         if (self.inProgressDownload.task.taskIdentifier == task.taskIdentifier &&
             self.inProgressDownload.completionHandler)
         {
-            self.inProgressDownload.completionHandler(self.inProgressDownload, nil, error);
+            self.inProgressDownload.completionHandler(self.inProgressDownload, nil, nil, error);
         }
 
         //  Handle error

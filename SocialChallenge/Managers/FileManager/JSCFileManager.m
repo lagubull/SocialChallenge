@@ -44,11 +44,10 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
 
 + (BOOL)saveData:(NSData *)data toDocumentsDirectoryPath:(NSString *)path
 {
-    NSString *documentsDirectory = [self documentsDirectoryPath];
-    NSString *extendedPath = [documentsDirectory stringByAppendingPathComponent:path];
+    NSString *documentsDirectory = [self documentsDirectoryPathForResourceWithPath:path];
     
     return [self saveData:data
-                   toPath:extendedPath];
+                   toPath:documentsDirectory];
 }
 
 + (BOOL)saveData:(NSData *)data

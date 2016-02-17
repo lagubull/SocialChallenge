@@ -46,7 +46,7 @@
                 
                 [JSCSession forceDownloadWithID:post.postID
                                         fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
-                                completionBlock:^(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error)
+                                completionBlock:^(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error)
                  {
                      if (error)
                      {
@@ -57,45 +57,16 @@
                      }
                      else
                      {
-                         BOOL didMoveFile = [JSCFileManager moveFileFromSourcePath:[location path]
-                                                                 toDestinationPath:post.postID];
                          
-                         if (didMoveFile)
-                         {
-                             if (success)
-                             {
-                                 JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postID];
-                                 
-                                 operation.onCompletion = ^(UIImage *imageMedia)
-                                 {
-                                     if (imageMedia)
-                                     {
-                                         if (success)
-                                         {
-                                             success(imageMedia);
-                                         }
-                                     }
-                                     else
-                                     {
-                                         if (failure)
-                                         {
-                                             failure(nil);
-                                         }
-                                     }
-                                 };
-                                 
-                                 operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
-                                 
-                                 [[JSCOperationCoordinator sharedInstance] addOperation:operation];
-                             }
-                         }
-                         else
-                         {
-                             if (failure)
-                             {
-                                 failure(nil);
-                             }
-                         }
+                         JSCMediaStorageOperation *op = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
+                                                                                                    data:responseData];
+                         
+                         op.onSuccess = success;
+                         op.onFailure = failure;
+                         
+                         op.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
+                         
+                         [[JSCOperationCoordinator sharedInstance] addOperation:op];
                      }
                      
                  }];

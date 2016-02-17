@@ -20,7 +20,7 @@
 /**
  Indicates where the object has been stored by default.
  */
-@property (nonatomic, strong) NSURL *location;;
+@property (nonatomic, strong) NSData *data;;
 
 @end
 
@@ -31,14 +31,14 @@
 #pragma mark - Init
 
 - (instancetype)initWithPostID:(NSString *)postID
-                      location:(NSURL *)location;
+                          data:(NSData *)data
 {
     self = [super init];
     
     if (self)
     {
         self.postID = postID;
-        self.location = location;
+        self.data = data;
     }
     
     return self;
@@ -65,7 +65,7 @@
     if (self)
     {
         self.postID = [decoder decodeObjectForKey:NSStringFromSelector(@selector(postID))];
-        self.location = [decoder decodeObjectForKey:NSStringFromSelector(@selector(location))];
+        self.data = [decoder decodeObjectForKey:NSStringFromSelector(@selector(data))];
     }
     
     return self;
@@ -76,8 +76,8 @@
     [encoder encodeObject:self.postID
                    forKey:NSStringFromSelector(@selector(postID))];
     
-    [encoder encodeObject:self.location
-                   forKey:NSStringFromSelector(@selector(location))];
+    [encoder encodeObject:self.data
+                   forKey:NSStringFromSelector(@selector(data))];
 }
 
 #pragma mark - Start
@@ -86,10 +86,10 @@
 {
     [super start];
     
-    if ([JSCFileManager moveFileFromSourcePath:[self.location path]
-                             toDestinationPath:self.postID])
+    if ([JSCFileManager saveData:self.data
+        toDocumentsDirectoryPath:self.postID])
     {
-        [self didSucceedWithResult:nil];
+        [self didSucceedWithResult:[UIImage imageWithData:self.data]];
     }
     else
     {

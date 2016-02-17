@@ -53,7 +53,7 @@
 /**
  Block to be executed upon finishing.
  */
-@property (nonatomic, copy) void (^completionHandler)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error);
+@property (nonatomic, copy) void (^completionHandler)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error);
 
 /**
  Path to be downloaded.
@@ -71,7 +71,7 @@
  */
 - (instancetype)initWithDownloadID:(NSString *)dowloadId
                                URL:(NSURL *)url
-                   completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler;
+                   completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error))completionHandler;
 
 /**
  Stops the task and stores the progress.

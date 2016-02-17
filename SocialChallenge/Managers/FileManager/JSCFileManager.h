@@ -15,4 +15,6 @@
 + (BOOL)moveFileFromSourcePath:(NSString *)sourcePath
              toDestinationPath:(NSString *)destinationPath;
 
++ (BOOL)saveData:(NSData *)data toDocumentsDirectoryPath:(NSString *)path;
+
 @end
