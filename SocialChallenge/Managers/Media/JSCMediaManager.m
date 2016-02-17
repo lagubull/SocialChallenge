@@ -42,8 +42,9 @@
                     retrievalRequired(post);
                 }
                 
-                [JSCSession scheduleDownloadFromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
-                                    completionBlock:^(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error)
+                [JSCSession forceDownloadWithID:post.postID
+                                        fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
+                                completionBlock:^(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error)
                  {
                      if (error)
                      {

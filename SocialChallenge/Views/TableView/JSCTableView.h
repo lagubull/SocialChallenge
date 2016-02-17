@@ -31,8 +31,14 @@
  */
 @property (nonatomic, weak) id <JSCDataRetrievalTableViewDelegate> dataRetrievalDelegate;
 
+/**
+ Tells the tableview we are about to paginate.
+ */
 - (void)willPaginate;
 
+/**
+ Tells the tableview pagination has finished.
+ */
 - (void)didPaginate;
 
 @end

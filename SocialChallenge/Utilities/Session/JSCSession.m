@@ -78,10 +78,11 @@ static NSInteger const kCancelled = -999;
 
 #pragma mark - ScheduleDownload
 
-+ (void)scheduleDownloadFromURL:(NSURL *)url
++ (void)scheduleDownloadWithID:(NSString *)downloadID
+                       fromURL:(NSURL *)url
                 completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler
 {
-    JSCDownloadTaskInfo *task = [[JSCDownloadTaskInfo alloc] initWithFileTitle:[url absoluteString]
+    JSCDownloadTaskInfo *task = [[JSCDownloadTaskInfo alloc] initWithDownloadID:downloadID
                                                                      URL:url
                                                          completionBlock:completionHandler];
     
@@ -92,12 +93,14 @@ static NSInteger const kCancelled = -999;
 
 #pragma mark - ForceDownload
 
-+ (void)forceDownloadFromURL:(NSURL *)url
++ (void)forceDownloadWithID:(NSString *)downloadID
+                    fromURL:(NSURL *)url
              completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler
 {
     [JSCSession pauseDownloads];
     
-    [JSCSession scheduleDownloadFromURL:url
+    [JSCSession scheduleDownloadWithID:downloadID
+                               fromURL:url
                              completionBlock:completionHandler];
 }
 
@@ -143,7 +146,8 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
         }
 
         //  Handle error
-        NSLog(@"task: %@ Error: %@", @(task.taskIdentifier), error);
+        NSLog(@"task: %@ Error: %@", self.inProgressDownload.downloadId, error);
+        
         [JSCSession resumeDownloads];
     }
 }
@@ -171,7 +175,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
     {
         if ([JSCSession session].inProgressDownload.taskResumeData.length > 0)
         {
-            NSLog(@"Resuming task - %@", [JSCSession session].inProgressDownload.taskIdentifier);
+            NSLog(@"Resuming task - %@", [JSCSession session].inProgressDownload.downloadId);
             
             [JSCSession session].inProgressDownload.task = [[JSCSession session].session downloadTaskWithResumeData:[JSCSession session].inProgressDownload.taskResumeData];
         }
@@ -184,7 +188,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
             }
             else
             {
-                NSLog(@"Starting task - %@", [JSCSession session].inProgressDownload.taskIdentifier);
+                NSLog(@"Starting task - %@", [JSCSession session].inProgressDownload.downloadId);
             }
         }
         
@@ -201,7 +205,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
 {
     if ([JSCSession session].inProgressDownload)
     {
-        NSLog(@"Pausing task - %@", [JSCSession session].inProgressDownload.taskIdentifier);
+        NSLog(@"Pausing task - %@", [JSCSession session].inProgressDownload.downloadId);
         
         [[JSCSession session].inProgressDownload pause];
         

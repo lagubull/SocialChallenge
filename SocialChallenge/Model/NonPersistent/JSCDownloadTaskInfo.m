@@ -12,33 +12,27 @@
 
 @interface JSCDownloadTaskInfo ()
 
-/**
- Identifies the object.
- */
-@property (nonatomic, strong) NSString *title;
-
 @end
 
 @implementation JSCDownloadTaskInfo
 
 #pragma mark - Init
 
-- (instancetype)initWithFileTitle:(NSString *)title
-                              URL:(NSURL *)url
-                  completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler
+- (instancetype)initWithDownloadID:(NSString *)downloadId
+                               URL:(NSURL *)url
+                   completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler
 {
     self = [super init];
     
     if (self)
     {
         _task = [[JSCSession session] downloadTaskWithURL:url];
-        _title = title;
+        _downloadId = downloadId;
         _url = url;
         _downloadProgress = 0.0;
         _isDownloading = NO;
         _downloadComplete = NO;
         _completionHandler = completionHandler;
-        _taskIdentifier = [@(_task.taskIdentifier) stringValue];
     }
     
     return self;

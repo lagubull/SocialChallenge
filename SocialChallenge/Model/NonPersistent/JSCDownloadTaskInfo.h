@@ -16,6 +16,11 @@
 @interface JSCDownloadTaskInfo : NSObject
 
 /**
+ Identifies the object.
+ */
+@property (nonatomic, strong) NSString *downloadId;
+
+/**
  Data already downloaded.
  */
 @property (nonatomic, strong) NSData *taskResumeData;
@@ -64,9 +69,9 @@
  
  @return Instance of the class.
  */
-- (instancetype)initWithFileTitle:(NSString *)title
-                              URL:(NSURL *)url
-                  completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler;
+- (instancetype)initWithDownloadID:(NSString *)dowloadId
+                               URL:(NSURL *)url
+                   completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler;
 
 /**
  Stops the task and stores the progress.

@@ -52,7 +52,8 @@
  @param URL - path to download.
  @param completionBlock - to be executed when the task finishes.
  */
-+ (void)scheduleDownloadFromURL:(NSURL *)url
++ (void)scheduleDownloadWithID:(NSString *)downloadID
+                       fromURL:(NSURL *)url
                 completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler;
 
 /**
@@ -61,7 +62,8 @@
  @param URL - path to download.
  @param completionBlock - to be executed when the task finishes.
  */
-+ (void)forceDownloadFromURL:(NSURL *)url
++ (void)forceDownloadWithID:(NSString *)downloadID
+                    fromURL:(NSURL *)url
              completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error))completionHandler;
 
 /**

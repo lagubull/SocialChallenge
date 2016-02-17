@@ -59,40 +59,6 @@ static NSUInteger const kJSCPaginationOffset = 5;
     self.paginating = NO;
 }
 
-
-//if ([self.dataRetrievalDelegate respondsToSelector:@selector(paginate)])
-//{
-//    if (!self.isPaginating)
-//    {
-//        BOOL triggerPagination = NO;
-//        
-//        switch (self.paginationDirection)
-//        {
-//            case FSNDataRetrievalPaginationDirectionTop:
-//            {
-//                triggerPagination = (indexPath.row <= kFSNPaginationOffset);
-//                
-//                break;
-//            }
-//            case FSNDataRetrievalPaginationDirectionBottom:
-//            {
-//                NSUInteger numberOfRowsInSection = [self numberOfRowsInSection:indexPath.section];
-//                NSUInteger paginationTriggerIndex = numberOfRowsInSection - kFSNPaginationOffset;
-//                
-//                triggerPagination = (indexPath.row >= MIN(paginationTriggerIndex, numberOfRowsInSection - 1));
-//                
-//                break;
-//            }
-//        }
-//        
-//        if(triggerPagination)
-//        {
-//            [self.dataRetrievalDelegate paginate];
-//        }
-//    }
-//}
-
-
 @end
 
 
