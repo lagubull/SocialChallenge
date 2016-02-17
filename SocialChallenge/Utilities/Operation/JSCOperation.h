@@ -74,6 +74,11 @@ typedef void (^JSCOperationOnFailureCallback)(NSError *error);
 - (void)didFailWithError:(NSError *)error;
 
 /**
+ Finishes the execution of the operation and calls the onCompletion callback.
+ */
+- (void)didCompleteWithResult:(id)result;
+
+/**
  This method figures out if we can coalesce with another operation.
  
  @param operation - Operation to determaine if we can coalesce with.

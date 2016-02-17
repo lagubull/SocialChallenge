@@ -6,6 +6,8 @@
 //
 //
 
+@class JSCTableView;
+
 @protocol JSCHomeAdapterDelegate <NSObject>
 
 @end
@@ -20,7 +22,7 @@
 /**
  Shows the content.
  */
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) JSCTableView *tableView;
 
 @property (nonatomic, strong, readonly) NSFetchRequest *fetchRequest;
 

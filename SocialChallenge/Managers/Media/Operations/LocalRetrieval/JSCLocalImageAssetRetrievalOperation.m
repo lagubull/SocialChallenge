@@ -84,13 +84,9 @@
     if (imageData)
     {
         imageFromDisk = [UIImage imageWithData:imageData];
-        
-        [self didSucceedWithResult:imageFromDisk];
     }
-    else
-    {
-        [self didFailWithError:nil];
-    }
+    
+    [self didCompleteWithResult:imageFromDisk];
 }
 
 #pragma mark - Cancel

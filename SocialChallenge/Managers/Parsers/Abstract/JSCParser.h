@@ -13,7 +13,8 @@
 
 static inline id JSCValueOrDefault(id value, id defaultValue)
 {
-    if (value == nil)
+    if (value == nil ||
+        value == [NSNull null])
     {
         return defaultValue;
     }

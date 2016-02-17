@@ -231,6 +231,13 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     return _commentsCountLabel;
 }
 
+#pragma mark - PrepareForReuse
+
+- (void)prepareForReuse
+{
+    self.avatar.image = nil;
+}
+
 #pragma mark - Layout
 
 - (void)layoutByApplyingConstraints

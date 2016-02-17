@@ -9,12 +9,13 @@
 #import "JSCHomeViewController.h"
 
 #import "JSCHomeAdapter.h"
+#import "JSCTableView.h"
 
 static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
 @interface JSCHomeViewController () <JSCHomeAdapterDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) JSCTableView *tableView;
 
 @property (nonatomic, strong) JSCHomeAdapter *adapter;
 
@@ -45,11 +46,11 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
 #pragma mark - Subviews
 
-- (UITableView *)tableView
+- (JSCTableView *)tableView
 {
     if (!_tableView)
     {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f,
+        _tableView = [[JSCTableView alloc] initWithFrame:CGRectMake(0.0f,
                                                                    kJSCNavigationBarHeight,
                                                                    self.view.bounds.size.width,
                                                                    self.view.bounds.size.height - kJSCNavigationBarHeight)];

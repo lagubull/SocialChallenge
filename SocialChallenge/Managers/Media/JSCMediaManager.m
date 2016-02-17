@@ -12,6 +12,8 @@
 #import "JSCLocalImageAssetRetrievalOperation.h"
 #import "JSCSession.h"
 #import "JSCMediaStorageOperation.h"
+#import "JSCOperationCoordinator.h"
+#import "JSCFileManager.h"
 
 @implementation JSCMediaManager
 
@@ -42,25 +44,69 @@
                 
                 [JSCSession scheduleDownloadFromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
                                     completionBlock:^(JSCDownloadTaskInfo *downloadTask, NSURL *location, NSError *error)
-                {
-                    if (error)
-                    {
-                        if (failure)
-                        {
-                            failure(error);
-                        }
-                    }
-                    else
-                    {
-                        JSCMediaStorageOperation *storageOperation = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
-                                                                                                             location:location];
-                        
-                        storageOperation.onSuccess = success;
-                        storageOperation.onFailure = failure;
-                    }
-                }];
+                 {
+                     if (error)
+                     {
+                         if (failure)
+                         {
+                             failure(error);
+                         }
+                     }
+                     else
+                     {
+                         BOOL didMoveFile = [JSCFileManager moveFileFromSourcePath:[location path]
+                                                                toDestinationPath:post.postID];
+                         
+                         if (didMoveFile)
+                         {
+                             if (success)
+                             {
+                                 JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postID];
+                                 
+                                 operation.onCompletion = ^(UIImage *imageMedia)
+                                 {
+                                     if (imageMedia)
+                                     {
+                                         if (success)
+                                         {
+                                             success(imageMedia);
+                                         }
+                                     }
+                                     else
+                                     {
+                                         if (failure)
+                                         {
+                                             failure(nil);
+                                         }
+                                     }
+                                 };
+                                 
+                                 operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
+                                 
+                                 [[JSCOperationCoordinator sharedInstance] addOperation:operation];
+                             }
+                         }
+                         else
+                         {
+                             if (failure)
+                             {
+                                 failure(nil);
+                             }
+                         }
+                     }
+
+//                         JSCMediaStorageOperation *storeOperation = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
+//                                                                                                            location:location];
+//                         
+//                         storeOperation.onSuccess = success;
+//                     storeOperation.onFailure = failure;                     }
+                 }];
             }
         };
+        
+        operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
+        
+        [[JSCOperationCoordinator sharedInstance] addOperation:operation];
     }
 }
 

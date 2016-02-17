@@ -86,7 +86,7 @@
 {
     [super start];
     
-    if ([JSCFileManager moveFileFromSourcePath:[self.location absoluteString]
+    if ([JSCFileManager moveFileFromSourcePath:[self.location path]
                              toDestinationPath:self.postID])
     {
         [self didSucceedWithResult:nil];

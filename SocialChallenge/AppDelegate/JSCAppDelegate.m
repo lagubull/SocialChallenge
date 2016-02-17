@@ -14,6 +14,9 @@
 #import "JSCWindow.h"
 #import "JSCSplashViewController.h"
 #import "JSCRootNavigationController.h"
+#import "JSCPost.h"
+#import "JSCPostPage.h"
+#import "NSManagedObjectContext+CDSDelete.h"
 
 @interface JSCAppDelegate ()
 
@@ -32,6 +35,10 @@
 
     self.window.backgroundColor = [UIColor clearColor];
     self.window.clipsToBounds = NO;
+    
+
+    [[CDSServiceManager sharedInstance].mainManagedObjectContext cds_deleteEntriesForEntityClass:[JSCPost class]];
+    [[CDSServiceManager sharedInstance].mainManagedObjectContext cds_deleteEntriesForEntityClass:[JSCPostPage class]];
     
     [self.window makeKeyAndVisible];
     

@@ -12,8 +12,9 @@
 #import "JSCFeedAPIManager.h"
 #import "CDSServiceManager.h"
 #import "JSCPostTableViewCell.h"
+#import "JSCTableView.h"
 
-@interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate>
+@interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate, JSCDataRetrievalTableViewDelegate, NSFetchedResultsControllerDelegate>
 
 @end
 
@@ -21,7 +22,7 @@
 
 #pragma mark - TableView
 
-- (void)setTableView:(UITableView *)tableView
+- (void)setTableView:(JSCTableView *)tableView
 {
     [self willChangeValueForKey:NSStringFromSelector(@selector(tableView))];
     _tableView = tableView;
@@ -29,6 +30,7 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.dataRetrievalDelegate = self;
     
     [self.tableView registerClass:[JSCPostTableViewCell class]
            forCellReuseIdentifier:[JSCPostTableViewCell reuseIdentifier]];
@@ -51,14 +53,18 @@
 
 - (void)paginate
 {
+    [self.tableView willPaginate];
+    
     [JSCFeedAPIManager retrieveFeedWithMode:JSCDataRetrievalOperationModeNextPage
                                     Success:^(id result)
      {
          //TODO: success block
+         [self.tableView didPaginate];
      }
                                     failure:^(NSError *error)
      {
          //TODO: failure block
+         [self.tableView didPaginate];
      }];
 }
 
@@ -93,7 +99,7 @@
 
 - (void)didUpdateContent
 {
-    
+    [self.tableView reloadData];
 }
 
 - (void)didUpdateItemAtIndexPath:(NSIndexPath *)indexPath
@@ -112,6 +118,8 @@
                                                                         managedObjectContext:[[CDSServiceManager sharedInstance] mainManagedObjectContext]
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
+        
+        _fetchedResultsController.delegate = self;
         
         [_fetchedResultsController performFetch:nil];
     }
@@ -140,7 +148,7 @@
 - (NSArray *)sortDescriptorsForFetchRequest
 {
     NSSortDescriptor *postIdSort = [NSSortDescriptor sortDescriptorWithKey:@"postID"
-                                                                 ascending:YES];
+                                                                 ascending:NO];
     
     return @[postIdSort];
 }
@@ -158,5 +166,85 @@
     [cell updateWithPost:post];
 }
 
+
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
+    [self.tableView beginUpdates];
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    
+    UITableView *tableView = self.tableView;
+    
+    switch(type)
+    {
+        case NSFetchedResultsChangeInsert:
+        {
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+            
+            break;
+        }
+        case NSFetchedResultsChangeDelete:
+        {
+            
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            break;
+        }
+        case NSFetchedResultsChangeUpdate:
+        {
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath]
+                   forIndexPath:indexPath];
+            
+            break;
+        }
+        case NSFetchedResultsChangeMove:
+        {
+            [tableView deleteRowsAtIndexPaths:[NSArray
+                                               arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray
+                                               arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+            break;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch(type)
+    {
+        case NSFetchedResultsChangeInsert:
+        {
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            
+            break;
+        }
+        case NSFetchedResultsChangeDelete:
+        {
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            
+            break;
+        }
+        case NSFetchedResultsChangeMove:
+        {
+            break;
+        }
+        case NSFetchedResultsChangeUpdate:
+        {
+            break;
+        }
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
+    [self.tableView endUpdates];
+}
 
 @end

@@ -35,8 +35,7 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
 
 + (NSData *)retrieveDataFromDocumentsDirectoryWithPath:(NSString *)path
 {
-    NSString *documentsDirectory = [self documentsDirectoryPath];
-    NSString *extendedPath = [documentsDirectory stringByAppendingPathComponent:path];
+    NSString *extendedPath = [self documentsDirectoryPathForResourceWithPath:path];
     
     return [NSData dataWithContentsOfFile:extendedPath];
 }
@@ -183,6 +182,8 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
 {
     BOOL success = NO;
     BOOL createdDirectory = YES;
+    
+    destinationPath = [self documentsDirectoryPathForResourceWithPath:destinationPath];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     

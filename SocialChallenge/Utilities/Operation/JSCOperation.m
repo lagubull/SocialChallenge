@@ -229,6 +229,21 @@
     }
 };
 
+- (void)didCompleteWithResult:(id)result
+{
+    self.result = result;
+    
+    [self finish];
+    
+    if (self.onCompletion)
+    {
+        [self.callbackQueue addOperationWithBlock:^
+         {
+             self.onCompletion(result);
+         }];
+    }
+}
+
 #pragma mark - NSCoding
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
