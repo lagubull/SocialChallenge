@@ -17,6 +17,8 @@
 
 @implementation JSCMediaManager
 
+#pragma mark - Retrieval
+
 + (void)retrieveMediaForPost:(JSCPost *)post
            retrievalRequired:(void (^)(JSCPost *post))retrievalRequired
                      Success:(JSCOperationOnSuccessCallback)success
@@ -56,7 +58,7 @@
                      else
                      {
                          BOOL didMoveFile = [JSCFileManager moveFileFromSourcePath:[location path]
-                                                                toDestinationPath:post.postID];
+                                                                 toDestinationPath:post.postID];
                          
                          if (didMoveFile)
                          {
@@ -95,12 +97,7 @@
                              }
                          }
                      }
-
-//                         JSCMediaStorageOperation *storeOperation = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
-//                                                                                                            location:location];
-//                         
-//                         storeOperation.onSuccess = success;
-//                     storeOperation.onFailure = failure;                     }
+                     
                  }];
             }
         };

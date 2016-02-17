@@ -13,8 +13,18 @@
  */
 @protocol JSCSessionDelegate <NSObject>
 
+/**
+ Notifies the delegate a download has been resumed.
+ 
+ @param downloadTaskInfo - metadata on the resumed download.
+ */
 - (void)didResumeDownload:(JSCDownloadTaskInfo *)downloadTaskInfo;
 
+/**
+ Notifies the delegate a download has progressed.
+ 
+ @param downloadTaskInfo - metadata on the download.
+ */
 - (void)didUpdateProgress:(JSCDownloadTaskInfo *)downloadTaskInfo;
 
 @end

@@ -60,5 +60,3 @@ static NSUInteger const kJSCPaginationOffset = 5;
 }
 
 @end
-
-
