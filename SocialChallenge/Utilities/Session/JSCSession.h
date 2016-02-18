@@ -94,8 +94,12 @@
 - (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler;
 
 /**
+ Creates a download task with the resume data.  If the download cannot be successfully resumed, URLSession:task:didCompleteWithError: will be called.
+ */
+- (NSURLSessionDownloadTask *)downloadTaskWithResumeData:(NSData *)resumeData;
+
+/**
  Delegate for the DownloadSessionDelegate class.
  */
 @property (nonatomic, weak) id<JSCSessionDelegate>delegate;
-
 @end

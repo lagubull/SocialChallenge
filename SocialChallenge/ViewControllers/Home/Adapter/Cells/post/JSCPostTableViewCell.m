@@ -150,6 +150,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
         
         _avatar.contentMode = UIViewContentModeScaleToFill;
         _avatar.clipsToBounds = YES;
+        _avatar.image = [UIImage imageNamed:@"avatarPlaceHolderIcon"];
     }
     
     return _avatar;
@@ -235,6 +236,8 @@ static const CGFloat JSCMarginConstraint = 10.0f;
 
 - (void)prepareForReuse
 {
+    [super prepareForReuse];
+    
     self.avatar.image = nil;
 }
 
@@ -365,11 +368,17 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     
     __weak typeof (self) weakSelf = self;
     
+    self.avatar.image = [UIImage imageNamed:@"avatarPlaceHolderIcon"];
+    
     [JSCMediaManager retrieveMediaForPost:post
                         retrievalRequired:nil
-                                  Success:^(id result)
+                                  success:^(id result, NSString *postId)
      {
-         weakSelf.avatar.image = result;
+         if ([weakSelf.post.postID isEqualToString:postId] &&
+             result)
+         {
+             weakSelf.avatar.image = result;
+         }
      }
                                   failure:^(NSError *error)
      {

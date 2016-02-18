@@ -78,4 +78,23 @@
  */
 - (void)pause;
 
+/**
+ Starts the task.
+ */
+- (void)resume;
+
+/**
+ Checks weather the taskInfo provided equals self.
+ 
+ @param taskInfo - new task.
+ */
+- (BOOL)canCoalesceWithTaskInfo:(JSCDownloadTaskInfo *)taskInfo;
+
+/**
+ Merges a new task with self.
+ 
+ @param taskInfo - new task.
+ */
+- (void)coalesceWithTaskInfo:(JSCDownloadTaskInfo *)taskInfo;
+
 @end

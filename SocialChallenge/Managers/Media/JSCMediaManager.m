@@ -21,7 +21,7 @@
 
 + (void)retrieveMediaForPost:(JSCPost *)post
            retrievalRequired:(void (^)(JSCPost *post))retrievalRequired
-                     Success:(JSCOperationOnSuccessCallback)success
+                     success:(void (^)(id result, NSString *postId))success
                      failure:(JSCOperationOnFailureCallback)failure
 {
     if (post.userAvatarRemoteURL)
@@ -34,7 +34,7 @@
             {
                 if (success)
                 {
-                    success(imageMedia);
+                    success(imageMedia, post.postID);
                 }
             }
             else
@@ -44,7 +44,7 @@
                     retrievalRequired(post);
                 }
                 
-                [JSCSession forceDownloadWithID:post.postID
+                [JSCSession scheduleDownloadWithID:post.postID
                                         fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
                                 completionBlock:^(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error)
                  {
@@ -61,7 +61,14 @@
                          JSCMediaStorageOperation *op = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
                                                                                                     data:responseData];
                          
-                         op.onSuccess = success;
+                         op.onSuccess = ^(id result)
+                         {
+                             if (success)
+                             {
+                                 success(result, post.postID);
+                             }
+                         };
+                         
                          op.onFailure = failure;
                          
                          op.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;

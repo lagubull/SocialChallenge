@@ -33,6 +33,15 @@ static NSInteger const kCancelled = -999;
  */
 @property (nonatomic, strong) NSURLSession *session;
 
+/**
+ Tries to coales the operation.
+ 
+ @param newTaskInfo - new task to coalesce.
+ 
+ @result YES - If the taskInfo is coalescing, NO otherwise
+ */
+- (BOOL)shouldCoalesceDownloadTask:(JSCDownloadTaskInfo *)newTaskInfo;
+
 @end
 
 @implementation JSCSession
@@ -86,7 +95,10 @@ static NSInteger const kCancelled = -999;
                                                                      URL:url
                                                          completionBlock:completionHandler];
     
-    [[JSCSession session].downloadStack push:task];
+    if (![[JSCSession session] shouldCoalesceDownloadTask:task])
+    {
+        [[JSCSession session].downloadStack push:task];
+    }
     
     [JSCSession resumeDownloads];
 }
@@ -149,6 +161,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
 
         //  Handle error
         NSLog(@"task: %@ Error: %@", self.inProgressDownload.downloadId, error);
+        self.inProgressDownload = nil;
         
         [JSCSession resumeDownloads];
     }
@@ -175,27 +188,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
     if ([JSCSession session].inProgressDownload &&
         ![JSCSession session].inProgressDownload.isDownloading)
     {
-        if ([JSCSession session].inProgressDownload.taskResumeData.length > 0)
-        {
-            NSLog(@"Resuming task - %@", [JSCSession session].inProgressDownload.downloadId);
-            
-            [JSCSession session].inProgressDownload.task = [[JSCSession session].session downloadTaskWithResumeData:[JSCSession session].inProgressDownload.taskResumeData];
-        }
-        else
-        {
-            if ([JSCSession session].inProgressDownload.task.state == NSURLSessionTaskStateCompleted)
-            {
-                //we cancelled this operation before it actually started
-                [JSCSession session].inProgressDownload.task = [[JSCSession session].session downloadTaskWithURL:[JSCSession session].inProgressDownload.url];
-            }
-            else
-            {
-                NSLog(@"Starting task - %@", [JSCSession session].inProgressDownload.downloadId);
-            }
-        }
-        
-        [JSCSession session].inProgressDownload.isDownloading = YES;
-        [[JSCSession session].inProgressDownload.task resume];
+        [[JSCSession session].inProgressDownload resume];
         
         [[JSCSession session].delegate didResumeDownload:[JSCSession session].inProgressDownload];
     }
@@ -224,12 +217,51 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
     return [[JSCSession session].session downloadTaskWithURL:url];
 }
 
+- (NSURLSessionDownloadTask *)downloadTaskWithResumeData:(NSData *)resumeData
+{
+    return [[JSCSession session].session downloadTaskWithResumeData:resumeData];
+}
+
 #pragma mark - NSURLSessionDataTask
 
 - (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler
 {
     return [[JSCSession session].session dataTaskWithRequest:request
                                            completionHandler:completionHandler];
+}
+
+#pragma mark - Coalescing
+
+- (BOOL)shouldCoalesceDownloadTask:(JSCDownloadTaskInfo *)newTaskInfo
+{
+    BOOL didCoalesce = NO;
+    
+    if ([[JSCSession session].inProgressDownload canCoalesceWithTaskInfo:newTaskInfo])
+    {
+        [[JSCSession session].inProgressDownload coalesceWithTaskInfo:newTaskInfo];
+        
+        didCoalesce = YES;
+    }
+    
+    if (!didCoalesce)
+    {
+        for (JSCDownloadTaskInfo *taskInfo in self.downloadStack.objectsArray)
+        {
+            BOOL canAskToCoalesce = [taskInfo isKindOfClass:[JSCDownloadTaskInfo class]];
+            
+            if (canAskToCoalesce &&
+                [taskInfo canCoalesceWithTaskInfo:newTaskInfo])
+            {
+                [taskInfo coalesceWithTaskInfo:newTaskInfo];
+                
+                didCoalesce = YES;
+                
+                break;
+            }
+        }
+    }
+    
+    return didCoalesce;
 }
 
 @end

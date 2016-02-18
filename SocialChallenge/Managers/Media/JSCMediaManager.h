@@ -24,7 +24,7 @@
  */
 + (void)retrieveMediaForPost:(JSCPost *)post
            retrievalRequired:(void (^)(JSCPost *post))retrievalRequired
-                     Success:(JSCOperationOnSuccessCallback)success
+                     success:(void (^)(id result, NSString *postId))success
                      failure:(JSCOperationOnFailureCallback)failure;
 
 @end
