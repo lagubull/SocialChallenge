@@ -24,10 +24,14 @@
  */
 @property (nonatomic, strong) JSCTableView *tableView;
 
+/**
+ Fetch request for retrieving posts.
+ */
 @property (nonatomic, strong, readonly) NSFetchRequest *fetchRequest;
 
-@property (nonatomic, strong, readonly) NSPredicate *predicateForFetchRequest;
-
+/**
+ Used to connect the TableView with Core Data.
+ */
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 /**

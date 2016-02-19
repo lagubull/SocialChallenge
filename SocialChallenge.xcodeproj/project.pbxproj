@@ -24,6 +24,7 @@
 		3B3EF65E1C73A31400223E5A /* JSCDownloadTaskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF65D1C73A31400223E5A /* JSCDownloadTaskInfo.m */; };
 		3B3EF6611C73A8B100223E5A /* JSCStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6601C73A8B100223E5A /* JSCStack.m */; };
 		3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
+		3B611DAA1C776CA90029EE7D /* JSCPaginatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B611DA91C776CA90029EE7D /* JSCPaginatingView.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD281ED1B6F92350097B452 /* JSCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281EC1B6F92350097B452 /* JSCTableView.m */; };
@@ -91,6 +92,8 @@
 		3B3EF6601C73A8B100223E5A /* JSCStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCStack.m; sourceTree = "<group>"; };
 		3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JSCDateFormatter.h"; sourceTree = "<group>"; };
 		3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JSCDateFormatter.m"; sourceTree = "<group>"; };
+		3B611DA81C776CA90029EE7D /* JSCPaginatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPaginatingView.h; sourceTree = "<group>"; };
+		3B611DA91C776CA90029EE7D /* JSCPaginatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPaginatingView.m; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
 		3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeAdapter.m; sourceTree = "<group>"; };
 		3BD281E61B6F8ACF0097B452 /* JSCPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostTableViewCell.h; sourceTree = "<group>"; };
@@ -443,6 +446,15 @@
 			path = NSDateFormatter;
 			sourceTree = "<group>";
 		};
+		3B611DA71C776C720029EE7D /* PaginatingView */ = {
+			isa = PBXGroup;
+			children = (
+				3B611DA81C776CA90029EE7D /* JSCPaginatingView.h */,
+				3B611DA91C776CA90029EE7D /* JSCPaginatingView.m */,
+			);
+			path = PaginatingView;
+			sourceTree = "<group>";
+		};
 		3BC04A701B73868F00AB0B66 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +484,7 @@
 		3BD281E91B6F91150097B452 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B611DA71C776C720029EE7D /* PaginatingView */,
 				3BD281EA1B6F91410097B452 /* TableView */,
 			);
 			path = Views;
@@ -727,6 +740,7 @@
 				TargetAttributes = {
 					3B3111831B6E110B008E374E = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 2ZD7MNBBZQ;
 					};
 					3B3111A21B6E110B008E374E = {
 						CreatedOnToolsVersion = 6.3;
@@ -834,6 +848,7 @@
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
 				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
 				3BF13B0C1C5E379F00B32627 /* JSCPostParser.m in Sources */,
+				3B611DAA1C776CA90029EE7D /* JSCPaginatingView.m in Sources */,
 				3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */,
 				3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */,
 				3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */,
@@ -914,6 +929,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -941,7 +957,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.unii.fling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -967,6 +983,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -987,7 +1004,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.unii.fling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

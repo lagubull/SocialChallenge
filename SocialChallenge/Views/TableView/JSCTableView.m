@@ -8,12 +8,14 @@
 
 #import "JSCTableView.h"
 
+#import "JSCPaginatingView.h"
+
 /**
  index from which pagination will be triggered, it should be at least half  of the expected load.
  */
 static NSUInteger const kJSCPaginationOffset = 5;
 
-@interface JSCTableView ()
+@interface JSCTableView () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, assign, getter=isPaginating) BOOL paginating;
 
@@ -45,17 +47,123 @@ static NSUInteger const kJSCPaginationOffset = 5;
     
     return cell;
 }
+#pragma mark - FetchResultController
+
+- (void)setFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+{
+    [self willChangeValueForKey:NSStringFromSelector(@selector(fetchedResultsController))];
+    _fetchedResultsController = fetchedResultsController;
+    [self didChangeValueForKey:NSStringFromSelector(@selector(fetchedResultsController))];
+    
+    self.fetchedResultsController.delegate = self;
+}
 
 #pragma mark - Pagination
 
 - (void)willPaginate
 {
-    self.paginating = YES;
+    if (!self.isPaginating)
+    {
+        [self.paginatingView startAnimating];
+        
+        self.paginating = YES;
+
+        self.tableFooterView = self.paginatingView;
+    }
 }
 
 - (void)didPaginate
 {
+    //we don't want it to be created if it is nil
+    if (_paginatingView)
+    {
+        self.tableFooterView = nil;
+        
+        [self.paginatingView stopAnimating];
+    }
+    
     self.paginating = NO;
 }
+
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
+    [self beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    switch(type)
+    {
+        case NSFetchedResultsChangeInsert:
+        {
+            [self insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            break;
+        }
+        case NSFetchedResultsChangeDelete:
+        {
+            [self deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            break;
+        }
+        case NSFetchedResultsChangeUpdate:
+        {
+            if ([self.dataRetrievalDelegate respondsToSelector:@selector(didUpdateItemAtIndexPath:)])
+            {
+                [self.dataRetrievalDelegate didUpdateItemAtIndexPath:indexPath];
+            }
+            
+            break;
+        }
+        case NSFetchedResultsChangeMove:
+        {
+            [self deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                        withRowAnimation:UITableViewRowAnimationFade];
+            
+            [self insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                        withRowAnimation:UITableViewRowAnimationFade];
+        }
+            break;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch(type)
+    {
+        case NSFetchedResultsChangeInsert:
+        {
+            [self insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                withRowAnimation:UITableViewRowAnimationFade];
+            
+            break;
+        }
+        case NSFetchedResultsChangeDelete:
+        {
+            [self deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                withRowAnimation:UITableViewRowAnimationFade];
+            
+            break;
+        }
+        case NSFetchedResultsChangeMove:
+        {
+            break;
+        }
+        case NSFetchedResultsChangeUpdate:
+        {
+            break;
+        }
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
+    [self endUpdates];
+}
+
 
 @end

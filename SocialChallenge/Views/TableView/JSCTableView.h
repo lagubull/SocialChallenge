@@ -7,6 +7,7 @@
 //
 
 @class JSCTableView;
+@class JSCPaginatingView;
 
 @protocol JSCDataRetrievalTableViewDelegate <NSObject>
 
@@ -22,6 +23,13 @@
  */
 - (void)paginate;
 
+/**
+ Call when there is an update.
+ 
+ @param indexPath - index path of the updated row.
+ */
+- (void)didUpdateItemAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @interface JSCTableView : UITableView
@@ -30,6 +38,15 @@
  Delegate of the class.
  */
 @property (nonatomic, weak) id <JSCDataRetrievalTableViewDelegate> dataRetrievalDelegate;
+
+/**
+ */
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
+/**
+ Pagination content view to show the local user we are retrieving fresh data.
+ */
+@property (nonatomic, strong) JSCPaginatingView *paginatingView;
 
 /**
  Tells the tableview we are about to paginate.
