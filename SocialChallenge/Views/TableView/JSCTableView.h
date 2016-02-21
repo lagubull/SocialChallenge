@@ -14,6 +14,11 @@
 @optional
 
 /**
+ Request for delegate to begin requesting new data.
+ */
+- (void)refresh;
+
+/**
  Called after FSNDataRetrievalTableView instance has asked for data refresh;
  */
 - (void)dataRetrievalTableViewDidRequestRefresh:(JSCTableView *)tableView;
@@ -57,5 +62,7 @@
  Tells the tableview pagination has finished.
  */
 - (void)didPaginate;
+
+- (void)didRefresh;
 
 @end

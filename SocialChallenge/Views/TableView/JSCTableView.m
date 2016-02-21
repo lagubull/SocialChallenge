@@ -17,11 +17,30 @@ static NSUInteger const kJSCPaginationOffset = 5;
 
 @interface JSCTableView () <NSFetchedResultsControllerDelegate>
 
+/**
+ Indicates wether pagination is happening.
+ */
 @property (nonatomic, assign, getter=isPaginating) BOOL paginating;
+
+/**
+ */
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
 @implementation JSCTableView
+
+#pragma mark - LayoutSubviews
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    if (!self.refreshControl.superview)
+    {
+        [self addSubview:self.refreshControl];
+    }
+}
 
 #pragma mark - Dequeue
 
@@ -47,6 +66,31 @@ static NSUInteger const kJSCPaginationOffset = 5;
     
     return cell;
 }
+
+#pragma mark - RefreshControl
+
+- (UIRefreshControl *)refreshControl
+{
+    if (!_refreshControl)
+    {
+        _refreshControl = [[UIRefreshControl alloc] init];
+        
+        if ([self.dataRetrievalDelegate respondsToSelector:@selector(refresh)])
+        {
+            [_refreshControl addTarget:self.dataRetrievalDelegate
+                                action:@selector(refresh)
+                      forControlEvents:UIControlEventValueChanged];
+        }
+    }
+    
+    return _refreshControl;
+}
+
+- (void)didRefresh
+{
+    [self.refreshControl endRefreshing];
+}
+
 #pragma mark - FetchResultController
 
 - (void)setFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController

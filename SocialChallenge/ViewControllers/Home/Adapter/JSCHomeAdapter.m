@@ -41,14 +41,16 @@
 
 - (void)refresh
 {
+    __weak typeof (self) weakSelf = self;
+    
     [JSCFeedAPIManager retrieveFeedWithMode:JSCDataRetrievalOperationModeFirstPage
                                     Success:^(id result)
      {
-         //TODO: success block
+         [weakSelf.tableView didRefresh];
      }
                                     failure:^(NSError *error)
      {
-         //TODO: failure block
+         [weakSelf.tableView didRefresh];
      }];
 }
 
