@@ -9,11 +9,9 @@
 #import "JSCHomeViewController.h"
 
 #import <STVPaginatingView.h>
-#import <STVTableView.h>
+#import <STVSimpleTableView.h>
 
 #import "JSCHomeAdapter.h"
-#import "JSCTableView.h"
-#import "JSCPaginatingView.h"
 
 static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
@@ -22,7 +20,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 /**
  Displays the posts.
  */
-@property (nonatomic, strong) STVTableView *tableView;
+@property (nonatomic, strong) STVSimpleTableView *tableView;
 
 /**
  Handles the tableView.
@@ -61,14 +59,14 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
 #pragma mark - Subviews
 
-- (STVTableView *)tableView
+- (STVSimpleTableView *)tableView
 {
     if (!_tableView)
     {
-        _tableView = [[STVTableView alloc] initWithFrame:CGRectMake(0.0f,
-                                                                   kJSCNavigationBarHeight,
-                                                                   self.view.bounds.size.width,
-                                                                   self.view.bounds.size.height - kJSCNavigationBarHeight)];
+        _tableView = [[STVSimpleTableView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                          kJSCNavigationBarHeight,
+                                                                          self.view.bounds.size.width,
+                                                                          self.view.bounds.size.height - kJSCNavigationBarHeight)];
         
         _tableView.backgroundColor = [UIColor lightGrayColor];
         
@@ -88,7 +86,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
         _paginatingView = [[STVPaginatingView alloc] initWithFrame:CGRectMake(0.0f,
                                                                               0.0f,
                                                                               self.view.bounds.size.width,
-                                                                              kJSCPaginatingViewHeight)];
+                                                                              kSTVPaginatingViewHeight)];
         
         _paginatingView.loadingLabel.text = NSLocalizedString(@"Loading", nil);
     }

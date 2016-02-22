@@ -8,11 +8,12 @@
 
 #import "JSCHomeAdapter.h"
 
+#import <STVSimpleTableView.h>
+
 #import "JSCPost.h"
 #import "JSCFeedAPIManager.h"
 #import "CDSServiceManager.h"
 #import "JSCPostTableViewCell.h"
-#import "STVTableView.h"
 
 @interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate, STVDataRetrievalTableViewDelegate>
 
@@ -22,7 +23,7 @@
 
 #pragma mark - TableView
 
-- (void)setTableView:(STVTableView *)tableView
+- (void)setTableView:(STVSimpleTableView *)tableView
 {
     [self willChangeValueForKey:NSStringFromSelector(@selector(tableView))];
     _tableView = tableView;
