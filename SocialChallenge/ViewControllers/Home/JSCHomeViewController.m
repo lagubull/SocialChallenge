@@ -8,6 +8,9 @@
 
 #import "JSCHomeViewController.h"
 
+#import <STVPaginatingView.h>
+#import <STVTableView.h>
+
 #import "JSCHomeAdapter.h"
 #import "JSCTableView.h"
 #import "JSCPaginatingView.h"
@@ -19,7 +22,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 /**
  Displays the posts.
  */
-@property (nonatomic, strong) JSCTableView *tableView;
+@property (nonatomic, strong) STVTableView *tableView;
 
 /**
  Handles the tableView.
@@ -29,7 +32,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 /**
  Pagination content view to show the local user we are retrieving fresh data.
  */
-@property (nonatomic, strong) JSCPaginatingView *paginatingView;
+@property (nonatomic, strong) STVPaginatingView *paginatingView;
 
 @end
 
@@ -58,11 +61,11 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
 #pragma mark - Subviews
 
-- (JSCTableView *)tableView
+- (STVTableView *)tableView
 {
     if (!_tableView)
     {
-        _tableView = [[JSCTableView alloc] initWithFrame:CGRectMake(0.0f,
+        _tableView = [[STVTableView alloc] initWithFrame:CGRectMake(0.0f,
                                                                    kJSCNavigationBarHeight,
                                                                    self.view.bounds.size.width,
                                                                    self.view.bounds.size.height - kJSCNavigationBarHeight)];
@@ -72,16 +75,17 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.allowsSelection = NO;
         _tableView.paginatingView = self.paginatingView;
+        _tableView.paginationOffset = @(5);
     }
     
     return _tableView;
 }
 
-- (JSCPaginatingView *)paginatingView
+- (STVPaginatingView *)paginatingView
 {
     if (!_paginatingView)
     {
-        _paginatingView = [[JSCPaginatingView alloc] initWithFrame:CGRectMake(0.0f,
+        _paginatingView = [[STVPaginatingView alloc] initWithFrame:CGRectMake(0.0f,
                                                                               0.0f,
                                                                               self.view.bounds.size.width,
                                                                               kJSCPaginatingViewHeight)];

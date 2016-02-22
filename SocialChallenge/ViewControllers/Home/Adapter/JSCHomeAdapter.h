@@ -6,7 +6,7 @@
 //
 //
 
-@class JSCTableView;
+@class STVTableView;
 
 @protocol JSCHomeAdapterDelegate <NSObject>
 
@@ -22,7 +22,7 @@
 /**
  Shows the content.
  */
-@property (nonatomic, strong) JSCTableView *tableView;
+@property (nonatomic, strong) STVTableView *tableView;
 
 /**
  Fetch request for retrieving posts.
