@@ -11,11 +11,11 @@
 @interface JSCFeedRetrieveOperation : JSCCDSOperation
 
 /**
- Creates an operation to retrieve a feed
+ Creates an operation to retrieve a feed.
  
- @param mode indicates whether should be the first the page or second
+ @param mode indicates whether should be the first the page or second.
  
- @return an instance of the class
+ @return an instance of the class.
  */
 - (instancetype)initWithMode:(JSCDataRetrievalOperationMode)mode;
 

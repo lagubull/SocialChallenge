@@ -8,15 +8,29 @@
 
 #import "JSCHomeViewController.h"
 
+#import <STVPaginatingView.h>
+#import <STVSimpleTableView.h>
+
 #import "JSCHomeAdapter.h"
 
 static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
 @interface JSCHomeViewController () <JSCHomeAdapterDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+/**
+ Displays the posts.
+ */
+@property (nonatomic, strong) STVSimpleTableView *tableView;
 
+/**
+ Handles the tableView.
+ */
 @property (nonatomic, strong) JSCHomeAdapter *adapter;
+
+/**
+ Pagination content view to show the local user we are retrieving fresh data.
+ */
+@property (nonatomic, strong) STVPaginatingView *paginatingView;
 
 @end
 
@@ -28,7 +42,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor blueColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -45,22 +59,39 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
 #pragma mark - Subviews
 
-- (UITableView *)tableView
+- (STVSimpleTableView *)tableView
 {
     if (!_tableView)
     {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f,
-                                                                   kJSCNavigationBarHeight,
-                                                                   self.view.bounds.size.width,
-                                                                   self.view.bounds.size.height - kJSCNavigationBarHeight)];
+        _tableView = [[STVSimpleTableView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                          kJSCNavigationBarHeight,
+                                                                          self.view.bounds.size.width,
+                                                                          self.view.bounds.size.height - kJSCNavigationBarHeight)];
         
         _tableView.backgroundColor = [UIColor lightGrayColor];
         
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.allowsSelection = NO;
+        _tableView.paginatingView = self.paginatingView;
+        _tableView.paginationOffset = @(5);
     }
     
     return _tableView;
+}
+
+- (STVPaginatingView *)paginatingView
+{
+    if (!_paginatingView)
+    {
+        _paginatingView = [[STVPaginatingView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                              0.0f,
+                                                                              self.view.bounds.size.width,
+                                                                              kSTVPaginatingViewHeight)];
+        
+        _paginatingView.loadingLabel.text = NSLocalizedString(@"Loading", nil);
+    }
+    
+    return _paginatingView;
 }
 
 #pragma mark - Getters

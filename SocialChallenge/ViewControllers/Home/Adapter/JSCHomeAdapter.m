@@ -8,12 +8,14 @@
 
 #import "JSCHomeAdapter.h"
 
+#import <STVSimpleTableView.h>
+
 #import "JSCPost.h"
 #import "JSCFeedAPIManager.h"
 #import "CDSServiceManager.h"
 #import "JSCPostTableViewCell.h"
 
-@interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate>
+@interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate, STVDataRetrievalTableViewDelegate>
 
 @end
 
@@ -21,7 +23,7 @@
 
 #pragma mark - TableView
 
-- (void)setTableView:(UITableView *)tableView
+- (void)setTableView:(STVSimpleTableView *)tableView
 {
     [self willChangeValueForKey:NSStringFromSelector(@selector(tableView))];
     _tableView = tableView;
@@ -29,6 +31,8 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.dataRetrievalDelegate = self;
+    self.tableView.fetchedResultsController = self.fetchedResultsController;
     
     [self.tableView registerClass:[JSCPostTableViewCell class]
            forCellReuseIdentifier:[JSCPostTableViewCell reuseIdentifier]];
@@ -38,27 +42,33 @@
 
 - (void)refresh
 {
+    __weak typeof (self) weakSelf = self;
+    
     [JSCFeedAPIManager retrieveFeedWithMode:JSCDataRetrievalOperationModeFirstPage
                                     Success:^(id result)
      {
-         //TODO: success block
+         [weakSelf.tableView didRefresh];
      }
                                     failure:^(NSError *error)
      {
-         //TODO: failure block
+         [weakSelf.tableView didRefresh];
      }];
 }
 
 - (void)paginate
 {
+    [self.tableView willPaginate];
+    
+    __weak typeof (self) weakSelf = self;
+    
     [JSCFeedAPIManager retrieveFeedWithMode:JSCDataRetrievalOperationModeNextPage
                                     Success:^(id result)
      {
-         //TODO: success block
+         [weakSelf.tableView didPaginate];
      }
                                     failure:^(NSError *error)
      {
-         //TODO: failure block
+         [weakSelf.tableView didPaginate];
      }];
 }
 
@@ -91,18 +101,13 @@
 
 #pragma mark - CDSTableViewFetchedResultsControllerDataDelegate
 
-- (void)didUpdateContent
-{
-    
-}
-
 - (void)didUpdateItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [self configureCell:[self.tableView cellForRowAtIndexPath:indexPath]
            forIndexPath:indexPath];
 }
 
-#pragma mark - FetchResultsController
+#pragma mark - FetchedResultsController
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
@@ -126,21 +131,15 @@
     fetchRequest.entity = [NSEntityDescription entityForName:NSStringFromClass([JSCPost class])
                                       inManagedObjectContext:[[CDSServiceManager sharedInstance] mainManagedObjectContext]];
     
-    fetchRequest.predicate = self.predicateForFetchRequest;
     fetchRequest.sortDescriptors = self.sortDescriptorsForFetchRequest;
     
     return fetchRequest;
 }
 
-- (NSPredicate *)predicateForFetchRequest
-{
-    return nil;
-}
-
 - (NSArray *)sortDescriptorsForFetchRequest
 {
     NSSortDescriptor *postIdSort = [NSSortDescriptor sortDescriptorWithKey:@"postID"
-                                                                 ascending:YES];
+                                                                 ascending:NO];
     
     return @[postIdSort];
 }
@@ -157,6 +156,5 @@
     
     [cell updateWithPost:post];
 }
-
 
 @end

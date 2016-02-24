@@ -46,7 +46,7 @@
     }
     else
     {
-        NSDictionary *metaDictionary = pageDictionary[@"meta"];
+        NSDictionary *metaDictionary = pageDictionary[@"posts"][@"pagination"];
         
         page = [self parseMetaDictionary:metaDictionary];
     }
@@ -61,7 +61,8 @@
     JSCPostPage *page = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([JSCPostPage class])
                                                       inManagedObjectContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
     
-    page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[@"next_href"], nil);
+    page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[@"next_page"], nil);
+    page.index = JSCValueOrDefault(metaDictionary[@"current_page"], nil);
     
     return page;
 }

@@ -9,6 +9,7 @@
 #import "JSCPostTableViewCell.h"
 
 #import "JSCPost.h"
+#import "JSCMediaManager.h"
 
 /**
  Constant to indicate the distance to the lower margin
@@ -149,6 +150,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
         
         _avatar.contentMode = UIViewContentModeScaleToFill;
         _avatar.clipsToBounds = YES;
+        _avatar.image = [UIImage imageNamed:@"avatarPlaceHolderIcon"];
     }
     
     return _avatar;
@@ -228,6 +230,15 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     }
     
     return _commentsCountLabel;
+}
+
+#pragma mark - PrepareForReuse
+
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    
+    self.avatar.image = nil;
 }
 
 #pragma mark - Layout
@@ -355,8 +366,24 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     
     self.contentLabel.text = post.content;
     
-    //TODO:download media in a thread
-    //self.avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:post.userAvatarRemoteURL]]];
+    __weak typeof (self) weakSelf = self;
+    
+    self.avatar.image = [UIImage imageNamed:@"avatarPlaceHolderIcon"];
+    
+    [JSCMediaManager retrieveMediaForPost:post
+                        retrievalRequired:nil
+                                  success:^(id result, NSString *postId)
+     {
+         if ([weakSelf.post.postID isEqualToString:postId] &&
+             result)
+         {
+             weakSelf.avatar.image = result;
+         }
+     }
+                                  failure:^(NSError *error)
+     {
+         NSLog(@"ERROR: %@",error);
+     }];
     
     self.authorLabel.text = post.userName;
     

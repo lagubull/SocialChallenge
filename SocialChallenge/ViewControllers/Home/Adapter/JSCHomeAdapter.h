@@ -6,6 +6,8 @@
 //
 //
 
+@class STVSimpleTableView;
+
 @protocol JSCHomeAdapterDelegate <NSObject>
 
 @end
@@ -20,12 +22,16 @@
 /**
  Shows the content.
  */
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) STVSimpleTableView *tableView;
 
+/**
+ Fetch request for retrieving posts.
+ */
 @property (nonatomic, strong, readonly) NSFetchRequest *fetchRequest;
 
-@property (nonatomic, strong, readonly) NSPredicate *predicateForFetchRequest;
-
+/**
+ Used to connect the TableView with Core Data.
+ */
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 /**

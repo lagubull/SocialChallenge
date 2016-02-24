@@ -8,3 +8,4 @@ pod 'CoreDataServices', '~>1.1.3'
 pod 'PureLayout'
 pod 'EasyAlert'
 pod 'Reveal-iOS-SDK', '~> 1.6', :configurations => ['Debug']
+pod 'SimpleTableView', '~>1.0.1'

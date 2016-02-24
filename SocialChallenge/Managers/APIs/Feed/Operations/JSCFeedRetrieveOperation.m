@@ -17,8 +17,14 @@
 
 @interface JSCFeedRetrieveOperation ()
 
+/**
+ Indicates the type of the request for data.
+ */
 @property (nonatomic, assign) JSCDataRetrievalOperationMode mode;
 
+/**
+ Task to retrieve the data.
+ */
 @property (nonatomic, strong) NSURLSessionTask *task;
 
 @end
@@ -134,6 +140,16 @@
     }
     
     return request;
+}
+
+#pragma mark - Cancel
+
+- (void)cancel
+{
+    [super cancel];
+    [self.task cancel];
+    
+    [self didSucceedWithResult:nil];
 }
 
 @end
