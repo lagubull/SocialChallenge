@@ -1,6 +1,7 @@
 PODS:
   - CoreDataServices (1.1.3)
   - EasyAlert (1.0.1)
+  - EasyDownloadSession (1.0.0)
   - PureLayout (3.0.1)
   - Reveal-iOS-SDK (1.6.2)
   - SimpleTableView (1.0.1):
@@ -11,13 +12,24 @@ PODS:
 DEPENDENCIES:
   - CoreDataServices (~> 1.1.3)
   - EasyAlert
+  - EasyDownloadSession (from `git://github.com/lagubull/EasyDownloadSession`)
   - PureLayout
   - Reveal-iOS-SDK (~> 1.6)
   - SimpleTableView (~> 1.0.1)
 
+EXTERNAL SOURCES:
+  EasyDownloadSession:
+    :git: git://github.com/lagubull/EasyDownloadSession
+
+CHECKOUT OPTIONS:
+  EasyDownloadSession:
+    :commit: 0b2d2a6837982a4b663db0e7cad497223a90fe3e
+    :git: git://github.com/lagubull/EasyDownloadSession
+
 SPEC CHECKSUMS:
   CoreDataServices: ca1e442e4d7b3913886f2293f92568f995d0e3e4
   EasyAlert: 837fa8d271786f3feedd83ca6bccc2e090abd091
+  EasyDownloadSession: 1f861c67dd1a8c97f0995ea25a4b3aca866d24bb
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SimpleTableView: 0cd2a03884099b4f939833a162584e793f9f05a6

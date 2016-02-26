@@ -8,12 +8,14 @@
 
 #import "JSCFeedRetrieveOperation.h"
 
+#import <EDSDownloadSession.h>
+
 #import "JSCFeedRequest.h"
-#import "JSCSession.h"
 #import "JSCJSONManager.h"
 #import "JSCPostPage.h"
 #import "JSCPostPageParser.h"
 #import "CDSServiceManager.h"
+#import "JSCSession.h"
 
 @interface JSCFeedRetrieveOperation ()
 
@@ -89,8 +91,8 @@
     
     __weak typeof(self) weakSelf = self;
     
-    self.task = [[JSCSession session] dataTaskWithRequest:request
-                                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+    self.task = [[JSCSession defaultSession] dataTaskWithRequest:request
+                                                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
                  {
                      if (!error)
                      {

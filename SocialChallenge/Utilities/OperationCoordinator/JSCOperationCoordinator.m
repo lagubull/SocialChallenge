@@ -14,6 +14,8 @@
 
 NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier = @"kJSCNetworkDataOperationSchedulerTypeIdentifier";
 
+NSString * const kJSCLocalDataOperationSchedulerTypeIdentifier = @"kJSCLocalDataOperationSchedulerTypeIdentifier";
+
 @interface JSCOperationCoordinator ()
 
 @property (nonatomic, strong) NSMutableDictionary *mutableSchedulerTable;

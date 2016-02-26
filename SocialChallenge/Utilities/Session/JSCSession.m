@@ -2,45 +2,38 @@
 //  JSCSession.m
 //  SocialChallenge
 //
-//  Created by Javier Laguna on 09/08/2015.
+//  Created by Javier Laguna on 26/02/2016.
 //
 //
 
 #import "JSCSession.h"
 
-#import "JSCStack.h"
-#import "JSCDownloadTaskInfo.h"
+@interface JSCSessionTaskContext : NSObject
 
-/**
- Constant to indicate cancelled task.
- */
-static NSInteger const kCancelled = -999;
+@property (nonatomic, strong) NSMutableData *receivedData;
+@property (nonatomic, strong) void (^completionHandler)(NSData *data, NSURLResponse *response, NSError *error);
 
-@interface JSCSession () <NSURLSessionDownloadDelegate>
+@end
 
-/**
- Stack to store the pending downloads.
- */
-@property (nonatomic, strong) JSCStack *downloadStack;
+@implementation JSCSessionTaskContext
 
-/**
- Current download.
- */
-@property (nonatomic, strong) JSCDownloadTaskInfo *inProgressDownload;
+#pragma mark - ReceivedData
 
-/**
- Session Object.
- */
-@property (nonatomic, strong) NSURLSession *session;
+- (NSMutableData *)receivedData
+{
+    if (!_receivedData)
+    {
+        _receivedData = [[NSMutableData alloc] init];
+    }
+    
+    return _receivedData;
+}
 
-/**
- Tries to coales the operation.
- 
- @param newTaskInfo - new task to coalesce.
- 
- @result YES - If the taskInfo is coalescing, NO otherwise
- */
-- (BOOL)shouldCoalesceDownloadTask:(JSCDownloadTaskInfo *)newTaskInfo;
+@end
+
+@interface JSCSession () <NSURLSessionDelegate>
+
+@property (nonatomic, strong) NSMutableDictionary *tasksContexts;
 
 @end
 
@@ -56,212 +49,66 @@ static NSInteger const kCancelled = -999;
     {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         
-        [configuration setHTTPMaximumConnectionsPerHost:1];
+        [configuration setHTTPMaximumConnectionsPerHost:10];
         
         self.session = [NSURLSession sessionWithConfiguration:configuration
                                                      delegate:self
                                                 delegateQueue:[NSOperationQueue mainQueue]];
         
-        _downloadStack = [[JSCStack alloc] init];
+        _tasksContexts = [[NSMutableDictionary alloc] init];
     }
     
     return self;
 }
 
-+ (JSCSession *)session
+#pragma mark - Session
+
++ (instancetype)defaultSession
 {
-    static JSCSession *session = nil;
+    static JSCSession *defaultSession = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^
-                  {
-                      NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-                      
-                      [configuration setHTTPMaximumConnectionsPerHost:100];
-                      
-                      session = [[self alloc] init];
-                  });
+    {
+        defaultSession = [[self alloc] init];
+    });
     
-    return session;
+    return defaultSession;
 }
-
-#pragma mark - ScheduleDownload
-
-+ (void)scheduleDownloadWithID:(NSString *)downloadID
-                       fromURL:(NSURL *)url
-                completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error))completionHandler
-{
-    JSCDownloadTaskInfo *task = [[JSCDownloadTaskInfo alloc] initWithDownloadID:downloadID
-                                                                     URL:url
-                                                         completionBlock:completionHandler];
-    
-    if (![[JSCSession session] shouldCoalesceDownloadTask:task])
-    {
-        [[JSCSession session].downloadStack push:task];
-    }
-    
-    [JSCSession resumeDownloads];
-}
-
-#pragma mark - ForceDownload
-
-+ (void)forceDownloadWithID:(NSString *)downloadID
-                    fromURL:(NSURL *)url
-             completionBlock:(void (^)(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error))completionHandler
-{
-    [JSCSession pauseDownloads];
-    
-    [JSCSession scheduleDownloadWithID:downloadID
-                               fromURL:url
-                             completionBlock:completionHandler];
-}
-
-#pragma mark - NSURLSessionDownloadDelegate
-
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
-{
-    if (self.inProgressDownload.task.taskIdentifier == downloadTask.taskIdentifier)
-    {
-        if (self.inProgressDownload.completionHandler)
-        {
-            NSData * data  = [NSData dataWithContentsOfFile:[location path]];
-            
-            self.inProgressDownload.completionHandler(self.inProgressDownload, data, location, nil);
-        }
-        
-        self.inProgressDownload = nil;
-        
-        [JSCSession resumeDownloads];
-    }
-}
-
-- (void)URLSession:(NSURLSession *)session
-      downloadTask:(NSURLSessionDownloadTask *)downloadTask
-      didWriteData:(int64_t)bytesWritten
- totalBytesWritten:(int64_t)totalBytesWritten
-totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
-{
-    if (self.inProgressDownload)
-    {
-        self.inProgressDownload.downloadProgress = (double)totalBytesWritten / (double)totalBytesExpectedToWrite;
-        [self.delegate didUpdateProgress:self.inProgressDownload];
-    }
-}
-
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
-{
-    if (error &&
-        error.code != kCancelled)
-    {
-        if (self.inProgressDownload.task.taskIdentifier == task.taskIdentifier &&
-            self.inProgressDownload.completionHandler)
-        {
-            self.inProgressDownload.completionHandler(self.inProgressDownload, nil, nil, error);
-        }
-
-        //  Handle error
-        NSLog(@"task: %@ Error: %@", self.inProgressDownload.downloadId, error);
-        self.inProgressDownload = nil;
-        
-        [JSCSession resumeDownloads];
-    }
-}
-
-#pragma mark - Cancel
-
-+ (void)cancelDownloads
-{
-    [[JSCSession session].inProgressDownload.task cancel];
-    [JSCSession session].inProgressDownload = nil;
-    [[JSCSession session].downloadStack clear];
-}
-
-#pragma mark - Resume
-
-+ (void)resumeDownloads
-{
-    if (![JSCSession session].inProgressDownload)
-    {
-        [JSCSession session].inProgressDownload = [[JSCSession session].downloadStack pop];
-    }
-    
-    if ([JSCSession session].inProgressDownload &&
-        ![JSCSession session].inProgressDownload.isDownloading)
-    {
-        [[JSCSession session].inProgressDownload resume];
-        
-        [[JSCSession session].delegate didResumeDownload:[JSCSession session].inProgressDownload];
-    }
-}
-
-#pragma mark - Pause
-
-+ (void)pauseDownloads
-{
-    if ([JSCSession session].inProgressDownload)
-    {
-        NSLog(@"Pausing task - %@", [JSCSession session].inProgressDownload.downloadId);
-        
-        [[JSCSession session].inProgressDownload pause];
-        
-        [[JSCSession session].downloadStack push:[JSCSession session].inProgressDownload];
-        
-        [JSCSession session].inProgressDownload = nil;
-    }
-}
-
-#pragma mark - NSURLSessionDownloadTask
-
-- (NSURLSessionDownloadTask *)downloadTaskWithURL:(NSURL *)url
-{
-    return [[JSCSession session].session downloadTaskWithURL:url];
-}
-
-- (NSURLSessionDownloadTask *)downloadTaskWithResumeData:(NSData *)resumeData
-{
-    return [[JSCSession session].session downloadTaskWithResumeData:resumeData];
-}
-
-#pragma mark - NSURLSessionDataTask
 
 - (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler
 {
-    return [[JSCSession session].session dataTaskWithRequest:request
-                                           completionHandler:completionHandler];
+    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request];
+    
+    
+    JSCSessionTaskContext *context = [[JSCSessionTaskContext alloc] init];
+    
+    context.completionHandler = completionHandler;
+    
+    [self.tasksContexts setObject:context
+                           forKey:@(task.taskIdentifier)];
+    
+    return task;
 }
 
-#pragma mark - Coalescing
+#pragma mark - NSURLSessionTaskDelegate
 
-- (BOOL)shouldCoalesceDownloadTask:(JSCDownloadTaskInfo *)newTaskInfo
+- (void)URLSession:(__unused NSURLSession *)session
+          dataTask:(NSURLSessionTask *)task
+    didReceiveData:(NSData *)data
 {
-    BOOL didCoalesce = NO;
+    JSCSessionTaskContext *context = [self.tasksContexts objectForKey:@(task.taskIdentifier)];
+    [context.receivedData appendData:data];
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error
+{
+    JSCSessionTaskContext *context = [self.tasksContexts objectForKey:@(task.taskIdentifier)];
     
-    if ([[JSCSession session].inProgressDownload canCoalesceWithTaskInfo:newTaskInfo])
+    if (context.completionHandler)
     {
-        [[JSCSession session].inProgressDownload coalesceWithTaskInfo:newTaskInfo];
-        
-        didCoalesce = YES;
+        context.completionHandler(context.receivedData, task.response, error);
     }
-    
-    if (!didCoalesce)
-    {
-        for (JSCDownloadTaskInfo *taskInfo in self.downloadStack.objectsArray)
-        {
-            BOOL canAskToCoalesce = [taskInfo isKindOfClass:[JSCDownloadTaskInfo class]];
-            
-            if (canAskToCoalesce &&
-                [taskInfo canCoalesceWithTaskInfo:newTaskInfo])
-            {
-                [taskInfo coalesceWithTaskInfo:newTaskInfo];
-                
-                didCoalesce = YES;
-                
-                break;
-            }
-        }
-    }
-    
-    return didCoalesce;
 }
 
 @end

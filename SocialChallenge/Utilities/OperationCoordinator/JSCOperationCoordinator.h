@@ -6,7 +6,15 @@
 //
 //
 
+/**
+ Identifier for network based operations.
+ */
 extern NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier;
+
+/**
+ Identifier for local operations.
+ */
+extern NSString * const kJSCLocalDataOperationSchedulerTypeIdentifier;
 
 #import "JSCOperationScheduler.h"
 
