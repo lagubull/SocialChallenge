@@ -17,6 +17,7 @@
 #import "JSCPost.h"
 #import "JSCPostPage.h"
 #import "NSManagedObjectContext+CDSDelete.h"
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 @interface JSCAppDelegate ()
 
@@ -26,6 +27,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BuddyBuildSDK setup];
+    
     [[CDSServiceManager sharedInstance] setupModelURLWithModelName:@"SocialChallenge"];
     
     NSOperationQueue *networkDataOperationQueue = [[NSOperationQueue alloc] init];
