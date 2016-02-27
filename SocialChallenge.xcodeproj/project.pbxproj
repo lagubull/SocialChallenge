@@ -860,6 +860,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = SocialChallenge/SupportingFIles/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"API_END_POINT=@\\\"http://unii-interview.herokuapp.com/api/v1/posts\\\"",
 					"DEBUG=1",
 					"$(inherited)",
 				);

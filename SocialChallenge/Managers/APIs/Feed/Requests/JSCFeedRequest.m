@@ -8,10 +8,14 @@
 
 #import "JSCFeedRequest.h"
 
-static NSString * const kJSCFeedURL = @"http://unii-interview.herokuapp.com/api/v1/posts";
+/**
+ HTTP GET Method.
+ */
 static NSString * const kJSCHTTPRequestMethodGet = @"GET";
 
 @implementation JSCFeedRequest
+
+#pragma mark - Retrieve
 
 + (instancetype)requestToRetrieveFeed
 {
@@ -19,7 +23,7 @@ static NSString * const kJSCHTTPRequestMethodGet = @"GET";
     
     request.HTTPMethod = kJSCHTTPRequestMethodGet;
     
-    request.URL = [NSURL URLWithString:kJSCFeedURL];
+    request.URL = [NSURL URLWithString:API_END_POINT];
     
     return request;
 }
