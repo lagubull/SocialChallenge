@@ -20,11 +20,15 @@ extern NSString * const kJSCLocalDataOperationSchedulerTypeIdentifier;
 
 @class JSCOperation;
 
+/**
+ This class handles the schedulers that run the operations.
+ */
 @interface JSCOperationCoordinator : NSObject
 
+/**
+ Contains the schedulers in the app.
+ */
 @property (nonatomic, strong, readonly) NSDictionary *schedulerTable;
-
-@property (nonatomic, strong, readonly) NSArray *schedulers;
 
 /**
  Creates or returns an instance of the class

@@ -11,6 +11,9 @@
 
 #pragma mark - ValueOrDefault
 
+/**
+ Convenient method to check if a value is not nil and returns ir or the default
+ */
 static inline id JSCValueOrDefault(id value, id defaultValue)
 {
     if (value == nil ||
@@ -22,13 +25,39 @@ static inline id JSCValueOrDefault(id value, id defaultValue)
     return value;
 }
 
+/**
+ Code base for the parsers.
+ */
 @interface JSCParser : NSObject
 
 /**
- Convenience alloc/init that will return a parser instance.
+ Context for the parser to access CoreData.
+ */
+@property (nonatomic, strong) NSManagedObjectContext *managedContext;
+
+/**
+ Convenient initialiser the parser.
+ 
+ @param managedContext - Context for the parser to access CoreData.
  
  @return FSNParser instance.
  */
-+ (instancetype)parser;
++ (instancetype)parserWithContext:(NSManagedObjectContext *)managedContext;
+
+/**
+ Initialises the parser.
+ 
+ @param managedContext - Context for the parser to access CoreData.
+ 
+ @return FSNParser instance.
+ */
+- (instancetype)initWithContext:(NSManagedObjectContext *)managedContext NS_DESIGNATED_INITIALIZER;
+
+/**
+ Initialises the parser.
+ 
+ This method must not be used as the context is a mandatory property.
+ */
+- (instancetype)init __attribute__((unavailable("Please use InitWithContext")));
 
 @end

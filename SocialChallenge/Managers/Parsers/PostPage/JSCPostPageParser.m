@@ -13,19 +13,28 @@
 #import "JSCPostParser.h"
 #import "CDSServiceManager.h"
 
+/**
+ PostPage JSON Keys.
+ */
+static NSString * const kJSCPosts = @"posts";
+static NSString * const kJSCData = @"data";
+static NSString * const kJSCPagination = @"pagination";
+static NSString * const kJSCcurrentPage = @"current_page";
+static NSString * const kJSCNextPage = @"next_page";
+
 @implementation JSCPostPageParser
 
 #pragma mark - Page
 
 - (JSCPostPage *)parsePage:(NSDictionary *)pageDictionary
 {
-    NSArray *postsDictionaries = pageDictionary[@"posts"][@"data"];
+    NSArray *postsDictionaries = pageDictionary[kJSCPosts][kJSCData];
     
     JSCPostPage *page = nil;
     
     if (postsDictionaries.count > 0)
     {
-        JSCPostParser *parser = [JSCPostParser parser];
+        JSCPostParser *parser = [JSCPostParser parserWithContext:self.managedContext];
         
         NSArray *parsedPosts = [parser parsePosts:postsDictionaries];
         
@@ -35,7 +44,7 @@
             {
                 if (!page)
                 {
-                    NSDictionary *metaDictionary = pageDictionary[@"posts"][@"pagination"];
+                    NSDictionary *metaDictionary = pageDictionary[kJSCPosts][kJSCPagination];
                     
                     page = [self parseMetaDictionary:metaDictionary];
                 }
@@ -46,7 +55,7 @@
     }
     else
     {
-        NSDictionary *metaDictionary = pageDictionary[@"posts"][@"pagination"];
+        NSDictionary *metaDictionary = pageDictionary[kJSCPosts][kJSCPagination];
         
         page = [self parseMetaDictionary:metaDictionary];
     }
@@ -59,10 +68,10 @@
 - (JSCPostPage *)parseMetaDictionary:(NSDictionary *)metaDictionary
 {
     JSCPostPage *page = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([JSCPostPage class])
-                                                      inManagedObjectContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
+                                                      inManagedObjectContext:self.managedContext];
     
-    page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[@"next_page"], nil);
-    page.index = JSCValueOrDefault(metaDictionary[@"current_page"], nil);
+    page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[kJSCNextPage], nil);
+    page.index = JSCValueOrDefault(metaDictionary[kJSCcurrentPage], nil);
     
     return page;
 }

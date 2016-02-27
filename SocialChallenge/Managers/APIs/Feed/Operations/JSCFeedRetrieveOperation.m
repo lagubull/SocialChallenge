@@ -92,13 +92,13 @@
     __weak typeof(self) weakSelf = self;
     
     self.task = [[JSCSession defaultSession] dataTaskWithRequest:request
-                                                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+                                               completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
                  {
                      if (!error)
                      {
                          NSDictionary *feed = [JSCJSONManager processJSONData:data];
                          
-                         JSCPostPageParser *pageParser = [JSCPostPageParser parser];
+                         JSCPostPageParser *pageParser = [JSCPostPageParser parserWithContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
                          
                          [[CDSServiceManager sharedInstance].backgroundManagedObjectContext performBlockAndWait:^
                           {
@@ -115,6 +115,8 @@
     
     [self.task resume];
 }
+
+#pragma mark - Request
 
 - (JSCFeedRequest *)requestForMode:(JSCDataRetrievalOperationMode)mode
 {

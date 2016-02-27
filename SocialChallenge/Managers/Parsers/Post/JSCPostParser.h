@@ -10,6 +10,9 @@
 
 @class JSCPost;
 
+/**
+ Extracts a Post.
+ */
 @interface JSCPostParser : JSCParser
 
 /**

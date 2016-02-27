@@ -10,6 +10,9 @@
 
 @class JSCPostPage;
 
+/**
+ Extracts a PostPage.
+ */
 @interface JSCPostPageParser : JSCParser
 
 /**

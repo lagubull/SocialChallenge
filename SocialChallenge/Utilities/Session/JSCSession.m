@@ -8,32 +8,7 @@
 
 #import "JSCSession.h"
 
-@interface JSCSessionTaskContext : NSObject
-
-@property (nonatomic, strong) NSMutableData *receivedData;
-@property (nonatomic, strong) void (^completionHandler)(NSData *data, NSURLResponse *response, NSError *error);
-
-@end
-
-@implementation JSCSessionTaskContext
-
-#pragma mark - ReceivedData
-
-- (NSMutableData *)receivedData
-{
-    if (!_receivedData)
-    {
-        _receivedData = [[NSMutableData alloc] init];
-    }
-    
-    return _receivedData;
-}
-
-@end
-
-@interface JSCSession () <NSURLSessionDelegate>
-
-@property (nonatomic, strong) NSMutableDictionary *tasksContexts;
+@interface JSCSession ()
 
 @end
 
@@ -51,11 +26,9 @@
         
         [configuration setHTTPMaximumConnectionsPerHost:10];
         
-        self.session = [NSURLSession sessionWithConfiguration:configuration
-                                                     delegate:self
-                                                delegateQueue:[NSOperationQueue mainQueue]];
-        
-        _tasksContexts = [[NSMutableDictionary alloc] init];
+        self = (JSCSession *)[NSURLSession sessionWithConfiguration:configuration
+                                                           delegate:nil
+                                                      delegateQueue:[NSOperationQueue mainQueue]];
     }
     
     return self;
@@ -74,41 +47,6 @@
     });
     
     return defaultSession;
-}
-
-- (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler
-{
-    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request];
-    
-    
-    JSCSessionTaskContext *context = [[JSCSessionTaskContext alloc] init];
-    
-    context.completionHandler = completionHandler;
-    
-    [self.tasksContexts setObject:context
-                           forKey:@(task.taskIdentifier)];
-    
-    return task;
-}
-
-#pragma mark - NSURLSessionTaskDelegate
-
-- (void)URLSession:(__unused NSURLSession *)session
-          dataTask:(NSURLSessionTask *)task
-    didReceiveData:(NSData *)data
-{
-    JSCSessionTaskContext *context = [self.tasksContexts objectForKey:@(task.taskIdentifier)];
-    [context.receivedData appendData:data];
-}
-
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error
-{
-    JSCSessionTaskContext *context = [self.tasksContexts objectForKey:@(task.taskIdentifier)];
-    
-    if (context.completionHandler)
-    {
-        context.completionHandler(context.receivedData, task.response, error);
-    }
 }
 
 @end
