@@ -52,6 +52,8 @@
     JSCWindow *splashWindow = (JSCWindow *)[UIApplication sharedApplication].delegate.window;
     
     [splashWindow hideSplashScreen];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 @end
