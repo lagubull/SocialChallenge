@@ -14,8 +14,13 @@
 
 NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier = @"kJSCNetworkDataOperationSchedulerTypeIdentifier";
 
+NSString * const kJSCLocalDataOperationSchedulerTypeIdentifier = @"kJSCLocalDataOperationSchedulerTypeIdentifier";
+
 @interface JSCOperationCoordinator ()
 
+/**
+Contains the schedulers in the app.
+*/
 @property (nonatomic, strong) NSMutableDictionary *mutableSchedulerTable;
 
 /**
@@ -64,6 +69,8 @@ NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier = @"kJSCNetwork
     return self;
 }
 
+#pragma mark - Schedulers
+
 - (NSArray *)schedulers
 {
     return [_mutableSchedulerTable allValues];
@@ -74,13 +81,15 @@ NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier = @"kJSCNetwork
     return [self.mutableSchedulerTable copy];
 }
 
-#pragma mark - OperationsAndScheduling
+#pragma mark - Register
 
 - (void)registerScheduler:(id<JSCOperationScheduler>)scheduler
       schedulerIdentifier:(NSString *)schedulerIdentifier
 {
     self.mutableSchedulerTable[schedulerIdentifier] = scheduler;
 }
+
+#pragma mark - Add
 
 - (void)addOperation:(JSCOperation *)operation
 {
@@ -95,16 +104,13 @@ NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier = @"kJSCNetwork
     }
 }
 
+#pragma mark - Coalescing
+
 - (JSCOperation *)coalesceOperation:(JSCOperation *)newOperation
                           scheduler:(id<JSCOperationScheduler>)scheduler
 {
     NSArray *operations = [scheduler operations];
     
-    /*
-     I know we check if the operation is a UFCOperation below,
-     but this is so we don't have to cast it everywhere as Objective-C
-     isn't as nice as Swift in this regard so we have to help the compiler out.
-     */
     for (JSCOperation *operation in operations)
     {
         BOOL canAskToCoalesce = [operation isKindOfClass:[JSCOperation class]];

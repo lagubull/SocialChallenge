@@ -13,6 +13,19 @@
 #import "NSDateFormatter+JSCDateFormatter.h"
 #import "JSCPost+CoreDataProperties.h"
 
+/**
+ Post JSON Keys.
+ */
+static NSString * const kJSCPostId = @"id";
+static NSString * const kJSCLikeCount = @"like_count";
+static NSString * const kJSCCommentCount = @"comment_count";
+static NSString * const kJSCContent = @"content";
+static NSString * const kJSCUser = @"user";
+static NSString * const kJSCAvatar = @"avatar";
+static NSString * const kJSCFirstName = @"first_name";
+static NSString * const kJSCLastName = @"last_name";
+static NSString * const kJSCCreatedAt = @"created_at";
+
 @implementation JSCPostParser
 
 #pragma mark Posts
@@ -35,37 +48,37 @@
 {
     JSCPost *post = nil;
     
-    if (postDictionary[@"id"])
+    if (postDictionary[kJSCPostId])
     {
-        NSString *postID = [NSString stringWithFormat:@"%@", postDictionary[@"id"]];
+        NSString *postID = [NSString stringWithFormat:@"%@",postDictionary[kJSCPostId]];
         
         post = [JSCPost fetchPostWithID:postID
-                   managedObjectContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
+                   managedObjectContext:self.managedContext];
         if (!post)
         {
             post = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([JSCPost class])
-                                                 inManagedObjectContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
+                                                 inManagedObjectContext:self.managedContext];
             
             post.postID = postID;
         }
         
         NSDateFormatter *dateFormatter = [NSDateFormatter jsc_dateFormatter];
         
-        post.createdAt = JSCValueOrDefault([dateFormatter dateFromString:postDictionary[@"created_at"]],
+        post.createdAt = JSCValueOrDefault([dateFormatter dateFromString:postDictionary[kJSCCreatedAt]],
                                            post.createdAt);
         
-        post.likeCount = JSCValueOrDefault(postDictionary[@"like_count"],
+        post.likeCount = JSCValueOrDefault(postDictionary[kJSCLikeCount],
                                            post.likeCount);
         
-        post.content = JSCValueOrDefault(postDictionary[@"content"],
+        post.content = JSCValueOrDefault(postDictionary[kJSCContent],
                                          post.content);
         
-        post.commentCount = JSCValueOrDefault(postDictionary[@"comment_count"],
+        post.commentCount = JSCValueOrDefault(postDictionary[kJSCCommentCount],
                                               post.commentCount);
         
-        post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[@"user"][@"avatar"], post.userAvatarRemoteURL);
-        post.userFirstName = JSCValueOrDefault(postDictionary[@"user"][@"first_name"], post.userFirstName);
-        post.userLastName = JSCValueOrDefault(postDictionary[@"user"][@"last_name"], post.userLastName);
+        post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[kJSCUser][kJSCAvatar], post.userAvatarRemoteURL);
+        post.userFirstName = JSCValueOrDefault(postDictionary[kJSCUser][kJSCFirstName], post.userFirstName);
+        post.userLastName = JSCValueOrDefault(postDictionary[kJSCUser][kJSCLastName], post.userLastName);
     }
     
     return post;

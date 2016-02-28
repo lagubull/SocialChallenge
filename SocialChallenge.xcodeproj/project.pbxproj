@@ -21,9 +21,8 @@
 		3B37AFE61C5F50000055428D /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE01C5F50000055428D /* JSCPost.m */; };
 		3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6501C73962400223E5A /* JSCMediaManager.m */; };
 		3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */; };
-		3B3EF65E1C73A31400223E5A /* JSCDownloadTaskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF65D1C73A31400223E5A /* JSCDownloadTaskInfo.m */; };
-		3B3EF6611C73A8B100223E5A /* JSCStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6601C73A8B100223E5A /* JSCStack.m */; };
 		3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
+		3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
@@ -35,7 +34,6 @@
 		3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9632F1B76CD95005365EF /* JSCFeedRetrieveOperation.m */; };
 		3BD963351B76D034005365EF /* JSCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963341B76D034005365EF /* JSCOperation.m */; };
 		3BD963391B76D382005365EF /* JSCFeedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963381B76D382005365EF /* JSCFeedRequest.m */; };
-		3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9633C1B76DD15005365EF /* JSCSession.m */; };
 		3BD963421B76E067005365EF /* JSCCDSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963411B76E067005365EF /* JSCCDSOperation.m */; };
 		3BF13B091C5E375300B32627 /* JSCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B081C5E375300B32627 /* JSCParser.m */; };
 		3BF13B0C1C5E379F00B32627 /* JSCPostParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B0B1C5E379F00B32627 /* JSCPostParser.m */; };
@@ -91,12 +89,10 @@
 		3B3EF6501C73962400223E5A /* JSCMediaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaManager.m; sourceTree = "<group>"; };
 		3B3EF6571C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCLocalImageAssetRetrievalOperation.h; sourceTree = "<group>"; };
 		3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCLocalImageAssetRetrievalOperation.m; sourceTree = "<group>"; };
-		3B3EF65C1C73A31400223E5A /* JSCDownloadTaskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCDownloadTaskInfo.h; sourceTree = "<group>"; };
-		3B3EF65D1C73A31400223E5A /* JSCDownloadTaskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCDownloadTaskInfo.m; sourceTree = "<group>"; };
-		3B3EF65F1C73A8B100223E5A /* JSCStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCStack.h; sourceTree = "<group>"; };
-		3B3EF6601C73A8B100223E5A /* JSCStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCStack.m; sourceTree = "<group>"; };
 		3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JSCDateFormatter.h"; sourceTree = "<group>"; };
 		3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JSCDateFormatter.m"; sourceTree = "<group>"; };
+		3B488FD31C80BC6E003DA767 /* JSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSession.h; sourceTree = "<group>"; };
+		3B488FD41C80BC6E003DA767 /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
 		3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeAdapter.m; sourceTree = "<group>"; };
 		3BD281E61B6F8ACF0097B452 /* JSCPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostTableViewCell.h; sourceTree = "<group>"; };
@@ -120,8 +116,6 @@
 		3BD963341B76D034005365EF /* JSCOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCOperation.m; sourceTree = "<group>"; };
 		3BD963371B76D382005365EF /* JSCFeedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFeedRequest.h; sourceTree = "<group>"; };
 		3BD963381B76D382005365EF /* JSCFeedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFeedRequest.m; sourceTree = "<group>"; };
-		3BD9633B1B76DD15005365EF /* JSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSession.h; sourceTree = "<group>"; };
-		3BD9633C1B76DD15005365EF /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
 		3BD963401B76E067005365EF /* JSCCDSOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCCDSOperation.h; sourceTree = "<group>"; };
 		3BD963411B76E067005365EF /* JSCCDSOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCCDSOperation.m; sourceTree = "<group>"; };
 		3BF13B071C5E375300B32627 /* JSCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCParser.h; sourceTree = "<group>"; };
@@ -264,7 +258,6 @@
 		3B3111B71B6E127D008E374E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3B3EF65B1C73A22C00223E5A /* NonPersistent */,
 				3B3111B81B6E127D008E374E /* Persistent */,
 			);
 			path = Model;
@@ -322,10 +315,9 @@
 		3B3111C01B6E127D008E374E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3B3EF65A1C73A1D100223E5A /* Stack */,
+				3B488FD21C80BC20003DA767 /* Session */,
 				3BD89C591B7761180084FA63 /* OperationScheduler */,
 				3BD89C551B775EEC0084FA63 /* OperationCoordinator */,
-				3BD9633A1B76DBC5005365EF /* Session */,
 				3BD963311B76CFF2005365EF /* Operation */,
 			);
 			path = Utilities;
@@ -334,18 +326,9 @@
 		3B3111C11B6E127D008E374E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3B3111C21B6E127D008E374E /* Activitty */,
 				3B3111C31B6E127D008E374E /* Home */,
-				3B3111C61B6E127D008E374E /* User */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		3B3111C21B6E127D008E374E /* Activitty */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Activitty;
 			sourceTree = "<group>";
 		};
 		3B3111C31B6E127D008E374E /* Home */ = {
@@ -356,13 +339,6 @@
 				3B3111D01B6E171F008E374E /* JSCHomeViewController.m */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		3B3111C61B6E127D008E374E /* User */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		3B3111CC1B6E16CE008E374E /* Adapter */ = {
@@ -430,24 +406,6 @@
 			path = LocalRetrieval;
 			sourceTree = "<group>";
 		};
-		3B3EF65A1C73A1D100223E5A /* Stack */ = {
-			isa = PBXGroup;
-			children = (
-				3B3EF65F1C73A8B100223E5A /* JSCStack.h */,
-				3B3EF6601C73A8B100223E5A /* JSCStack.m */,
-			);
-			path = Stack;
-			sourceTree = "<group>";
-		};
-		3B3EF65B1C73A22C00223E5A /* NonPersistent */ = {
-			isa = PBXGroup;
-			children = (
-				3B3EF65C1C73A31400223E5A /* JSCDownloadTaskInfo.h */,
-				3B3EF65D1C73A31400223E5A /* JSCDownloadTaskInfo.m */,
-			);
-			path = NonPersistent;
-			sourceTree = "<group>";
-		};
 		3B3FAA3D1C60B5950019D0D0 /* NSDateFormatter */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +413,15 @@
 				3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */,
 			);
 			path = NSDateFormatter;
+			sourceTree = "<group>";
+		};
+		3B488FD21C80BC20003DA767 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				3B488FD31C80BC6E003DA767 /* JSCSession.h */,
+				3B488FD41C80BC6E003DA767 /* JSCSession.m */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		3BC04A701B73868F00AB0B66 /* CoreData */ = {
@@ -600,15 +567,6 @@
 				3BD963381B76D382005365EF /* JSCFeedRequest.m */,
 			);
 			path = Requests;
-			sourceTree = "<group>";
-		};
-		3BD9633A1B76DBC5005365EF /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				3BD9633B1B76DD15005365EF /* JSCSession.h */,
-				3BD9633C1B76DD15005365EF /* JSCSession.m */,
-			);
-			path = Session;
 			sourceTree = "<group>";
 		};
 		3BD9633E1B76E030005365EF /* Operation */ = {
@@ -830,7 +788,6 @@
 			files = (
 				3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */,
 				3BF13B091C5E375300B32627 /* JSCParser.m in Sources */,
-				3B3EF65E1C73A31400223E5A /* JSCDownloadTaskInfo.m in Sources */,
 				3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */,
 				3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
@@ -847,16 +804,15 @@
 				3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */,
 				3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */,
 				3BD963391B76D382005365EF /* JSCFeedRequest.m in Sources */,
-				3BD9633D1B76DD15005365EF /* JSCSession.m in Sources */,
 				3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */,
 				3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */,
 				3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */,
 				3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */,
+				3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */,
 				3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */,
 				3B37AFE61C5F50000055428D /* JSCPost.m in Sources */,
 				3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */,
 				3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */,
-				3B3EF6611C73A8B100223E5A /* JSCStack.m in Sources */,
 				3BF13B0F1C5E37B200B32627 /* JSCPostPageParser.m in Sources */,
 				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
 			);
@@ -932,6 +888,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = SocialChallenge/SupportingFIles/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"API_END_POINT=@\\\"http://unii-interview.herokuapp.com/api/v1/posts\\\"",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -988,6 +945,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = SocialChallenge/SupportingFIles/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"API_END_POINT=@\\\"http://unii-interview.herokuapp.com/api/v1/posts\\\"",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

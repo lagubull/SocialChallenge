@@ -8,12 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ Success block type.
+ */
 typedef void (^JSCOperationOnSuccessCallback)(id result);
 
+/**
+ Completion block type.
+ */
 typedef void (^JSCOperationOnCompletionCallback)(id result);
 
+/**
+ Failure block type.
+ */
 typedef void (^JSCOperationOnFailureCallback)(NSError *error);
 
+/**
+ Code base for the operations in the app.
+ */
 @interface JSCOperation : NSOperation <NSCoding, NSCopying>
 
 /**
@@ -92,8 +104,6 @@ typedef void (^JSCOperationOnFailureCallback)(NSError *error);
  is all performed in one operation.
  
  Perform any logic here to merge the actions together.
- 
- i.e For a unblock / block pair you could cancel the work.
  
  @param operation - Operation to coalesce with.
  */

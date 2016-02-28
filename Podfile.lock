@@ -1,6 +1,7 @@
 PODS:
   - CoreDataServices (1.1.3)
   - EasyAlert (1.0.1)
+  - EasyDownloadSession (1.0.2)
   - PureLayout (3.0.1)
   - Reveal-iOS-SDK (1.6.2)
   - SimpleTableView (1.0.1):
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - CoreDataServices (~> 1.1.3)
   - EasyAlert
+  - EasyDownloadSession (~> 1.0.2)
   - PureLayout
   - Reveal-iOS-SDK (~> 1.6)
   - SimpleTableView (~> 1.0.1)
@@ -18,6 +20,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   CoreDataServices: ca1e442e4d7b3913886f2293f92568f995d0e3e4
   EasyAlert: 837fa8d271786f3feedd83ca6bccc2e090abd091
+  EasyDownloadSession: 8d27e72df8de276191d9f543a1f61c9436e384c9
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SimpleTableView: 0cd2a03884099b4f939833a162584e793f9f05a6

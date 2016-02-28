@@ -10,18 +10,39 @@
 
 @interface JSCOperation ()
 
+/**
+ Current progress of the operation.
+ */
 @property (nonatomic, strong, readwrite) NSProgress *progress;
 
+/**
+ Is the Operation prepared to execute.
+ */
 @property (atomic, assign, getter=isReady) BOOL ready;
 
+/**
+ Is the operation running.
+ */
 @property (atomic, assign, getter=isExecuting) BOOL executing;
 
+/*
+ YES - The operation has executed.
+ */
 @property (atomic, assign, getter=isFinished) BOOL finished;
 
+/**
+ Return value for the operation.
+ */
 @property (nonatomic, strong, readwrite) id result;
 
+/**
+ Error occurred during execution.
+ */
 @property (nonatomic, strong, readwrite) NSError *error;
 
+/**
+ Queue for callbacks.
+ */
 @property (nonatomic, strong) NSOperationQueue *callbackQueue;
 
 @end
@@ -163,7 +184,7 @@
         }
     };
     
-    /*
+    /**
      We replace the other operation's progress object,
      so that anyone listening to that one, actually gets the
      progress of this operation which is doing the real work. */

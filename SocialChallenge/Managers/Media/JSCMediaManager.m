@@ -8,9 +8,10 @@
 
 #import "JSCMediaManager.h"
 
+#import <EDSDownloadSession.h>
+
 #import "JSCPost.h"
 #import "JSCLocalImageAssetRetrievalOperation.h"
-#import "JSCSession.h"
 #import "JSCMediaStorageOperation.h"
 #import "JSCOperationCoordinator.h"
 #import "JSCFileManager.h"
@@ -44,43 +45,39 @@
                     retrievalRequired(post);
                 }
                 
-                [JSCSession scheduleDownloadWithID:post.postID
-                                        fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
-                                completionBlock:^(JSCDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location, NSError *error)
+                [EDSDownloadSession scheduleDownloadWithId:post.postID
+                                                   fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
+                                                  progress:nil
+                                                   success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location)
                  {
-                     if (error)
-                     {
-                         if (failure)
-                         {
-                             failure(error);
-                         }
-                     }
-                     else
-                     {
-                         
-                         JSCMediaStorageOperation *op = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
-                                                                                                    data:responseData];
-                         
-                         op.onSuccess = ^(id result)
-                         {
-                             if (success)
-                             {
-                                 success(result, post.postID);
-                             }
-                         };
-                         
-                         op.onFailure = failure;
-                         
-                         op.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
-                         
-                         [[JSCOperationCoordinator sharedInstance] addOperation:op];
-                     }
+                     JSCMediaStorageOperation *op = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
+                                                                                                data:responseData];
                      
+                     op.onSuccess = ^(id result)
+                     {
+                         if (success)
+                         {
+                             success(result, post.postID);
+                         }
+                     };
+                     
+                     op.onFailure = failure;
+                     
+                     op.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
+                     
+                     [[JSCOperationCoordinator sharedInstance] addOperation:op];
+                 }
+                                                   failure:^(EDSDownloadTaskInfo *downloadTask, NSError *error)
+                 {
+                     if (failure)
+                     {
+                         failure(error);
+                     }
                  }];
             }
         };
         
-        operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
+        operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
         
         [[JSCOperationCoordinator sharedInstance] addOperation:operation];
     }

@@ -12,9 +12,32 @@
 
 #pragma mark - Parser
 
-+ (instancetype)parser
++ (instancetype)parserWithContext:(NSManagedObjectContext *)managedContext
 {
-    return [[self.class alloc] init];
+    JSCParser *parser = [[self.class alloc] init];
+    
+    parser.managedContext = managedContext;
+    
+    return parser;
+}
+
+#pragma mark - Init
+
+- (instancetype)init
+{
+    return [self initWithContext:nil];
+}
+
+- (instancetype)initWithContext:(NSManagedObjectContext *)managedContext
+{
+    self = [super init];
+    
+    if (self)
+    {
+        self.managedContext = managedContext;
+    }
+    
+    return self;
 }
 
 @end

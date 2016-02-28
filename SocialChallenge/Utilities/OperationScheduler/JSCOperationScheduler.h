@@ -16,7 +16,14 @@
  */
 @protocol JSCOperationScheduler <NSObject>
 
-@property (nonatomic, assign, getter = isSuspended) BOOL suspended;
+/**
+ Indicates whether the scheduler is executing.
+ */
+@property (nonatomic, assign, getter=isSuspended) BOOL suspended;
+
+/**
+ Contains the operations waiting to execute.
+ */
 @property (readonly, copy) NSArray *operations;
 
 /**
@@ -25,7 +32,6 @@
  @param operation to add
  */
 - (void)addOperation:(NSOperation *)operation;
-
 
 /**
  Stops all operations in the queue
