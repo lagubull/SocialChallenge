@@ -45,7 +45,7 @@
                     retrievalRequired(post);
                 }
                 
-                [EDSDownloadSession scheduleDownloadWithID:post.postID
+                [EDSDownloadSession scheduleDownloadWithId:post.postID
                                                    fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
                                                   progress:nil
                                                    success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location)
