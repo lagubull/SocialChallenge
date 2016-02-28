@@ -23,4 +23,3 @@ scrolling down the tableview.
 A special mention to the pod EasyALertView which we are using here to show alerts for the 
 unimplemented button actions.
 
-
