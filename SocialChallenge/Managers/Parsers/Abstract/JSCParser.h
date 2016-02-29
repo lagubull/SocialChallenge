@@ -33,7 +33,7 @@ static inline id JSCValueOrDefault(id value, id defaultValue)
 /**
  Context for the parser to access CoreData.
  */
-@property (nonatomic, strong) NSManagedObjectContext *managedContext;
+@property (nonatomic, strong, readonly) NSManagedObjectContext *managedContext;
 
 /**
  Convenient initialiser the parser.
