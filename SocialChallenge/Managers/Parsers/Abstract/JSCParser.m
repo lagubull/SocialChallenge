@@ -8,6 +8,15 @@
 
 #import "JSCParser.h"
 
+@interface JSCParser ()
+
+/**
+ Context for the parser to access CoreData.
+ */
+@property (nonatomic, strong, readwrite) NSManagedObjectContext *managedContext;
+
+@end
+
 @implementation JSCParser
 
 #pragma mark - Parser
