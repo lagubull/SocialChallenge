@@ -54,6 +54,8 @@
     
     //TODO: Delete media
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     [self.window makeKeyAndVisible];
     
     return YES;

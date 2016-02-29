@@ -8,6 +8,7 @@
 
 #import "JSCHomeViewController.h"
 
+#import "UINavigationBar+JSCCustomHeight.h"
 #import <STVPaginatingView.h>
 #import <STVSimpleTableView.h>
 
@@ -42,7 +43,22 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 {
     [super viewDidLoad];
     
+    [self.navigationController.navigationBar jsc_setHeight:kJSCNavigationBarHeight];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+   
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    self.title = NSLocalizedString(@"postsTitle", nil);
+    
     self.view.backgroundColor = [UIColor blueColor];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -64,9 +80,9 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
     if (!_tableView)
     {
         _tableView = [[STVSimpleTableView alloc] initWithFrame:CGRectMake(0.0f,
-                                                                          kJSCNavigationBarHeight,
+                                                                          0.0f,
                                                                           self.view.bounds.size.width,
-                                                                          self.view.bounds.size.height - kJSCNavigationBarHeight)];
+                                                                          self.view.bounds.size.height)];
         
         _tableView.backgroundColor = [UIColor lightGrayColor];
         
