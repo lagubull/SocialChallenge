@@ -15,7 +15,7 @@
 #import "CDSServiceManager.h"
 #import "JSCPostTableViewCell.h"
 
-@interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate, STVDataRetrievalTableViewDelegate>
+@interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate, STVDataRetrievalTableViewDelegate, JSCPostTableViewCellDelegate>
 
 @end
 
@@ -86,10 +86,24 @@
     JSCPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[JSCPostTableViewCell reuseIdentifier]
                                                                          forIndexPath:indexPath];
     
+    cell.delegate = self;
+    
     [self configureCell:cell
            forIndexPath:indexPath];
     
     return cell;
+}
+
+#pragma mark - JSCPostTableViewCellDelegate
+
+- (void)didPressCommentsButton:(JSCPost *)post
+{
+    [self.delegate didPressCommentsButton:post];
+}
+
+- (void)didPressFavoritesButton:(JSCPost *)post
+{
+    [self.delegate didPressFavoritesButton:post];
 }
 
 #pragma mark - UITableViewDelegate
