@@ -106,7 +106,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
                                                                               self.view.bounds.size.width,
                                                                               kSTVPaginatingViewHeight)];
         
-        _paginatingView.loadingLabel.text = NSLocalizedString(@"Loading", nil);
+        _paginatingView.loadingLabel.text = NSLocalizedString(@"LoadingMessage", nil);
     }
     
     return _paginatingView;
@@ -138,7 +138,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
 - (void)didPressFavoritesButton:(JSCPost *)post
 {
     [[LEAAlertController dismissibleAlertViewWithTitle:NSLocalizedString(@"FavoritesMessageTitle", nil)
-                                               message:NSLocalizedString(@"FavouritesMessageBody", nil)
+                                               message:NSLocalizedString(@"FavoritesMessageBody", nil)
                                      cancelButtonTitle:NSLocalizedString(@"AcceptNav", nil)] showInViewController:self];
 }
 
