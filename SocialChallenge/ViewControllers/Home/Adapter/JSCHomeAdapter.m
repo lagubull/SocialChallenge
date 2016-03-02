@@ -152,7 +152,7 @@
 
 - (NSArray *)sortDescriptorsForFetchRequest
 {
-    NSSortDescriptor *postIdSort = [NSSortDescriptor sortDescriptorWithKey:@"postID"
+    NSSortDescriptor *postIdSort = [NSSortDescriptor sortDescriptorWithKey:@"postId"
                                                                  ascending:NO];
     
     return @[postIdSort];

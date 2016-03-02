@@ -14,7 +14,7 @@
 @implementation JSCPostPage (CoreDataProperties)
 
 @dynamic nextPageRequestPath;
-@dynamic postPageID;
+@dynamic postPageId;
 @dynamic post;
 @dynamic index;
 

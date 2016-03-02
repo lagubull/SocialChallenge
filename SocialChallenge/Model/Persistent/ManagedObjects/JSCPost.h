@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Retrieves a JSCPOST from DB based on ID provided.
  
- @param postID - ID of the post to be retrieved.
+ @param postId - ID of the post to be retrieved.
  @param managedObjectContext - context that should be used to access persistent store.
  
  @return JSCPOST instance or nil if POST can't be found.
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Retrieves a JSCPOST from DB based on ID provided, looking in the mainContext.
  
- @param postID - ID of the post to be retrieved.
+ @param postId - ID of the post to be retrieved.
  
  @return JSCPOST instance or nil if POST can't be found.
  */

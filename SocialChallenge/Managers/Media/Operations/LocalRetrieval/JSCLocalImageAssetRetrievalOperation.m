@@ -17,7 +17,7 @@
 /**
  ID of the post the media is related to.
  */
-@property (nonatomic, copy) NSString *postID;
+@property (nonatomic, copy) NSString *postId;
 
 @end
 
@@ -27,13 +27,13 @@
 
 #pragma mark - Init
 
-- (instancetype)initWithPostID:(NSString *)postID;
+- (instancetype)initWithPostID:(NSString *)postId;
 {
     self = [super init];
     
     if (self)
     {
-        self.postID = postID;
+        self.postId = postId;
     }
     
     return self;
@@ -45,7 +45,7 @@
 {
     if (!_identifier)
     {
-        _identifier = [NSString stringWithFormat:@"retrieveLocalImageAssetForPostID %@", self.postID];
+        _identifier = [NSString stringWithFormat:@"retrieveLocalImageAssetForPostID %@", self.postId];
     }
     
     return _identifier;
@@ -59,7 +59,7 @@
     
     if (self)
     {
-        self.postID = [decoder decodeObjectForKey:NSStringFromSelector(@selector(postID))];
+        self.postId = [decoder decodeObjectForKey:NSStringFromSelector(@selector(postId))];
     }
     
     return self;
@@ -67,8 +67,8 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
-    [encoder encodeObject:self.postID
-                    forKey:NSStringFromSelector(@selector(postID))];
+    [encoder encodeObject:self.postId
+                    forKey:NSStringFromSelector(@selector(postId))];
 }
 
 #pragma mark - Start
@@ -79,7 +79,7 @@
     
     UIImage *imageFromDisk = nil;
     
-    NSData *imageData = [JSCFileManager retrieveDataFromDocumentsDirectoryWithPath:self.postID];
+    NSData *imageData = [JSCFileManager retrieveDataFromDocumentsDirectoryWithPath:self.postId];
     
     if (imageData)
     {

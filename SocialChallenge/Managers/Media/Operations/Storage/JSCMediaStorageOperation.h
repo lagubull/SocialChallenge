@@ -13,12 +13,12 @@
 /**
  Creates an operation to store an asset.
  
- @param postID - indicates the post the asset is related to.
+ @param postId - indicates the post the asset is related to.
  @param location - indicates where the object has been stored by default.
  
  @return an instance of the class.
  */
-- (instancetype)initWithPostID:(NSString *)postID
+- (instancetype)initWithPostID:(NSString *)postId
                       data:(NSData *)data;
 
 @end

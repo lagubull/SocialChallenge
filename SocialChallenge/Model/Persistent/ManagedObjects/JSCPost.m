@@ -18,7 +18,7 @@
 + (instancetype)fetchPostWithId:(NSString *)postId
            managedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"postID MATCHES %@", postId];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"postId MATCHES %@", postId];
     
     return (JSCPost *)[managedObjectContext cds_retrieveFirstEntryForEntityClass:[JSCPost class]
                                                                        predicate:predicate];
