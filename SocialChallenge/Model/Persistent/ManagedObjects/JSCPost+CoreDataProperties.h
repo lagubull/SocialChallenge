@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSDate *createdAt;
 @property (nullable, nonatomic, retain) NSNumber *likeCount;
 @property (nullable, nonatomic, retain) NSNumber *commentCount;
-@property (nullable, nonatomic, retain) NSString *postID;
+@property (nullable, nonatomic, retain) NSString *postId;
 @property (nullable, nonatomic, retain) JSCPostPage *page;
 @property (nullable, nonatomic, retain) NSString *content;
 @property (nullable, nonatomic, retain) NSString *userFirstName;

@@ -23,6 +23,7 @@
 		3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */; };
 		3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
 		3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
+		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
@@ -94,6 +95,7 @@
 		3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JSCDateFormatter.m"; sourceTree = "<group>"; };
 		3B488FD31C80BC6E003DA767 /* JSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSession.h; sourceTree = "<group>"; };
 		3B488FD41C80BC6E003DA767 /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
+		3B70D2581C8600B100A6AB11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
 		3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeAdapter.m; sourceTree = "<group>"; };
 		3BD281E61B6F8ACF0097B452 /* JSCPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostTableViewCell.h; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				3B3111881B6E110B008E374E /* Info.plist */,
 				3B3111891B6E110B008E374E /* main.m */,
 				3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */,
+				3B70D2591C8600B100A6AB11 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			path = SupportingFiles;
@@ -734,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3111C91B6E127D008E374E /* Images.xcassets in Resources */,
+				3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +853,17 @@
 			targetProxy = 3B3111A41B6E110B008E374E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B70D2591C8600B100A6AB11 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B70D2581C8600B100A6AB11 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3B31117E1B6E1095008E374E /* Debug */ = {

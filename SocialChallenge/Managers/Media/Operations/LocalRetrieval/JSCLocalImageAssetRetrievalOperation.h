@@ -13,10 +13,10 @@
 /**
  Creates an operation to retrieve an asset from disk.
  
- @param postID - indicates the post the asset is related to.
+ @param postId - indicates the post the asset is related to.
  
  @return an instance of the class.
  */
-- (instancetype)initWithPostID:(NSString *)postID;
+- (instancetype)initWithPostID:(NSString *)postId;
 
 @end

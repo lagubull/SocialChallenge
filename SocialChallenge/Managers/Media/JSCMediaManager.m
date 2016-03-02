@@ -21,13 +21,13 @@
 #pragma mark - Retrieval
 
 + (void)retrieveMediaForPost:(JSCPost *)post
-           retrievalRequired:(void (^)(JSCPost *post))retrievalRequired
+           retrievalRequired:(void (^)(NSString *postId))retrievalRequired
                      success:(void (^)(id result, NSString *postId))success
-                     failure:(JSCOperationOnFailureCallback)failure
+                     failure:(void (^)(NSError *error, NSString *postId))failure;
 {
     if (post.userAvatarRemoteURL)
     {
-        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postID];
+        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postId];
         
         operation.onCompletion = ^(UIImage *imageMedia)
         {
@@ -35,33 +35,49 @@
             {
                 if (success)
                 {
-                    success(imageMedia, post.postID);
+                    success(imageMedia, post.postId);
                 }
             }
             else
             {
                 if (retrievalRequired)
                 {
-                    retrievalRequired(post);
+                    retrievalRequired(post.postId);
                 }
                 
-                [EDSDownloadSession scheduleDownloadWithId:post.postID
+                [EDSDownloadSession scheduleDownloadWithId:post.postId
                                                    fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
                                                   progress:nil
                                                    success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location)
                  {
-                     JSCMediaStorageOperation *op = [[JSCMediaStorageOperation alloc] initWithPostID:post.postID
+                     JSCMediaStorageOperation *op = [[JSCMediaStorageOperation alloc] initWithPostID:post.postId
                                                                                                 data:responseData];
                      
                      op.onSuccess = ^(id result)
                      {
-                         if (success)
+                         if (result)
                          {
-                             success(result, post.postID);
+                             if (success)
+                             {
+                                 success(result, post.postId);
+                             }
+                         }
+                         else
+                         {
+                             if (failure)
+                             {
+                                 failure(nil, post.postId);
+                             }
                          }
                      };
                      
-                     op.onFailure = failure;
+                     op.onFailure = ^(NSError *error)
+                     {
+                         if (failure)
+                         {
+                             failure(error, post.postId);
+                         }
+                     };
                      
                      op.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
                      
@@ -71,7 +87,7 @@
                  {
                      if (failure)
                      {
-                         failure(error);
+                         failure(error, post.postId);
                      }
                  }];
             }
@@ -80,6 +96,13 @@
         operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
         
         [[JSCOperationCoordinator sharedInstance] addOperation:operation];
+    }
+    else
+    {
+        if (failure)
+        {
+            failure(nil, post.postId);
+        }
     }
 }
 

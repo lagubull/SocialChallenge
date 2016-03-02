@@ -11,6 +11,7 @@
 #import <BuddyBuildSDK/BuddyBuildSDK.h>
 #import <CDSServiceManager.h>
 #import <EDSDownloadSession.h>
+#import <NSManagedObjectContext+CDSDelete.h>
 
 #import "JSCOperationCoordinator.h"
 #import "NSOperationQueue+JSCOperationScheduler.h"
@@ -19,7 +20,7 @@
 #import "JSCRootNavigationController.h"
 #import "JSCPost.h"
 #import "JSCPostPage.h"
-#import "NSManagedObjectContext+CDSDelete.h"
+#import "JSCFileManager.h"
 
 @interface JSCAppDelegate ()
 
@@ -51,12 +52,12 @@
     self.window.clipsToBounds = NO;
     
     /**
-     For the sake of the test, I will get rid of everything on startup
+     For the sake of the exercise, I will get rid of everything on startup
      */
     [[CDSServiceManager sharedInstance].mainManagedObjectContext cds_deleteEntriesForEntityClass:[JSCPost class]];
     [[CDSServiceManager sharedInstance].mainManagedObjectContext cds_deleteEntriesForEntityClass:[JSCPostPage class]];
     
-    //TODO: Delete media
+    [JSCFileManager deleteDataFromDocumentDirectoryWithPath:nil];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     

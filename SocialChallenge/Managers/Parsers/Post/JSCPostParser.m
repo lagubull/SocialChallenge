@@ -50,16 +50,16 @@ static NSString * const kJSCCreatedAt = @"created_at";
     
     if (postDictionary[kJSCPostId])
     {
-        NSString *postID = [NSString stringWithFormat:@"%@",postDictionary[kJSCPostId]];
+        NSString *postId = [NSString stringWithFormat:@"%@",postDictionary[kJSCPostId]];
         
-        post = [JSCPost fetchPostWithID:postID
+        post = [JSCPost fetchPostWithId:postId
                    managedObjectContext:self.managedContext];
         if (!post)
         {
             post = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([JSCPost class])
                                                  inManagedObjectContext:self.managedContext];
             
-            post.postID = postID;
+            post.postId = postId;
         }
         
         NSDateFormatter *dateFormatter = [NSDateFormatter jsc_dateFormatter];

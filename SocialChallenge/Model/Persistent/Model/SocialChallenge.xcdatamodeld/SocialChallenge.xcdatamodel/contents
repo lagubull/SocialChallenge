@@ -5,7 +5,7 @@
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="likeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="postID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userAvatarRemoteURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userFirstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userLastName" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,7 +14,7 @@
     <entity name="JSCPostPage" representedClassName="JSCPostPage" syncable="YES">
         <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="nextPageRequestPath" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="postPageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postPageId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSCPost" inverseName="page" inverseEntity="JSCPost" syncable="YES"/>
     </entity>
     <elements>

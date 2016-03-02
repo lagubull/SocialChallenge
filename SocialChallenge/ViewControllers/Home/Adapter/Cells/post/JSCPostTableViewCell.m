@@ -25,7 +25,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
 
 /**
  Post shown in the cell.
-*/
+ */
 @property (nonatomic, strong) JSCPost *post;
 
 /**
@@ -42,6 +42,11 @@ static const CGFloat JSCMarginConstraint = 10.0f;
  Image for the author of the post.
  */
 @property (nonatomic, strong) UIImageView *avatar;
+
+/**
+ Spinner to show activity while downloading.
+ */
+@property (nonatomic, strong) UIActivityIndicatorView *avatarLoadingView;
 
 /*
  Name of the author.
@@ -94,6 +99,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
         
         [self.baseContentView addSubview:self.contentLabel];
         [self.baseContentView addSubview:self.avatar];
+        [self.baseContentView addSubview:self.avatarLoadingView];
         [self.baseContentView addSubview:self.authorLabel];
         [self.baseContentView addSubview:self.favoritesButton];
         [self.baseContentView addSubview:self.favoritesCountLabel];
@@ -156,6 +162,19 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     return _avatar;
 }
 
+-(UIActivityIndicatorView *)avatarLoadingView
+{
+    if (!_avatarLoadingView)
+    {
+        _avatarLoadingView = [UIActivityIndicatorView newAutoLayoutView];
+        
+        _avatarLoadingView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+        _avatarLoadingView.hidesWhenStopped = YES;
+    }
+    
+    return _avatarLoadingView;
+}
+
 - (UILabel *)authorLabel
 {
     if (!_authorLabel)
@@ -177,11 +196,11 @@ static const CGFloat JSCMarginConstraint = 10.0f;
         _favoritesButton = [UIButton newAutoLayoutView];
         
         [_favoritesButton setImage:[UIImage imageNamed:@"favoritesIcon"]
-                           forState:UIControlStateNormal];
+                          forState:UIControlStateNormal];
         
         [_favoritesButton addTarget:self
-                              action:@selector(favoritesButtonPressed)
-                    forControlEvents:UIControlEventTouchUpInside];
+                             action:@selector(favoritesButtonPressed)
+                   forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _favoritesButton;
@@ -208,11 +227,11 @@ static const CGFloat JSCMarginConstraint = 10.0f;
         _commentsButton = [UIButton newAutoLayoutView];
         
         [_commentsButton setImage:[UIImage imageNamed:@"commentsIcon"]
-                           forState:UIControlStateNormal];
+                         forState:UIControlStateNormal];
         
         [_commentsButton addTarget:self
-                              action:@selector(commentsButtonPressed)
-                    forControlEvents:UIControlEventTouchUpInside];
+                            action:@selector(commentsButtonPressed)
+                  forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _commentsButton;
@@ -275,7 +294,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     
     [self.avatar autoPinEdgeToSuperviewEdge:ALEdgeBottom
                                   withInset:15.0f];
-
+    
     [self.avatar autoPinEdgeToSuperviewEdge:ALEdgeLeft
                                   withInset:JSCMarginConstraint];
     
@@ -284,10 +303,22 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     
     /*------------------*/
     
+    [self.avatarLoadingView autoPinEdgeToSuperviewEdge:ALEdgeBottom
+                                             withInset:15.0f];
+    
+    [self.avatarLoadingView autoPinEdgeToSuperviewEdge:ALEdgeLeft
+                                             withInset:JSCMarginConstraint];
+    
+    [self.avatarLoadingView autoSetDimensionsToSize:CGSizeMake(25.0f,
+                                                               25.0f)];
+    
+    /*------------------*/
+    
+    
     [self.authorLabel autoPinEdge:ALEdgeTop
-                      toEdge:ALEdgeTop
-                      ofView:self.avatar
-                  withOffset:JSCBottomConstraint];
+                           toEdge:ALEdgeTop
+                           ofView:self.avatar
+                       withOffset:JSCBottomConstraint];
     
     [self.authorLabel autoPinEdge:ALEdgeLeft
                            toEdge:ALEdgeRight
@@ -295,51 +326,51 @@ static const CGFloat JSCMarginConstraint = 10.0f;
                        withOffset:6.0f];
     
     /*------------------*/
-
+    
     [self.commentsCountLabel autoPinEdgeToSuperviewEdge:ALEdgeRight
-                                                withInset:JSCMarginConstraint];
+                                              withInset:JSCMarginConstraint];
     
     [self.commentsCountLabel autoPinEdge:ALEdgeTop
-                           toEdge:ALEdgeTop
-                           ofView:self.avatar
-                       withOffset:JSCBottomConstraint];
+                                  toEdge:ALEdgeTop
+                                  ofView:self.avatar
+                              withOffset:JSCBottomConstraint];
     
     /*------------------*/
-
+    
     [self.commentsButton autoPinEdge:ALEdgeRight
                               toEdge:ALEdgeLeft
                               ofView:self.commentsCountLabel
                           withOffset:-5.0f];
     
     [self.commentsButton autoPinEdge:ALEdgeTop
-                                    toEdge:ALEdgeTop
-                                    ofView:self.avatar
-                                withOffset:JSCBottomConstraint];
+                              toEdge:ALEdgeTop
+                              ofView:self.avatar
+                          withOffset:JSCBottomConstraint];
     
     /*------------------*/
     
     [self.favoritesCountLabel autoPinEdge:ALEdgeRight
-                                 toEdge:ALEdgeLeft
-                                 ofView:self.commentsButton
-                             withOffset:-JSCMarginConstraint];
+                                   toEdge:ALEdgeLeft
+                                   ofView:self.commentsButton
+                               withOffset:-JSCMarginConstraint];
     
     [self.favoritesCountLabel autoPinEdge:ALEdgeTop
-                                toEdge:ALEdgeTop
-                                ofView:self.avatar
-                            withOffset:JSCBottomConstraint];
+                                   toEdge:ALEdgeTop
+                                   ofView:self.avatar
+                               withOffset:JSCBottomConstraint];
     
     /*------------------*/
     
     [self.favoritesButton autoPinEdge:ALEdgeRight
-                                toEdge:ALEdgeLeft
-                                ofView:self.favoritesCountLabel
-                            withOffset:-5.0f];
+                               toEdge:ALEdgeLeft
+                               ofView:self.favoritesCountLabel
+                           withOffset:-5.0f];
     
     [self.favoritesButton autoPinEdge:ALEdgeTop
-                                toEdge:ALEdgeTop
-                                ofView:self.avatar
-                            withOffset:JSCBottomConstraint];
-
+                               toEdge:ALEdgeTop
+                               ofView:self.avatar
+                           withOffset:JSCBottomConstraint];
+    
     /*------------------*/
     
     [super updateConstraints];
@@ -371,17 +402,28 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     self.avatar.image = [UIImage imageNamed:@"avatarPlaceHolderIcon"];
     
     [JSCMediaManager retrieveMediaForPost:post
-                        retrievalRequired:nil
+                        retrievalRequired:^(NSString *postId)
+     {
+         if ([weakSelf.post.postId isEqualToString:postId])
+         {
+             [weakSelf.avatarLoadingView startAnimating];
+         }
+     }
                                   success:^(id result, NSString *postId)
      {
-         if ([weakSelf.post.postID isEqualToString:postId] &&
-             result)
+         if ([weakSelf.post.postId isEqualToString:postId])
          {
+             [weakSelf.avatarLoadingView stopAnimating];
              weakSelf.avatar.image = result;
          }
      }
-                                  failure:^(NSError *error)
+                                  failure:^(NSError *error, NSString *postId)
      {
+         if ([weakSelf.post.postId isEqualToString:postId])
+         {
+             [weakSelf.avatarLoadingView stopAnimating];
+         }
+         
          NSLog(@"ERROR: %@",error);
      }];
     
