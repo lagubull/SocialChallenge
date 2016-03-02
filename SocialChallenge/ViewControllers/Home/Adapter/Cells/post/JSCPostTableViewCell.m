@@ -298,8 +298,8 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     [self.avatar autoPinEdgeToSuperviewEdge:ALEdgeLeft
                                   withInset:JSCMarginConstraint];
     
-    [self.avatar autoSetDimensionsToSize:CGSizeMake(25.0f,
-                                                    25.0f)];
+    [self.avatar autoSetDimensionsToSize:CGSizeMake(kJSCPostAvatardimension,
+                                                    kJSCPostAvatardimension)];
     
     /*------------------*/
     
@@ -309,8 +309,8 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     [self.avatarLoadingView autoPinEdgeToSuperviewEdge:ALEdgeLeft
                                              withInset:JSCMarginConstraint];
     
-    [self.avatarLoadingView autoSetDimensionsToSize:CGSizeMake(25.0f,
-                                                               25.0f)];
+    [self.avatarLoadingView autoSetDimensionsToSize:CGSizeMake(kJSCPostAvatardimension,
+                                                               kJSCPostAvatardimension)];
     
     /*------------------*/
     

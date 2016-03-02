@@ -50,10 +50,10 @@
                                                   progress:nil
                                                    success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location)
                  {
-                     JSCMediaStorageOperation *op = [[JSCMediaStorageOperation alloc] initWithPostID:post.postId
-                                                                                                data:responseData];
+                     JSCMediaStorageOperation *storeOPeration = [[JSCMediaStorageOperation alloc] initWithPostID:post.postId
+                                                                                                            data:responseData];
                      
-                     op.onSuccess = ^(id result)
+                     storeOPeration.onSuccess = ^(id result)
                      {
                          if (result)
                          {
@@ -71,7 +71,7 @@
                          }
                      };
                      
-                     op.onFailure = ^(NSError *error)
+                     storeOPeration.onFailure = ^(NSError *error)
                      {
                          if (failure)
                          {
@@ -79,9 +79,9 @@
                          }
                      };
                      
-                     op.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
+                     storeOPeration.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
                      
-                     [[JSCOperationCoordinator sharedInstance] addOperation:op];
+                     [[JSCOperationCoordinator sharedInstance] addOperation:storeOPeration];
                  }
                                                    failure:^(EDSDownloadTaskInfo *downloadTask, NSError *error)
                  {

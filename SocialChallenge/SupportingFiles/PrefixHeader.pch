@@ -32,4 +32,10 @@ typedef NS_ENUM(NSUInteger, JSCDataRetrievalOperationMode)
     JSCDataRetrievalOperationModeNextPage = 1
 };
 
+
+/**
+ Constant for the dimmensions of the images to display in the cell.
+ */
+static const CGFloat kJSCPostAvatardimension = 25.0f;
+
 #endif

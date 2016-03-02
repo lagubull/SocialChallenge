@@ -24,6 +24,8 @@
 		3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
 		3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
+		3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
+		3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
@@ -96,6 +98,10 @@
 		3B488FD31C80BC6E003DA767 /* JSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSession.h; sourceTree = "<group>"; };
 		3B488FD41C80BC6E003DA767 /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
 		3B70D2581C8600B100A6AB11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B70D2611C8721DD00A6AB11 /* UIImage+JSCRoundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSCRoundImage.h"; sourceTree = "<group>"; };
+		3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCRoundImage.m"; sourceTree = "<group>"; };
+		3B70D2641C8721F000A6AB11 /* UIImage+JSCScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSCScaleImage.h"; sourceTree = "<group>"; };
+		3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCScaleImage.m"; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
 		3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeAdapter.m; sourceTree = "<group>"; };
 		3BD281E61B6F8ACF0097B452 /* JSCPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostTableViewCell.h; sourceTree = "<group>"; };
@@ -430,6 +436,33 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		3B70D25A1C871FA200A6AB11 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3B70D2601C8721DD00A6AB11 /* Round */,
+				3B70D25F1C87219100A6AB11 /* Scale */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		3B70D25F1C87219100A6AB11 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				3B70D2641C8721F000A6AB11 /* UIImage+JSCScaleImage.h */,
+				3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */,
+			);
+			path = Scale;
+			sourceTree = "<group>";
+		};
+		3B70D2601C8721DD00A6AB11 /* Round */ = {
+			isa = PBXGroup;
+			children = (
+				3B70D2611C8721DD00A6AB11 /* UIImage+JSCRoundImage.h */,
+				3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */,
+			);
+			path = Round;
+			sourceTree = "<group>";
+		};
 		3BC04A701B73868F00AB0B66 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +546,7 @@
 		3BD89C5B1B7768D90084FA63 /* categories */ = {
 			isa = PBXGroup;
 			children = (
+				3B70D25A1C871FA200A6AB11 /* UIImage */,
 				3BF799551C8373D3009DDA66 /* UINavigationBar */,
 				3B3FAA3D1C60B5950019D0D0 /* NSDateFormatter */,
 				3BF13B4B1C5E473600B32627 /* NSOperation */,
@@ -812,6 +846,7 @@
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
 				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
 				3BF13B0C1C5E379F00B32627 /* JSCPostParser.m in Sources */,
+				3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */,
 				3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */,
 				3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */,
 				3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */,
@@ -825,6 +860,7 @@
 				3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */,
 				3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */,
 				3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */,
+				3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */,
 				3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */,
 				3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */,
 				3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */,
