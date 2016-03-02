@@ -8,7 +8,10 @@
 
 #import "JSCAppDelegate.h"
 
-#import "CDSServiceManager.h"
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
+#import <CDSServiceManager.h>
+#import <EDSDownloadSession.h>
+
 #import "JSCOperationCoordinator.h"
 #import "NSOperationQueue+JSCOperationScheduler.h"
 #import "JSCWindow.h"
@@ -17,7 +20,6 @@
 #import "JSCPost.h"
 #import "JSCPostPage.h"
 #import "NSManagedObjectContext+CDSDelete.h"
-#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 @interface JSCAppDelegate ()
 
@@ -28,6 +30,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [BuddyBuildSDK setup];
+    
+    [EDSDownloadSession downloadSession].maxDownloads = @(4);
     
     [[CDSServiceManager sharedInstance] setupModelURLWithModelName:@"SocialChallenge"];
     

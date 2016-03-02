@@ -11,8 +11,10 @@
 #import "UINavigationBar+JSCCustomHeight.h"
 #import <STVPaginatingView.h>
 #import <STVSimpleTableView.h>
+#import <LEAAlertController.h>
 
 #import "JSCHomeAdapter.h"
+
 
 static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
@@ -46,7 +48,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
     [self.navigationController.navigationBar jsc_setHeight:kJSCNavigationBarHeight];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
-   
+    
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     self.title = NSLocalizedString(@"postsTitle", nil);
@@ -104,7 +106,7 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
                                                                               self.view.bounds.size.width,
                                                                               kSTVPaginatingViewHeight)];
         
-        _paginatingView.loadingLabel.text = NSLocalizedString(@"Loading", nil);
+        _paginatingView.loadingLabel.text = NSLocalizedString(@"LoadingMessage", nil);
     }
     
     return _paginatingView;
@@ -120,6 +122,24 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
     }
     
     return _adapter;
+}
+
+#pragma mark - JSCHomeAdapterDelegate
+
+- (void)didPressCommentsButton:(JSCPost *)post
+{
+    [[LEAAlertController dismissibleAlertViewWithTitle:NSLocalizedString(@"CommentsMessageTitle", nil)
+                                               message:NSLocalizedString(@"CommentsMessageBody", nil)
+                                     cancelButtonTitle:NSLocalizedString(@"AcceptNav", nil)] showInViewController:self];
+    
+    
+}
+
+- (void)didPressFavoritesButton:(JSCPost *)post
+{
+    [[LEAAlertController dismissibleAlertViewWithTitle:NSLocalizedString(@"FavoritesMessageTitle", nil)
+                                               message:NSLocalizedString(@"FavoritesMessageBody", nil)
+                                     cancelButtonTitle:NSLocalizedString(@"AcceptNav", nil)] showInViewController:self];
 }
 
 @end
