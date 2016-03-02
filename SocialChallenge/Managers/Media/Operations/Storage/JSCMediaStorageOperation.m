@@ -9,6 +9,8 @@
 #import "JSCMediaStorageOperation.h"
 
 #import "JSCFileManager.h"
+#import "UIImage+JSCRoundImage.h"
+#import "UIImage+JSCScaleImage.h"
 
 @interface JSCMediaStorageOperation ()
 
@@ -86,12 +88,29 @@
 {
     [super start];
     
-    if ([JSCFileManager saveData:self.data
-        toDocumentsDirectoryPath:self.postId])
+    BOOL success = NO;
+    
+    if (self.data)
     {
-        [self didSucceedWithResult:[UIImage imageWithData:self.data]];
+        //Images in this API are too big to have on a performant cell,
+        //in a real app we would keep the original and store also a smaller resolution copy to improve performance, for the test I will only keep the preview
+        
+        UIImage *image = [UIImage imageWithData:self.data];
+        
+        image = [UIImage jsc_scaleImage:image];
+        image = [UIImage jsc_roundImage:image];
+        
+        NSData *imageData = UIImageJPEGRepresentation(image,
+                                                      1.0f);
+        
+        if ([JSCFileManager saveData:imageData
+            toDocumentsDirectoryPath:self.postId])
+        {
+            [self didSucceedWithResult:image];
+        }
     }
-    else
+  
+    if (!success)
     {
         [self didFailWithError:nil];
     }
