@@ -10,6 +10,67 @@
 
 static NSString * const kJSCLocalDirectory = @"SocialChallenge";
 
+@interface JSCFileManager ()
+
+/**
+ Path of documents directory.
+ 
+ return NSString instance.
+ */
++ (NSString *)documentsDirectoryPath;
+
+/**
+ Path of resource in documents directory.
+ 
+ @parameter path - path that will be combined documents path.
+ 
+ @return Combined path.
+ */
++ (NSString *)documentsDirectoryPathForResourceWithPath:(NSString *)path;
+
+/**
+ Retrieves data to path in document directory for this particular application.
+ 
+ @parameter path - path that will be combined documents path.
+ 
+ @return NSData that was retrieved.
+ */
++ (NSData *)retrieveDataFromDocumentsDirectoryWithPath:(NSString *)path;
+
+/**
+ Save data to path on filesystem.
+ 
+ If the directory doesn't exist it will be created.
+ 
+ @parameter data - data to be saved.
+ @parameter path - path that the data will be saved to.
+ 
+ @return BOOL if save was successful.
+ */
++ (BOOL)saveData:(NSData *)data toPath:(NSString *)path;
+
+/**
+ Creates directory on filesystem.
+ 
+ If the directory doesn't exist it will be created.
+ 
+ @parameter path - path that will be created.
+ 
+ @return BOOL if creation was successful.
+ */
++ (BOOL)createDirectoryAtPath:(NSString *)path;
+
+/**
+ Delete data from path.
+ 
+ @parameter path - path to the file.
+ 
+ @return BOOL if deletion was successful.
+ */
++ (BOOL)deleteDataAtPath:(NSString *)path;
+
+@end
+
 @implementation JSCFileManager
 
 #pragma mark - Documents
@@ -107,49 +168,13 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
     return createdDirectory;
 }
 
-#pragma mark - Exists
-
-+ (BOOL)fileExistsInDocumentsDirectory:(NSString *)path
-{
-    NSString *documentsDirectory = [self documentsDirectoryPath];
-    NSString *extendedPath = [documentsDirectory stringByAppendingPathComponent:path];
-    
-    return [[NSFileManager defaultManager] fileExistsAtPath:extendedPath];
-}
-
-+ (BOOL)fileExistsAtPath:(NSString *)path
-{
-    return [[NSFileManager defaultManager] fileExistsAtPath:path];
-}
-
-+ (void)fileExistsAtPath:(NSString *)path
-              completion:(void (^)(BOOL fileExists))completion
-{
-    //Used to return the call on the same thread
-    NSOperationQueue *callBackQueue = [NSOperationQueue currentQueue];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^
-                   {
-                       BOOL fileExists = [self fileExistsAtPath:path];
-                       
-                       [callBackQueue addOperationWithBlock:^
-                        {
-                            if (completion)
-                            {
-                                completion(fileExists);
-                            }
-                        }];
-                   });
-}
-
 #pragma mark - Deletion
 
 + (BOOL)deleteDataFromDocumentDirectoryWithPath:(NSString *)path
 {
-    NSString *documentsDirectory = [self documentsDirectoryPath];
-    NSString *extendedPath = [documentsDirectory stringByAppendingPathComponent:path];
+    NSString *documentsDirectory = [self documentsDirectoryPathForResourceWithPath:path];
     
-    return [self deleteDataAtPath:extendedPath];
+    return [self deleteDataAtPath:documentsDirectory];
 }
 
 + (BOOL)deleteDataAtPath:(NSString *)path
@@ -162,49 +187,6 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
     if (error)
     {
         NSLog(@"Error when attempting to delete data from disk: %@", [error userInfo]);
-    }
-    
-    return success;
-}
-
-#pragma mark - URL
-
-+ (NSURL *)fileURLForPath:(NSString *)path
-{
-    return [NSURL fileURLWithPath:path];
-}
-
-#pragma mark - Move
-
-+ (BOOL)moveFileFromSourcePath:(NSString *)sourcePath
-             toDestinationPath:(NSString *)destinationPath
-{
-    BOOL success = NO;
-    BOOL createdDirectory = YES;
-    
-    destinationPath = [self documentsDirectoryPathForResourceWithPath:destinationPath];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    NSString *destinationDirectoryPath = [destinationPath stringByDeletingLastPathComponent];
-    
-    if (![fileManager fileExistsAtPath:destinationDirectoryPath])
-    {
-        createdDirectory = [self createDirectoryAtPath:destinationDirectoryPath];
-    }
-    
-    if (createdDirectory)
-    {
-        NSError *error = nil;
-        
-        success = [fileManager moveItemAtPath:sourcePath
-                                       toPath:destinationPath
-                                        error:&error];
-        
-        if (error)
-        {
-            NSLog(@"Error when attempting to move data on disk: %@", [error userInfo]);
-        }
     }
     
     return success;

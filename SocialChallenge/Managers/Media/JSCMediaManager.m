@@ -55,9 +55,19 @@
                      
                      op.onSuccess = ^(id result)
                      {
-                         if (success)
+                         if (result)
                          {
-                             success(result, post.postID);
+                             if (success)
+                             {
+                                 success(result, post.postID);
+                             }
+                         }
+                         else
+                         {
+                             if (failure)
+                             {
+                                 failure(nil);
+                             }
                          }
                      };
                      
@@ -80,6 +90,13 @@
         operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
         
         [[JSCOperationCoordinator sharedInstance] addOperation:operation];
+    }
+    else
+    {
+        if (failure)
+        {
+            failure(nil);
+        }
     }
 }
 
