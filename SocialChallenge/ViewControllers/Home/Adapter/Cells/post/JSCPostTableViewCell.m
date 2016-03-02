@@ -402,24 +402,27 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     self.avatar.image = [UIImage imageNamed:@"avatarPlaceHolderIcon"];
     
     [JSCMediaManager retrieveMediaForPost:post
-                        retrievalRequired:^(JSCPost *post)
+                        retrievalRequired:^(NSString *postId)
      {
-         if ([weakSelf.post.postID isEqualToString:post.postID])
+         if ([weakSelf.post.postId isEqualToString:postId])
          {
              [weakSelf.avatarLoadingView startAnimating];
          }
      }
                                   success:^(id result, NSString *postId)
      {
-         if ([weakSelf.post.postID isEqualToString:postId])
+         if ([weakSelf.post.postId isEqualToString:postId])
          {
              [weakSelf.avatarLoadingView stopAnimating];
              weakSelf.avatar.image = result;
          }
      }
-                                  failure:^(NSError *error)
+                                  failure:^(NSError *error, NSString *postId)
      {
-         [weakSelf.avatarLoadingView stopAnimating];
+         if ([weakSelf.post.postId isEqualToString:postId])
+         {
+             [weakSelf.avatarLoadingView stopAnimating];
+         }
          
          NSLog(@"ERROR: %@",error);
      }];

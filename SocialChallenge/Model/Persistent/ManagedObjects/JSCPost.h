@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return JSCPOST instance or nil if POST can't be found.
  */
-+ (instancetype)fetchPostWithID:(NSString *)postID
++ (instancetype)fetchPostWithId:(NSString *)postId
            managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /**
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return JSCPOST instance or nil if POST can't be found.
  */
-+ (instancetype)fetchPostWithID:(NSString *)postID;
++ (instancetype)fetchPostWithId:(NSString *)postId;
 
 /**
  Convenient method to shape the user's name into the desired format.

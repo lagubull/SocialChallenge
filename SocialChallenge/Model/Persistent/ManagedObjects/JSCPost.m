@@ -15,18 +15,18 @@
 
 #pragma mark - Post
 
-+ (instancetype)fetchPostWithID:(NSString *)postID
++ (instancetype)fetchPostWithId:(NSString *)postId
            managedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"postID MATCHES %@", postID];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"postID MATCHES %@", postId];
     
     return (JSCPost *)[managedObjectContext cds_retrieveFirstEntryForEntityClass:[JSCPost class]
                                                                        predicate:predicate];
 }
 
-+ (instancetype)fetchPostWithID:(NSString *)postID
++ (instancetype)fetchPostWithId:(NSString *)postId
 {
-    return [JSCPost fetchPostWithID:postID
+    return [JSCPost fetchPostWithId:postId
                managedObjectContext:[CDSServiceManager sharedInstance].mainManagedObjectContext];
 }
 

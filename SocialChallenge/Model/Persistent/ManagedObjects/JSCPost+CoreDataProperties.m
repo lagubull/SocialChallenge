@@ -16,7 +16,7 @@
 @dynamic createdAt;
 @dynamic likeCount;
 @dynamic commentCount;
-@dynamic postID;
+@dynamic postId;
 @dynamic page;
 @dynamic content;
 @dynamic userFirstName;

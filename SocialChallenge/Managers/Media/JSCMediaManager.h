@@ -23,8 +23,8 @@
  @parama failure - block to execute on failure.
  */
 + (void)retrieveMediaForPost:(JSCPost *)post
-           retrievalRequired:(void (^)(JSCPost *post))retrievalRequired
+           retrievalRequired:(void (^)(NSString *postId))retrievalRequired
                      success:(void (^)(id result, NSString *postId))success
-                     failure:(JSCOperationOnFailureCallback)failure;
+                     failure:(void (^)(NSError *error, NSString *postId))failure;
 
 @end
