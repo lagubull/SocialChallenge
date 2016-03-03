@@ -48,8 +48,6 @@
 		3B316EFA1C88686B0052F19A /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
 		3B316EFB1C88686B0052F19A /* JSCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C621B776C460084FA63 /* JSCWindow.m */; };
 		3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
-		3B316F021C88710B0052F19A /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B316F011C88710B0052F19A /* OCMock.framework */; };
-		3B316F031C8871140052F19A /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B316F011C88710B0052F19A /* OCMock.framework */; };
 		3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */; };
 		3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
 		3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */; };
@@ -117,7 +115,6 @@
 		3B3111D01B6E171F008E374E /* JSCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeViewController.m; sourceTree = "<group>"; };
 		3B316ED81C88569F0052F19A /* JSCPostParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParserTests.m; sourceTree = "<group>"; };
 		3B316EDA1C8859150052F19A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
-		3B316F011C88710B0052F19A /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		3B37819C1C74756100D12BB3 /* JSCMediaStorageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCMediaStorageOperation.h; sourceTree = "<group>"; };
 		3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaStorageOperation.m; sourceTree = "<group>"; };
 		3B3781A01C748DB300D12BB3 /* JSCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFileManager.h; sourceTree = "<group>"; };
@@ -195,7 +192,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B316F021C88710B0052F19A /* OCMock.framework in Frameworks */,
 				CC733320D31556AD5F4C1950 /* libPods.a in Frameworks */,
 				BF487C44F0E59E581C2A3BD5 /* AssetsLibrary.framework in Frameworks */,
 				BA544E9361EAF529778588A5 /* CoreText.framework in Frameworks */,
@@ -210,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B316EDB1C8859150052F19A /* libPods.a in Frameworks */,
-				3B316F031C8871140052F19A /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,7 +762,6 @@
 		E5C92224D8C24ABAB9801BE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B316F011C88710B0052F19A /* OCMock.framework */,
 				3B316EDA1C8859150052F19A /* libPods.a */,
 				AC51405265E948251228B921 /* libPods.a */,
 				8F6768CF6A78C7DF15507DFA /* BuddyBuildSDK.framework */,
