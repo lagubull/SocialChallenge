@@ -9,6 +9,9 @@
 @class STVSimpleTableView;
 @class JSCPost;
 
+/**
+ Methods from the adapter.
+ */
 @protocol JSCHomeAdapterDelegate <NSObject>
 
 /**
@@ -27,6 +30,9 @@
 
 @end
 
+/**
+ Handles the tableview.
+ */
 @interface JSCHomeAdapter : NSObject
 
 /**

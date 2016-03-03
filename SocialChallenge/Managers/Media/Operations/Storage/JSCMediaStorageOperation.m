@@ -90,27 +90,28 @@
     
     BOOL success = NO;
     
-    if (self.data)
+    //Images in this API are too big to have on a performant cell,
+    //in a real app we would keep the original and store also a smaller resolution copy to improve performance, for the test I will only keep the preview
+    
+    UIImage *image = [UIImage imageWithData:self.data];
+    
+    if (image)
     {
-        //Images in this API are too big to have on a performant cell,
-        //in a real app we would keep the original and store also a smaller resolution copy to improve performance, for the test I will only keep the preview
-        
-        UIImage *image = [UIImage imageWithData:self.data];
-        
         image = [UIImage jsc_scaleImage:image];
         image = [UIImage jsc_roundImage:image];
         
         NSData *imageData = UIImageJPEGRepresentation(image,
                                                       1.0f);
         
-        if ([JSCFileManager saveData:imageData
-            toDocumentsDirectoryPath:self.postId])
-        {
-            [self didSucceedWithResult:image];
-        }
+        success = [JSCFileManager saveData:imageData
+                  toDocumentsDirectoryPath:self.postId];
     }
-  
-    if (!success)
+    
+    if (success)
+    {
+        [self didSucceedWithResult:image];
+    }
+    else
     {
         [self didFailWithError:nil];
     }

@@ -10,6 +10,9 @@
 
 @class JSCPost;
 
+/**
+ Actions from the cell.
+ */
 @protocol JSCPostTableViewCellDelegate <NSObject>
 
 /**
@@ -28,6 +31,9 @@
 
 @end
 
+/**
+ Representation for a post.
+ */
 @interface JSCPostTableViewCell : UITableViewCell
 
 /**
@@ -38,7 +44,7 @@
 /**
  Sets up the Cell with post data.
  
- @param post -
+ @param post - post to be displayed.
  */
 - (void)updateWithPost:(JSCPost *)post;
 

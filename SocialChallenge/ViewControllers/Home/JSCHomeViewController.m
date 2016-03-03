@@ -14,8 +14,12 @@
 #import <LEAAlertController.h>
 
 #import "JSCHomeAdapter.h"
+#import "JSCLoadingView.h"
+#import "JSCEmptyView.h"
 
-
+/**
+ Constant to define the height of the navigation bar.s
+ */
 static const CGFloat kJSCNavigationBarHeight = 44.0f;
 
 @interface JSCHomeViewController () <JSCHomeAdapterDelegate>
@@ -34,6 +38,16 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
  Pagination content view to show the local user we are retrieving fresh data.
  */
 @property (nonatomic, strong) STVPaginatingView *paginatingView;
+
+/**
+ View to show while data is being loaded.
+ */
+@property (nonatomic, strong) JSCLoadingView *loadingView;
+
+/**
+ View to show when no data is available.
+ */
+@property (nonatomic, strong) JSCEmptyView *emptyView;
 
 @end
 
@@ -91,6 +105,8 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.allowsSelection = NO;
         _tableView.paginatingView = self.paginatingView;
+        _tableView.loadingView = self.loadingView;
+        _tableView.emptyView = self.emptyView;
         _tableView.paginationOffset = @(5);
     }
     
@@ -110,6 +126,34 @@ static const CGFloat kJSCNavigationBarHeight = 44.0f;
     }
     
     return _paginatingView;
+}
+
+- (JSCEmptyView *)emptyView
+{
+    if (!_emptyView)
+    {
+        _emptyView = [[JSCEmptyView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                    0.0f,
+                                                                    self.view.bounds.size.width,
+                                                                    self.view.bounds.size.height)];
+        
+        _emptyView.messageLabel.text = NSLocalizedString(@"NoContentBody", nil);
+    }
+    
+    return _emptyView;
+}
+
+- (JSCLoadingView *)loadingView
+{
+    if (!_loadingView)
+    {
+        _loadingView = [[JSCLoadingView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                        0.0f,
+                                                                        self.view.bounds.size.width,
+                                                                        self.view.bounds.size.height)];
+    }
+    
+    return _loadingView;
 }
 
 #pragma mark - Getters

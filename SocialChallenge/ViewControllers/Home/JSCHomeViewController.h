@@ -6,6 +6,9 @@
 //
 //
 
+/**
+ Landing viewController.
+ */
 @interface JSCHomeViewController : UIViewController
 
 @end
