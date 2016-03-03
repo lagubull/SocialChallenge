@@ -9,10 +9,10 @@
 #import "JSCHomeAdapter.h"
 
 #import <STVSimpleTableView.h>
+#import <CDSServiceManager.h>
 
 #import "JSCPost.h"
 #import "JSCFeedAPIManager.h"
-#import "CDSServiceManager.h"
 #import "JSCPostTableViewCell.h"
 
 @interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate, STVDataRetrievalTableViewDelegate, JSCPostTableViewCellDelegate>
@@ -47,11 +47,16 @@
     [JSCFeedAPIManager retrieveFeedWithMode:JSCDataRetrievalOperationModeFirstPage
                                     Success:^(id result)
      {
-         [weakSelf.tableView didRefresh];
+         BOOL hasContent = weakSelf.fetchedResultsController.fetchedObjects.count > 0;
+         
+         [weakSelf.tableView didRefreshWithContent:hasContent];
+         [weakSelf.tableView reloadData];
      }
                                     failure:^(NSError *error)
      {
-         [weakSelf.tableView didRefresh];
+         BOOL hasContent = weakSelf.fetchedResultsController.fetchedObjects.count > 0;
+         
+         [weakSelf.tableView didRefreshWithContent:hasContent];
      }];
 }
 
@@ -164,9 +169,6 @@
          forIndexPath:(NSIndexPath *)indexPath
 {
     JSCPost *post = self.fetchedResultsController.fetchedObjects[indexPath.row];
-    
-//    cell.delegate = self;
-
     
     [cell updateWithPost:post];
 }

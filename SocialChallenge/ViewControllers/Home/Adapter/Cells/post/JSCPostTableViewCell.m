@@ -137,7 +137,6 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     {
         _contentLabel = [UILabel newAutoLayoutView];
         
-        _contentLabel.backgroundColor = [UIColor clearColor];
         _contentLabel.textColor = [UIColor blackColor];
         _contentLabel.font = [UIFont boldSystemFontOfSize:11.0f];
         _contentLabel.numberOfLines = 0;
@@ -181,7 +180,6 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     {
         _authorLabel = [UILabel newAutoLayoutView];
         
-        _authorLabel.backgroundColor = [UIColor clearColor];
         _authorLabel.textColor = [UIColor blackColor];
         _authorLabel.font = [UIFont systemFontOfSize:9.0f];
     }
@@ -212,7 +210,6 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     {
         _favoritesCountLabel = [UILabel newAutoLayoutView];
         
-        _favoritesCountLabel.backgroundColor = [UIColor clearColor];
         _favoritesCountLabel.textColor = [UIColor blackColor];
         _favoritesCountLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     }
@@ -243,7 +240,6 @@ static const CGFloat JSCMarginConstraint = 10.0f;
     {
         _commentsCountLabel = [UILabel newAutoLayoutView];
         
-        _commentsCountLabel.backgroundColor = [UIColor clearColor];
         _commentsCountLabel.textColor = [UIColor blackColor];
         _commentsCountLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     }
@@ -414,6 +410,7 @@ static const CGFloat JSCMarginConstraint = 10.0f;
          if ([weakSelf.post.postId isEqualToString:postId])
          {
              [weakSelf.avatarLoadingView stopAnimating];
+
              weakSelf.avatar.image = result;
          }
      }

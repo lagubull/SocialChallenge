@@ -19,3 +19,5 @@
 "FavoritesMessageTitle" = "Info";
 
 "FavoritesMessageBody" = "Favorites feature is not implemented";
+
+"NoContentBody" = "No content available.";

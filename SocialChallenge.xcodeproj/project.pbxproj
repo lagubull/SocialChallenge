@@ -26,6 +26,8 @@
 		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
 		3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
+		3B70D26C1C872AF800A6AB11 /* JSCLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D26B1C872AF800A6AB11 /* JSCLoadingView.m */; };
+		3BA68D2F1C873C080096EAFD /* JSCEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA68D2E1C873C080096EAFD /* JSCEmptyView.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
@@ -102,6 +104,10 @@
 		3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCRoundImage.m"; sourceTree = "<group>"; };
 		3B70D2641C8721F000A6AB11 /* UIImage+JSCScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSCScaleImage.h"; sourceTree = "<group>"; };
 		3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCScaleImage.m"; sourceTree = "<group>"; };
+		3B70D26A1C872AF800A6AB11 /* JSCLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCLoadingView.h; sourceTree = "<group>"; };
+		3B70D26B1C872AF800A6AB11 /* JSCLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCLoadingView.m; sourceTree = "<group>"; };
+		3BA68D2D1C873C080096EAFD /* JSCEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCEmptyView.h; sourceTree = "<group>"; };
+		3BA68D2E1C873C080096EAFD /* JSCEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCEmptyView.m; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
 		3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeAdapter.m; sourceTree = "<group>"; };
 		3BD281E61B6F8ACF0097B452 /* JSCPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostTableViewCell.h; sourceTree = "<group>"; };
@@ -346,6 +352,7 @@
 		3B3111C31B6E127D008E374E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3B70D2671C872A9400A6AB11 /* Views */,
 				3B3111CC1B6E16CE008E374E /* Adapter */,
 				3B3111CF1B6E171F008E374E /* JSCHomeViewController.h */,
 				3B3111D01B6E171F008E374E /* JSCHomeViewController.m */,
@@ -461,6 +468,33 @@
 				3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */,
 			);
 			path = Round;
+			sourceTree = "<group>";
+		};
+		3B70D2671C872A9400A6AB11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B70D2691C872ABD00A6AB11 /* LoadingView */,
+				3B70D2681C872AAA00A6AB11 /* EmptyView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B70D2681C872AAA00A6AB11 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				3BA68D2D1C873C080096EAFD /* JSCEmptyView.h */,
+				3BA68D2E1C873C080096EAFD /* JSCEmptyView.m */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
+		3B70D2691C872ABD00A6AB11 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				3B70D26A1C872AF800A6AB11 /* JSCLoadingView.h */,
+				3B70D26B1C872AF800A6AB11 /* JSCLoadingView.m */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		3BC04A701B73868F00AB0B66 /* CoreData */ = {
@@ -738,7 +772,6 @@
 				TargetAttributes = {
 					3B3111831B6E110B008E374E = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 2ZD7MNBBZQ;
 					};
 					3B3111A21B6E110B008E374E = {
 						CreatedOnToolsVersion = 6.3;
@@ -837,8 +870,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B70D26C1C872AF800A6AB11 /* JSCLoadingView.m in Sources */,
 				3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */,
 				3BF13B091C5E375300B32627 /* JSCParser.m in Sources */,
+				3BA68D2F1C873C080096EAFD /* JSCEmptyView.m in Sources */,
 				3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */,
 				3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
@@ -971,7 +1006,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.unii.fling;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lagusoft.socialchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -1027,7 +1062,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.unii.fling;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lagusoft.socialchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
