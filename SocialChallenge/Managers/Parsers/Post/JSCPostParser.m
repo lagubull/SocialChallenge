@@ -16,15 +16,15 @@
 /**
  Post JSON Keys.
  */
-static NSString * const kJSCPostId = @"id";
-static NSString * const kJSCLikeCount = @"like_count";
-static NSString * const kJSCCommentCount = @"comment_count";
-static NSString * const kJSCContent = @"content";
-static NSString * const kJSCUser = @"user";
-static NSString * const kJSCAvatar = @"avatar";
-static NSString * const kJSCFirstName = @"first_name";
-static NSString * const kJSCLastName = @"last_name";
-static NSString * const kJSCCreatedAt = @"created_at";
+NSString * const kJSCPostId = @"id";
+NSString * const kJSCLikeCount = @"like_count";
+NSString * const kJSCCommentCount = @"comment_count";
+NSString * const kJSCContent = @"content";
+NSString * const kJSCUser = @"user";
+NSString * const kJSCAvatar = @"avatar";
+NSString * const kJSCFirstName = @"first_name";
+NSString * const kJSCLastName = @"last_name";
+NSString * const kJSCCreatedAt = @"created_at";
 
 @implementation JSCPostParser
 
