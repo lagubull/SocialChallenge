@@ -1,5 +1,5 @@
 PODS:
-  - CoreDataServices (1.1.4)
+  - CoreDataServices (1.1.5)
   - EasyAlert (1.0.1)
   - EasyDownloadSession (1.0.2)
   - PureLayout (3.0.1)
@@ -18,7 +18,7 @@ DEPENDENCIES:
   - SimpleTableView (~> 1.0.3)
 
 SPEC CHECKSUMS:
-  CoreDataServices: d4ae6543e2d330a69a609dd34f30dda40c00565c
+  CoreDataServices: 9f4a86f6f116165a217206f1db624f1742b8702b
   EasyAlert: 837fa8d271786f3feedd83ca6bccc2e090abd091
   EasyDownloadSession: 8d27e72df8de276191d9f543a1f61c9436e384c9
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
