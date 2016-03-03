@@ -8,7 +8,6 @@
 
 #import "JSCAppDelegate.h"
 
-#import <BuddyBuildSDK/BuddyBuildSDK.h>
 #import <CDSServiceManager.h>
 #import <EDSDownloadSession.h>
 #import <NSManagedObjectContext+CDSDelete.h>
@@ -30,8 +29,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [BuddyBuildSDK setup];
-    
     [EDSDownloadSession downloadSession].maxDownloads = @(4);
     
     [[CDSServiceManager sharedInstance] setupModelURLWithModelName:@"SocialChallenge"];
