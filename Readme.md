@@ -12,13 +12,18 @@ For the purpose of the exercise we are using a link to an old coding challenge, 
 still working, but some of the images are not, which is great for us to show why you 
 should always protect the user against server errors.
 
-It works as an example for the Pod SimpleTableView. We use it here for connecting coreData
+It works as an example for the pod SimpleTableView.
+ (git@github.com:lagubull/SimpleTableView.git) We use it here for connecting coreData
 via NSFetchedResultsController to display  a feed of posts.
 
-This project also shows the usage of the pod EasyDownloadSession. This pod allows us to
+This project also shows the usage of the pod EasyDownloadSession.
+(git@github.com:lagubull/EasyDownloadSession.git) This pod allows us to
 download the images of the user in the background and therefore prevents lagging when 
 scrolling down the tableview.
 
-A special mention to the pod EasyALertView which we are using here to show alerts for the 
-unimplemented button actions.
+A special mention to the pod EasyALertView (git@github.com:lagubull/EasyAlert.git)which we
+ are using here to show alerts for the unimplemented button actions.
 
+
+I integrated this project a Continous Integration server, Travis. I am as well testing out
+ a new alternative BuddyBuild.
