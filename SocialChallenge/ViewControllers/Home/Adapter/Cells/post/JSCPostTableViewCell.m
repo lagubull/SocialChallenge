@@ -8,7 +8,6 @@
 
 #import "JSCPostTableViewCell.h"
 
-#import "JSCPost.h"
 #import "JSCMediaManager.h"
 
 /**

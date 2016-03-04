@@ -8,11 +8,10 @@
 
 #import "JSCFeedRetrieveOperation.h"
 
-#import <EDSDownloadSession.h>
+#import <EasyDownloadSession/EDSDownloadSession.h>
 
 #import "JSCFeedRequest.h"
 #import "JSCJSONManager.h"
-#import "JSCPostPage.h"
 #import "JSCPostPageParser.h"
 #import "CDSServiceManager.h"
 #import "JSCSession.h"

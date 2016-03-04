@@ -8,10 +8,8 @@
 
 #import "JSCPostParser.h"
 
-#import "JSCPost.h"
 #import "CDSServiceManager.h"
 #import "NSDateFormatter+JSCDateFormatter.h"
-#import "JSCPost+CoreDataProperties.h"
 
 /**
  Post JSON Keys.

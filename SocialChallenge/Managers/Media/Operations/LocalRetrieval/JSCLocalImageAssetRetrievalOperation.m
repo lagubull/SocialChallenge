@@ -9,7 +9,6 @@
 #import "JSCLocalImageAssetRetrievalOperation.h"
 
 #import "CDSServiceManager.h"
-#import "JSCPost.h"
 #import "JSCFileManager.h"
 
 @interface JSCLocalImageAssetRetrievalOperation ()

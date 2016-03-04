@@ -8,10 +8,9 @@
 
 #import "JSCHomeAdapter.h"
 
-#import <STVSimpleTableView.h>
-#import <CDSServiceManager.h>
+#import <SimpleTableView/STVSimpleTableView.h>
+#import <CoreDataServices/CDSServiceManager.h>
 
-#import "JSCPost.h"
 #import "JSCFeedAPIManager.h"
 #import "JSCPostTableViewCell.h"
 

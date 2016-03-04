@@ -8,8 +8,6 @@
 
 #import "JSCPostPageParser.h"
 
-#import "JSCPostPage.h"
-#import "JSCPost.h"
 #import "JSCPostParser.h"
 #import "CDSServiceManager.h"
 

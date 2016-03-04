@@ -7,10 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <CDSServiceManager.h>
+#import <CoreDataServices/CDSServiceManager.h>
 
-#import "JSCPost.h"
-#import "JSCPostPage.h"
 #import "JSCPostParser.h"
 
 @interface JSCPostParserTests : XCTestCase
