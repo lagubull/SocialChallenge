@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Coredata/Coredata.h>
 #import <objc/runtime.h>
 
 #pragma mark - ValueOrDefault
