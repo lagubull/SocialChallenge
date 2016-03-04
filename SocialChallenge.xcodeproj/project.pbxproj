@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3B31118A1B6E110B008E374E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111891B6E110B008E374E /* main.m */; };
-		3B3111AA1B6E110B008E374E /* SocialChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111A91B6E110B008E374E /* SocialChallengeTests.m */; };
 		3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111B31B6E127D008E374E /* JSCAppDelegate.m */; };
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
@@ -48,6 +47,7 @@
 		3B316EFA1C88686B0052F19A /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
 		3B316EFB1C88686B0052F19A /* JSCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C621B776C460084FA63 /* JSCWindow.m */; };
 		3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
+		3B316F061C88893A0052F19A /* JSCFeedRetrieveOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B316F051C88893A0052F19A /* JSCFeedRetrieveOperationTests.m */; };
 		3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */; };
 		3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
 		3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */; };
@@ -105,7 +105,6 @@
 		3B3111891B6E110B008E374E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B3111A31B6E110B008E374E /* SocialChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111A81B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B3111A91B6E110B008E374E /* SocialChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialChallengeTests.m; sourceTree = "<group>"; };
 		3B3111B21B6E127D008E374E /* JSCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCAppDelegate.h; sourceTree = "<group>"; };
 		3B3111B31B6E127D008E374E /* JSCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCAppDelegate.m; sourceTree = "<group>"; };
 		3B3111BC1B6E127D008E374E /* SocialChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialChallenge.xcdatamodel; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		3B3111D01B6E171F008E374E /* JSCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeViewController.m; sourceTree = "<group>"; };
 		3B316ED81C88569F0052F19A /* JSCPostParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParserTests.m; sourceTree = "<group>"; };
 		3B316EDA1C8859150052F19A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		3B316F051C88893A0052F19A /* JSCFeedRetrieveOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFeedRetrieveOperationTests.m; sourceTree = "<group>"; };
 		3B37819C1C74756100D12BB3 /* JSCMediaStorageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCMediaStorageOperation.h; sourceTree = "<group>"; };
 		3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaStorageOperation.m; sourceTree = "<group>"; };
 		3B3781A01C748DB300D12BB3 /* JSCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFileManager.h; sourceTree = "<group>"; };
@@ -265,8 +265,8 @@
 		3B3111A61B6E110B008E374E /* SocialChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B316F041C8888DA0052F19A /* Operations */,
 				3B316ED61C88565C0052F19A /* Parsers */,
-				3B3111A91B6E110B008E374E /* SocialChallengeTests.m */,
 				3B3111A71B6E110B008E374E /* Supporting Files */,
 			);
 			path = SocialChallengeTests;
@@ -429,6 +429,14 @@
 				3B316ED81C88569F0052F19A /* JSCPostParserTests.m */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		3B316F041C8888DA0052F19A /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				3B316F051C88893A0052F19A /* JSCFeedRetrieveOperationTests.m */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		3B37819B1C74753400D12BB3 /* Storage */ = {
@@ -986,6 +994,7 @@
 				3B316EF01C88686B0052F19A /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3B316EF11C88686B0052F19A /* JSCRootNavigationController.m in Sources */,
 				3B316EF21C88686B0052F19A /* JSCSplashViewController.m in Sources */,
+				3B316F061C88893A0052F19A /* JSCFeedRetrieveOperationTests.m in Sources */,
 				3B316EF31C88686B0052F19A /* JSCSession.m in Sources */,
 				3B316EF41C88686B0052F19A /* JSCOperationCoordinator.m in Sources */,
 				3B316EF51C88686B0052F19A /* JSCOperation.m in Sources */,
@@ -996,7 +1005,6 @@
 				3B316EFA1C88686B0052F19A /* JSCHomeViewController.m in Sources */,
 				3B316EFB1C88686B0052F19A /* JSCWindow.m in Sources */,
 				3B316ED91C88569F0052F19A /* JSCPostParserTests.m in Sources */,
-				3B3111AA1B6E110B008E374E /* SocialChallengeTests.m in Sources */,
 				3B316EDC1C8862BF0052F19A /* JSCPost.m in Sources */,
 				3B316EDD1C8862C40052F19A /* JSCPostPage.m in Sources */,
 			);
