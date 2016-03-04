@@ -81,7 +81,6 @@
 		47864D810E09D246BC7321BC /* Pods_SocialChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D0755087E1EE97D275FD2C /* Pods_SocialChallenge.framework */; };
 		688E4A7F2D96FE901926B777 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */; };
 		6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */; };
-		B5EF50A10ACA05B893BAAE9C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBF4B234424914FC5328785 /* Pods.framework */; };
 		BA544E9361EAF529778588A5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C9187E6B5128FE05C33908 /* CoreText.framework */; };
 		BF487C44F0E59E581C2A3BD5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */; };
 		D079945656FDBD5447B2AA9B /* Pods_SocialChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C053BEF568BCD9CF9F341171 /* Pods_SocialChallengeTests.framework */; };
@@ -202,7 +201,6 @@
 				6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */,
 				688E4A7F2D96FE901926B777 /* SystemConfiguration.framework in Frameworks */,
 				D980C4EDBB68412EEA73790C /* QuartzCore.framework in Frameworks */,
-				B5EF50A10ACA05B893BAAE9C /* Pods.framework in Frameworks */,
 				47864D810E09D246BC7321BC /* Pods_SocialChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
