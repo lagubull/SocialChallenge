@@ -10,7 +10,6 @@
 #import <CDSServiceManager.h>
 
 #import "JSCPost.h"
-#import "JSCPostPage.h"
 #import "JSCPostParser.h"
 
 @interface JSCPostParserTests : XCTestCase

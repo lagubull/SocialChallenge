@@ -8,9 +8,8 @@
 
 #import "JSCMediaManager.h"
 
-#import <EDSDownloadSession.h>
+#import <EasyDownloadSession/EDSDownloadSession.h>
 
-#import "JSCPost.h"
 #import "JSCLocalImageAssetRetrievalOperation.h"
 #import "JSCMediaStorageOperation.h"
 #import "JSCOperationCoordinator.h"

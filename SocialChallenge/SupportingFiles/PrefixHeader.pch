@@ -23,6 +23,8 @@
 #import <UIKit/UIKit.h>
 #import <PureLayout/PureLayout.h>
 
+#import "SocialChallenge-Swift.h"
+
 /**
  A set of possible feed retrieval options.
  */

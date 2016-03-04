@@ -14,8 +14,6 @@
 		3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
 		3B316ED91C88569F0052F19A /* JSCPostParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B316ED81C88569F0052F19A /* JSCPostParserTests.m */; };
 		3B316EDB1C8859150052F19A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B316EDA1C8859150052F19A /* libPods.a */; };
-		3B316EDC1C8862BF0052F19A /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE01C5F50000055428D /* JSCPost.m */; };
-		3B316EDD1C8862C40052F19A /* JSCPostPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDE1C5F50000055428D /* JSCPostPage.m */; };
 		3B316EDE1C88686B0052F19A /* JSCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111B31B6E127D008E374E /* JSCAppDelegate.m */; };
 		3B316EDF1C88686B0052F19A /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
@@ -33,8 +31,6 @@
 		3B316EEC1C88686B0052F19A /* JSCFeedRetrieveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9632F1B76CD95005365EF /* JSCFeedRetrieveOperation.m */; };
 		3B316EED1C88686B0052F19A /* JSCFeedAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9632C1B76CD27005365EF /* JSCFeedAPIManager.m */; };
 		3B316EEE1C88686B0052F19A /* JSCCDSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963411B76E067005365EF /* JSCCDSOperation.m */; };
-		3B316EEF1C88686B0052F19A /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */; };
-		3B316EF01C88686B0052F19A /* JSCPostPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */; };
 		3B316EF11C88686B0052F19A /* JSCRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */; };
 		3B316EF21C88686B0052F19A /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
 		3B316EF31C88686B0052F19A /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
@@ -50,13 +46,17 @@
 		3B316F061C88893A0052F19A /* JSCFeedRetrieveOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B316F051C88893A0052F19A /* JSCFeedRetrieveOperationTests.m */; };
 		3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */; };
 		3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
-		3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */; };
-		3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */; };
-		3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFDE1C5F50000055428D /* JSCPostPage.m */; };
-		3B37AFE61C5F50000055428D /* JSCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFE01C5F50000055428D /* JSCPost.m */; };
 		3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6501C73962400223E5A /* JSCMediaManager.m */; };
 		3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */; };
 		3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
+		3B4287EF1C89A7F200D3D4EF /* JSCPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */; };
+		3B4288001C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */; };
+		3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */; };
+		3B4288041C89C6C500D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */; };
+		3B4288061C89E80D00D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */; };
+		3B4288071C89E80F00D3D4EF /* JSCPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */; };
+		3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */; };
+		3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */; };
 		3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
 		3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
@@ -83,7 +83,7 @@
 		6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */; };
 		BA544E9361EAF529778588A5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C9187E6B5128FE05C33908 /* CoreText.framework */; };
 		BF487C44F0E59E581C2A3BD5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */; };
-		CC733320D31556AD5F4C1950 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC51405265E948251228B921 /* libPods.a */; };
+		C76AD09187577FF73B0A55E0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB0A6CCEB3BCDBF06ABDA99 /* Pods.framework */; };
 		D980C4EDBB68412EEA73790C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BB0A6CCEB3BCDBF06ABDA99 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		20A57988DFC58A5A00472ED3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3B3111841B6E110B008E374E /* SocialChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,20 +120,18 @@
 		3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaStorageOperation.m; sourceTree = "<group>"; };
 		3B3781A01C748DB300D12BB3 /* JSCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFileManager.h; sourceTree = "<group>"; };
 		3B3781A11C748DB300D12BB3 /* JSCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFileManager.m; sourceTree = "<group>"; };
-		3B37AFD51C5F50000055428D /* JSCPost+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPost+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPost+CoreDataProperties.m"; sourceTree = "<group>"; };
-		3B37AFD71C5F50000055428D /* JSCPostPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSCPostPage+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSCPostPage+CoreDataProperties.m"; sourceTree = "<group>"; };
-		3B37AFDD1C5F50000055428D /* JSCPostPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostPage.h; sourceTree = "<group>"; };
-		3B37AFDE1C5F50000055428D /* JSCPostPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostPage.m; sourceTree = "<group>"; };
-		3B37AFDF1C5F50000055428D /* JSCPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPost.h; sourceTree = "<group>"; };
-		3B37AFE01C5F50000055428D /* JSCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPost.m; sourceTree = "<group>"; };
 		3B3EF64F1C73962400223E5A /* JSCMediaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCMediaManager.h; sourceTree = "<group>"; };
 		3B3EF6501C73962400223E5A /* JSCMediaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaManager.m; sourceTree = "<group>"; };
 		3B3EF6571C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCLocalImageAssetRetrievalOperation.h; sourceTree = "<group>"; };
 		3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCLocalImageAssetRetrievalOperation.m; sourceTree = "<group>"; };
 		3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JSCDateFormatter.h"; sourceTree = "<group>"; };
 		3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JSCDateFormatter.m"; sourceTree = "<group>"; };
+		3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPost.swift; sourceTree = "<group>"; };
+		3B4287F01C89A83600D3D4EF /* SocialChallenge-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SocialChallenge-Bridging-Header.h"; path = "SocialChallenge/SupportingFiles/SocialChallenge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSCPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostPage.swift; sourceTree = "<group>"; };
+		3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSCPostPage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3B4288051C89C9D200D3D4EF /* SocialChallenge-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialChallenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		3B488FD31C80BC6E003DA767 /* JSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSession.h; sourceTree = "<group>"; };
 		3B488FD41C80BC6E003DA767 /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
 		3B70D2581C8600B100A6AB11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -181,7 +180,6 @@
 		74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		8F6768CF6A78C7DF15507DFA /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		AC51405265E948251228B921 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C1C9187E6B5128FE05C33908 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,12 +190,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC733320D31556AD5F4C1950 /* libPods.a in Frameworks */,
 				BF487C44F0E59E581C2A3BD5 /* AssetsLibrary.framework in Frameworks */,
 				BA544E9361EAF529778588A5 /* CoreText.framework in Frameworks */,
 				6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */,
 				688E4A7F2D96FE901926B777 /* SystemConfiguration.framework in Frameworks */,
 				D980C4EDBB68412EEA73790C /* QuartzCore.framework in Frameworks */,
+				C76AD09187577FF73B0A55E0 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +251,11 @@
 		3B3111871B6E110B008E374E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B4288051C89C9D200D3D4EF /* SocialChallenge-Bridging-Header.h */,
 				3B3111881B6E110B008E374E /* Info.plist */,
+				3B70D2591C8600B100A6AB11 /* Localizable.strings */,
 				3B3111891B6E110B008E374E /* main.m */,
 				3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */,
-				3B70D2591C8600B100A6AB11 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			path = SupportingFiles;
@@ -275,6 +274,7 @@
 		3B3111A71B6E110B008E374E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B4287F01C89A83600D3D4EF /* SocialChallenge-Bridging-Header.h */,
 				3B3111A81B6E110B008E374E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -330,14 +330,10 @@
 		3B3111B91B6E127D008E374E /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				3B37AFDF1C5F50000055428D /* JSCPost.h */,
-				3B37AFE01C5F50000055428D /* JSCPost.m */,
-				3B37AFD51C5F50000055428D /* JSCPost+CoreDataProperties.h */,
-				3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */,
-				3B37AFDD1C5F50000055428D /* JSCPostPage.h */,
-				3B37AFDE1C5F50000055428D /* JSCPostPage.m */,
-				3B37AFD71C5F50000055428D /* JSCPostPage+CoreDataProperties.h */,
-				3B37AFD81C5F50000055428D /* JSCPostPage+CoreDataProperties.m */,
+				3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */,
+				3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */,
+				3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */,
+				3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -771,13 +767,13 @@
 			isa = PBXGroup;
 			children = (
 				3B316EDA1C8859150052F19A /* libPods.a */,
-				AC51405265E948251228B921 /* libPods.a */,
 				8F6768CF6A78C7DF15507DFA /* BuddyBuildSDK.framework */,
 				10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */,
 				C1C9187E6B5128FE05C33908 /* CoreText.framework */,
 				74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */,
 				ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */,
 				A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */,
+				0BB0A6CCEB3BCDBF06ABDA99 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -931,12 +927,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4288001C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */,
 				3B70D26C1C872AF800A6AB11 /* JSCLoadingView.m in Sources */,
 				3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */,
 				3BF13B091C5E375300B32627 /* JSCParser.m in Sources */,
 				3BA68D2F1C873C080096EAFD /* JSCEmptyView.m in Sources */,
-				3B37AFE51C5F50000055428D /* JSCPostPage.m in Sources */,
-				3B37AFE21C5F50000055428D /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
 				3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */,
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
@@ -946,6 +941,7 @@
 				3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */,
 				3BD89C631B776C460084FA63 /* JSCWindow.m in Sources */,
 				3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */,
+				3B4287EF1C89A7F200D3D4EF /* JSCPost.swift in Sources */,
 				3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */,
 				3BD963421B76E067005365EF /* JSCCDSOperation.m in Sources */,
 				3BF799581C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m in Sources */,
@@ -960,9 +956,9 @@
 				3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */,
 				3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */,
 				3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */,
-				3B37AFE61C5F50000055428D /* JSCPost.m in Sources */,
-				3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */,
+				3B4288071C89E80F00D3D4EF /* JSCPostPage.swift in Sources */,
 				3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */,
+				3B4288061C89E80D00D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
 				3BF13B0F1C5E37B200B32627 /* JSCPostPageParser.m in Sources */,
 				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
 			);
@@ -972,6 +968,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4288041C89C6C500D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */,
 				3B316EDE1C88686B0052F19A /* JSCAppDelegate.m in Sources */,
 				3B316EDF1C88686B0052F19A /* UIImage+JSCRoundImage.m in Sources */,
 				3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */,
@@ -990,23 +987,22 @@
 				3B316EEC1C88686B0052F19A /* JSCFeedRetrieveOperation.m in Sources */,
 				3B316EED1C88686B0052F19A /* JSCFeedAPIManager.m in Sources */,
 				3B316EEE1C88686B0052F19A /* JSCCDSOperation.m in Sources */,
-				3B316EEF1C88686B0052F19A /* JSCPost+CoreDataProperties.m in Sources */,
-				3B316EF01C88686B0052F19A /* JSCPostPage+CoreDataProperties.m in Sources */,
 				3B316EF11C88686B0052F19A /* JSCRootNavigationController.m in Sources */,
 				3B316EF21C88686B0052F19A /* JSCSplashViewController.m in Sources */,
 				3B316F061C88893A0052F19A /* JSCFeedRetrieveOperationTests.m in Sources */,
 				3B316EF31C88686B0052F19A /* JSCSession.m in Sources */,
 				3B316EF41C88686B0052F19A /* JSCOperationCoordinator.m in Sources */,
 				3B316EF51C88686B0052F19A /* JSCOperation.m in Sources */,
+				3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */,
 				3B316EF61C88686B0052F19A /* JSCLoadingView.m in Sources */,
 				3B316EF71C88686B0052F19A /* JSCEmptyView.m in Sources */,
 				3B316EF81C88686B0052F19A /* JSCPostTableViewCell.m in Sources */,
+				3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
+				3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */,
 				3B316EF91C88686B0052F19A /* JSCHomeAdapter.m in Sources */,
 				3B316EFA1C88686B0052F19A /* JSCHomeViewController.m in Sources */,
 				3B316EFB1C88686B0052F19A /* JSCWindow.m in Sources */,
 				3B316ED91C88569F0052F19A /* JSCPostParserTests.m in Sources */,
-				3B316EDC1C8862BF0052F19A /* JSCPost.m in Sources */,
-				3B316EDD1C8862C40052F19A /* JSCPostPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,6 +1100,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lagusoft.socialchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SocialChallenge/SupportingFiles/SocialChallenge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1160,6 +1158,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lagusoft.socialchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SocialChallenge/SupportingFiles/SocialChallenge-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
