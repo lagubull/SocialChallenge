@@ -1,0 +1,31 @@
+PODS:
+  - CoreDataServices (1.1.5)
+  - EasyAlert (1.0.1)
+  - EasyDownloadSession (1.0.2)
+  - OCMock (3.2.2)
+  - PureLayout (3.0.1)
+  - Reveal-iOS-SDK (1.6.2)
+  - SimpleTableView (1.0.3):
+    - SimpleTableView/STVPaginatingView (= 1.0.3)
+  - SimpleTableView/STVPaginatingView (1.0.3):
+    - PureLayout
+
+DEPENDENCIES:
+  - CoreDataServices (~> 1.1)
+  - EasyAlert
+  - EasyDownloadSession (~> 1.0.2)
+  - OCMock (~> 3.2)
+  - PureLayout
+  - Reveal-iOS-SDK (~> 1.6)
+  - SimpleTableView (~> 1.0.3)
+
+SPEC CHECKSUMS:
+  CoreDataServices: 9f4a86f6f116165a217206f1db624f1742b8702b
+  EasyAlert: 837fa8d271786f3feedd83ca6bccc2e090abd091
+  EasyDownloadSession: 8d27e72df8de276191d9f543a1f61c9436e384c9
+  OCMock: 18c9b7e67d4c2770e95bb77a9cc1ae0c91fe3835
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
+  SimpleTableView: d5c86cffbe961311e4059e87a8c1550142470c71
+
+COCOAPODS: 0.39.0
