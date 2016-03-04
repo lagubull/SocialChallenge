@@ -8,9 +8,9 @@
 
 #import "JSCAppDelegate.h"
 
-#import <CDSServiceManager.h>
-#import <EDSDownloadSession.h>
-#import <NSManagedObjectContext+CDSDelete.h>
+#import <CoreDataServices/CDSServiceManager.h>
+#import <EasyDownloadSession/EDSDownloadSession.h>
+#import <CoreDataServices/NSManagedObjectContext+CDSDelete.h>
 
 #import "JSCOperationCoordinator.h"
 #import "NSOperationQueue+JSCOperationScheduler.h"

@@ -8,13 +8,12 @@
 
 #import "JSCFeedRetrieveOperation.h"
 
-#import <EDSDownloadSession.h>
+#import <CoredataServices/CDSServiceManager.h>
 
 #import "JSCFeedRequest.h"
 #import "JSCJSONManager.h"
 #import "JSCPostPage.h"
 #import "JSCPostPageParser.h"
-#import "CDSServiceManager.h"
 #import "JSCSession.h"
 
 @interface JSCFeedRetrieveOperation ()

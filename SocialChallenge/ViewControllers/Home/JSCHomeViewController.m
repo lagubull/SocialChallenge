@@ -9,9 +9,9 @@
 #import "JSCHomeViewController.h"
 
 #import "UINavigationBar+JSCCustomHeight.h"
-#import <STVPaginatingView.h>
-#import <STVSimpleTableView.h>
-#import <LEAAlertController.h>
+#import <SimpleTableView/STVPaginatingView.h>
+#import <SimpleTableView/STVSimpleTableView.h>
+#import <EasyAlert/LEAAlertController.h>
 
 #import "JSCHomeAdapter.h"
 #import "JSCLoadingView.h"
