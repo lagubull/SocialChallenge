@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-//import CoreDataServices
+import CoreDataServices
 
 @objc(JSCPostPage)
 

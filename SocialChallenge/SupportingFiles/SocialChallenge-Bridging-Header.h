@@ -9,8 +9,8 @@
 
 #import "JSCParser.h"
 #import "JSCPostParser.h"
-#import "NSManagedObjectContext+CDSRetrieval.h"
-#import <CoreDataServices/CDSServiceManager.h>
+//#import "NSManagedObjectContext+CDSRetrieval.h"
+//#import <CoreDataServices/CDSServiceManager.h>
 
 #endif /* SocialChallenge_Bridging_Header_h */
 
