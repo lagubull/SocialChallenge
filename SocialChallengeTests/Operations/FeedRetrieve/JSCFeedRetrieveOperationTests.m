@@ -9,12 +9,11 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 
-#import "JSCFeedRetrieveOperation.h"
+#import <CoreDataServices/CDSServiceManager.h>
 
+#import "JSCFeedRetrieveOperation.h"
 #import "JSCFeedRequest.h"
 #import "JSCJSONManager.h"
-#import "JSCPostPageParser.h"
-#import "CDSServiceManager.h"
 #import "JSCSession.h"
 
 
