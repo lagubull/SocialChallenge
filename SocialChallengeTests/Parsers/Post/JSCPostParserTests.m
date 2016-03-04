@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <CDSServiceManager.h>
+#import <CoredataServices/CDSServiceManager.h>
 
 #import "JSCPost.h"
 #import "JSCPostPage.h"

@@ -11,13 +11,13 @@
 
 #import "JSCFeedRetrieveOperation.h"
 
-#import <EDSDownloadSession.h>
+#import <CoredataServices/CDSServiceManager.h>
 
 #import "JSCFeedRequest.h"
 #import "JSCJSONManager.h"
 #import "JSCPostPage.h"
 #import "JSCPostPageParser.h"
-#import "CDSServiceManager.h"
+
 #import "JSCSession.h"
 
 
@@ -45,7 +45,9 @@
 
 @property (nonatomic, strong) id taskMock;
 
-@property (nonatomic, strong) id  parserMock;
+@property (nonatomic, strong) id parserMock;
+
+@property (nonatomic, strong) id bundleMock;
 
 @property (nonatomic, strong) NSError *error;
 
@@ -58,6 +60,9 @@
 - (void)setUp
 {
     [super setUp];
+    
+    self.bundleMock = [OCMockObject mockForClass:[NSBundle class]];
+    [[[self.bundleMock stub] andReturn:[NSBundle bundleForClass:[self class]]] mainBundle];
     
     [[CDSServiceManager sharedInstance] setupModelURLWithModelName:@"SocialChallenge"];
 
