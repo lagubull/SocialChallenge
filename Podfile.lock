@@ -1,5 +1,5 @@
 PODS:
-  - CoreDataServices (1.1.5)
+  - CoreDataServices (1.1.4)
   - EasyAlert (1.0.1)
   - EasyDownloadSession (1.0.2)
   - OCMock (3.2.2)
@@ -11,7 +11,7 @@ PODS:
     - PureLayout
 
 DEPENDENCIES:
-  - CoreDataServices (~> 1.1)
+  - CoreDataServices (= 1.1.4)
   - EasyAlert
   - EasyDownloadSession (~> 1.0.2)
   - OCMock (~> 3.2)
@@ -20,7 +20,7 @@ DEPENDENCIES:
   - SimpleTableView (~> 1.0.3)
 
 SPEC CHECKSUMS:
-  CoreDataServices: 9f4a86f6f116165a217206f1db624f1742b8702b
+  CoreDataServices: d4ae6543e2d330a69a609dd34f30dda40c00565c
   EasyAlert: 837fa8d271786f3feedd83ca6bccc2e090abd091
   EasyDownloadSession: 8d27e72df8de276191d9f543a1f61c9436e384c9
   OCMock: 18c9b7e67d4c2770e95bb77a9cc1ae0c91fe3835
