@@ -82,6 +82,7 @@
 		6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */; };
 		9CA555B7A44F2039F418B4A3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FF7DB512D079A953982229 /* Pods.framework */; };
 		BA544E9361EAF529778588A5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C9187E6B5128FE05C33908 /* CoreText.framework */; };
+		BF340CE7BC2D9A3C8D2C7B29 /* Pods_SocialChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B861B73D88BD87B5AA7820B /* Pods_SocialChallenge.framework */; };
 		BF487C44F0E59E581C2A3BD5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */; };
 		D980C4EDBB68412EEA73790C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -98,7 +99,7 @@
 
 /* Begin PBXFileReference section */
 		10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		20A57988DFC58A5A00472ED3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		36111EF044CFE5564B49FEE5 /* Pods-SocialChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B3111841B6E110B008E374E /* SocialChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111881B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B3111891B6E110B008E374E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -174,13 +175,16 @@
 		3BF13B4C1C5E473600B32627 /* NSOperationQueue+JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+JSCOperationScheduler.h"; sourceTree = "<group>"; };
 		3BF799561C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JSCCustomHeight.h"; sourceTree = "<group>"; };
 		3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JSCCustomHeight.m"; sourceTree = "<group>"; };
+		42A9A7C4DAFAB50F0FF69D29 /* Pods-SocialChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		692522B6086335AFDFD58A1C /* Pods-SocialChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7B861B73D88BD87B5AA7820B /* Pods_SocialChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6768CF6A78C7DF15507DFA /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		A2FF7DB512D079A953982229 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C1C9187E6B5128FE05C33908 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CCA029AF9B63B12404DD97E5 /* Pods_SocialChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B316EDB1C8859150052F19A /* libPods.a in Frameworks */,
+				770B219FC566D19B21A8575E /* Pods_SocialChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,8 +758,10 @@
 		E329036832D4BECC41E1C2D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				20A57988DFC58A5A00472ED3 /* Pods.debug.xcconfig */,
-				DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */,
+				692522B6086335AFDFD58A1C /* Pods-SocialChallenge.debug.xcconfig */,
+				A2B07248FC846BD636877C79 /* Pods-SocialChallenge.release.xcconfig */,
+				36111EF044CFE5564B49FEE5 /* Pods-SocialChallengeTests.debug.xcconfig */,
+				42A9A7C4DAFAB50F0FF69D29 /* Pods-SocialChallengeTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -802,9 +808,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B3111AE1B6E110B008E374E /* Build configuration list for PBXNativeTarget "SocialChallengeTests" */;
 			buildPhases = (
+				07DAE80DC85610A9A2D439FD /* Check Pods Manifest.lock */,
 				3B31119F1B6E110B008E374E /* Sources */,
 				3B3111A01B6E110B008E374E /* Frameworks */,
 				3B3111A11B6E110B008E374E /* Resources */,
+				DE803ACFCAF73043206758E3 /* Embed Pods Frameworks */,
+				F93E816469795AC0DE817A5E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -872,6 +881,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07DAE80DC85610A9A2D439FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		36E9D7E2BAAA1A9C330C9E76 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -884,7 +908,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		38F5A9356B0110BAEEC9B438 /* Check Pods Manifest.lock */ = {
@@ -914,7 +938,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE803ACFCAF73043206758E3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F93E816469795AC0DE817A5E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1042,7 +1096,7 @@
 		};
 		3B3111AC1B6E110B008E374E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20A57988DFC58A5A00472ED3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 692522B6086335AFDFD58A1C /* Pods-SocialChallenge.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1103,7 +1157,7 @@
 		};
 		3B3111AD1B6E110B008E374E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */;
+			baseConfigurationReference = A2B07248FC846BD636877C79 /* Pods-SocialChallenge.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1161,7 +1215,7 @@
 		};
 		3B3111AF1B6E110B008E374E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20A57988DFC58A5A00472ED3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 36111EF044CFE5564B49FEE5 /* Pods-SocialChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1203,6 +1257,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Reveal-iOS-SDK\"",
+					"\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"",
+				);
 				INFOPLIST_FILE = SocialChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1220,7 +1280,7 @@
 		};
 		3B3111B01B6E110B008E374E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF5AD0A75C27FBEDC32FAAD0 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 42A9A7C4DAFAB50F0FF69D29 /* Pods-SocialChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
