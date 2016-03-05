@@ -10,7 +10,7 @@ target 'SocialChallenge' do
     pod 'EasyAlert'
     pod 'Reveal-iOS-SDK', '~> 1.6', :configurations => ['Debug']
     pod 'SimpleTableView', '~>1.0.3'
-    pod 'EasyDownloadSession', '~>1.0.2'
+    pod 'EasyDownloadSession', '1.0.4'
     pod 'OCMock', '~>3.2'
 end
 
@@ -20,6 +20,6 @@ target 'SocialChallengeTests' do
     pod 'EasyAlert'
     pod 'Reveal-iOS-SDK', '~> 1.6', :configurations => ['Debug']
     pod 'SimpleTableView', '~>1.0.3'
-    pod 'EasyDownloadSession', '~>1.0.2'
+    pod 'EasyDownloadSession', '1.0.4'
     pod 'OCMock', '~>3.2'
 end

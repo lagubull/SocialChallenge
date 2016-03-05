@@ -48,7 +48,7 @@
                 [EDSDownloadSession scheduleDownloadWithId:post.postId
                                                    fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
                                                   progress:nil
-                                                   success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData, NSURL *location)
+                                                   success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData)
                  {
                      JSCMediaStorageOperation *storeOPeration = [[JSCMediaStorageOperation alloc] initWithPostID:post.postId
                                                                                                             data:responseData];
