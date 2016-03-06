@@ -54,7 +54,6 @@
 		3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */; };
 		3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */; };
 		3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42880A1C89FCCF00D3D4EF /* JSCPostPageParser.swift */; };
-		3B42880F1C8A501A00D3D4EF /* JSCFeedRetrieveOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B42880E1C8A501A00D3D4EF /* JSCFeedRetrieveOperationTests.m */; };
 		3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
 		3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
@@ -1047,7 +1046,6 @@
 				3B316EF11C88686B0052F19A /* JSCRootNavigationController.m in Sources */,
 				3B316EF21C88686B0052F19A /* JSCSplashViewController.m in Sources */,
 				3B316EF31C88686B0052F19A /* JSCSession.m in Sources */,
-				3B42880F1C8A501A00D3D4EF /* JSCFeedRetrieveOperationTests.m in Sources */,
 				3B316EF41C88686B0052F19A /* JSCOperationCoordinator.m in Sources */,
 				3B316EF51C88686B0052F19A /* JSCOperation.m in Sources */,
 				3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */,
