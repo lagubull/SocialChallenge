@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 /**
 Post JSON Keys.
@@ -68,29 +69,28 @@ class JSCPostParser: JSCParser {
             
             let postId = "\(postDictionary[kJSCPostId]!)"
             
-            post = JSCPost.fetchPostWithId(postId, managedObjectContext : self.managedContext)
+            post = JSCPost.fetchPostWithId(postId, managedObjectContext : self.managedObjectContext)
             
             if (post == nil) {
                 
-                post = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPost.self), inManagedObjectContext : self.managedContext) as! JSCPost
+                post = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPost.self), inManagedObjectContext : self.managedObjectContext) as! JSCPost
                 
                 post.postId = postId
             }
       
             let dateFormatter = NSDateFormatter.jsc_dateFormatter() as NSDateFormatter
             
-            post.createdAt = JSCValueOrDefault(dateFormatter.dateFromString("\(postDictionary[kJSCCreatedAt])"),
-                post.createdAt) as? NSDate
+            post.createdAt = JSCValueOrDefault(dateFormatter.dateFromString("\(postDictionary[kJSCCreatedAt])"), defaultValue : post.createdAt) as? NSDate
 
-            post.likeCount = JSCValueOrDefault(postDictionary[kJSCLikeCount], post.likeCount) as? NSNumber
+            post.likeCount = JSCValueOrDefault(postDictionary[kJSCLikeCount], defaultValue : post.likeCount) as? NSNumber
             
-            post.content = JSCValueOrDefault(postDictionary[kJSCContent], post.content)  as? String
+            post.content = JSCValueOrDefault(postDictionary[kJSCContent], defaultValue : post.content)  as? String
 
-            post.commentCount = JSCValueOrDefault(postDictionary[kJSCCommentCount], post.commentCount)  as? NSNumber
+            post.commentCount = JSCValueOrDefault(postDictionary[kJSCCommentCount], defaultValue : post.commentCount)  as? NSNumber
             
-            post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCAvatar], post.userAvatarRemoteURL) as? String
-            post.userFirstName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCFirstName], post.userFirstName) as? String
-            post.userLastName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCLastName], post.userLastName) as? String
+            post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCAvatar], defaultValue : post.userAvatarRemoteURL) as? String
+            post.userFirstName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCFirstName], defaultValue : post.userFirstName) as? String
+            post.userLastName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCLastName], defaultValue : post.userLastName) as? String
         }
         
         return post;
