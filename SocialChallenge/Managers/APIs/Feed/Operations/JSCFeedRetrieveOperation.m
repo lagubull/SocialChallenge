@@ -96,7 +96,7 @@
                      {
                          NSDictionary *feed = [JSCJSONManager processJSONData:data];
                          
-                         JSCPostPageParser *pageParser = [[JSCPostPageParser alloc]initWithManagedObjectContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
+                         JSCPostPageParser *pageParser = [JSCPostPageParser parserWithContext:[CDSServiceManager sharedInstance].backgroundManagedObjectContext];
                          
                          [[CDSServiceManager sharedInstance].backgroundManagedObjectContext performBlockAndWait:^
                           {

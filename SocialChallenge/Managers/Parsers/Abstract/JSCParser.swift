@@ -40,28 +40,28 @@ class JSCParser: NSObject {
     //Mark - Init
     
     /**
-     Convenient initialiser the parser.
-     
-     @param managedContext - Context for the parser to access CoreData.
-     
-     @return FSNParser instance.
-     */
-    class func parserWithContext(managedObjectContext : NSManagedObjectContext) -> JSCParser! {
-        
-        let parser = JSCParser.init (managedObjectContext : managedObjectContext)
-        
-        return parser
-    }
-    
-    /**
      Initialises the parser.
      
      @param managedContext - Context for the parser to access CoreData.
      
      @return FSNParser instance.
      */
-    init (managedObjectContext : NSManagedObjectContext?) {
+    required init (managedObjectContext : NSManagedObjectContext?) {
         
         self.managedObjectContext = managedObjectContext!;
+    }
+    
+    //Mark: Parser
+    
+    /**
+     Convenient initialiser the parser.
+     
+     @param managedContext - Context for the parser to access CoreData.
+     
+     @return FSNParser instance.
+     */
+    class func parserWithContext(managedObjectContext : NSManagedObjectContext) -> Self {
+        
+        return self.init(managedObjectContext: managedObjectContext)
     }
 }
