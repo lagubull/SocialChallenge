@@ -16,7 +16,6 @@
 		3B316EDF1C88686B0052F19A /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
 		3B316EE11C88686B0052F19A /* UINavigationBar+JSCCustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */; };
-		3B316EE21C88686B0052F19A /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
 		3B316EE31C88686B0052F19A /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
 		3B316EE41C88686B0052F19A /* JSCMediaStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */; };
 		3B316EE51C88686B0052F19A /* JSCLocalImageAssetRetrievalOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */; };
@@ -42,7 +41,6 @@
 		3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
 		3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6501C73962400223E5A /* JSCMediaManager.m */; };
 		3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */; };
-		3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */; };
 		3B4287EF1C89A7F200D3D4EF /* JSCPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */; };
 		3B4288001C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */; };
 		3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */; };
@@ -54,6 +52,7 @@
 		3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42880A1C89FCCF00D3D4EF /* JSCPostPageParser.swift */; };
 		3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B4E80211C8DA1A600ECFCD0 /* JSCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E80201C8DA1A600ECFCD0 /* JSCParser.swift */; };
+		3B4E80281C8DE70600ECFCD0 /* JSCDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */; };
 		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
 		3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
@@ -117,8 +116,6 @@
 		3B3EF6501C73962400223E5A /* JSCMediaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaManager.m; sourceTree = "<group>"; };
 		3B3EF6571C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCLocalImageAssetRetrievalOperation.h; sourceTree = "<group>"; };
 		3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCLocalImageAssetRetrievalOperation.m; sourceTree = "<group>"; };
-		3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JSCDateFormatter.h"; sourceTree = "<group>"; };
-		3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JSCDateFormatter.m"; sourceTree = "<group>"; };
 		3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPost.swift; sourceTree = "<group>"; };
 		3B4287F01C89A83600D3D4EF /* SocialChallenge-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SocialChallenge-Bridging-Header.h"; path = "SocialChallenge/SupportingFiles/SocialChallenge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSCPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -130,6 +127,7 @@
 		3B488FD31C80BC6E003DA767 /* JSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSession.h; sourceTree = "<group>"; };
 		3B488FD41C80BC6E003DA767 /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
 		3B4E80201C8DA1A600ECFCD0 /* JSCParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCParser.swift; sourceTree = "<group>"; };
+		3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCDateFormatter.swift; sourceTree = "<group>"; };
 		3B70D2581C8600B100A6AB11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B70D2611C8721DD00A6AB11 /* UIImage+JSCRoundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSCRoundImage.h"; sourceTree = "<group>"; };
 		3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCRoundImage.m"; sourceTree = "<group>"; };
@@ -480,8 +478,7 @@
 		3B3FAA3D1C60B5950019D0D0 /* NSDateFormatter */ = {
 			isa = PBXGroup;
 			children = (
-				3B3FAA3E1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.h */,
-				3B3FAA3F1C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m */,
+				3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */,
 			);
 			path = NSDateFormatter;
 			sourceTree = "<group>";
@@ -983,6 +980,7 @@
 				3B70D26C1C872AF800A6AB11 /* JSCLoadingView.m in Sources */,
 				3BD963301B76CD95005365EF /* JSCFeedRetrieveOperation.m in Sources */,
 				3BA68D2F1C873C080096EAFD /* JSCEmptyView.m in Sources */,
+				3B4E80281C8DE70600ECFCD0 /* JSCDateFormatter.swift in Sources */,
 				3B4E80211C8DA1A600ECFCD0 /* JSCParser.swift in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
 				3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */,
@@ -1005,7 +1003,6 @@
 				3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */,
 				3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */,
 				3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */,
-				3B3FAA401C60B5FE0019D0D0 /* NSDateFormatter+JSCDateFormatter.m in Sources */,
 				3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */,
 				3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */,
 				3B4288071C89E80F00D3D4EF /* JSCPostPage.swift in Sources */,
@@ -1024,7 +1021,6 @@
 				3B316EDF1C88686B0052F19A /* UIImage+JSCRoundImage.m in Sources */,
 				3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */,
 				3B316EE11C88686B0052F19A /* UINavigationBar+JSCCustomHeight.m in Sources */,
-				3B316EE21C88686B0052F19A /* NSDateFormatter+JSCDateFormatter.m in Sources */,
 				3B316EE31C88686B0052F19A /* JSCFileManager.m in Sources */,
 				3B316EE41C88686B0052F19A /* JSCMediaStorageOperation.m in Sources */,
 				3B316EE51C88686B0052F19A /* JSCLocalImageAssetRetrievalOperation.m in Sources */,

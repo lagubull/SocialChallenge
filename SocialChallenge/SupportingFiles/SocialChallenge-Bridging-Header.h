@@ -7,7 +7,5 @@
 
 #pragma mark - prefix Imports
 
-#import "NSDateFormatter+JSCDateFormatter.h"
-
 #endif /* SocialChallenge_Bridging_Header_h */
 
