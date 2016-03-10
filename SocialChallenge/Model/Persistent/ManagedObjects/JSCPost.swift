@@ -17,14 +17,14 @@ class JSCPost: NSManagedObject {
     // MARK: Post
     
     /**
-     Retrieves a JSCPOST from DB based on ID provided.
+    Retrieves a JSCPOST from DB based on ID provided.
     
-     @param postId - ID of the post to be retrieved.
-     @param managedObjectContext - context that should be used to access persistent store.
+    - Parameter postId - ID of the post to be retrieved.
+    - Parameter managedObjectContext - context that should be used to access persistent store.
     
-     @return JSCPOST instance or nil if POST can't be found.
+    - Returns: JSCPOST instance or nil if POST can't be found.
     */
-    class func fetchPostWithId(postId: String, managedObjectContext:NSManagedObjectContext) -> JSCPost? {
+    class func fetchPostWithId (postId: String, managedObjectContext:NSManagedObjectContext) -> JSCPost? {
         
         let predicate = NSPredicate(format:"postId MATCHES %@", postId)
         
@@ -38,11 +38,11 @@ class JSCPost: NSManagedObject {
     /**
      Retrieves a JSCPOST from DB based on ID provided, looking in the mainContext.
      
-     @param postId - ID of the post to be retrieved.
+     - Parameter postId - ID of the post to be retrieved.
      
-     @return JSCPOST instance or nil if POST can't be found.
+     - Returns: JSCPOST instance or nil if POST can't be found.
      */
-    class func fetchPostWithId(postId: String) -> JSCPost? {
+    class func fetchPostWithId (postId: String) -> JSCPost? {
         
         var post: JSCPost?
         
@@ -51,15 +51,15 @@ class JSCPost: NSManagedObject {
         return post
     }
     
-   // MARK: UserName
+    // MARK: UserName
     
     /**
-     Convenient method to shape the user's name into the desired format.
-     
-     @return user's Name.
+    Convenient method to shape the user's name into the desired format.
+    
+    - Returns: user's Name.
     */
-    func userName()-> String {
-
+    func userName ()-> String {
+        
         let lastNameFirstLetter = self.userLastName![self.userLastName!.startIndex]
         
         return "\(self.userFirstName!) \(lastNameFirstLetter).";

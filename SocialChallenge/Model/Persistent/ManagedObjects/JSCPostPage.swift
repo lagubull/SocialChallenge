@@ -1,6 +1,6 @@
 //
 //  JSCPostPage.swift
-//  
+//
 //
 //  Created by Javier Laguna on 04/03/2016.
 //
@@ -15,12 +15,12 @@ import CoreDataServices
 class JSCPostPage: NSManagedObject {
     
     /**
-    Retrieves the last page of posts stored in the context.
-    
-    @param context in which we want to perform the search.
-    
-    @return JSCPostPage - instace of the JSCPostPage class
-    */
+     Retrieves the last page of posts stored in the context.
+     
+     - Parameter context in which we want to perform the search.
+     
+     - Returns: JSCPostPage - instace of the JSCPostPage class
+     */
     class func fetchLastPageInContext(managedObjectContext : NSManagedObjectContext) -> JSCPostPage {
         
         let retrievedPagesSortDescriptor = NSSortDescriptor.init(key : "index", ascending : false)
