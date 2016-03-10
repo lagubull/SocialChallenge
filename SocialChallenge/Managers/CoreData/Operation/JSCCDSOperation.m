@@ -8,7 +8,7 @@
 
 #import "JSCCDSOperation.h"
 
-#import "CDSServiceManager.h"
+#import <CoreDataServices/CDSServiceManager.h>
 
 @interface JSCCDSOperation ()
 

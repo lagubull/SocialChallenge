@@ -37,6 +37,7 @@
 		3B316EFB1C88686B0052F19A /* JSCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C621B776C460084FA63 /* JSCWindow.m */; };
 		3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */; };
+		3B33AC681C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */; };
 		3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */; };
 		3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
 		3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6501C73962400223E5A /* JSCMediaManager.m */; };
@@ -108,6 +109,7 @@
 		3B316ED81C88569F0052F19A /* JSCPostParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParserTests.m; sourceTree = "<group>"; };
 		3B316EDA1C8859150052F19A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRequest.swift; sourceTree = "<group>"; };
+		3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRetrievalOperation.swift; sourceTree = "<group>"; };
 		3B37819C1C74756100D12BB3 /* JSCMediaStorageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCMediaStorageOperation.h; sourceTree = "<group>"; };
 		3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaStorageOperation.m; sourceTree = "<group>"; };
 		3B3781A01C748DB300D12BB3 /* JSCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFileManager.h; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 			children = (
 				3BD9632E1B76CD95005365EF /* JSCFeedRetrieveOperation.h */,
 				3BD9632F1B76CD95005365EF /* JSCFeedRetrieveOperation.m */,
+				3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -1000,6 +1003,7 @@
 				3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */,
 				3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */,
 				3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */,
+				3B33AC681C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift in Sources */,
 				3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */,
 				3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */,
 				3B4288071C89E80F00D3D4EF /* JSCPostPage.swift in Sources */,

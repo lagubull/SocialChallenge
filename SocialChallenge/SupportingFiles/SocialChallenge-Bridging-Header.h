@@ -7,5 +7,13 @@
 
 #pragma mark - prefix Imports
 
+#import <EasyDownloadSession/EDSDownloadSession.h>
+#import <CoreDataServices/CDSServiceManager.h>
+
+#import "JSCCDSOperation.h"
+#import "JSCJSONManager.h"
+#import "JSCSession.h"
+
+
 #endif /* SocialChallenge_Bridging_Header_h */
 

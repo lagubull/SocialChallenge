@@ -30,7 +30,7 @@ Convenient method to check if a value is not nil and returns ir or the default
 /**
 Code base for the parsers.
 */
-class JSCParser: NSObject {
+class JSCParser : NSObject {
     
     /**
      Context for the parser to access CoreData.
@@ -46,7 +46,7 @@ class JSCParser: NSObject {
     
     - Returns: FSNParser instance.
     */
-    required init (managedObjectContext : NSManagedObjectContext?) {
+    required init(managedObjectContext : NSManagedObjectContext?) {
         
         self.managedObjectContext = managedObjectContext!;
     }
