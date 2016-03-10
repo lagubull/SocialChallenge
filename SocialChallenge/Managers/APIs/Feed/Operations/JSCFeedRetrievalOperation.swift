@@ -41,18 +41,23 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     
     - Returns: an instance of the class.
     */
-    init(mode : DataRetrievalOperationMode) {
+    class func feedRetrievalOperation(mode : DataRetrievalOperationMode) -> JSCFeedRetrievalOperation {
+        
+        return self.init(mode: mode) as JSCFeedRetrievalOperation
+    }
+    
+    required init(mode : DataRetrievalOperationMode) {
         
         self.mode = mode
         
         super.init()
-
+        
         self.identifier = self.myIdentifier
     }
     
     //Mark - Identifier
     
-     lazy var myIdentifier : String = {
+    lazy var myIdentifier : String = {
         
         let _identifier : String = "retrieveFeed \(self.mode!)"
         

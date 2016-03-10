@@ -8,7 +8,6 @@
 
 #import "JSCFeedAPIManager.h"
 
-#import "JSCFeedRetrieveOperation.h"
 #import "JSCOperationCoordinator.h"
 
 @implementation JSCFeedAPIManager
@@ -19,14 +18,14 @@
 {
     DLog(@"Queuing request to retrieve feed");
     
-    JSCFeedRetrieveOperation *operation = [[JSCFeedRetrieveOperation alloc] initWithMode:mode];
+//    JSCFeedRetrievalOperation *operation = [JSCFeedRetrievalOperation feedRetrievalOperation:Data];
     
-    operation.onSuccess = success;
-    operation.onFailure = failure;
-    
-    operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
-    
-    [[JSCOperationCoordinator sharedInstance] addOperation:operation];
+//    operation.onSuccess = success;
+//    operation.onFailure = failure;
+//    
+//    operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
+//    
+//    [[JSCOperationCoordinator sharedInstance] addOperation:operation];
 }
 
 @end
