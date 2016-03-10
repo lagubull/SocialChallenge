@@ -34,16 +34,16 @@ class JSCPostParser: JSCParser {
     /**
     Parse array of posts.
     
-    @param postsDictionaries - array of dictionaries with posts.
+    - Parameter postsDictionaries - array of dictionaries with posts.
     
-    @return NSArray of posts.
+    - Returns: NSArray of posts.
     */
-    func parsePosts(postsDictionaries : [[String : AnyObject]]) -> [JSCPost] {
+    func parsePosts (postsDictionaries : [[String : AnyObject]]) -> [JSCPost] {
         
         var posts : [JSCPost] = []
         
         for postDictionary in postsDictionaries {
-
+            
             let post = self.parsePost(postDictionary)
             
             posts.append(post)
@@ -51,18 +51,18 @@ class JSCPostParser: JSCParser {
         
         return posts
     }
-
-//Mark: Post
-
+    
+    //Mark: Post
+    
     /**
     Parse Post.
     
-    @param postDictionary - JSON containing a post.
+    - Parameter postDictionary - JSON containing a post.
     
-    @return JSCPostPage instance that was parsed.
+    - Returns: JSCPostPage instance that was parsed.
     */
     func parsePost (postDictionary : [String : AnyObject]) -> JSCPost! {
-    
+        
         var post : JSCPost!
         
         if ((postDictionary[kJSCPostId]) != nil) {
@@ -77,15 +77,15 @@ class JSCPostParser: JSCParser {
                 
                 post.postId = postId
             }
-      
+            
             let dateFormatter = NSDateFormatter.jsc_dateFormatter() as NSDateFormatter
             
             post.createdAt = JSCValueOrDefault(dateFormatter.dateFromString("\(postDictionary[kJSCCreatedAt])"), defaultValue : post.createdAt) as? NSDate
-
+            
             post.likeCount = JSCValueOrDefault(postDictionary[kJSCLikeCount], defaultValue : post.likeCount) as? NSNumber
             
             post.content = JSCValueOrDefault(postDictionary[kJSCContent], defaultValue : post.content)  as? String
-
+            
             post.commentCount = JSCValueOrDefault(postDictionary[kJSCCommentCount], defaultValue : post.commentCount)  as? NSNumber
             
             post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCAvatar], defaultValue : post.userAvatarRemoteURL) as? String

@@ -11,7 +11,7 @@ import CoreData
 import CoreDataServices
 
 /**
-PostPage JSON Keys.
+ PostPage JSON Keys.
 */
 let kJSCPosts = "posts" as String
 let kJSCData = "data" as String
@@ -31,11 +31,11 @@ class JSCPostPageParser: JSCParser {
     /**
      Parse Page.
      
-     @param pageDictionary - JSON containing a page.
+     - Parameter pageDictionary JSON containing a page.
      
-     @return JSCPostPage instance that was parsed.
+     - Returns: JSCPostPage instance that was parsed.
     */
-    func parsePage(pageDictionary : [String : AnyObject]) -> JSCPostPage! {
+    func parsePage (pageDictionary : [String : AnyObject]) -> JSCPostPage! {
         
         let postDictionaries = pageDictionary[kJSCPosts]![kJSCData] as! [[String : AnyObject]]
         
@@ -77,9 +77,9 @@ class JSCPostPageParser: JSCParser {
      /**
      Parse meta data about the page.
     
-     @param metaDictionary - JSON containing a page meta data.
+     - Parameter metaDictionary JSON containing a page meta data.
     
-     @return JSCPostPage instance that was parsed.
+     - Returns: JSCPostPage instance that was parsed.
      */
     func parseMetaDictionary (metaDictionary : [String : AnyObject]) -> JSCPostPage! {
         

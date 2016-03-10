@@ -23,7 +23,7 @@ extension NSDateFormatter {
     /**
     Convenient method to create a date formatter per thread.
     
-    @return NSDateFormmater of the thread we are on.
+    - Returns: NSDateFormmater of the thread we are on.
     */
     class func jsc_dateFormatter () -> NSDateFormatter {
         

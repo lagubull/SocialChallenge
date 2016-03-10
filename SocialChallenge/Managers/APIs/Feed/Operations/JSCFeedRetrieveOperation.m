@@ -10,7 +10,6 @@
 
 #import <EasyDownloadSession/EDSDownloadSession.h>
 
-#import "JSCFeedRequest.h"
 #import "JSCJSONManager.h"
 #import "CDSServiceManager.h"
 #import "JSCSession.h"
