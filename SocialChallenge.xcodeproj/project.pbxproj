@@ -537,8 +537,7 @@
 		3B70D2691C872ABD00A6AB11 /* LoadingView */ = {
 			isa = PBXGroup;
 			children = (
-				3B70D26A1C872AF800A6AB11 /* JSCLoadingView.h */,
-				3B70D26B1C872AF800A6AB11 /* JSCLoadingView.m */,
+				3BF0A15E1C9300C2004E9E50 /* JSCLoadingView.swift */,
 			);
 			path = LoadingView;
 			sourceTree = "<group>";
@@ -994,6 +993,7 @@
 				3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */,
 				3B4288061C89E80D00D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
 				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
+				3BF0A15F1C9300C2004E9E50 /* JSCLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
