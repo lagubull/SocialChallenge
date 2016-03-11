@@ -89,8 +89,8 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
         
         self.task = JSCSession.defaultSession().dataTaskWithRequest (request, completionHandler : { [weak self] (data, response, error) in
             
-            if (error == nil)
-            {
+            if (error == nil) {
+                
                 let feed = JSCJSONManager.processJSONData(data) as! [String : AnyObject]!
                 
                 let pageParser = JSCPostPageParser.parserWithContext(CDSServiceManager.sharedInstance().backgroundManagedObjectContext)
