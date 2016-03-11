@@ -15,7 +15,6 @@
 #import <EasyAlert/LEAAlertController.h>
 
 #import "JSCHomeAdapter.h"
-#import "JSCLoadingView.h"
 #import "JSCEmptyView.h"
 
 /**
