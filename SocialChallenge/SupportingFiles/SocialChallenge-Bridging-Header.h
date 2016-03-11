@@ -13,7 +13,7 @@
 #import "JSCOperation.h"
 #import "JSCJSONManager.h"
 #import "JSCSession.h"
-
+#import "JSCMediaManager.h"
 
 #endif /* SocialChallenge_Bridging_Header_h */
 
