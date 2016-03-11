@@ -20,7 +20,7 @@ Request to retrieve a feed.
 */
 class JSCFeedRequest : NSMutableURLRequest {
 
-    //Mark - Retrieve
+    //MARK: Retrieve
     
     /**
     Creates a request for downloading the feed first page.

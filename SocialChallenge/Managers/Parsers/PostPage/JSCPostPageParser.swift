@@ -26,7 +26,7 @@ let kJSCNextPage = "next_page" as String
 */
 class JSCPostPageParser : JSCParser {
     
-    //Mark: Page
+    //MARK: Page
     
     /**
      Parse Page.

@@ -25,15 +25,6 @@
 
 #import "SocialChallenge-Swift.h"
 
-/**
- A set of possible feed retrieval options.
- */
-typedef NS_ENUM(NSUInteger, JSCDataRetrievalOperationMode)
-{
-    JSCDataRetrievalOperationModeFirstPage = 0,
-    JSCDataRetrievalOperationModeNextPage = 1
-};
-
 
 /**
  Constant for the dimmensions of the images to display in the cell.

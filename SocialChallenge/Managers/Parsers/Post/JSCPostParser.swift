@@ -29,7 +29,7 @@ let kJSCCreatedAt = "created_at" as String
 
 class JSCPostParser : JSCParser {
     
-    //Mark: Posts
+    //MARK: Posts
     
     /**
     Parse array of posts.
@@ -52,7 +52,7 @@ class JSCPostParser : JSCParser {
         return posts
     }
     
-    //Mark: Post
+    //MARK: Post
     
     /**
     Parse Post.

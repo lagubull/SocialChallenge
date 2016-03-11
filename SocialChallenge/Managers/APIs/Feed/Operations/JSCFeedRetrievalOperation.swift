@@ -9,9 +9,12 @@
 import Foundation
 import CoreDataServices
 
-enum DataRetrievalOperationMode : Int {
+/**
+ A set of possible feed retrieval options.
+ */
+@objc enum JSCDataRetrievalOperationMode : Int {
     
-    case JSCFirstPage = 0, JSCNextPage
+    case FirstPage = 0, NextPage
 }
 
 @objc(JSCFeedRetrievalOperation)
@@ -24,15 +27,20 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     /**
      Indicates the type of the request for data.
      */
-    private var mode : DataRetrievalOperationMode?
+    private var mode : JSCDataRetrievalOperationMode?
     
     /**
      Task to retrieve the data.
      */
     private var task : NSURLSessionTask?
     
-    //Mark: Init
+    //MARK: Init
     
+    /**
+    Default initialiser.
+    
+    - Returns: an instance of the class.
+    */
     override init() {
         
         super.init()
@@ -49,25 +57,29 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
         
         self.init()
         
-        self.mode = DataRetrievalOperationMode (rawValue : mode)
+        self.mode = JSCDataRetrievalOperationMode (rawValue : mode)
 
         self.identifier = self.myIdentifier
     }
     
-    //Mark - Identifier
+    //MARK: Identifier
     
+    /**
+    We need to create new identifier variable as we cannot override from the parent
+    */
     lazy var myIdentifier : String = {
         
+            //TODO: override from the parent when migrated to Swift
         let _identifier : String = "retrieveFeed \(self.mode!.rawValue)"
         
         return _identifier
     }()
     
-    //Mark - NSCoding
+    //MARK: NSCoding
     
     required init?(coder aDecoder: NSCoder) {
         
-        self.mode = DataRetrievalOperationMode (rawValue : aDecoder.decodeIntegerForKey("mode"))!
+        self.mode = JSCDataRetrievalOperationMode (rawValue : aDecoder.decodeIntegerForKey("mode"))!
         
         super.init()
         
@@ -79,7 +91,7 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
         aCoder.encodeInteger(self.mode!.rawValue, forKey: "mode")
     }
     
-    //Mark - Start
+    //MARK: Start
     
     override func start() {
         
@@ -111,19 +123,25 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
         self.task!.resume()
     }
     
-    //Mark - Request
+    //MARK: Request
     
-    func requestForMode(mode : DataRetrievalOperationMode) -> JSCFeedRequest {
+    /**
+    Gets a request depending on the mode.
+    
+    - Parameter mode Can be either first page or any other page.
+    - Return: JSCFeedRequest to retrieve the data from.
+    */
+    func requestForMode(mode : JSCDataRetrievalOperationMode) -> JSCFeedRequest {
         
         var request : JSCFeedRequest?
         
         switch mode {
             
-        case .JSCFirstPage:
+        case .FirstPage:
             
             request = JSCFeedRequest.requestToRetrieveFeed()
             
-        case .JSCNextPage:
+        case .NextPage:
             
             CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
                 
@@ -136,7 +154,7 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
         return request!
     }
     
-    //Mark - Cancel
+    //MARK: Cancel
     
     override func cancel() {
         
