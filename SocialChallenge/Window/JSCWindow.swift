@@ -29,16 +29,16 @@ class JSCWindow : UIWindow {
         self.showSplashScreen()
     }
     
-   //MARK: Hide
+    //MARK: Hide
     
     /**
-     Hide the Splash image / video with an animation.
-     */
+    Hide the Splash image / video with an animation.
+    */
     func hideSplashScreen() {
         
         UIView.animateWithDuration(0.3 , animations : {
-                
-                self.splashViewController!.view.alpha = 0.0
+            
+            self.splashViewController!.view.alpha = 0.0
             },
             completion : { (BOOL finished) in
                 
@@ -50,8 +50,8 @@ class JSCWindow : UIWindow {
     //MARK: Show
     
     /**
-     Adds the spash image view as a subview.
-     */
+    Adds the spash image view as a subview.
+    */
     func showSplashScreen() {
         
         self.showSplashViewController()
