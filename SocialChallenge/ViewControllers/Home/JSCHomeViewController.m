@@ -15,7 +15,6 @@
 #import <EasyAlert/LEAAlertController.h>
 
 #import "JSCHomeAdapter.h"
-#import "JSCLoadingView.h"
 
 /**
  Constant to define the height of the navigation bar.s
