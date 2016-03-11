@@ -11,8 +11,7 @@ import CoreDataServices
 
 enum DataRetrievalOperationMode : Int {
     
-    case JSCFirstPage = 1
-    case JSCNextPage = 2
+    case JSCFirstPage = 0, JSCNextPage
 }
 
 @objc(JSCFeedRetrievalOperation)
@@ -34,6 +33,11 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     
     //Mark: Init
     
+    override init() {
+        
+        super.init()
+    }
+    
     /**
     Creates an operation to retrieve a feed.
     
@@ -41,17 +45,12 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     
     - Returns: an instance of the class.
     */
-    class func feedRetrievalOperation(mode : DataRetrievalOperationMode) -> JSCFeedRetrievalOperation {
+    convenience init(mode : Int) {
         
-        return self.init(mode: mode) as JSCFeedRetrievalOperation
-    }
-    
-    required init(mode : DataRetrievalOperationMode) {
+        self.init()
         
-        self.mode = mode
-        
-        super.init()
-        
+        self.mode = DataRetrievalOperationMode (rawValue : mode)
+
         self.identifier = self.myIdentifier
     }
     
@@ -59,7 +58,7 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     
     lazy var myIdentifier : String = {
         
-        let _identifier : String = "retrieveFeed \(self.mode!)"
+        let _identifier : String = "retrieveFeed \(self.mode!.rawValue)"
         
         return _identifier
     }()
@@ -68,7 +67,7 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     
     required init?(coder aDecoder: NSCoder) {
         
-        self.mode = DataRetrievalOperationMode (rawValue: aDecoder.decodeIntegerForKey("mode"))!
+        self.mode = DataRetrievalOperationMode (rawValue : aDecoder.decodeIntegerForKey("mode"))!
         
         super.init()
         
@@ -90,7 +89,7 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
         
         self.task = JSCSession.defaultSession().dataTaskWithRequest (request, completionHandler : { [weak self] (data, response, error) in
             
-            if (error != nil)
+            if (error == nil)
             {
                 let feed = JSCJSONManager.processJSONData(data) as! [String : AnyObject]!
                 

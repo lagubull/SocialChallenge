@@ -21,7 +21,7 @@ class JSCCDSOperation : JSCOperation {
     /**
     Saves the parent managed context if there is changes.
     */
-    func saveLocalContextChangesToMainContext(result : AnyObject) {
+    func saveLocalContextChangesToMainContext(result : AnyObject?) {
         
         CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
             
@@ -64,9 +64,17 @@ class JSCCDSOperation : JSCOperation {
                         self.didFailWithError(nserror)
                     }
                 }
-                if (result.isKindOfClass(NSError.self)) {
-                    
-                    self.didFailWithError(result as! NSError)
+                
+                if let unwrappedResult = result {
+
+                    if (unwrappedResult.isKindOfClass(NSError.self)) {
+                        
+                        self.didFailWithError(unwrappedResult as! NSError)
+                    }
+                    else {
+                        
+                        self.didSucceedWithResult(unwrappedResult)
+                    }
                 }
                 else {
                     
@@ -87,7 +95,7 @@ class JSCCDSOperation : JSCOperation {
         
         if (hasChanges) {
             
-            self.saveLocalContextChangesToMainContext(result!)
+            self.saveLocalContextChangesToMainContext(result)
         }
         else
         {

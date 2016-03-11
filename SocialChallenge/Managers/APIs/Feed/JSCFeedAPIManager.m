@@ -18,14 +18,14 @@
 {
     DLog(@"Queuing request to retrieve feed");
     
-//    JSCFeedRetrievalOperation *operation = [JSCFeedRetrievalOperation feedRetrievalOperation:Data];
+    JSCFeedRetrievalOperation *operation = [[JSCFeedRetrievalOperation alloc] initWithMode:mode];
     
-//    operation.onSuccess = success;
-//    operation.onFailure = failure;
-//    
-//    operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
-//    
-//    [[JSCOperationCoordinator sharedInstance] addOperation:operation];
+    operation.onSuccess = success;
+    operation.onFailure = failure;
+    
+    operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
+    
+    [[JSCOperationCoordinator sharedInstance] addOperation:operation];
 }
 
 @end
