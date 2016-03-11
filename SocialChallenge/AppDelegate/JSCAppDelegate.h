@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "JSCWindow.h"
-
 @class JSCRootNavigationController;
 
 @interface JSCAppDelegate : UIResponder <UIApplicationDelegate>
