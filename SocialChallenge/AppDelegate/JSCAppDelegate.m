@@ -14,7 +14,6 @@
 
 #import "JSCOperationCoordinator.h"
 #import "NSOperationQueue+JSCOperationScheduler.h"
-#import "JSCWindow.h"
 #import "JSCSplashViewController.h"
 #import "JSCRootNavigationController.h"
 #import "JSCFileManager.h"

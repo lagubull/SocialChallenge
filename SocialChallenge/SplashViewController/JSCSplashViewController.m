@@ -8,8 +8,6 @@
 
 #import "JSCSplashViewController.h"
 
-#import "JSCWindow.h"
-
 @interface JSCSplashViewController ()
 
 /**
