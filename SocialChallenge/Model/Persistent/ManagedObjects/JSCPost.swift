@@ -12,7 +12,7 @@ import CoreDataServices
 
 @objc(JSCPost)
 
-class JSCPost: NSManagedObject {
+class JSCPost : NSManagedObject {
     
     // MARK: Post
     
@@ -24,7 +24,7 @@ class JSCPost: NSManagedObject {
     
     - Returns: JSCPOST instance or nil if POST can't be found.
     */
-    class func fetchPostWithId (postId: String, managedObjectContext:NSManagedObjectContext) -> JSCPost? {
+    class func fetchPostWithId(postId: String, managedObjectContext:NSManagedObjectContext) -> JSCPost? {
         
         let predicate = NSPredicate(format:"postId MATCHES %@", postId)
         
@@ -42,7 +42,7 @@ class JSCPost: NSManagedObject {
      
      - Returns: JSCPOST instance or nil if POST can't be found.
      */
-    class func fetchPostWithId (postId: String) -> JSCPost? {
+    class func fetchPostWithId(postId: String) -> JSCPost? {
         
         var post: JSCPost?
         
@@ -58,7 +58,7 @@ class JSCPost: NSManagedObject {
     
     - Returns: user's Name.
     */
-    func userName ()-> String {
+    func userName() -> String {
         
         let lastNameFirstLetter = self.userLastName![self.userLastName!.startIndex]
         

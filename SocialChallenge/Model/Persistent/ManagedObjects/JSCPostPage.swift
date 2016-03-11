@@ -12,7 +12,7 @@ import CoreDataServices
 
 @objc(JSCPostPage)
 
-class JSCPostPage: NSManagedObject {
+class JSCPostPage : NSManagedObject {
     
     /**
      Retrieves the last page of posts stored in the context.

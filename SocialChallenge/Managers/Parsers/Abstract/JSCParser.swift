@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-//Mark - ValueOrDefault
+//MARK: ValueOrDefault
 
 /**
 Convenient method to check if a value is not nil and returns ir or the default
@@ -30,14 +30,14 @@ Convenient method to check if a value is not nil and returns ir or the default
 /**
 Code base for the parsers.
 */
-class JSCParser: NSObject {
+class JSCParser : NSObject {
     
     /**
      Context for the parser to access CoreData.
      */
     var managedObjectContext = NSManagedObjectContext ()
     
-    //Mark - Init
+    //MARK: Init
     
     /**
     Initialises the parser.
@@ -46,12 +46,12 @@ class JSCParser: NSObject {
     
     - Returns: FSNParser instance.
     */
-    required init (managedObjectContext : NSManagedObjectContext?) {
+    required init(managedObjectContext : NSManagedObjectContext?) {
         
         self.managedObjectContext = managedObjectContext!;
     }
     
-    //Mark: Parser
+    //MARK: Parser
     
     /**
     Convenient initialiser the parser.

@@ -18,7 +18,7 @@ let kJSCDateFormatterKey = "dateFormatterKey" as String
  */
 extension NSDateFormatter {
     
-    //Mark: DateFormatter
+    //MARK: DateFormatter
     
     /**
     Convenient method to create a date formatter per thread.

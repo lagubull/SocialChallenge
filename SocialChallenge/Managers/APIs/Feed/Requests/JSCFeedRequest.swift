@@ -18,14 +18,14 @@ let kJSCHTTPRequestMethodGet = "GET" as String!
 /**
 Request to retrieve a feed.
 */
-class JSCFeedRequest: NSMutableURLRequest {
+class JSCFeedRequest : NSMutableURLRequest {
 
-    //Mark - Retrieve
+    //MARK: Retrieve
     
     /**
     Creates a request for downloading the feed first page.
     
-    :Returns: an instance of the class.
+    - Returns: an instance of the class.
     */
     class func requestToRetrieveFeed () -> JSCFeedRequest {
         
@@ -35,9 +35,9 @@ class JSCFeedRequest: NSMutableURLRequest {
     /**
     Creates a request for downloading a page of content.
     
-    :Parameter URL - URL to download the content from.
+    - Parameter URL - URL to download the content from.
     
-    :Returns: an instance of the class.
+    - Returns: an instance of the class.
     */
     class func requestToRetrieveFeedNexPageWithURL(URL : String) -> JSCFeedRequest {
     

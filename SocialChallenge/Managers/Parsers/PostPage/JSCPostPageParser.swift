@@ -24,9 +24,9 @@ let kJSCNextPage = "next_page" as String
 /**
  Extracts a PostPage.
 */
-class JSCPostPageParser: JSCParser {
+class JSCPostPageParser : JSCParser {
     
-    //Mark: Page
+    //MARK: Page
     
     /**
      Parse Page.
@@ -35,7 +35,7 @@ class JSCPostPageParser: JSCParser {
      
      - Returns: JSCPostPage instance that was parsed.
     */
-    func parsePage (pageDictionary : [String : AnyObject]) -> JSCPostPage! {
+    func parsePage(pageDictionary : [String : AnyObject]) -> JSCPostPage! {
         
         let postDictionaries = pageDictionary[kJSCPosts]![kJSCData] as! [[String : AnyObject]]
         
@@ -81,7 +81,7 @@ class JSCPostPageParser: JSCParser {
     
      - Returns: JSCPostPage instance that was parsed.
      */
-    func parseMetaDictionary (metaDictionary : [String : AnyObject]) -> JSCPostPage! {
+    func parseMetaDictionary(metaDictionary : [String : AnyObject]) -> JSCPostPage! {
         
         let page = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPostPage.self), inManagedObjectContext: self.managedObjectContext) as! JSCPostPage
         

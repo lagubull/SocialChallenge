@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "JSCCDSOperation.h"
-
 @class JSCPost;
 
 @interface JSCMediaManager : NSObject
