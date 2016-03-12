@@ -12,12 +12,12 @@ import PureLayout
 /**
 Constant to indicate the distance to the lower margin
 */
-let JSCBottomConstraint = 8.0 as CGFloat
+let kJSCBottomConstraint = 8.0 as CGFloat
 
 /**
 Constant to inidicate the margin between components and sides
 */
-let JSCMarginConstraint = 10.0 as CGFloat
+let kJSCMarginConstraint = 10.0 as CGFloat
 
 /**
 Constant for the dimmensions of the images to display in the cell.
@@ -263,9 +263,9 @@ class JSCPostTableViewCell : UITableViewCell {
         
         self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Top)
         
-        self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : JSCMarginConstraint)
+        self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : kJSCMarginConstraint)
         
-        self.contentLabel.autoPinEdgeToSuperviewEdge (ALEdge.Right, withInset : JSCMarginConstraint)
+        self.contentLabel.autoPinEdgeToSuperviewEdge (ALEdge.Right, withInset : kJSCMarginConstraint)
         
         self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:58.0)
         
@@ -273,7 +273,7 @@ class JSCPostTableViewCell : UITableViewCell {
         
         self.avatar.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:15.0)
         
-        self.avatar.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : JSCMarginConstraint)
+        self.avatar.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : kJSCMarginConstraint)
         
         self.avatar.autoSetDimensionsToSize(CGSizeMake(kJSCPostAvatardimension, kJSCPostAvatardimension))
         
@@ -281,39 +281,39 @@ class JSCPostTableViewCell : UITableViewCell {
         
         self.avatarLoadingView.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:15.0)
         
-        self.avatarLoadingView.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : JSCMarginConstraint)
+        self.avatarLoadingView.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : kJSCMarginConstraint)
         
         self.avatarLoadingView.autoSetDimensionsToSize(CGSizeMake(kJSCPostAvatardimension, kJSCPostAvatardimension))
         
         /*------------------*/
         
-        self.authorLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset : JSCBottomConstraint)
+        self.authorLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset : kJSCBottomConstraint)
         
         self.authorLabel.autoPinEdge(ALEdge.Left, toEdge:ALEdge.Right, ofView:self.avatar, withOffset:6.0)
         
         /*------------------*/
         
-        self.commentsCountLabel.autoPinEdgeToSuperviewEdge(ALEdge.Right, withInset : JSCMarginConstraint)
+        self.commentsCountLabel.autoPinEdgeToSuperviewEdge(ALEdge.Right, withInset : kJSCMarginConstraint)
         
-        self.commentsCountLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset:JSCBottomConstraint)
+        self.commentsCountLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset:kJSCBottomConstraint)
         
         /*------------------*/
         
         self.commentsButton.autoPinEdge(ALEdge.Right, toEdge:ALEdge.Left, ofView:self.commentsCountLabel, withOffset:-5.0)
         
-        self.commentsButton.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset:JSCBottomConstraint)
+        self.commentsButton.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset:kJSCBottomConstraint)
         
         /*------------------*/
         
-        self.favoritesCountLabel.autoPinEdge(ALEdge.Right, toEdge : ALEdge.Left, ofView:self.commentsButton, withOffset : -JSCMarginConstraint)
+        self.favoritesCountLabel.autoPinEdge(ALEdge.Right, toEdge : ALEdge.Left, ofView:self.commentsButton, withOffset : -kJSCMarginConstraint)
         
-        self.favoritesCountLabel.autoPinEdge(ALEdge.Top, toEdge : ALEdge.Top, ofView : self.avatar, withOffset : JSCBottomConstraint)
+        self.favoritesCountLabel.autoPinEdge(ALEdge.Top, toEdge : ALEdge.Top, ofView : self.avatar, withOffset : kJSCBottomConstraint)
         
         /*------------------*/
         
         self.favoritesButton.autoPinEdge(ALEdge.Right, toEdge : ALEdge.Left, ofView : self.favoritesCountLabel, withOffset : -5.0)
         
-        self.favoritesButton.autoPinEdge(ALEdge.Top, toEdge : ALEdge.Top, ofView : self.avatar, withOffset : JSCBottomConstraint)
+        self.favoritesButton.autoPinEdge(ALEdge.Top, toEdge : ALEdge.Top, ofView : self.avatar, withOffset : kJSCBottomConstraint)
         
         /*------------------*/
         
