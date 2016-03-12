@@ -24,7 +24,7 @@ let kJSCNextPage = "next_page" as String
 /**
  Extracts a PostPage.
 */
-class JSCPostPageParser : JSCParser {
+class JSCPostPageParser: JSCParser {
     
     //MARK: Page
     
@@ -35,25 +35,25 @@ class JSCPostPageParser : JSCParser {
      
      - Returns: JSCPostPage instance that was parsed.
     */
-    func parsePage(pageDictionary : [String : AnyObject]) -> JSCPostPage! {
+    func parsePage(pageDictionary: [String: AnyObject]) -> JSCPostPage! {
         
-        let postDictionaries = pageDictionary[kJSCPosts]![kJSCData] as! [[String : AnyObject]]
+        let postDictionaries = pageDictionary[kJSCPosts]![kJSCData] as! [[String: AnyObject]]
         
-        var page : JSCPostPage?
+        var page: JSCPostPage?
 
-        if (postDictionaries.count > 0) {
+        if postDictionaries.count > 0 {
             
-            let parser = JSCPostParser(managedObjectContext : self.managedObjectContext)
+            let parser = JSCPostParser(managedObjectContext: self.managedObjectContext)
             
             let parsedPosts = parser.parsePosts(postDictionaries) as [JSCPost]
             
             for post in parsedPosts {
                 
-                if (post.page == nil) {
+                if post.page == nil {
                     
-                    if (page == nil) {
+                    if page == nil {
                         
-                        let metaDictionary = pageDictionary[kJSCPosts]![kJSCPagination] as! [String : AnyObject]
+                        let metaDictionary = pageDictionary[kJSCPosts]![kJSCPagination] as! [String: AnyObject]
                         
                         page = self.parseMetaDictionary(metaDictionary)
                     }
@@ -62,7 +62,7 @@ class JSCPostPageParser : JSCParser {
                 }
                 else {
                     
-                    let metaDictionary = pageDictionary[kJSCPosts]![kJSCPagination] as! [String : AnyObject]
+                    let metaDictionary = pageDictionary[kJSCPosts]![kJSCPagination] as! [String: AnyObject]
 
                     page = self.parseMetaDictionary(metaDictionary)
                 }
@@ -81,12 +81,12 @@ class JSCPostPageParser : JSCParser {
     
      - Returns: JSCPostPage instance that was parsed.
      */
-    func parseMetaDictionary(metaDictionary : [String : AnyObject]) -> JSCPostPage! {
+    func parseMetaDictionary(metaDictionary: [String: AnyObject]) -> JSCPostPage! {
         
         let page = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPostPage.self), inManagedObjectContext: self.managedObjectContext) as! JSCPostPage
         
-        page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[kJSCNextPage], defaultValue : nil) as? String
-        page.index = JSCValueOrDefault(metaDictionary[kJSCcurrentPage], defaultValue : nil) as? NSNumber
+        page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[kJSCNextPage], defaultValue: nil) as? String
+        page.index = JSCValueOrDefault(metaDictionary[kJSCcurrentPage], defaultValue: nil) as? NSNumber
         
         return page
     }

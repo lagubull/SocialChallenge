@@ -14,7 +14,7 @@ import CoreData
 /**
 Convenient method to check if a value is not nil and returns ir or the default
 */
-@inline(__always) func JSCValueOrDefault(value : AnyObject?, defaultValue : AnyObject?) -> AnyObject?
+@inline(__always) func JSCValueOrDefault(value: AnyObject?, defaultValue: AnyObject?) -> AnyObject?
 {
     if value == nil ||
         value is NSNull {
@@ -30,7 +30,7 @@ Convenient method to check if a value is not nil and returns ir or the default
 /**
 Code base for the parsers.
 */
-class JSCParser : NSObject {
+class JSCParser: NSObject {
     
     /**
      Context for the parser to access CoreData.
@@ -46,7 +46,7 @@ class JSCParser : NSObject {
     
     - Returns: FSNParser instance.
     */
-    required init(managedObjectContext : NSManagedObjectContext?) {
+    required init(managedObjectContext: NSManagedObjectContext?) {
         
         self.managedObjectContext = managedObjectContext!;
     }
@@ -60,7 +60,7 @@ class JSCParser : NSObject {
     
     - Returns: FSNParser instance.
     */
-    class func parserWithContext(managedObjectContext : NSManagedObjectContext) -> Self {
+    class func parserWithContext(managedObjectContext: NSManagedObjectContext) -> Self {
         
         return self.init(managedObjectContext: managedObjectContext)
     }

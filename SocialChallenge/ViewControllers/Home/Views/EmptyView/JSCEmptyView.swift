@@ -12,13 +12,13 @@ import PureLayout
 /**
  Empty View for the tableView.
  */
-class JSCEmptyView : UIView {
+class JSCEmptyView: UIView {
     
     //MARK: Init
     
-    override init(frame : CGRect) {
+    override init(frame: CGRect) {
         
-        super.init(frame : frame)
+        super.init(frame: frame)
         
         self.backgroundColor = UIColor.whiteColor()
         
@@ -35,7 +35,7 @@ class JSCEmptyView : UIView {
     /**
     Label for displaying a customizable message.
     */
-    lazy var messageLabel : UILabel = {
+    lazy var messageLabel: UILabel = {
         
         let _messageLabel = UILabel.newAutoLayoutView()
         

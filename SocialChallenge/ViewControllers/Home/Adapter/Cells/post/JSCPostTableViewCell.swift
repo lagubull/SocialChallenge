@@ -34,14 +34,14 @@ let kJSCPostAvatardimension = 25.0 as CGFloat
      
      - Parameter post post cell is showing.
      */
-    func didPressFavoritesButton(post : JSCPost)
+    func didPressFavoritesButton(post: JSCPost)
     
     /**
      User pressed on the comments button.
      
      - Parameter post post cell is showing.
      */
-    func didPressCommentsButton(post : JSCPost)
+    func didPressCommentsButton(post: JSCPost)
 }
 
 @objc (JSCPostTableViewCell)
@@ -49,12 +49,12 @@ let kJSCPostAvatardimension = 25.0 as CGFloat
 /**
 Representation for a post.
 */
-class JSCPostTableViewCell : UITableViewCell {
+class JSCPostTableViewCell: UITableViewCell {
     
     /**
      Post shown in the cell.
      */
-    private var post : JSCPost?
+    private var post: JSCPost?
     
     /**
      Delegate of the protocol JSCPostTableViewCellDelegate.
@@ -79,7 +79,7 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
      Identifies the cell type.
      */
-    private var innerIdentifier : String = NSStringFromClass(JSCPostTableViewCell.self)
+    private var innerIdentifier: String = NSStringFromClass(JSCPostTableViewCell.self)
     
     /**
      Identifies the cell type.
@@ -120,7 +120,7 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
     View on which the content is located, we need it to be on top of the edit options.
     */
-    lazy var baseContentView : UIView = {
+    lazy var baseContentView: UIView = {
         
         let _baseContentView = UIView.newAutoLayoutView()
         
@@ -137,7 +137,7 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
     Content of the post.
     */
-    lazy var contentLabel : UILabel = {
+    lazy var contentLabel: UILabel = {
         
         let _contentLabel = UILabel.newAutoLayoutView()
         
@@ -153,13 +153,13 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
      Image for the author of the post.
      */
-    lazy var avatar : UIImageView = {
+    lazy var avatar: UIImageView = {
         
         let _avatar = UIImageView.newAutoLayoutView()
         
         _avatar.contentMode = UIViewContentMode.ScaleToFill
         _avatar.clipsToBounds = true
-        _avatar.image = UIImage.init(named : "avatarPlaceHolderIcon")
+        _avatar.image = UIImage.init(named: "avatarPlaceHolderIcon")
         
         return _avatar
     }()
@@ -167,7 +167,7 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
      Spinner to show activity while downloading.
      */
-    lazy var avatarLoadingView : UIActivityIndicatorView = {
+    lazy var avatarLoadingView: UIActivityIndicatorView = {
         
         let _avatarLoadingView = UIActivityIndicatorView.newAutoLayoutView()
         
@@ -180,7 +180,7 @@ class JSCPostTableViewCell : UITableViewCell {
     /*
     Name of the author.
     */
-    lazy var authorLabel : UILabel = {
+    lazy var authorLabel: UILabel = {
         
         let _authorLabel = UILabel.newAutoLayoutView()
         
@@ -193,13 +193,13 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
      Button for favorites.
      */
-    lazy var favoritesButton : UIButton = {
+    lazy var favoritesButton: UIButton = {
         
         let _favoritesButton = UIButton.newAutoLayoutView()
         
-        _favoritesButton.setImage(UIImage.init(named : "favoritesIcon"), forState : UIControlState.Normal)
+        _favoritesButton.setImage(UIImage.init(named: "favoritesIcon"), forState: UIControlState.Normal)
         
-        _favoritesButton.addTarget(self, action : "favoritesButtonPressed", forControlEvents :UIControlEvents.TouchUpInside)
+        _favoritesButton.addTarget(self, action: "favoritesButtonPressed", forControlEvents :UIControlEvents.TouchUpInside)
         
         return _favoritesButton;
     }()
@@ -207,7 +207,7 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
      Shows the number of times post was made favourtie.
      */
-    lazy var favoritesCountLabel : UILabel = {
+    lazy var favoritesCountLabel: UILabel = {
         
         let _favoritesCountLabel = UILabel.newAutoLayoutView()
         
@@ -220,13 +220,13 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
      Button for comments.
      */
-    lazy var commentsButton : UIButton = {
+    lazy var commentsButton: UIButton = {
         
         let _commentsButton = UIButton.newAutoLayoutView()
         
-        _commentsButton.setImage(UIImage.init(named : "commentsIcon"), forState : UIControlState.Normal)
+        _commentsButton.setImage(UIImage.init(named: "commentsIcon"), forState: UIControlState.Normal)
         
-        _commentsButton.addTarget(self, action : "commentsButtonPressed", forControlEvents :UIControlEvents.TouchUpInside)
+        _commentsButton.addTarget(self, action: "commentsButtonPressed", forControlEvents :UIControlEvents.TouchUpInside)
         
         return _commentsButton
     }()
@@ -234,7 +234,7 @@ class JSCPostTableViewCell : UITableViewCell {
     /**
      Shows the number of comments.
      */
-    lazy var commentsCountLabel : UILabel = {
+    lazy var commentsCountLabel: UILabel = {
         
         let _commentsCountLabel = UILabel.newAutoLayoutView()
         
@@ -263,9 +263,9 @@ class JSCPostTableViewCell : UITableViewCell {
         
         self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Top)
         
-        self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : kJSCMarginConstraint)
+        self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset: kJSCMarginConstraint)
         
-        self.contentLabel.autoPinEdgeToSuperviewEdge (ALEdge.Right, withInset : kJSCMarginConstraint)
+        self.contentLabel.autoPinEdgeToSuperviewEdge (ALEdge.Right, withInset: kJSCMarginConstraint)
         
         self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:58.0)
         
@@ -273,7 +273,7 @@ class JSCPostTableViewCell : UITableViewCell {
         
         self.avatar.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:15.0)
         
-        self.avatar.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : kJSCMarginConstraint)
+        self.avatar.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset: kJSCMarginConstraint)
         
         self.avatar.autoSetDimensionsToSize(CGSizeMake(kJSCPostAvatardimension, kJSCPostAvatardimension))
         
@@ -281,19 +281,19 @@ class JSCPostTableViewCell : UITableViewCell {
         
         self.avatarLoadingView.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:15.0)
         
-        self.avatarLoadingView.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset : kJSCMarginConstraint)
+        self.avatarLoadingView.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset: kJSCMarginConstraint)
         
         self.avatarLoadingView.autoSetDimensionsToSize(CGSizeMake(kJSCPostAvatardimension, kJSCPostAvatardimension))
         
         /*------------------*/
         
-        self.authorLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset : kJSCBottomConstraint)
+        self.authorLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset: kJSCBottomConstraint)
         
         self.authorLabel.autoPinEdge(ALEdge.Left, toEdge:ALEdge.Right, ofView:self.avatar, withOffset:6.0)
         
         /*------------------*/
         
-        self.commentsCountLabel.autoPinEdgeToSuperviewEdge(ALEdge.Right, withInset : kJSCMarginConstraint)
+        self.commentsCountLabel.autoPinEdgeToSuperviewEdge(ALEdge.Right, withInset: kJSCMarginConstraint)
         
         self.commentsCountLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset:kJSCBottomConstraint)
         
@@ -305,15 +305,15 @@ class JSCPostTableViewCell : UITableViewCell {
         
         /*------------------*/
         
-        self.favoritesCountLabel.autoPinEdge(ALEdge.Right, toEdge : ALEdge.Left, ofView:self.commentsButton, withOffset : -kJSCMarginConstraint)
+        self.favoritesCountLabel.autoPinEdge(ALEdge.Right, toEdge: ALEdge.Left, ofView:self.commentsButton, withOffset: -kJSCMarginConstraint)
         
-        self.favoritesCountLabel.autoPinEdge(ALEdge.Top, toEdge : ALEdge.Top, ofView : self.avatar, withOffset : kJSCBottomConstraint)
+        self.favoritesCountLabel.autoPinEdge(ALEdge.Top, toEdge: ALEdge.Top, ofView: self.avatar, withOffset: kJSCBottomConstraint)
         
         /*------------------*/
         
-        self.favoritesButton.autoPinEdge(ALEdge.Right, toEdge : ALEdge.Left, ofView : self.favoritesCountLabel, withOffset : -5.0)
+        self.favoritesButton.autoPinEdge(ALEdge.Right, toEdge: ALEdge.Left, ofView: self.favoritesCountLabel, withOffset: -5.0)
         
-        self.favoritesButton.autoPinEdge(ALEdge.Top, toEdge : ALEdge.Top, ofView : self.avatar, withOffset : kJSCBottomConstraint)
+        self.favoritesButton.autoPinEdge(ALEdge.Top, toEdge: ALEdge.Top, ofView: self.avatar, withOffset: kJSCBottomConstraint)
         
         /*------------------*/
         
@@ -340,7 +340,7 @@ class JSCPostTableViewCell : UITableViewCell {
     
     - Parameter post post to be displayed.
     */
-    func updateWithPost(post : JSCPost)
+    func updateWithPost(post: JSCPost)
     {
         self.post = post;
         
@@ -349,23 +349,23 @@ class JSCPostTableViewCell : UITableViewCell {
         self.avatar.image = UIImage.init(named:"avatarPlaceHolderIcon")
         
         JSCMediaManager.retrieveMediaForPost(post,
-            retrievalRequired: { [weak self] (postId : String!) in
+            retrievalRequired: { [weak self] (postId: String!) in
                 
-                if (self!.post!.postId == postId) {
+                if self!.post!.postId == postId {
                     
                     self!.avatarLoadingView.startAnimating()
                 }
-            }, success: { [weak self] (result: AnyObject!, postId : String!) in
+            }, success: { [weak self] (result: AnyObject!, postId: String!) in
                 
-                if (self!.post!.postId == postId) {
+                if self!.post!.postId == postId {
                     
                     self!.avatarLoadingView.stopAnimating()
                     
                     self!.avatar.image = result as? UIImage
                 }
-            }, failure : { [weak self] (error : NSError!, postId : String!) in
+            }, failure: { [weak self] (error: NSError!, postId: String!) in
                 
-                if (self!.post!.postId == postId) {
+                if self!.post!.postId == postId {
                     
                     self!.avatarLoadingView.stopAnimating()
                 }

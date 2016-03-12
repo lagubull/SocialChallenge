@@ -27,13 +27,13 @@ extension NSDateFormatter {
     */
     class func jsc_dateFormatter () -> NSDateFormatter {
         
-        if (NSThread.currentThread().threadDictionary[kJSCDateFormatterKey] == nil) {
+        if NSThread.currentThread().threadDictionary[kJSCDateFormatterKey] == nil {
             
             let dateFormatter = NSDateFormatter()
             
-            dateFormatter.timeZone = NSTimeZone.init(abbreviation : "UTC")
+            dateFormatter.timeZone = NSTimeZone.init(abbreviation: "UTC")
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-            dateFormatter.locale = NSLocale.init(localeIdentifier : "en_GB")
+            dateFormatter.locale = NSLocale.init(localeIdentifier: "en_GB")
             
             NSThread.currentThread().threadDictionary[kJSCDateFormatterKey] = dateFormatter
         }

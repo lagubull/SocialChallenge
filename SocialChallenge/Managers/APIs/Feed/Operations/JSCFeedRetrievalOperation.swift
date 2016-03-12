@@ -12,7 +12,7 @@ import CoreDataServices
 /**
  A set of possible feed retrieval options.
  */
-@objc enum JSCDataRetrievalOperationMode : Int {
+@objc enum JSCDataRetrievalOperationMode: Int {
     
     case FirstPage = 0, NextPage
 }
@@ -22,17 +22,17 @@ import CoreDataServices
 /**
 Request to retrieve a feed.
 */
-class JSCFeedRetrievalOperation : JSCCDSOperation {
+class JSCFeedRetrievalOperation: JSCCDSOperation {
     
     /**
      Indicates the type of the request for data.
      */
-    private var mode : JSCDataRetrievalOperationMode?
+    private var mode: JSCDataRetrievalOperationMode?
     
     /**
      Task to retrieve the data.
      */
-    private var task : NSURLSessionTask?
+    private var task: NSURLSessionTask?
     
     //MARK: Init
     
@@ -53,11 +53,11 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     
     - Returns: an instance of the class.
     */
-    convenience init(mode : Int) {
+    convenience init(mode: Int) {
         
         self.init()
         
-        self.mode = JSCDataRetrievalOperationMode (rawValue : mode)
+        self.mode = JSCDataRetrievalOperationMode (rawValue: mode)
 
         self.identifier = self.myIdentifier
     }
@@ -67,10 +67,10 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     /**
     We need to create new identifier variable as we cannot override from the parent
     */
-    lazy var myIdentifier : String = {
+    lazy var myIdentifier: String = {
         
             //TODO: override from the parent when migrated to Swift
-        let _identifier : String = "retrieveFeed \(self.mode!.rawValue)"
+        let _identifier: String = "retrieveFeed \(self.mode!.rawValue)"
         
         return _identifier
     }()
@@ -79,7 +79,7 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     
     required init?(coder aDecoder: NSCoder) {
         
-        self.mode = JSCDataRetrievalOperationMode (rawValue : aDecoder.decodeIntegerForKey("mode"))!
+        self.mode = JSCDataRetrievalOperationMode (rawValue: aDecoder.decodeIntegerForKey("mode"))!
         
         super.init()
         
@@ -99,11 +99,11 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
         
         let request = self.requestForMode(self.mode!)
         
-        self.task = JSCSession.defaultSession().dataTaskWithRequest (request, completionHandler : { [weak self] (data, response, error) in
+        self.task = JSCSession.defaultSession().dataTaskWithRequest (request, completionHandler: { [weak self] (data, response, error) in
             
-            if (error == nil) {
+            if error == nil {
                 
-                let feed = JSCJSONManager.processJSONData(data) as! [String : AnyObject]!
+                let feed = JSCJSONManager.processJSONData(data) as! [String: AnyObject]!
                 
                 let pageParser = JSCPostPageParser.parserWithContext(CDSServiceManager.sharedInstance().backgroundManagedObjectContext)
                 
@@ -131,9 +131,9 @@ class JSCFeedRetrievalOperation : JSCCDSOperation {
     - Parameter mode Can be either first page or any other page.
     - Return: JSCFeedRequest to retrieve the data from.
     */
-    func requestForMode(mode : JSCDataRetrievalOperationMode) -> JSCFeedRequest {
+    func requestForMode(mode: JSCDataRetrievalOperationMode) -> JSCFeedRequest {
         
-        var request : JSCFeedRequest?
+        var request: JSCFeedRequest?
         
         switch mode {
             

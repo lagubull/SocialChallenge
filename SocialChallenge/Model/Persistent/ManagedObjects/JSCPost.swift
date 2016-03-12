@@ -12,7 +12,7 @@ import CoreDataServices
 
 @objc(JSCPost)
 
-class JSCPost : NSManagedObject {
+class JSCPost: NSManagedObject {
     
     // MARK: Post
     
