@@ -37,7 +37,7 @@ class JSCLoadingView: UIView {
         
         let _loadingIndicator = UIActivityIndicatorView.newAutoLayoutView()
         
-        _loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        _loadingIndicator.activityIndicatorViewStyle = .WhiteLarge
         
         _loadingIndicator.startAnimating()
         

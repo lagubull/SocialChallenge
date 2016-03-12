@@ -124,7 +124,7 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _baseContentView = UIView.newAutoLayoutView()
         
-        _baseContentView.backgroundColor = UIColor.whiteColor()
+        _baseContentView.backgroundColor = .whiteColor()
         
         _baseContentView.layer.shadowOffset = CGSizeMake(0.0, 0.0)
         _baseContentView.layer.shadowOpacity = 1.0
@@ -141,8 +141,8 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _contentLabel = UILabel.newAutoLayoutView()
         
-        _contentLabel.textColor = UIColor.blackColor()
-        _contentLabel.font = UIFont.boldSystemFontOfSize(11.0)
+        _contentLabel.textColor = .blackColor()
+        _contentLabel.font = .boldSystemFontOfSize(11.0)
         _contentLabel.numberOfLines = 0
         _contentLabel.textAlignment = .Center
         
@@ -157,7 +157,7 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _avatar = UIImageView.newAutoLayoutView()
         
-        _avatar.contentMode = UIViewContentMode.ScaleToFill
+        _avatar.contentMode = .ScaleToFill
         _avatar.clipsToBounds = true
         _avatar.image = UIImage.init(named: "avatarPlaceHolderIcon")
         
@@ -171,7 +171,7 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _avatarLoadingView = UIActivityIndicatorView.newAutoLayoutView()
         
-        _avatarLoadingView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
+        _avatarLoadingView.activityIndicatorViewStyle = .White
         _avatarLoadingView.hidesWhenStopped = true
         
         return _avatarLoadingView
@@ -184,8 +184,8 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _authorLabel = UILabel.newAutoLayoutView()
         
-        _authorLabel.textColor = UIColor.blackColor()
-        _authorLabel.font = UIFont.systemFontOfSize(9.0)
+        _authorLabel.textColor = .blackColor()
+        _authorLabel.font = .systemFontOfSize(9.0)
         
         return _authorLabel
     }()
@@ -197,9 +197,9 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _favoritesButton = UIButton.newAutoLayoutView()
         
-        _favoritesButton.setImage(UIImage.init(named: "favoritesIcon"), forState: UIControlState.Normal)
+        _favoritesButton.setImage(UIImage.init(named: "favoritesIcon"), forState: .Normal)
         
-        _favoritesButton.addTarget(self, action: "favoritesButtonPressed", forControlEvents :UIControlEvents.TouchUpInside)
+        _favoritesButton.addTarget(self, action: "favoritesButtonPressed", forControlEvents : .TouchUpInside)
         
         return _favoritesButton;
     }()
@@ -211,8 +211,8 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _favoritesCountLabel = UILabel.newAutoLayoutView()
         
-        _favoritesCountLabel.textColor = UIColor.blackColor()
-        _favoritesCountLabel.font = UIFont.boldSystemFontOfSize(18.0)
+        _favoritesCountLabel.textColor = .blackColor()
+        _favoritesCountLabel.font = .boldSystemFontOfSize(18.0)
         
         return _favoritesCountLabel
     }()
@@ -224,9 +224,9 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _commentsButton = UIButton.newAutoLayoutView()
         
-        _commentsButton.setImage(UIImage.init(named: "commentsIcon"), forState: UIControlState.Normal)
+        _commentsButton.setImage(UIImage.init(named: "commentsIcon"), forState: .Normal)
         
-        _commentsButton.addTarget(self, action: "commentsButtonPressed", forControlEvents :UIControlEvents.TouchUpInside)
+        _commentsButton.addTarget(self, action: "commentsButtonPressed", forControlEvents : .TouchUpInside)
         
         return _commentsButton
     }()
@@ -238,8 +238,8 @@ class JSCPostTableViewCell: UITableViewCell {
         
         let _commentsCountLabel = UILabel.newAutoLayoutView()
         
-        _commentsCountLabel.textColor = UIColor.blackColor()
-        _commentsCountLabel.font = UIFont.boldSystemFontOfSize(18.0)
+        _commentsCountLabel.textColor = .blackColor()
+        _commentsCountLabel.font = .boldSystemFontOfSize(18.0)
         
         return _commentsCountLabel
     }()
@@ -261,59 +261,59 @@ class JSCPostTableViewCell: UITableViewCell {
         
         /*------------------*/
         
-        self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Top)
+        self.contentLabel.autoPinEdgeToSuperviewEdge(.Top)
         
-        self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset: kJSCMarginConstraint)
+        self.contentLabel.autoPinEdgeToSuperviewEdge(.Left, withInset: kJSCMarginConstraint)
         
-        self.contentLabel.autoPinEdgeToSuperviewEdge (ALEdge.Right, withInset: kJSCMarginConstraint)
+        self.contentLabel.autoPinEdgeToSuperviewEdge (.Right, withInset: kJSCMarginConstraint)
         
-        self.contentLabel.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:58.0)
+        self.contentLabel.autoPinEdgeToSuperviewEdge(.Bottom, withInset:58.0)
         
         /*------------------*/
         
-        self.avatar.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:15.0)
+        self.avatar.autoPinEdgeToSuperviewEdge(.Bottom, withInset:15.0)
         
-        self.avatar.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset: kJSCMarginConstraint)
+        self.avatar.autoPinEdgeToSuperviewEdge(.Left, withInset: kJSCMarginConstraint)
         
         self.avatar.autoSetDimensionsToSize(CGSizeMake(kJSCPostAvatardimension, kJSCPostAvatardimension))
         
         /*------------------*/
         
-        self.avatarLoadingView.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset:15.0)
+        self.avatarLoadingView.autoPinEdgeToSuperviewEdge(.Bottom, withInset:15.0)
         
-        self.avatarLoadingView.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset: kJSCMarginConstraint)
+        self.avatarLoadingView.autoPinEdgeToSuperviewEdge(.Left, withInset: kJSCMarginConstraint)
         
         self.avatarLoadingView.autoSetDimensionsToSize(CGSizeMake(kJSCPostAvatardimension, kJSCPostAvatardimension))
         
         /*------------------*/
         
-        self.authorLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset: kJSCBottomConstraint)
+        self.authorLabel.autoPinEdge(.Top, toEdge:.Top, ofView:self.avatar, withOffset: kJSCBottomConstraint)
         
-        self.authorLabel.autoPinEdge(ALEdge.Left, toEdge:ALEdge.Right, ofView:self.avatar, withOffset:6.0)
-        
-        /*------------------*/
-        
-        self.commentsCountLabel.autoPinEdgeToSuperviewEdge(ALEdge.Right, withInset: kJSCMarginConstraint)
-        
-        self.commentsCountLabel.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset:kJSCBottomConstraint)
+        self.authorLabel.autoPinEdge(.Left, toEdge:.Right, ofView:self.avatar, withOffset:6.0)
         
         /*------------------*/
         
-        self.commentsButton.autoPinEdge(ALEdge.Right, toEdge:ALEdge.Left, ofView:self.commentsCountLabel, withOffset:-5.0)
+        self.commentsCountLabel.autoPinEdgeToSuperviewEdge(.Right, withInset: kJSCMarginConstraint)
         
-        self.commentsButton.autoPinEdge(ALEdge.Top, toEdge:ALEdge.Top, ofView:self.avatar, withOffset:kJSCBottomConstraint)
-        
-        /*------------------*/
-        
-        self.favoritesCountLabel.autoPinEdge(ALEdge.Right, toEdge: ALEdge.Left, ofView:self.commentsButton, withOffset: -kJSCMarginConstraint)
-        
-        self.favoritesCountLabel.autoPinEdge(ALEdge.Top, toEdge: ALEdge.Top, ofView: self.avatar, withOffset: kJSCBottomConstraint)
+        self.commentsCountLabel.autoPinEdge(.Top, toEdge:.Top, ofView:self.avatar, withOffset:kJSCBottomConstraint)
         
         /*------------------*/
         
-        self.favoritesButton.autoPinEdge(ALEdge.Right, toEdge: ALEdge.Left, ofView: self.favoritesCountLabel, withOffset: -5.0)
+        self.commentsButton.autoPinEdge(.Right, toEdge:.Left, ofView:self.commentsCountLabel, withOffset:-5.0)
         
-        self.favoritesButton.autoPinEdge(ALEdge.Top, toEdge: ALEdge.Top, ofView: self.avatar, withOffset: kJSCBottomConstraint)
+        self.commentsButton.autoPinEdge(.Top, toEdge:.Top, ofView:self.avatar, withOffset:kJSCBottomConstraint)
+        
+        /*------------------*/
+        
+        self.favoritesCountLabel.autoPinEdge(.Right, toEdge: .Left, ofView:self.commentsButton, withOffset: -kJSCMarginConstraint)
+        
+        self.favoritesCountLabel.autoPinEdge(.Top, toEdge: .Top, ofView: self.avatar, withOffset: kJSCBottomConstraint)
+        
+        /*------------------*/
+        
+        self.favoritesButton.autoPinEdge(.Right, toEdge: .Left, ofView: self.favoritesCountLabel, withOffset: -5.0)
+        
+        self.favoritesButton.autoPinEdge(.Top, toEdge: .Top, ofView: self.avatar, withOffset: kJSCBottomConstraint)
         
         /*------------------*/
         
@@ -348,8 +348,7 @@ class JSCPostTableViewCell: UITableViewCell {
         
         self.avatar.image = UIImage.init(named:"avatarPlaceHolderIcon")
         
-        JSCMediaManager.retrieveMediaForPost(post,
-            retrievalRequired: { [weak self] (postId: String!) in
+        JSCMediaManager.retrieveMediaForPost(post, retrievalRequired: { [weak self] (postId: String!) in
                 
                 if self!.post!.postId == postId {
                     
@@ -370,7 +369,7 @@ class JSCPostTableViewCell: UITableViewCell {
                     self!.avatarLoadingView.stopAnimating()
                 }
                 
-                NSLog("ERROR: %@",error);
+                NSLog("ERROR: \(error)")
             })
         
         self.authorLabel.text = post.userName();

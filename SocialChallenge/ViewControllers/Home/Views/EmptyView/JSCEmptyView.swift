@@ -20,7 +20,7 @@ class JSCEmptyView: UIView {
         
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = .whiteColor()
         
         self.addSubview(self.messageLabel)
     }
@@ -39,8 +39,8 @@ class JSCEmptyView: UIView {
         
         let _messageLabel = UILabel.newAutoLayoutView()
         
-        _messageLabel.textColor = UIColor.blackColor()
-        _messageLabel.font = UIFont.boldSystemFontOfSize(18.0)
+        _messageLabel.textColor = .blackColor()
+        _messageLabel.font = .boldSystemFontOfSize(18.0)
         
         return _messageLabel;
     }()
