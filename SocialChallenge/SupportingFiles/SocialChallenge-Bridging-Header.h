@@ -14,6 +14,8 @@
 #import "JSCJSONManager.h"
 #import "JSCSession.h"
 #import "JSCMediaManager.h"
+#import "UINavigationBar+JSCCustomHeight.h"
+#import "JSCHomeAdapter.h"
 
 #endif /* SocialChallenge_Bridging_Header_h */
 

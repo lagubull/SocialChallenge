@@ -8,8 +8,6 @@
 
 #import "JSCRootNavigationController.h"
 
-#import "JSCHomeViewController.h"
-
 @interface JSCRootNavigationController () <UINavigationControllerDelegate>
 
 @property (nonatomic, strong) JSCHomeViewController *homeViewController;
