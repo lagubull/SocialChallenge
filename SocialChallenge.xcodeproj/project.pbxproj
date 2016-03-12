@@ -11,7 +11,6 @@
 		3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111B31B6E127D008E374E /* JSCAppDelegate.m */; };
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
-		3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
 		3B316EDE1C88686B0052F19A /* JSCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111B31B6E127D008E374E /* JSCAppDelegate.m */; };
 		3B316EDF1C88686B0052F19A /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
@@ -28,7 +27,6 @@
 		3B316EF41C88686B0052F19A /* JSCOperationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */; };
 		3B316EF51C88686B0052F19A /* JSCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963341B76D034005365EF /* JSCOperation.m */; };
 		3B316EF91C88686B0052F19A /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
-		3B316EFA1C88686B0052F19A /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
 		3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */; };
 		3B33AC681C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */; };
@@ -65,6 +63,7 @@
 		3BF46A901C8C811200DD55EA /* JSCPostParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF46A8F1C8C811200DD55EA /* JSCPostParser.swift */; };
 		3BF799581C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */; };
 		3BFF18A51C941C3D00638549 /* JSCPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFF18A41C941C3D00638549 /* JSCPostTableViewCell.swift */; };
+		3BFF18A71C9436B600638549 /* JSCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFF18A61C9436B600638549 /* JSCHomeViewController.swift */; };
 		688E4A7F2D96FE901926B777 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */; };
 		6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */; };
 		770B219FC566D19B21A8575E /* Pods_SocialChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA029AF9B63B12404DD97E5 /* Pods_SocialChallengeTests.framework */; };
@@ -97,8 +96,6 @@
 		3B3111BC1B6E127D008E374E /* SocialChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialChallenge.xcdatamodel; sourceTree = "<group>"; };
 		3B3111BF1B6E127D008E374E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		3B3111CF1B6E171F008E374E /* JSCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeViewController.h; sourceTree = "<group>"; };
-		3B3111D01B6E171F008E374E /* JSCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeViewController.m; sourceTree = "<group>"; };
 		3B316ED81C88569F0052F19A /* JSCPostParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParserTests.m; sourceTree = "<group>"; };
 		3B316EDA1C8859150052F19A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRequest.swift; sourceTree = "<group>"; };
@@ -152,6 +149,7 @@
 		3BF799561C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JSCCustomHeight.h"; sourceTree = "<group>"; };
 		3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JSCCustomHeight.m"; sourceTree = "<group>"; };
 		3BFF18A41C941C3D00638549 /* JSCPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostTableViewCell.swift; sourceTree = "<group>"; };
+		3BFF18A61C9436B600638549 /* JSCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCHomeViewController.swift; sourceTree = "<group>"; };
 		42A9A7C4DAFAB50F0FF69D29 /* Pods-SocialChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		692522B6086335AFDFD58A1C /* Pods-SocialChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -366,8 +364,7 @@
 			children = (
 				3B70D2671C872A9400A6AB11 /* Views */,
 				3B3111CC1B6E16CE008E374E /* Adapter */,
-				3B3111CF1B6E171F008E374E /* JSCHomeViewController.h */,
-				3B3111D01B6E171F008E374E /* JSCHomeViewController.m */,
+				3BFF18A61C9436B600638549 /* JSCHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -963,11 +960,11 @@
 				3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */,
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
 				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
+				3BFF18A71C9436B600638549 /* JSCHomeViewController.swift in Sources */,
 				3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */,
 				3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */,
 				3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */,
 				3B4287EF1C89A7F200D3D4EF /* JSCPost.swift in Sources */,
-				3B3111D11B6E171F008E374E /* JSCHomeViewController.m in Sources */,
 				3BF799581C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m in Sources */,
 				3B31118A1B6E110B008E374E /* main.m in Sources */,
 				3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */,
@@ -1016,7 +1013,6 @@
 				3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
 				3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */,
 				3B316EF91C88686B0052F19A /* JSCHomeAdapter.m in Sources */,
-				3B316EFA1C88686B0052F19A /* JSCHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
