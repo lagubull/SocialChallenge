@@ -130,7 +130,7 @@ class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
     
     func didPressFavoritesButton(post: JSCPost) {
         
-        LEAAlertController.dismissibleAlertViewWithTitle(NSLocalizedString("FavoritesMessageTitle", comment: ""),   message: NSLocalizedString("FavoritesMessageBody", comment: ""),
+        LEAAlertController.dismissibleAlertViewWithTitle(NSLocalizedString("FavoritesMessageTitle", comment: ""), message: NSLocalizedString("FavoritesMessageBody", comment: ""),
             cancelButtonTitle: NSLocalizedString("AcceptNav", comment: "")).showInViewController(self)
     }
 }
