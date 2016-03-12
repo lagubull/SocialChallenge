@@ -146,7 +146,6 @@ class JSCPostTableViewCell: UITableViewCell {
         _contentLabel.numberOfLines = 0
         _contentLabel.textAlignment = .Center
         
-        
         return _contentLabel;
     }()
     
