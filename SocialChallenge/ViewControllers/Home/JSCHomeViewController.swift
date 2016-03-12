@@ -46,9 +46,6 @@ class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
         
         super.viewDidAppear(animated)
         
-        self.adapter.tableView = self.tableView
-        self.adapter.delegate = self
-        
         self.view.addSubview(self.tableView)
         
         self.adapter.refresh()
@@ -117,6 +114,9 @@ class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
     lazy var adapter: JSCHomeAdapter = {
         
         let _adapter = JSCHomeAdapter.init()
+        
+        _adapter.delegate = self
+        _adapter.tableView = self.tableView
         
         return _adapter
     }()
