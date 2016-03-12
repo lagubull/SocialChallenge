@@ -12,13 +12,13 @@ import PureLayout
 /**
  Loading View for the tableView.
  */
-class JSCLoadingView : UIView {
+class JSCLoadingView: UIView {
     
     //MARK: Init
     
-    override init(frame : CGRect) {
+    override init(frame: CGRect) {
         
-        super.init(frame : frame)
+        super.init(frame: frame)
         
         self.addSubview(self.loadingIndicator)
     }
@@ -33,11 +33,11 @@ class JSCLoadingView : UIView {
     /*
     Animating activity indicator.
     */
-    lazy var loadingIndicator : UIActivityIndicatorView  = {
+    lazy var loadingIndicator: UIActivityIndicatorView  = {
         
         let _loadingIndicator = UIActivityIndicatorView.newAutoLayoutView()
         
-        _loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        _loadingIndicator.activityIndicatorViewStyle = .WhiteLarge
         
         _loadingIndicator.startAnimating()
         

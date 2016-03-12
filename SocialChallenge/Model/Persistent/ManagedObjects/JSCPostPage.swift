@@ -12,7 +12,7 @@ import CoreDataServices
 
 @objc(JSCPostPage)
 
-class JSCPostPage : NSManagedObject {
+class JSCPostPage: NSManagedObject {
     
     /**
      Retrieves the last page of posts stored in the context.
@@ -21,13 +21,13 @@ class JSCPostPage : NSManagedObject {
      
      - Returns: JSCPostPage - instace of the JSCPostPage class
      */
-    class func fetchLastPageInContext(managedObjectContext : NSManagedObjectContext) -> JSCPostPage {
+    class func fetchLastPageInContext(managedObjectContext: NSManagedObjectContext) -> JSCPostPage {
         
-        let retrievedPagesSortDescriptor = NSSortDescriptor.init(key : "index", ascending : false)
+        let retrievedPagesSortDescriptor = NSSortDescriptor.init(key: "index", ascending: false)
         
         let sortDescriptors = [retrievedPagesSortDescriptor]
         
-        return managedObjectContext.cds_retrieveFirstEntryForEntityClass(JSCPostPage.self, predicate : nil, sortDescriptors : sortDescriptors) as! JSCPostPage
+        return managedObjectContext.cds_retrieveFirstEntryForEntityClass(JSCPostPage.self, predicate: nil, sortDescriptors: sortDescriptors) as! JSCPostPage
     }
     
 }

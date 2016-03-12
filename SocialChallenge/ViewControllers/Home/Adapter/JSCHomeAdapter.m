@@ -12,7 +12,6 @@
 #import <CoreDataServices/CDSServiceManager.h>
 
 #import "JSCFeedAPIManager.h"
-#import "JSCPostTableViewCell.h"
 
 @interface JSCHomeAdapter () <UITableViewDataSource, UITableViewDelegate, STVDataRetrievalTableViewDelegate, JSCPostTableViewCellDelegate>
 
@@ -34,7 +33,7 @@
     self.tableView.fetchedResultsController = self.fetchedResultsController;
     
     [self.tableView registerClass:[JSCPostTableViewCell class]
-           forCellReuseIdentifier:[JSCPostTableViewCell reuseIdentifier]];
+           forCellReuseIdentifier:[JSCPostTableViewCell identifierForReuse]];
 }
 
 #pragma mark - JSCHomeAdapterDelegate
@@ -87,7 +86,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    JSCPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[JSCPostTableViewCell reuseIdentifier]
+    JSCPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[JSCPostTableViewCell identifierForReuse]
                                                                          forIndexPath:indexPath];
     
     cell.delegate = self;

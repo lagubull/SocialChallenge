@@ -13,12 +13,12 @@ import Foundation
 /**
 Custom Window.
 */
-class JSCWindow : UIWindow {
+class JSCWindow: UIWindow {
     
     /**
      View controller to show when the app starts up.
      */
-    var splashViewController : UIViewController?
+    var splashViewController: UIViewController?
     
     //MARK: SuperClass
     
@@ -36,11 +36,11 @@ class JSCWindow : UIWindow {
     */
     func hideSplashScreen() {
         
-        UIView.animateWithDuration(0.3 , animations : {
+        UIView.animateWithDuration(0.3 , animations: {
             
             self.splashViewController!.view.alpha = 0.0
             },
-            completion : { (BOOL finished) in
+            completion: { (BOOL finished) in
                 
                 self.splashViewController!.view.removeFromSuperview()
                 self.splashViewController = nil;

@@ -27,7 +27,7 @@ let kJSCCreatedAt = "created_at" as String
  */
 @objc(JSCPostParser)
 
-class JSCPostParser : JSCParser {
+class JSCPostParser: JSCParser {
     
     //MARK: Posts
     
@@ -38,9 +38,9 @@ class JSCPostParser : JSCParser {
     
     - Returns: NSArray of posts.
     */
-    func parsePosts(postsDictionaries : [[String : AnyObject]]) -> [JSCPost] {
+    func parsePosts(postsDictionaries: [[String: AnyObject]]) -> [JSCPost] {
         
-        var posts : [JSCPost] = []
+        var posts: [JSCPost] = []
         
         for postDictionary in postsDictionaries {
             
@@ -61,36 +61,36 @@ class JSCPostParser : JSCParser {
     
     - Returns: JSCPostPage instance that was parsed.
     */
-    func parsePost(postDictionary : [String : AnyObject]) -> JSCPost! {
+    func parsePost(postDictionary: [String: AnyObject]) -> JSCPost! {
         
-        var post : JSCPost!
+        var post: JSCPost!
         
-        if ((postDictionary[kJSCPostId]) != nil) {
+        if (postDictionary[kJSCPostId]) != nil {
             
             let postId = "\(postDictionary[kJSCPostId]!)"
             
-            post = JSCPost.fetchPostWithId(postId, managedObjectContext : self.managedObjectContext)
+            post = JSCPost.fetchPostWithId(postId, managedObjectContext: self.managedObjectContext)
             
-            if (post == nil) {
+            if post == nil {
                 
-                post = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPost.self), inManagedObjectContext : self.managedObjectContext) as! JSCPost
+                post = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPost.self), inManagedObjectContext: self.managedObjectContext) as! JSCPost
                 
                 post.postId = postId
             }
             
             let dateFormatter = NSDateFormatter.jsc_dateFormatter() as NSDateFormatter
             
-            post.createdAt = JSCValueOrDefault(dateFormatter.dateFromString("\(postDictionary[kJSCCreatedAt])"), defaultValue : post.createdAt) as? NSDate
+            post.createdAt = JSCValueOrDefault(dateFormatter.dateFromString("\(postDictionary[kJSCCreatedAt])"), defaultValue: post.createdAt) as? NSDate
             
-            post.likeCount = JSCValueOrDefault(postDictionary[kJSCLikeCount], defaultValue : post.likeCount) as? NSNumber
+            post.likeCount = JSCValueOrDefault(postDictionary[kJSCLikeCount], defaultValue: post.likeCount) as? NSNumber
             
-            post.content = JSCValueOrDefault(postDictionary[kJSCContent], defaultValue : post.content)  as? String
+            post.content = JSCValueOrDefault(postDictionary[kJSCContent], defaultValue: post.content)  as? String
             
-            post.commentCount = JSCValueOrDefault(postDictionary[kJSCCommentCount], defaultValue : post.commentCount)  as? NSNumber
+            post.commentCount = JSCValueOrDefault(postDictionary[kJSCCommentCount], defaultValue: post.commentCount)  as? NSNumber
             
-            post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCAvatar], defaultValue : post.userAvatarRemoteURL) as? String
-            post.userFirstName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCFirstName], defaultValue : post.userFirstName) as? String
-            post.userLastName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCLastName], defaultValue : post.userLastName) as? String
+            post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCAvatar], defaultValue: post.userAvatarRemoteURL) as? String
+            post.userFirstName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCFirstName], defaultValue: post.userFirstName) as? String
+            post.userLastName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCLastName], defaultValue: post.userLastName) as? String
         }
         
         return post;

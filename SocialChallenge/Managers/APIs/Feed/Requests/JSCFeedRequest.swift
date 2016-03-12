@@ -18,7 +18,7 @@ let kJSCHTTPRequestMethodGet = "GET" as String!
 /**
 Request to retrieve a feed.
 */
-class JSCFeedRequest : NSMutableURLRequest {
+class JSCFeedRequest: NSMutableURLRequest {
 
     //MARK: Retrieve
     
@@ -39,7 +39,7 @@ class JSCFeedRequest : NSMutableURLRequest {
     
     - Returns: an instance of the class.
     */
-    class func requestToRetrieveFeedNexPageWithURL(URL : String) -> JSCFeedRequest {
+    class func requestToRetrieveFeedNexPageWithURL(URL: String) -> JSCFeedRequest {
     
         let request = self.init() as JSCFeedRequest
         

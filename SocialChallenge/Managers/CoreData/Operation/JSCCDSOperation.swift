@@ -14,14 +14,14 @@ import CoreDataServices
 /**
  Code base for a core data opration.
  */
-class JSCCDSOperation : JSCOperation {
+class JSCCDSOperation: JSCOperation {
     
     //MARK: Save
     
     /**
     Saves the parent managed context if there is changes.
     */
-    func saveLocalContextChangesToMainContext(result : AnyObject?) {
+    func saveLocalContextChangesToMainContext(result: AnyObject?) {
         
         CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
             
@@ -89,17 +89,17 @@ class JSCCDSOperation : JSCOperation {
      
      - Parameter result - result to finish with and pass to on success callback.
      */
-    func saveContextAndFinishWithResult(result : AnyObject?) {
+    func saveContextAndFinishWithResult(result: AnyObject?) {
         
         let hasChanges = CDSServiceManager.sharedInstance().backgroundManagedObjectContext.hasChanges;
         
-        if (hasChanges) {
+        if hasChanges {
             
             self.saveLocalContextChangesToMainContext(result)
         }
         else
         {
-            if (result!.isKindOfClass(NSError.self)) {
+            if result!.isKindOfClass(NSError.self) {
                 
                 self.didFailWithError(result as! NSError)
             }
