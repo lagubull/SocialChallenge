@@ -27,7 +27,6 @@
 		3B316EF31C88686B0052F19A /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B316EF41C88686B0052F19A /* JSCOperationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */; };
 		3B316EF51C88686B0052F19A /* JSCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963341B76D034005365EF /* JSCOperation.m */; };
-		3B316EF71C88686B0052F19A /* JSCEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA68D2E1C873C080096EAFD /* JSCEmptyView.m */; };
 		3B316EF81C88686B0052F19A /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3B316EF91C88686B0052F19A /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3B316EFA1C88686B0052F19A /* JSCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111D01B6E171F008E374E /* JSCHomeViewController.m */; };
@@ -53,7 +52,6 @@
 		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
 		3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
-		3BA68D2F1C873C080096EAFD /* JSCEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA68D2E1C873C080096EAFD /* JSCEmptyView.m */; };
 		3BD281DE1B6F8A5B0097B452 /* JSCHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */; };
 		3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD281E71B6F8ACF0097B452 /* JSCPostTableViewCell.m */; };
 		3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
@@ -63,7 +61,8 @@
 		3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9632C1B76CD27005365EF /* JSCFeedAPIManager.m */; };
 		3BD963351B76D034005365EF /* JSCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963341B76D034005365EF /* JSCOperation.m */; };
 		3BF0A15D1C92E70F004E9E50 /* JSCWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF0A15C1C92E70F004E9E50 /* JSCWindow.swift */; };
-		3BF0A15F1C9300C2004E9E50 /* JSCLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF0A15E1C9300C2004E9E50 /* JSCLoadingView.swift */; };
+		3BF0A1671C933CC9004E9E50 /* JSCLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF0A1661C933CC9004E9E50 /* JSCLoadingView.swift */; };
+		3BF0A1681C933D8B004E9E50 /* JSCEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF0A1601C9306AA004E9E50 /* JSCEmptyView.swift */; };
 		3BF19AFA1C92090A006F4AC1 /* JSCCDSOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF19AF91C92090A006F4AC1 /* JSCCDSOperation.swift */; };
 		3BF46A901C8C811200DD55EA /* JSCPostParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF46A8F1C8C811200DD55EA /* JSCPostParser.swift */; };
 		3BF799581C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */; };
@@ -130,8 +129,6 @@
 		3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCRoundImage.m"; sourceTree = "<group>"; };
 		3B70D2641C8721F000A6AB11 /* UIImage+JSCScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSCScaleImage.h"; sourceTree = "<group>"; };
 		3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCScaleImage.m"; sourceTree = "<group>"; };
-		3BA68D2D1C873C080096EAFD /* JSCEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCEmptyView.h; sourceTree = "<group>"; };
-		3BA68D2E1C873C080096EAFD /* JSCEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCEmptyView.m; sourceTree = "<group>"; };
 		3BD281DC1B6F8A5B0097B452 /* JSCHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCHomeAdapter.h; sourceTree = "<group>"; };
 		3BD281DD1B6F8A5B0097B452 /* JSCHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCHomeAdapter.m; sourceTree = "<group>"; };
 		3BD281E61B6F8ACF0097B452 /* JSCPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostTableViewCell.h; sourceTree = "<group>"; };
@@ -150,7 +147,8 @@
 		3BD963331B76D034005365EF /* JSCOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperation.h; sourceTree = "<group>"; };
 		3BD963341B76D034005365EF /* JSCOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCOperation.m; sourceTree = "<group>"; };
 		3BF0A15C1C92E70F004E9E50 /* JSCWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCWindow.swift; sourceTree = "<group>"; };
-		3BF0A15E1C9300C2004E9E50 /* JSCLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCLoadingView.swift; sourceTree = "<group>"; };
+		3BF0A1601C9306AA004E9E50 /* JSCEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCEmptyView.swift; sourceTree = "<group>"; };
+		3BF0A1661C933CC9004E9E50 /* JSCLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCLoadingView.swift; sourceTree = "<group>"; };
 		3BF13B4C1C5E473600B32627 /* NSOperationQueue+JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+JSCOperationScheduler.h"; sourceTree = "<group>"; };
 		3BF19AF91C92090A006F4AC1 /* JSCCDSOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCCDSOperation.swift; sourceTree = "<group>"; };
 		3BF46A8F1C8C811200DD55EA /* JSCPostParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostParser.swift; sourceTree = "<group>"; };
@@ -529,8 +527,7 @@
 		3B70D2681C872AAA00A6AB11 /* EmptyView */ = {
 			isa = PBXGroup;
 			children = (
-				3BA68D2D1C873C080096EAFD /* JSCEmptyView.h */,
-				3BA68D2E1C873C080096EAFD /* JSCEmptyView.m */,
+				3BF0A1601C9306AA004E9E50 /* JSCEmptyView.swift */,
 			);
 			path = EmptyView;
 			sourceTree = "<group>";
@@ -538,7 +535,7 @@
 		3B70D2691C872ABD00A6AB11 /* LoadingView */ = {
 			isa = PBXGroup;
 			children = (
-				3BF0A15E1C9300C2004E9E50 /* JSCLoadingView.swift */,
+				3BF0A1661C933CC9004E9E50 /* JSCLoadingView.swift */,
 			);
 			path = LoadingView;
 			sourceTree = "<group>";
@@ -962,7 +959,6 @@
 			files = (
 				3B4288001C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */,
 				3BF46A901C8C811200DD55EA /* JSCPostParser.swift in Sources */,
-				3BA68D2F1C873C080096EAFD /* JSCEmptyView.m in Sources */,
 				3B4E80281C8DE70600ECFCD0 /* JSCDateFormatter.swift in Sources */,
 				3B4E80211C8DA1A600ECFCD0 /* JSCParser.swift in Sources */,
 				3B3111C71B6E127D008E374E /* JSCAppDelegate.m in Sources */,
@@ -982,6 +978,7 @@
 				3BF0A15D1C92E70F004E9E50 /* JSCWindow.swift in Sources */,
 				3BD9632D1B76CD27005365EF /* JSCFeedAPIManager.m in Sources */,
 				3BF19AFA1C92090A006F4AC1 /* JSCCDSOperation.swift in Sources */,
+				3BF0A1681C933D8B004E9E50 /* JSCEmptyView.swift in Sources */,
 				3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */,
 				3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */,
 				3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */,
@@ -993,7 +990,7 @@
 				3BD281E81B6F8ACF0097B452 /* JSCPostTableViewCell.m in Sources */,
 				3B4288061C89E80D00D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
 				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
-				3BF0A15F1C9300C2004E9E50 /* JSCLoadingView.swift in Sources */,
+				3BF0A1671C933CC9004E9E50 /* JSCLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,7 +1016,6 @@
 				3B316EF41C88686B0052F19A /* JSCOperationCoordinator.m in Sources */,
 				3B316EF51C88686B0052F19A /* JSCOperation.m in Sources */,
 				3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */,
-				3B316EF71C88686B0052F19A /* JSCEmptyView.m in Sources */,
 				3B316EF81C88686B0052F19A /* JSCPostTableViewCell.m in Sources */,
 				3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
 				3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */,
