@@ -16,6 +16,9 @@ Constant to define the height of the navigation bar.s
 */
 let kJSCNavigationBarHeight = 44.0 as CGFloat
 
+/**
+ Landing viewController.
+ */
 class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
     
     //MARK: Lifecycle
@@ -56,7 +59,7 @@ class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
     /**
     Displays the posts.
     */
-    lazy var tableView: STVSimpleTableView = {
+    lazy var tableView: STVSimpleTableView! = {
         
         let _tableView = STVSimpleTableView.init(frame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, self.view.bounds.size.height))
         

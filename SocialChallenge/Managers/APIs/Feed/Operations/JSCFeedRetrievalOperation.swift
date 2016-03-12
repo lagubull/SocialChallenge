@@ -53,11 +53,11 @@ class JSCFeedRetrievalOperation: JSCCDSOperation {
     
     - Returns: an instance of the class.
     */
-    convenience init(mode: Int) {
+    convenience init(mode: JSCDataRetrievalOperationMode) {
         
         self.init()
         
-        self.mode = JSCDataRetrievalOperationMode (rawValue: mode)
+        self.mode = mode
 
         self.identifier = self.myIdentifier
     }

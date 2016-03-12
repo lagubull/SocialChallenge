@@ -7,15 +7,16 @@
 
 #pragma mark - prefix Imports
 
-#import <EasyDownloadSession/EDSDownloadSession.h>
-#import <CoreDataServices/CDSServiceManager.h>
-
 #import "JSCOperation.h"
 #import "JSCJSONManager.h"
 #import "JSCSession.h"
 #import "JSCMediaManager.h"
 #import "UINavigationBar+JSCCustomHeight.h"
-#import "JSCHomeAdapter.h"
+#import "JSCOperationCoordinator.h"
+#import "JSCFileManager.h"
+#import "JSCRootNavigationController.h"
+#import "JSCSplashViewController.h"
+#import "NSOperationQueue+JSCOperationScheduler.h"
 
 #endif /* SocialChallenge_Bridging_Header_h */
 
