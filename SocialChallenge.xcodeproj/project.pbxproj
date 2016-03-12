@@ -84,7 +84,6 @@
 		36111EF044CFE5564B49FEE5 /* Pods-SocialChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B3111841B6E110B008E374E /* SocialChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111881B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B3111891B6E110B008E374E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B3111A31B6E110B008E374E /* SocialChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111A81B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B3111BC1B6E127D008E374E /* SocialChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialChallenge.xcdatamodel; sourceTree = "<group>"; };
@@ -224,7 +223,6 @@
 				3B4288051C89C9D200D3D4EF /* SocialChallenge-Bridging-Header.h */,
 				3B3111881B6E110B008E374E /* Info.plist */,
 				3B70D2591C8600B100A6AB11 /* Localizable.strings */,
-				3B3111891B6E110B008E374E /* main.m */,
 				3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";

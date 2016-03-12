@@ -26,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = self._window
         
-        EDSDownloadSession.sharedInstance().maxDownloads = 4
+        //TODO: Restore once EDSDownloadSession v1.0.5 is out
+//        EDSDownloadSession.sharedInstance().maxDownloads = 4
         
         CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
         
