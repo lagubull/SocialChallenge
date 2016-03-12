@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSCFeedAPIManager: NSObject
+@interface JSCFeedAPIManager : NSObject
 
 /**
  Cretes and queues an operation for retrieving the feed
