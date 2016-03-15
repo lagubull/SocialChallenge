@@ -29,8 +29,7 @@ class JSCSplashViewController: UIViewController {
         UIView.animateWithDuration(2.0, animations: {
             
             self.view.backgroundColor = .whiteColor()
-            },
-            completion: { (finished: Bool) in
+            }, completion: { (finished: Bool) in
                 
                 self.hide()
         })
