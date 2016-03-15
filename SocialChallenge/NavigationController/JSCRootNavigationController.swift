@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Handles the navigation in the app.
+*/
 class JSCRootNavigationController: UINavigationController, UINavigationControllerDelegate {
 
     var homeViewController: JSCHomeViewController?

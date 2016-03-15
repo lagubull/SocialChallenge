@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ View controller to show on app start up.
+*/
 class JSCSplashViewController: UIViewController {
     
     //MARK: ViewLifeCycle
