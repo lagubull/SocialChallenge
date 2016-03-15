@@ -17,8 +17,6 @@
 		3B316EE51C88686B0052F19A /* JSCLocalImageAssetRetrievalOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6581C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m */; };
 		3B316EE61C88686B0052F19A /* JSCMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6501C73962400223E5A /* JSCMediaManager.m */; };
 		3B316EE71C88686B0052F19A /* JSCJSONManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD850D91B7F3BE10077868E /* JSCJSONManager.m */; };
-		3B316EF11C88686B0052F19A /* JSCRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */; };
-		3B316EF21C88686B0052F19A /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
 		3B316EF31C88686B0052F19A /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B316EF41C88686B0052F19A /* JSCOperationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */; };
 		3B316EF51C88686B0052F19A /* JSCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963341B76D034005365EF /* JSCOperation.m */; };
@@ -41,14 +39,14 @@
 		3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B4E80211C8DA1A600ECFCD0 /* JSCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E80201C8DA1A600ECFCD0 /* JSCParser.swift */; };
 		3B4E80281C8DE70600ECFCD0 /* JSCDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */; };
+		3B5867141C98682D005BCDEB /* JSCRootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5867131C98682D005BCDEB /* JSCRootNavigationController.swift */; };
+		3B5867161C986D3A005BCDEB /* JSCSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5867151C986D3A005BCDEB /* JSCSplashViewController.swift */; };
 		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
 		3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
 		3B7C51131C944C72000AACB5 /* JSCHomeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C51121C944C72000AACB5 /* JSCHomeAdapter.swift */; };
 		3B7C51151C946BBF000AACB5 /* JSCFeedAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C51141C946BBF000AACB5 /* JSCFeedAPIManager.swift */; };
 		3B7C51371C94756D000AACB5 /* JSCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C51361C94756D000AACB5 /* JSCAppDelegate.swift */; };
-		3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */; };
-		3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */; };
 		3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD850D91B7F3BE10077868E /* JSCJSONManager.m */; };
 		3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */; };
 		3BD963351B76D034005365EF /* JSCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD963341B76D034005365EF /* JSCOperation.m */; };
@@ -113,6 +111,8 @@
 		3B488FD41C80BC6E003DA767 /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
 		3B4E80201C8DA1A600ECFCD0 /* JSCParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCParser.swift; sourceTree = "<group>"; };
 		3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCDateFormatter.swift; sourceTree = "<group>"; };
+		3B5867131C98682D005BCDEB /* JSCRootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCRootNavigationController.swift; sourceTree = "<group>"; };
+		3B5867151C986D3A005BCDEB /* JSCSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCSplashViewController.swift; sourceTree = "<group>"; };
 		3B70D2581C8600B100A6AB11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B70D2611C8721DD00A6AB11 /* UIImage+JSCRoundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSCRoundImage.h"; sourceTree = "<group>"; };
 		3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCRoundImage.m"; sourceTree = "<group>"; };
@@ -121,10 +121,6 @@
 		3B7C51121C944C72000AACB5 /* JSCHomeAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCHomeAdapter.swift; sourceTree = "<group>"; };
 		3B7C51141C946BBF000AACB5 /* JSCFeedAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedAPIManager.swift; sourceTree = "<group>"; };
 		3B7C51361C94756D000AACB5 /* JSCAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCAppDelegate.swift; sourceTree = "<group>"; };
-		3BD52D861B77BA37000783E3 /* JSCSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSplashViewController.h; sourceTree = "<group>"; };
-		3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSplashViewController.m; sourceTree = "<group>"; };
-		3BD52D8A1B77BBC5000783E3 /* JSCRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCRootNavigationController.h; sourceTree = "<group>"; };
-		3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCRootNavigationController.m; sourceTree = "<group>"; };
 		3BD850D81B7F3BE10077868E /* JSCJSONManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCJSONManager.h; sourceTree = "<group>"; };
 		3BD850D91B7F3BE10077868E /* JSCJSONManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCJSONManager.m; sourceTree = "<group>"; };
 		3BD89C561B775F580084FA63 /* JSCOperationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationCoordinator.h; sourceTree = "<group>"; };
@@ -552,8 +548,7 @@
 		3BD52D851B77B9FD000783E3 /* SplashViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3BD52D861B77BA37000783E3 /* JSCSplashViewController.h */,
-				3BD52D871B77BA37000783E3 /* JSCSplashViewController.m */,
+				3B5867151C986D3A005BCDEB /* JSCSplashViewController.swift */,
 			);
 			path = SplashViewController;
 			sourceTree = "<group>";
@@ -561,8 +556,7 @@
 		3BD52D891B77BB85000783E3 /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				3BD52D8A1B77BBC5000783E3 /* JSCRootNavigationController.h */,
-				3BD52D8B1B77BBC5000783E3 /* JSCRootNavigationController.m */,
+				3B5867131C98682D005BCDEB /* JSCRootNavigationController.swift */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
@@ -947,6 +941,8 @@
 				3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */,
 				3BD963351B76D034005365EF /* JSCOperation.m in Sources */,
 				3B7C51151C946BBF000AACB5 /* JSCFeedAPIManager.swift in Sources */,
+				3B5867161C986D3A005BCDEB /* JSCSplashViewController.swift in Sources */,
+				3B5867141C98682D005BCDEB /* JSCRootNavigationController.swift in Sources */,
 				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
 				3BFF18A71C9436B600638549 /* JSCHomeViewController.swift in Sources */,
 				3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */,
@@ -956,7 +952,6 @@
 				3B3EF6511C73962400223E5A /* JSCMediaManager.m in Sources */,
 				3B4287EF1C89A7F200D3D4EF /* JSCPost.swift in Sources */,
 				3BF799581C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m in Sources */,
-				3BD52D881B77BA37000783E3 /* JSCSplashViewController.m in Sources */,
 				3BD89C581B775F580084FA63 /* JSCOperationCoordinator.m in Sources */,
 				3BF0A15D1C92E70F004E9E50 /* JSCWindow.swift in Sources */,
 				3BF19AFA1C92090A006F4AC1 /* JSCCDSOperation.swift in Sources */,
@@ -970,7 +965,6 @@
 				3B3EF6591C73993000223E5A /* JSCLocalImageAssetRetrievalOperation.m in Sources */,
 				3B4288071C89E80F00D3D4EF /* JSCPostPage.swift in Sources */,
 				3B4288061C89E80D00D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
-				3BD52D8C1B77BBC5000783E3 /* JSCRootNavigationController.m in Sources */,
 				3BF0A1671C933CC9004E9E50 /* JSCLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -989,8 +983,6 @@
 				3B316EE61C88686B0052F19A /* JSCMediaManager.m in Sources */,
 				3B316EE71C88686B0052F19A /* JSCJSONManager.m in Sources */,
 				3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */,
-				3B316EF11C88686B0052F19A /* JSCRootNavigationController.m in Sources */,
-				3B316EF21C88686B0052F19A /* JSCSplashViewController.m in Sources */,
 				3B316EF31C88686B0052F19A /* JSCSession.m in Sources */,
 				3B316EF41C88686B0052F19A /* JSCOperationCoordinator.m in Sources */,
 				3B316EF51C88686B0052F19A /* JSCOperation.m in Sources */,

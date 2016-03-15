@@ -14,8 +14,6 @@
 #import "UINavigationBar+JSCCustomHeight.h"
 #import "JSCOperationCoordinator.h"
 #import "JSCFileManager.h"
-#import "JSCRootNavigationController.h"
-#import "JSCSplashViewController.h"
 #import "NSOperationQueue+JSCOperationScheduler.h"
 
 #endif /* SocialChallenge_Bridging_Header_h */
