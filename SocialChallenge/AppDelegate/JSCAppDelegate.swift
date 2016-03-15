@@ -20,11 +20,31 @@ func DLog(message: String, function: String = __FUNCTION__) {
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow?
+    //MARK: Root
+    
+    lazy var navigationController : UINavigationController = {
+        
+        let _navigationController = JSCRootNavigationController.init()
+        _navigationController.setNavigationBarHidden(true, animated: false)
+        
+        return _navigationController
+    }()
+    
+    //MARK: Window
+    lazy var window : UIWindow? = {
+        
+        let window = JSCWindow.init(frame: UIScreen.mainScreen().bounds)
+        window.tintAdjustmentMode = .Normal
+        
+        window.splashViewController = JSCSplashViewController.init()
+        window.rootViewController = self.navigationController
+        
+        window.windowLevel = 1.2
+        
+        return window
+    }()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        self.window = self._window
         
         //TODO: Restore once EDSDownloadSession v1.0.5 is out
 //        EDSDownloadSession.sharedInstance().maxDownloads = 4
@@ -80,29 +100,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    //MARK: Window
-    
-    lazy var _window : JSCWindow = {
-        
-        let __window = JSCWindow.init(frame: UIScreen.mainScreen().bounds)
-        __window.tintAdjustmentMode = .Normal
-        
-        __window.splashViewController = JSCSplashViewController.init()
-        __window.rootViewController = self.navigationController
-        
-        __window.windowLevel = 1.2
-        
-        return __window
-    }()
-    
-    //MARK: Root
-    
-    lazy var navigationController : UINavigationController = {
-        
-        let _navigationController = JSCRootNavigationController.init()
-        _navigationController.setNavigationBarHidden(true, animated: false)
-        
-        return _navigationController
-    }()
 }

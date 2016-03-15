@@ -62,31 +62,11 @@ class JSCPostTableViewCell: UITableViewCell {
     var delegate:JSCPostTableViewCellDelegate?
     
     /**
-     Override the Identifier of the cell.
-     */
-    override var reuseIdentifier: String {
-        
-        get {
-            
-            return self.innerIdentifier
-        }
-        set {
-            
-            self.innerIdentifier = newValue
-        }
-    };
-    
-    /**
      Identifies the cell type.
      */
-    private var innerIdentifier: String = NSStringFromClass(JSCPostTableViewCell.self)
-    
-    /**
-     Identifies the cell type.
-     */
-    class func identifierForReuse() -> String {
+    class func reuseIdentifier() -> String {
         
-        return JSCPostTableViewCell.init().reuseIdentifier
+        return NSStringFromClass(self)
     }
     
     //MARK: Init
@@ -135,8 +115,8 @@ class JSCPostTableViewCell: UITableViewCell {
     }()
     
     /**
-    Content of the post.
-    */
+     Content of the post.
+     */
     lazy var contentLabel: UILabel = {
         
         let _contentLabel = UILabel.newAutoLayoutView()
@@ -348,11 +328,11 @@ class JSCPostTableViewCell: UITableViewCell {
         self.avatar.image = UIImage.init(named:"avatarPlaceHolderIcon")
         
         JSCMediaManager.retrieveMediaForPost(post, retrievalRequired: { [weak self] (postId: String!) in
+            
+            if self!.post!.postId == postId {
                 
-                if self!.post!.postId == postId {
-                    
-                    self!.avatarLoadingView.startAnimating()
-                }
+                self!.avatarLoadingView.startAnimating()
+            }
             }, success: { [weak self] (result: AnyObject!, postId: String!) in
                 
                 if self!.post!.postId == postId {

@@ -53,33 +53,16 @@ class JSCHomeAdapter: NSObject, UITableViewDataSource, UITableViewDelegate, STVD
     /**
     Shows the content.
     */
-    private var _tableView: STVSimpleTableView? {
-        
-        willSet {
-            
-            self.willChangeValueForKey("tableView")
-        }
-        didSet {
-            
-            self.didChangeValueForKey("tableView")
-        }
-    }
-    
     var tableView: STVSimpleTableView? {
         
-        get {
-            return self._tableView
-        }
-        set {
+        didSet {
             
-            self._tableView = newValue
+            self.tableView!.dataSource = self
+            self.tableView!.delegate = self
+            self.tableView!.dataRetrievalDelegate = self
+            self.tableView!.fetchedResultsController = self.fetchedResultsController
             
-            self._tableView!.dataSource = self
-            self._tableView!.delegate = self
-            self._tableView!.dataRetrievalDelegate = self
-            self._tableView!.fetchedResultsController = self.fetchedResultsController
-            
-            self._tableView!.registerClass(JSCPostTableViewCell.self, forCellReuseIdentifier: JSCPostTableViewCell.identifierForReuse())
+            self.tableView!.registerClass(JSCPostTableViewCell.self, forCellReuseIdentifier: JSCPostTableViewCell.reuseIdentifier())
         }
     }
     
@@ -172,7 +155,7 @@ class JSCHomeAdapter: NSObject, UITableViewDataSource, UITableViewDelegate, STVD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(JSCPostTableViewCell.identifierForReuse(), forIndexPath: indexPath) as! JSCPostTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(JSCPostTableViewCell.reuseIdentifier(), forIndexPath: indexPath) as! JSCPostTableViewCell
         
         cell.delegate = self
         
