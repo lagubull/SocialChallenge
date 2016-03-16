@@ -60,26 +60,6 @@
     return _identifier;
 }
 
-#pragma mark - NSCoding
-
-- (id)initWithCoder:(NSCoder *)decoder
-{
-    self = [super init];
-    
-    if (self)
-    {
-        self.mode = [decoder decodeIntegerForKey:NSStringFromSelector(@selector(mode))];
-    }
-    
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)encoder
-{
-    [encoder encodeInteger:self.mode
-                    forKey:NSStringFromSelector(@selector(mode))];
-}
-
 #pragma mark - Start
 
 - (void)start

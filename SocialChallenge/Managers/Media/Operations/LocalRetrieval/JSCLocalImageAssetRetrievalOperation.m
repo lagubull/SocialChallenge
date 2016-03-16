@@ -27,7 +27,7 @@
 
 #pragma mark - Init
 
-- (instancetype)initWithPostID:(NSString *)postId;
+- (instancetype)initWithPostId:(NSString *)postId;
 {
     self = [super init];
     
@@ -45,30 +45,10 @@
 {
     if (!_identifier)
     {
-        _identifier = [NSString stringWithFormat:@"retrieveLocalImageAssetForPostID %@", self.postId];
+        _identifier = [NSString stringWithFormat:@"retrieveLocalImageAssetForPostId %@", self.postId];
     }
     
     return _identifier;
-}
-
-#pragma mark - NSCoding
-
-- (id)initWithCoder:(NSCoder *)decoder
-{
-    self = [super init];
-    
-    if (self)
-    {
-        self.postId = [decoder decodeObjectForKey:NSStringFromSelector(@selector(postId))];
-    }
-    
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)encoder
-{
-    [encoder encodeObject:self.postId
-                    forKey:NSStringFromSelector(@selector(postId))];
 }
 
 #pragma mark - Start

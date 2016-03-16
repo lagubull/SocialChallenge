@@ -78,12 +78,12 @@
 		3BF13B0C1C5E379F00B32627 /* JSCPostParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B0B1C5E379F00B32627 /* JSCPostParser.m */; };
 		3BF13B0F1C5E37B200B32627 /* JSCPostPageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13B0E1C5E37B200B32627 /* JSCPostPageParser.m */; };
 		3BF799581C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */; };
-		47864D810E09D246BC7321BC /* Pods_SocialChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D0755087E1EE97D275FD2C /* Pods_SocialChallenge.framework */; };
 		688E4A7F2D96FE901926B777 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */; };
 		6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */; };
+		768D9FCD6D4111E4E7BE8D79 /* Pods_SocialChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9821D63D76D6A4FDEDFF67DF /* Pods_SocialChallenge.framework */; };
+		789BD66046FB5CE1F9AF47DF /* Pods_SocialChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6E679A3EE4CB20817ABFED /* Pods_SocialChallengeTests.framework */; };
 		BA544E9361EAF529778588A5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C9187E6B5128FE05C33908 /* CoreText.framework */; };
 		BF487C44F0E59E581C2A3BD5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */; };
-		D079945656FDBD5447B2AA9B /* Pods_SocialChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C053BEF568BCD9CF9F341171 /* Pods_SocialChallengeTests.framework */; };
 		D980C4EDBB68412EEA73790C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,10 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E5E9A3D44389DCD4EE8355B /* Pods-SocialChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		12D0755087E1EE97D275FD2C /* Pods_SocialChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		191275F79F5A5992860EFF08 /* Pods-SocialChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		3B3111841B6E110B008E374E /* SocialChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111881B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B3111891B6E110B008E374E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,14 +178,17 @@
 		3BF799561C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JSCCustomHeight.h"; sourceTree = "<group>"; };
 		3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JSCCustomHeight.m"; sourceTree = "<group>"; };
 		5BBF4B234424914FC5328785 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E55395C84413E5839BB0EF2 /* Pods-SocialChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		83B1FFFEEC3D0B2AF3391221 /* Pods-SocialChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F6768CF6A78C7DF15507DFA /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
-		991786815C3DCD1FE86BED8C /* Pods-SocialChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		9201C97288C4140A98577417 /* Pods-SocialChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		9821D63D76D6A4FDEDFF67DF /* Pods_SocialChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		B2809D28FFCD78FAD63E431B /* Pods-SocialChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C053BEF568BCD9CF9F341171 /* Pods_SocialChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C9187E6B5128FE05C33908 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DDF87DBB5D8F7E704AE694FC /* Pods-SocialChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		EC6E679A3EE4CB20817ABFED /* Pods_SocialChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +201,7 @@
 				6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */,
 				688E4A7F2D96FE901926B777 /* SystemConfiguration.framework in Frameworks */,
 				D980C4EDBB68412EEA73790C /* QuartzCore.framework in Frameworks */,
-				47864D810E09D246BC7321BC /* Pods_SocialChallenge.framework in Frameworks */,
+				768D9FCD6D4111E4E7BE8D79 /* Pods_SocialChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D079945656FDBD5447B2AA9B /* Pods_SocialChallengeTests.framework in Frameworks */,
+				789BD66046FB5CE1F9AF47DF /* Pods_SocialChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,8 +222,8 @@
 				3B3111861B6E110B008E374E /* SocialChallenge */,
 				3B3111A61B6E110B008E374E /* SocialChallengeTests */,
 				3B3111851B6E110B008E374E /* Products */,
-				E329036832D4BECC41E1C2D0 /* Pods */,
 				E5C92224D8C24ABAB9801BE1 /* Frameworks */,
+				948AF46DCF037C5DAEBBABD4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -762,13 +762,13 @@
 			path = UINavigationBar;
 			sourceTree = "<group>";
 		};
-		E329036832D4BECC41E1C2D0 /* Pods */ = {
+		948AF46DCF037C5DAEBBABD4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0E5E9A3D44389DCD4EE8355B /* Pods-SocialChallenge.debug.xcconfig */,
-				191275F79F5A5992860EFF08 /* Pods-SocialChallenge.release.xcconfig */,
-				B2809D28FFCD78FAD63E431B /* Pods-SocialChallengeTests.debug.xcconfig */,
-				991786815C3DCD1FE86BED8C /* Pods-SocialChallengeTests.release.xcconfig */,
+				9201C97288C4140A98577417 /* Pods-SocialChallenge.debug.xcconfig */,
+				DDF87DBB5D8F7E704AE694FC /* Pods-SocialChallenge.release.xcconfig */,
+				5E55395C84413E5839BB0EF2 /* Pods-SocialChallengeTests.debug.xcconfig */,
+				83B1FFFEEC3D0B2AF3391221 /* Pods-SocialChallengeTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -784,8 +784,8 @@
 				ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */,
 				A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */,
 				5BBF4B234424914FC5328785 /* Pods.framework */,
-				12D0755087E1EE97D275FD2C /* Pods_SocialChallenge.framework */,
-				C053BEF568BCD9CF9F341171 /* Pods_SocialChallengeTests.framework */,
+				9821D63D76D6A4FDEDFF67DF /* Pods_SocialChallenge.framework */,
+				EC6E679A3EE4CB20817ABFED /* Pods_SocialChallengeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -797,12 +797,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B3111AB1B6E110B008E374E /* Build configuration list for PBXNativeTarget "SocialChallenge" */;
 			buildPhases = (
-				38F5A9356B0110BAEEC9B438 /* Check Pods Manifest.lock */,
+				63691F742A30FE584F3CFA18 /* Check Pods Manifest.lock */,
 				3B3111801B6E110B008E374E /* Sources */,
 				3B3111811B6E110B008E374E /* Frameworks */,
 				3B3111821B6E110B008E374E /* Resources */,
-				7573DD2821CE151FA49FA95D /* Embed Pods Frameworks */,
-				36E9D7E2BAAA1A9C330C9E76 /* Copy Pods Resources */,
+				B00623E1B9C5689F8636D170 /* Embed Pods Frameworks */,
+				6299BD25F729F655798DE6E6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -817,12 +817,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B3111AE1B6E110B008E374E /* Build configuration list for PBXNativeTarget "SocialChallengeTests" */;
 			buildPhases = (
-				762E7B38A73A781CC95E6B0F /* Check Pods Manifest.lock */,
+				9A5A748C08E21C770CE08B25 /* Check Pods Manifest.lock */,
 				3B31119F1B6E110B008E374E /* Sources */,
 				3B3111A01B6E110B008E374E /* Frameworks */,
 				3B3111A11B6E110B008E374E /* Resources */,
-				C352BB3112008416B6179F5D /* Embed Pods Frameworks */,
-				DF8EFD625383F82B41E9FB51 /* Copy Pods Resources */,
+				9DE141D42232F5EA916D6A62 /* Embed Pods Frameworks */,
+				08BE2E172562E9A46EAEBAAA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -890,7 +890,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36E9D7E2BAAA1A9C330C9E76 /* Copy Pods Resources */ = {
+		08BE2E172562E9A46EAEBAAA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6299BD25F729F655798DE6E6 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -905,7 +920,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		38F5A9356B0110BAEEC9B438 /* Check Pods Manifest.lock */ = {
+		63691F742A30FE584F3CFA18 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -920,22 +935,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7573DD2821CE151FA49FA95D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		762E7B38A73A781CC95E6B0F /* Check Pods Manifest.lock */ = {
+		9A5A748C08E21C770CE08B25 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -950,7 +950,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C352BB3112008416B6179F5D /* Embed Pods Frameworks */ = {
+		9DE141D42232F5EA916D6A62 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -965,19 +965,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF8EFD625383F82B41E9FB51 /* Copy Pods Resources */ = {
+		B00623E1B9C5689F8636D170 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1106,7 +1106,7 @@
 		};
 		3B3111AC1B6E110B008E374E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E5E9A3D44389DCD4EE8355B /* Pods-SocialChallenge.debug.xcconfig */;
+			baseConfigurationReference = 9201C97288C4140A98577417 /* Pods-SocialChallenge.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1165,7 +1165,7 @@
 		};
 		3B3111AD1B6E110B008E374E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 191275F79F5A5992860EFF08 /* Pods-SocialChallenge.release.xcconfig */;
+			baseConfigurationReference = DDF87DBB5D8F7E704AE694FC /* Pods-SocialChallenge.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1222,7 +1222,7 @@
 		};
 		3B3111AF1B6E110B008E374E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2809D28FFCD78FAD63E431B /* Pods-SocialChallengeTests.debug.xcconfig */;
+			baseConfigurationReference = 5E55395C84413E5839BB0EF2 /* Pods-SocialChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1281,7 +1281,7 @@
 		};
 		3B3111B01B6E110B008E374E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 991786815C3DCD1FE86BED8C /* Pods-SocialChallengeTests.release.xcconfig */;
+			baseConfigurationReference = 83B1FFFEEC3D0B2AF3391221 /* Pods-SocialChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

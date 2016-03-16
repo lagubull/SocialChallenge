@@ -18,14 +18,14 @@
 /**
  User pressed on the favorites button.
  
- @parameter post - post cell is showing.
+ @param post - post cell is showing.
  */
 - (void)didPressFavoritesButton:(JSCPost *)post;
 
 /**
  User pressed on the comments button.
  
- @parameter post - post cell is showing.
+ @param post - post cell is showing.
  */
 - (void)didPressCommentsButton:(JSCPost *)post;
 

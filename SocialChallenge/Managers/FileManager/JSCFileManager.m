@@ -15,14 +15,14 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
 /**
  Path of documents directory.
  
- return NSString instance.
+ @return NSString instance.
  */
 + (NSString *)documentsDirectoryPath;
 
 /**
  Path of resource in documents directory.
  
- @parameter path - path that will be combined documents path.
+ @param path - path that will be combined documents path.
  
  @return Combined path.
  */
@@ -31,7 +31,7 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
 /**
  Retrieves data to path in document directory for this particular application.
  
- @parameter path - path that will be combined documents path.
+ @param path - path that will be combined documents path.
  
  @return NSData that was retrieved.
  */
@@ -42,8 +42,8 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
  
  If the directory doesn't exist it will be created.
  
- @parameter data - data to be saved.
- @parameter path - path that the data will be saved to.
+ @param data - data to be saved.
+ @param path - path that the data will be saved to.
  
  @return BOOL if save was successful.
  */
@@ -54,7 +54,7 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
  
  If the directory doesn't exist it will be created.
  
- @parameter path - path that will be created.
+ @param path - path that will be created.
  
  @return BOOL if creation was successful.
  */
@@ -63,7 +63,7 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
 /**
  Delete data from path.
  
- @parameter path - path to the file.
+ @param path - path to the file.
  
  @return BOOL if deletion was successful.
  */
