@@ -7,7 +7,7 @@
 
 #pragma mark - prefix Imports
 
-#import "JSCOperation.h"
+#import <Foundation/Foundation.h>
 #import "JSCJSONManager.h"
 #import "JSCSession.h"
 #import "JSCMediaManager.h"

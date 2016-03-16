@@ -6,9 +6,7 @@
 //
 //
 
-#import "JSCOperation.h"
-
-@interface JSCMediaStorageOperation : JSCOperation
+@interface JSCMediaStorageOperation : NSOperation//JSCOperation
 
 /**
  Creates an operation to store an asset.

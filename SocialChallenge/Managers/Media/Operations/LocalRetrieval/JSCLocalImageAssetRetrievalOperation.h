@@ -6,9 +6,7 @@
 //
 //
 
-#import "JSCOperation.h"
-
-@interface JSCLocalImageAssetRetrievalOperation : JSCOperation
+@interface JSCLocalImageAssetRetrievalOperation : NSOperation//JSCOperation
 
 /**
  Creates an operation to retrieve an asset from disk.

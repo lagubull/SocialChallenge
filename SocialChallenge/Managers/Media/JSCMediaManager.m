@@ -24,85 +24,85 @@
                      success:(void (^)(id result, NSString *postId))success
                      failure:(void (^)(NSError *error, NSString *postId))failure;
 {
-    if (post.userAvatarRemoteURL)
-    {
-        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postId];
-        
-        operation.onCompletion = ^(UIImage *imageMedia)
-        {
-            if (imageMedia)
-            {
-                if (success)
-                {
-                    success(imageMedia, post.postId);
-                }
-            }
-            else
-            {
-                if (retrievalRequired)
-                {
-                    retrievalRequired(post.postId);
-                }
-                
-                [EDSDownloadSession scheduleDownloadWithId:post.postId
-                                                   fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
-                                                  progress:nil
-                                                   success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData)
-                 {
-                     JSCMediaStorageOperation *storeOPeration = [[JSCMediaStorageOperation alloc] initWithPostID:post.postId
-                                                                                                            data:responseData];
-                     
-                     storeOPeration.onSuccess = ^(id result)
-                     {
-                         if (result)
-                         {
-                             if (success)
-                             {
-                                 success(result, post.postId);
-                             }
-                         }
-                         else
-                         {
-                             if (failure)
-                             {
-                                 failure(nil, post.postId);
-                             }
-                         }
-                     };
-                     
-                     storeOPeration.onFailure = ^(NSError *error)
-                     {
-                         if (failure)
-                         {
-                             failure(error, post.postId);
-                         }
-                     };
-                     
-                     storeOPeration.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
-                     
-                     [[JSCOperationCoordinator sharedInstance] addOperation:storeOPeration];
-                 }
-                                                   failure:^(EDSDownloadTaskInfo *downloadTask, NSError *error)
-                 {
-                     if (failure)
-                     {
-                         failure(error, post.postId);
-                     }
-                 }];
-            }
-        };
-        
-        operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
-        
-        [[JSCOperationCoordinator sharedInstance] addOperation:operation];
-    }
-    else
-    {
-        if (failure)
-        {
-            failure(nil, post.postId);
-        }
-    }
+//    if (post.userAvatarRemoteURL)
+//    {
+//        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postId];
+//        
+//        operation.onCompletion = ^(UIImage *imageMedia)
+//        {
+//            if (imageMedia)
+//            {
+//                if (success)
+//                {
+//                    success(imageMedia, post.postId);
+//                }
+//            }
+//            else
+//            {
+//                if (retrievalRequired)
+//                {
+//                    retrievalRequired(post.postId);
+//                }
+//                
+//                [EDSDownloadSession scheduleDownloadWithId:post.postId
+//                                                   fromURL:[NSURL URLWithString:post.userAvatarRemoteURL]
+//                                                  progress:nil
+//                                                   success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData)
+//                 {
+//                     JSCMediaStorageOperation *storeOPeration = [[JSCMediaStorageOperation alloc] initWithPostID:post.postId
+//                                                                                                            data:responseData];
+//                     
+//                     storeOPeration.onSuccess = ^(id result)
+//                     {
+//                         if (result)
+//                         {
+//                             if (success)
+//                             {
+//                                 success(result, post.postId);
+//                             }
+//                         }
+//                         else
+//                         {
+//                             if (failure)
+//                             {
+//                                 failure(nil, post.postId);
+//                             }
+//                         }
+//                     };
+//                     
+//                     storeOPeration.onFailure = ^(NSError *error)
+//                     {
+//                         if (failure)
+//                         {
+//                             failure(error, post.postId);
+//                         }
+//                     };
+//                     
+//                     storeOPeration.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
+//                     
+//                     [[JSCOperationCoordinator sharedInstance] addOperation:storeOPeration];
+//                 }
+//                                                   failure:^(EDSDownloadTaskInfo *downloadTask, NSError *error)
+//                 {
+//                     if (failure)
+//                     {
+//                         failure(error, post.postId);
+//                     }
+//                 }];
+//            }
+//        };
+//        
+//        operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
+//        
+//        [[JSCOperationCoordinator sharedInstance] addOperation:operation];
+//    }
+//    else
+//    {
+//        if (failure)
+//        {
+//            failure(nil, post.postId);
+//        }
+//    }
 }
 
 @end

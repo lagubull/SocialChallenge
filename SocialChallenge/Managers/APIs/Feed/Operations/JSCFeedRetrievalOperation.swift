@@ -37,23 +37,13 @@ class JSCFeedRetrievalOperation: JSCCDSOperation {
     //MARK: Init
     
     /**
-    Default initialiser.
-    
-    - Returns: an instance of the class.
-    */
-    override init() {
-        
-        super.init()
-    }
-    
-    /**
     Creates an operation to retrieve a feed.
     
     - Parameter: mode indicates whether should be the first the page or second.
     
     - Returns: an instance of the class.
     */
-    convenience init(mode: JSCDataRetrievalOperationMode) {
+    required convenience init(mode: JSCDataRetrievalOperationMode) {
         
         self.init()
         
@@ -74,22 +64,6 @@ class JSCFeedRetrievalOperation: JSCCDSOperation {
         
         return _identifier
     }()
-    
-    //MARK: NSCoding
-    
-    required init?(coder aDecoder: NSCoder) {
-        
-        self.mode = JSCDataRetrievalOperationMode (rawValue: aDecoder.decodeIntegerForKey("mode"))!
-        
-        super.init()
-        
-        self.identifier = self.myIdentifier
-    }
-    
-    override func encodeWithCoder(aCoder: NSCoder) {
-        
-        aCoder.encodeInteger(self.mode!.rawValue, forKey: "mode")
-    }
     
     //MARK: Start
     
