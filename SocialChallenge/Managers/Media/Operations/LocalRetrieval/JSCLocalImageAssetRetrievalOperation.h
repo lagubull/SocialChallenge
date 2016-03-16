@@ -17,6 +17,6 @@
  
  @return an instance of the class.
  */
-- (instancetype)initWithPostID:(NSString *)postId;
+- (instancetype)initWithPostId:(NSString *)postId;
 
 @end

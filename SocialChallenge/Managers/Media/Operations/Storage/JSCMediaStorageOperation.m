@@ -32,7 +32,7 @@
 
 #pragma mark - Init
 
-- (instancetype)initWithPostID:(NSString *)postId
+- (instancetype)initWithPostId:(NSString *)postId
                           data:(NSData *)data
 {
     self = [super init];
@@ -56,30 +56,6 @@
     }
     
     return _identifier;
-}
-
-#pragma mark - NSCoding
-
-- (id)initWithCoder:(NSCoder *)decoder
-{
-    self = [super init];
-    
-    if (self)
-    {
-        self.postId = [decoder decodeObjectForKey:NSStringFromSelector(@selector(postId))];
-        self.data = [decoder decodeObjectForKey:NSStringFromSelector(@selector(data))];
-    }
-    
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)encoder
-{
-    [encoder encodeObject:self.postId
-                   forKey:NSStringFromSelector(@selector(postId))];
-    
-    [encoder encodeObject:self.data
-                   forKey:NSStringFromSelector(@selector(data))];
 }
 
 #pragma mark - Start

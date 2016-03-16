@@ -27,7 +27,7 @@
 {
     if (post.userAvatarRemoteURL)
     {
-        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postId];
+        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostId:post.postId];
         
         operation.onCompletion = ^(UIImage *imageMedia)
         {
@@ -50,7 +50,7 @@
                                                   progress:nil
                                                    success:^(EDSDownloadTaskInfo *downloadTask, NSData *responseData)
                  {
-                     JSCMediaStorageOperation *storeOPeration = [[JSCMediaStorageOperation alloc] initWithPostID:post.postId
+                     JSCMediaStorageOperation *storeOPeration = [[JSCMediaStorageOperation alloc] initWithPostId:post.postId
                                                                                                             data:responseData];
                      
                      storeOPeration.onSuccess = ^(id result)

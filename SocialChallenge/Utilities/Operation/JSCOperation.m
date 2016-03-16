@@ -69,19 +69,6 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [self init];
-    
-    if (self)
-    {
-        self.identifier = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(identifier))];
-        self.targetSchedulerIdentifier = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(targetSchedulerIdentifier))];
-    }
-    
-    return self;
-}
-
 #pragma mark - Name
 
 - (NSString *)name
@@ -184,6 +171,23 @@
         }
     };
     
+    // Complete coalescing
+    void (^myCompletionBlock)(id result) = [_onCompletion copy];
+    void (^theirCompletionBlock)(id result) = [operation->_onCompletion copy];
+    
+    self.onFailure = ^(NSError *error)
+    {
+        if (myCompletionBlock)
+        {
+            myCompletionBlock(error);
+        }
+        
+        if (theirCompletionBlock)
+        {
+            theirCompletionBlock(error);
+        }
+    };
+    
     /**
      We replace the other operation's progress object,
      so that anyone listening to that one, actually gets the
@@ -263,34 +267,6 @@
              self.onCompletion(result);
          }];
     }
-}
-
-#pragma mark - NSCoding
-
-- (void)encodeWithCoder:(NSCoder *)aCoder
-{
-    [aCoder encodeObject:self.identifier
-                  forKey:NSStringFromSelector(@selector(identifier))];
-    
-    [aCoder encodeObject:self.targetSchedulerIdentifier
-                  forKey:NSStringFromSelector(@selector(targetSchedulerIdentifier))];
-}
-
-#pragma mark - NSCopying
-
-- (instancetype)copyWithZone:(NSZone *)zone
-{
-    JSCOperation *newOperation = [[self.class allocWithZone:zone] init];
-    
-    newOperation.callbackQueue = _callbackQueue;
-    
-    newOperation.identifier = [_identifier copy];
-    newOperation.targetSchedulerIdentifier = [_targetSchedulerIdentifier copy];
-    
-    newOperation.onSuccess = [_onSuccess copy];
-    newOperation.onFailure = [_onFailure copy];
-    
-    return newOperation;
 }
 
 @end

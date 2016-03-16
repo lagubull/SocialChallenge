@@ -26,7 +26,7 @@ typedef void (^JSCOperationOnFailureCallback)(NSError *error);
 /**
  Code base for the operations in the app.
  */
-@interface JSCOperation : NSOperation <NSCoding, NSCopying>
+@interface JSCOperation : NSOperation
 
 /**
  Identifies the operation.
