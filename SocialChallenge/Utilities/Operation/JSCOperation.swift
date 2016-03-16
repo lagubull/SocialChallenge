@@ -71,7 +71,7 @@ class JSCOperation:  NSOperation {
     
     private var _executing : Bool = false
     
-    /*
+    /**
     YES - The operation has executed.
     */
     override var finished : Bool {
@@ -128,19 +128,14 @@ class JSCOperation:  NSOperation {
     
     //MARK: Init
     
-    init(ready: Bool) {
+    required override init() {
+        
+        self.progress = NSProgress(totalUnitCount: -1)
+        self.callbackQueue = NSOperationQueue.currentQueue()
         
         super.init()
         
-        self.ready = ready
-        self.progress = NSProgress(totalUnitCount: -1)
-        self.callbackQueue = NSOperationQueue.currentQueue()
-    }
-    
-    required convenience override init() {
-        
-        self.init(ready: true)
-        
+        ready = true
     }
     
     //MARK: Name

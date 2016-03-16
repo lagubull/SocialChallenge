@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B30E6C51C996E0500DFE289 /* JSCMediaStorageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30E6C41C996E0500DFE289 /* JSCMediaStorageOperation.swift */; };
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
 		3B316EDF1C88686B0052F19A /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
@@ -75,6 +76,7 @@
 /* Begin PBXFileReference section */
 		10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		36111EF044CFE5564B49FEE5 /* Pods-SocialChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B30E6C41C996E0500DFE289 /* JSCMediaStorageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCMediaStorageOperation.swift; sourceTree = "<group>"; };
 		3B3111841B6E110B008E374E /* SocialChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111881B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B3111A31B6E110B008E374E /* SocialChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,8 +88,6 @@
 		3B316EDA1C8859150052F19A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRequest.swift; sourceTree = "<group>"; };
 		3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRetrievalOperation.swift; sourceTree = "<group>"; };
-		3B37819C1C74756100D12BB3 /* JSCMediaStorageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCMediaStorageOperation.h; sourceTree = "<group>"; };
-		3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCMediaStorageOperation.m; sourceTree = "<group>"; };
 		3B3781A01C748DB300D12BB3 /* JSCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFileManager.h; sourceTree = "<group>"; };
 		3B3781A11C748DB300D12BB3 /* JSCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFileManager.m; sourceTree = "<group>"; };
 		3B3EF64F1C73962400223E5A /* JSCMediaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCMediaManager.h; sourceTree = "<group>"; };
@@ -393,8 +393,7 @@
 		3B37819B1C74753400D12BB3 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				3B37819C1C74756100D12BB3 /* JSCMediaStorageOperation.h */,
-				3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */,
+				3B30E6C41C996E0500DFE289 /* JSCMediaStorageOperation.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -957,6 +956,7 @@
 				3B4288071C89E80F00D3D4EF /* JSCPostPage.swift in Sources */,
 				3B4288061C89E80D00D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
 				3BF0A1671C933CC9004E9E50 /* JSCLoadingView.swift in Sources */,
+				3B30E6C51C996E0500DFE289 /* JSCMediaStorageOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
