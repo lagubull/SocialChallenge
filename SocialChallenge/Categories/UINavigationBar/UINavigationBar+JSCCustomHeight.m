@@ -10,12 +10,12 @@
 
 #import "objc/runtime.h"
 
-@implementation UINavigationBar (JSCCustomHeight)
-
 /**
  constant for the height.
  */
 static char *const kJSCHeightKey = "Height";
+
+@implementation UINavigationBar (JSCCustomHeight)
 
 - (void)jsc_setHeight:(CGFloat)height
 {

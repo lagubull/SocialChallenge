@@ -13,7 +13,7 @@
 /**
  Retrieve data to path in document directory.
  
- @parameter path - path that will be combined documents path.
+ @param path - path that will be combined documents path.
  
  @return NSData that was retrieved.
  */
@@ -22,8 +22,8 @@
 /**
  Save data to path in document directory.
  
- @parameter data - data to be saved.
- @parameter path - path that will be combined documents path.
+ @param data - data to be saved.
+ @param path - path that will be combined documents path.
  
  @return BOOL if save was successful.
  */
@@ -32,7 +32,7 @@
 /**
  Delete data from path in document directory.
  
- @parameter path - path that will be combined documents path.
+ @param path - path that will be combined documents path.
  
  @return BOOL if deletion was successful.
  */
