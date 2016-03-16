@@ -175,16 +175,16 @@
     void (^myCompletionBlock)(id result) = [_onCompletion copy];
     void (^theirCompletionBlock)(id result) = [operation->_onCompletion copy];
     
-    self.onFailure = ^(NSError *error)
+    self.onCompletion = ^(id result)
     {
         if (myCompletionBlock)
         {
-            myCompletionBlock(error);
+            myCompletionBlock(result);
         }
         
         if (theirCompletionBlock)
         {
-            theirCompletionBlock(error);
+            theirCompletionBlock(result);
         }
     };
     
