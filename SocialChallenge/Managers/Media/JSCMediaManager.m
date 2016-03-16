@@ -10,7 +10,6 @@
 
 #import <EasyDownloadSession/EDSDownloadSession.h>
 
-#import "JSCLocalImageAssetRetrievalOperation.h"
 #import "JSCOperationCoordinator.h"
 #import "JSCFileManager.h"
 
@@ -25,19 +24,19 @@
 {
     if (post.userAvatarRemoteURL)
     {
-//        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostID:post.postId];
-//        
-//        operation.onCompletion = ^(UIImage *imageMedia)
-//        {
-//            if (imageMedia)
-//            {
-//                if (success)
-//                {
-//                    success(imageMedia, post.postId);
-//                }
-//            }
-//            else
-//            {
+        JSCLocalImageAssetRetrievalOperation *operation = [[JSCLocalImageAssetRetrievalOperation alloc] initWithPostId:post.postId];
+        
+        operation.onCompletion = ^(UIImage *imageMedia)
+        {
+            if (imageMedia)
+            {
+                if (success)
+                {
+                    success(imageMedia, post.postId);
+                }
+            }
+            else
+            {
                 if (retrievalRequired)
                 {
                     retrievalRequired(post.postId);
@@ -88,12 +87,12 @@
                          failure(error, post.postId);
                      }
                  }];
-//            }
-//        };
-//
-//        operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
-//        
-//        [[JSCOperationCoordinator sharedInstance] addOperation:operation];
+            }
+        };
+
+        operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
+        
+        [[JSCOperationCoordinator sharedInstance] addOperation:operation];
     }
     else
     {

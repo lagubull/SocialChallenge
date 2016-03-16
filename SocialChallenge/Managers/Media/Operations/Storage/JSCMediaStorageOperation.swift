@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+Operation to store an asset in disk.
+*/
 class JSCMediaStorageOperation: JSCOperation {
     
     /**
@@ -22,19 +25,17 @@ class JSCMediaStorageOperation: JSCOperation {
     
     //MARK: Init
     
-    /**
-    Creates an operation to store an asset.
-    
-    @param postId - indicates the post the asset is related to.
-    @param location - indicates where the object has been stored by default.
-    
-    @return an instance of the class.
-    */
     required init()
     {
         super.init()
     }
     
+    /**
+     Creates an operation to store an asset.
+     
+     @param postId - indicates the post the asset is related to.
+     @param location - indicates where the object has been stored by default.
+     */
     convenience init (postId: String, data: NSData) {
         
         self.init()
@@ -45,9 +46,10 @@ class JSCMediaStorageOperation: JSCOperation {
     
     //MARK: Identifier
     
-    override var identifier : String? {
+    override var identifier: String? {
         
         get {
+            
             return _identifier
         }
         set {

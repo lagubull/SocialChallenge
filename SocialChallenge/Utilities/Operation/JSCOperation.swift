@@ -322,7 +322,7 @@ class JSCOperation:  NSOperation {
     /**
      Finishes the execution of the operation and calls the onCompletion callback.
      */
-    func didCompleteWithResult(result: AnyObject) {
+    func didCompleteWithResult(result: AnyObject?) {
         
         self.result = result
         
