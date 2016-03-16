@@ -48,21 +48,27 @@ class JSCFeedRetrievalOperation: JSCCDSOperation {
         self.init()
         
         self.mode = mode
-
-        self.identifier = self.myIdentifier
     }
     
     //MARK: Identifier
     
-    /**
-    We need to create new identifier variable as we cannot override from the parent
-    */
-    lazy var myIdentifier: String = {
+    override var identifier: String? {
         
-            //TODO: override from the parent when migrated to Swift
-        let _identifier: String = "retrieveFeed \(self.mode!.rawValue)"
+        get {
+            
+            return _identifier
+        }
+        set {
+            
+            willChangeValueForKey("identifier")
+            self._identifier = newValue!
+            didChangeValueForKey("identifier")
+        }
+    }
+    
+    private lazy var _identifier: String = {
         
-        return _identifier
+        return "retrieveFeed \(self.mode!.rawValue)"
     }()
     
     //MARK: Start

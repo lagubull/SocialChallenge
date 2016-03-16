@@ -34,7 +34,6 @@ class JSCLocalImageAssetRetrievalOperation: JSCOperation {
     
     //MARK: Identifier
     
-    
     override var identifier: String? {
         
         get {
@@ -44,7 +43,7 @@ class JSCLocalImageAssetRetrievalOperation: JSCOperation {
         set {
             
             willChangeValueForKey("identifier")
-            _identifier = newValue!
+            self._identifier = newValue!
             didChangeValueForKey("identifier")
         }
     }

@@ -25,8 +25,8 @@ class JSCMediaStorageOperation: JSCOperation {
     
     //MARK: Init
     
-    required init()
-    {
+    required init() {
+        
         super.init()
     }
     
@@ -55,7 +55,7 @@ class JSCMediaStorageOperation: JSCOperation {
         set {
             
             willChangeValueForKey("identifier")
-            _identifier = newValue!
+            self._identifier = newValue!
             didChangeValueForKey("identifier")
         }
     }

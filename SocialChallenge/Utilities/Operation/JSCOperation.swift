@@ -41,6 +41,7 @@ class JSCOperation:  NSOperation {
     override var ready : Bool {
         
         get {
+            
             return _ready
         }
         set {
@@ -59,6 +60,7 @@ class JSCOperation:  NSOperation {
     override var executing : Bool {
         
         get {
+            
             return _executing
         }
         set {
@@ -77,6 +79,7 @@ class JSCOperation:  NSOperation {
     override var finished : Bool {
         
         get {
+            
             return _finished
         }
         set {
@@ -107,7 +110,7 @@ class JSCOperation:  NSOperation {
     /**
      Identifies the scheduler for the operation.
      */
-    var targetSchedulerIdentifier:String?
+    var targetSchedulerIdentifier: String?
     
     /**
      Callback called when the operation completes successfully.
@@ -135,7 +138,7 @@ class JSCOperation:  NSOperation {
         
         super.init()
         
-        ready = true
+        self.ready = true
     }
     
     //MARK: Name

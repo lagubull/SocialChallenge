@@ -98,8 +98,8 @@ class JSCCDSOperation: JSCOperation {
             
             self.saveLocalContextChangesToMainContext(result)
         }
-        else
-        {
+        else {
+            
             if let unwrappedResult = result {
                 
                 if (unwrappedResult.isKindOfClass(NSError.self)) {
