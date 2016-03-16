@@ -20,6 +20,8 @@ class JSCCDSOperation: JSCOperation {
     
     /**
     Saves the parent managed context if there is changes.
+    
+    - Parameter result - result to finish with and pass to on success callback.
     */
     func saveLocalContextChangesToMainContext(result: AnyObject?) {
         
@@ -45,8 +47,7 @@ class JSCCDSOperation: JSCOperation {
             if (didSave) {
                 
                 /*
-                Coredata will delay cascading deletes for performance
-                so we force them to happen.
+                Coredata will delay cascading deletes for performance so we force them to happen.
                 */
                 CDSServiceManager.sharedInstance().backgroundManagedObjectContext.processPendingChanges()
                 
@@ -69,7 +70,7 @@ class JSCCDSOperation: JSCOperation {
 
                     if (unwrappedResult.isKindOfClass(NSError.self)) {
                         
-                        self.didFailWithError(unwrappedResult as! NSError)
+                        self.didFailWithError(unwrappedResult as? NSError)
                     }
                     else {
                         
@@ -97,16 +98,23 @@ class JSCCDSOperation: JSCOperation {
             
             self.saveLocalContextChangesToMainContext(result)
         }
-        else
-        {
-            if result!.isKindOfClass(NSError.self) {
+        else {
+            
+            if let unwrappedResult = result {
                 
-                self.didFailWithError(result as! NSError)
+                if (unwrappedResult.isKindOfClass(NSError.self)) {
+                    
+                    self.didFailWithError(unwrappedResult as? NSError)
+                }
+                else {
+                    
+                    self.didSucceedWithResult(unwrappedResult)
+                }
             }
             else {
                 
                 self.didSucceedWithResult(result)
-            }
+            }    
         }
     }
 }

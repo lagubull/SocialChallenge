@@ -37,59 +37,39 @@ class JSCFeedRetrievalOperation: JSCCDSOperation {
     //MARK: Init
     
     /**
-    Default initialiser.
-    
-    - Returns: an instance of the class.
-    */
-    override init() {
-        
-        super.init()
-    }
-    
-    /**
     Creates an operation to retrieve a feed.
     
     - Parameter: mode indicates whether should be the first the page or second.
     
     - Returns: an instance of the class.
     */
-    convenience init(mode: JSCDataRetrievalOperationMode) {
+    required convenience init(mode: JSCDataRetrievalOperationMode) {
         
         self.init()
         
         self.mode = mode
-
-        self.identifier = self.myIdentifier
     }
     
     //MARK: Identifier
     
-    /**
-    We need to create new identifier variable as we cannot override from the parent
-    */
-    lazy var myIdentifier: String = {
+    override var identifier: String? {
         
-            //TODO: override from the parent when migrated to Swift
-        let _identifier: String = "retrieveFeed \(self.mode!.rawValue)"
+        get {
+            
+            return _identifier
+        }
+        set {
+            
+            willChangeValueForKey("identifier")
+            self._identifier = newValue!
+            didChangeValueForKey("identifier")
+        }
+    }
+    
+    private lazy var _identifier: String = {
         
-        return _identifier
+        return "retrieveFeed \(self.mode!.rawValue)"
     }()
-    
-    //MARK: NSCoding
-    
-    required init?(coder aDecoder: NSCoder) {
-        
-        self.mode = JSCDataRetrievalOperationMode (rawValue: aDecoder.decodeIntegerForKey("mode"))!
-        
-        super.init()
-        
-        self.identifier = self.myIdentifier
-    }
-    
-    override func encodeWithCoder(aCoder: NSCoder) {
-        
-        aCoder.encodeInteger(self.mode!.rawValue, forKey: "mode")
-    }
     
     //MARK: Start
     

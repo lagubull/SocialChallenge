@@ -117,13 +117,13 @@ class JSCHomeAdapter: NSObject, UITableViewDataSource, UITableViewDelegate, STVD
     */
     func refresh() {
         
-        JSCFeedAPIManager.retrieveFeedWithMode(JSCDataRetrievalOperationMode.FirstPage, success: { [weak self] (result: AnyObject!) in
+        JSCFeedAPIManager.retrieveFeedWithMode(JSCDataRetrievalOperationMode.FirstPage, success: { [weak self] (result: AnyObject?) in
             
             let hasContent = self!.fetchedResultsController.fetchedObjects!.count > 0
             
             self!.tableView!.didRefreshWithContent(hasContent)
             self!.tableView!.reloadData()
-            }, failure: { [weak self] (error: NSError!) in
+            }, failure: { [weak self] (error: NSError?) in
                 
                 let hasContent = self!.fetchedResultsController.fetchedObjects!.count > 0
                 
@@ -135,10 +135,10 @@ class JSCHomeAdapter: NSObject, UITableViewDataSource, UITableViewDelegate, STVD
         
         self.tableView!.willPaginate()
         
-        JSCFeedAPIManager.retrieveFeedWithMode(JSCDataRetrievalOperationMode.NextPage, success: { [weak self] (result :AnyObject!) in
+        JSCFeedAPIManager.retrieveFeedWithMode(JSCDataRetrievalOperationMode.NextPage, success: { [weak self] (result :AnyObject?) in
             
             self!.tableView!.didPaginate()
-            }, failure: { [weak self] (error : NSError!) in
+            }, failure: { [weak self] (error : NSError?) in
                 
                 self!.tableView!.didPaginate()
             })

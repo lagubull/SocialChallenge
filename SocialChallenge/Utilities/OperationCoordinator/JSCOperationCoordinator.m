@@ -8,9 +8,7 @@
 
 #import "JSCOperationCoordinator.h"
 
-#import "JSCOperation.h"
 #import "JSCOperationScheduler.h"
-
 
 NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier = @"kJSCNetworkDataOperationSchedulerTypeIdentifier";
 

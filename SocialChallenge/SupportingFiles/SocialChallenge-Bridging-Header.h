@@ -7,7 +7,7 @@
 
 #pragma mark - prefix Imports
 
-#import "JSCOperation.h"
+#import <Foundation/Foundation.h>
 #import "JSCJSONManager.h"
 #import "JSCSession.h"
 #import "JSCMediaManager.h"
@@ -15,6 +15,8 @@
 #import "JSCOperationCoordinator.h"
 #import "JSCFileManager.h"
 #import "NSOperationQueue+JSCOperationScheduler.h"
+#import "UIImage+JSCRoundImage.h"
+#import "UIImage+JSCScaleImage.h"
 
 #endif /* SocialChallenge_Bridging_Header_h */
 
