@@ -77,7 +77,7 @@ class JSCOperationCoordinator {
     - Parameter operation - opearation to coaleque with.
     - Parameter scheduler - Scheduler to coalesce the operation on.
     
-    - Returns the coalesced operation
+    - Returns: the coalesced operation
     */
     func coalesceOperation(newOperation: JSCOperation, queue: NSOperationQueue) -> JSCOperation? {
         
