@@ -10,7 +10,6 @@
 
 #import <EasyDownloadSession/EDSDownloadSession.h>
 
-#import "JSCOperationCoordinator.h"
 #import "JSCFileManager.h"
 
 @implementation JSCMediaManager
@@ -20,7 +19,7 @@
 + (void)retrieveMediaForPost:(JSCPost *)post
            retrievalRequired:(void (^)(NSString *postId))retrievalRequired
                      success:(void (^)(id result, NSString *postId))success
-                     failure:(void (^)(NSError *error, NSString *postId))failure;
+                     failure:(void (^)(NSError *error, NSString *postId))failure
 {
     if (post.userAvatarRemoteURL)
     {
@@ -76,9 +75,9 @@
                          }
                      };
                      
-                     storeOPeration.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
-                     
-                     [[JSCOperationCoordinator sharedInstance] addOperation:storeOPeration];
+//                     storeOPeration.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
+//                     
+//                     [[JSCOperationCoordinator sharedInstance] addOperation:storeOPeration];
                  }
                                                    failure:^(EDSDownloadTaskInfo *downloadTask, NSError *error)
                  {
@@ -90,9 +89,9 @@
             }
         };
 
-        operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
-        
-        [[JSCOperationCoordinator sharedInstance] addOperation:operation];
+//        operation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
+//        
+//        [[JSCOperationCoordinator sharedInstance] addOperation:operation];
     }
     else
     {

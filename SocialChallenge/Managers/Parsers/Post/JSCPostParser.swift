@@ -38,9 +38,9 @@ class JSCPostParser: JSCParser {
     
     - Returns: NSArray of posts.
     */
-    func parsePosts(postsDictionaries: [[String: AnyObject]]) -> [JSCPost] {
+    func parsePosts(postsDictionaries: Array <Dictionary <String, AnyObject>>) -> Array <JSCPost> {
         
-        var posts: [JSCPost] = []
+        var posts: Array <JSCPost> = []
         
         for postDictionary in postsDictionaries {
             
@@ -61,7 +61,7 @@ class JSCPostParser: JSCParser {
     
     - Returns: JSCPostPage instance that was parsed.
     */
-    func parsePost(postDictionary: [String: AnyObject]) -> JSCPost! {
+    func parsePost(postDictionary: Dictionary <String, AnyObject>) -> JSCPost! {
         
         var post: JSCPost!
         

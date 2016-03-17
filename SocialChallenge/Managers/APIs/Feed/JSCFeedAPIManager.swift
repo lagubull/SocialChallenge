@@ -31,8 +31,6 @@ class JSCFeedAPIManager: NSObject {
         
         operation.targetSchedulerIdentifier = kJSCNetworkDataOperationSchedulerTypeIdentifier;
         
-        JSCOperationCoordinator.sharedInstance().addOperation(operation)
+        JSCOperationCoordinator.sharedInstance.addOperation(operation)
     }
-    
-    
 }

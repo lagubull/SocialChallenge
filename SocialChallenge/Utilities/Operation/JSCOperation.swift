@@ -11,17 +11,17 @@ import Foundation
 /**
  Success closure type.
  */
-typealias JSCOperationOnSuccessCallback =  AnyObject? -> ()
+typealias JSCOperationOnSuccessCallback =  AnyObject? -> Void
 
 /**
  Completion closure type.
  */
-typealias JSCOperationOnCompletionCallback =  AnyObject? -> ()
+typealias JSCOperationOnCompletionCallback =  AnyObject? -> Void
 
 /**
  Failure closure type.
  */
-typealias JSCOperationOnFailureCallback =  NSError? -> ()
+typealias JSCOperationOnFailureCallback =  NSError? -> Void
 
 class JSCOperation:  NSOperation {
     
@@ -277,7 +277,7 @@ class JSCOperation:  NSOperation {
         
         if self.executing {
             
-            DLog("\\(self.name!) Operation Finished.")
+            DLog("\(self.name!) Operation Finished.")
             
             self.executing = false
             self.finished = true
