@@ -48,6 +48,7 @@
 		3B316F061C88893A0052F19A /* JSCFeedRetrieveOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B316F051C88893A0052F19A /* JSCFeedRetrieveOperationTests.m */; };
 		3B31FEA61C9ABBC4001E8C34 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B31FEA51C9ABBC4001E8C34 /* JSCSplashViewController.m */; };
 		3B31FEAA1C9ABC41001E8C34 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B31FEA81C9ABC41001E8C34 /* Localizable.strings */; };
+		3B31FEAB1C9AC849001E8C34 /* JSCSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B31FEA51C9ABBC4001E8C34 /* JSCSplashViewController.m */; };
 		3B37819E1C74756100D12BB3 /* JSCMediaStorageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37819D1C74756100D12BB3 /* JSCMediaStorageOperation.m */; };
 		3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
 		3B37AFE11C5F50000055428D /* JSCPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B37AFD61C5F50000055428D /* JSCPost+CoreDataProperties.m */; };
@@ -1035,6 +1036,7 @@
 				3B316EF81C88686B0052F19A /* JSCPostTableViewCell.m in Sources */,
 				3B316EF91C88686B0052F19A /* JSCHomeAdapter.m in Sources */,
 				3B316EFA1C88686B0052F19A /* JSCHomeViewController.m in Sources */,
+				3B31FEAB1C9AC849001E8C34 /* JSCSplashViewController.m in Sources */,
 				3B316EFB1C88686B0052F19A /* JSCWindow.m in Sources */,
 				3B316ED91C88569F0052F19A /* JSCPostParserTests.m in Sources */,
 				3B316EDC1C8862BF0052F19A /* JSCPost.m in Sources */,

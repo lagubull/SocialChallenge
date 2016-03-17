@@ -40,6 +40,8 @@
     self.window.backgroundColor = [UIColor clearColor];
     self.window.clipsToBounds = NO;
     
+    [self registerQueues];
+    
     /**
      For the sake of the exercise, I will get rid of everything on startup
      */
