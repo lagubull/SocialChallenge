@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ View with custom animation to show on app start up.
+ */
 @interface JSCSplashViewController : UIViewController
 
 @end

@@ -12,6 +12,9 @@
 
 @interface JSCRootNavigationController () <UINavigationControllerDelegate>
 
+/**
+ Landing view controller.
+ */
 @property (nonatomic, strong) JSCHomeViewController *homeViewController;
 
 @end
