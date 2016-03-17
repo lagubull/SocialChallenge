@@ -155,7 +155,6 @@
 		3BD850D91B7F3BE10077868E /* JSCJSONManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCJSONManager.m; sourceTree = "<group>"; };
 		3BD89C561B775F580084FA63 /* JSCOperationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationCoordinator.h; sourceTree = "<group>"; };
 		3BD89C571B775F580084FA63 /* JSCOperationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCOperationCoordinator.m; sourceTree = "<group>"; };
-		3BD89C5A1B7761690084FA63 /* JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCOperationScheduler.h; sourceTree = "<group>"; };
 		3BD89C611B776C460084FA63 /* JSCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCWindow.h; sourceTree = "<group>"; };
 		3BD89C621B776C460084FA63 /* JSCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCWindow.m; sourceTree = "<group>"; };
 		3BD9632B1B76CD27005365EF /* JSCFeedAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFeedAPIManager.h; sourceTree = "<group>"; };
@@ -174,7 +173,6 @@
 		3BF13B0B1C5E379F00B32627 /* JSCPostParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParser.m; sourceTree = "<group>"; };
 		3BF13B0D1C5E37B200B32627 /* JSCPostPageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCPostPageParser.h; sourceTree = "<group>"; };
 		3BF13B0E1C5E37B200B32627 /* JSCPostPageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostPageParser.m; sourceTree = "<group>"; };
-		3BF13B4C1C5E473600B32627 /* NSOperationQueue+JSCOperationScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+JSCOperationScheduler.h"; sourceTree = "<group>"; };
 		3BF799561C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JSCCustomHeight.h"; sourceTree = "<group>"; };
 		3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JSCCustomHeight.m"; sourceTree = "<group>"; };
 		5BBF4B234424914FC5328785 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -375,7 +373,6 @@
 			isa = PBXGroup;
 			children = (
 				3B488FD21C80BC20003DA767 /* Session */,
-				3BD89C591B7761180084FA63 /* OperationScheduler */,
 				3BD89C551B775EEC0084FA63 /* OperationCoordinator */,
 				3BD963311B76CFF2005365EF /* Operation */,
 			);
@@ -634,21 +631,12 @@
 			path = OperationCoordinator;
 			sourceTree = "<group>";
 		};
-		3BD89C591B7761180084FA63 /* OperationScheduler */ = {
-			isa = PBXGroup;
-			children = (
-				3BD89C5A1B7761690084FA63 /* JSCOperationScheduler.h */,
-			);
-			path = OperationScheduler;
-			sourceTree = "<group>";
-		};
 		3BD89C5B1B7768D90084FA63 /* categories */ = {
 			isa = PBXGroup;
 			children = (
 				3B70D25A1C871FA200A6AB11 /* UIImage */,
 				3BF799551C8373D3009DDA66 /* UINavigationBar */,
 				3B3FAA3D1C60B5950019D0D0 /* NSDateFormatter */,
-				3BF13B4B1C5E473600B32627 /* NSOperation */,
 			);
 			name = categories;
 			path = Categories;
@@ -743,14 +731,6 @@
 				3BF13B081C5E375300B32627 /* JSCParser.m */,
 			);
 			path = Abstract;
-			sourceTree = "<group>";
-		};
-		3BF13B4B1C5E473600B32627 /* NSOperation */ = {
-			isa = PBXGroup;
-			children = (
-				3BF13B4C1C5E473600B32627 /* NSOperationQueue+JSCOperationScheduler.h */,
-			);
-			path = NSOperation;
 			sourceTree = "<group>";
 		};
 		3BF799551C8373D3009DDA66 /* UINavigationBar */ = {

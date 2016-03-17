@@ -20,7 +20,7 @@
  @param post - post which we want media for.
  @param retrievalRequired - block to execute while a download is in progress.
  @param succes - block to execute in case of success.
- @parama failure - block to execute on failure.
+ @param failure - block to execute on failure.
  */
 + (void)retrieveMediaForPost:(JSCPost *)post
            retrievalRequired:(void (^)(NSString *postId))retrievalRequired
