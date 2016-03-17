@@ -13,7 +13,6 @@
 #import <CoreDataServices/NSManagedObjectContext+CDSDelete.h>
 
 #import "JSCOperationCoordinator.h"
-#import "NSOperationQueue+JSCOperationScheduler.h"
 #import "JSCWindow.h"
 #import "JSCSplashViewController.h"
 #import "JSCRootNavigationController.h"
@@ -22,6 +21,11 @@
 #import "JSCFileManager.h"
 
 @interface JSCAppDelegate ()
+
+/**
+ Registering operation queues.
+ */
+- (void)registerQueues;
 
 @end
 
@@ -33,20 +37,10 @@
     
     [[CDSServiceManager sharedInstance] setupModelURLWithModelName:@"SocialChallenge"];
     
-    NSOperationQueue *networkDataOperationQueue = [[NSOperationQueue alloc] init];
-    
-    networkDataOperationQueue.qualityOfService = NSQualityOfServiceUserInitiated;
-    [[JSCOperationCoordinator sharedInstance] registerScheduler:networkDataOperationQueue
-                                            schedulerIdentifier:kJSCNetworkDataOperationSchedulerTypeIdentifier];
-    
-    NSOperationQueue *localDataOperationQueue = [[NSOperationQueue alloc] init];
-    
-    localDataOperationQueue.qualityOfService = NSQualityOfServiceUserInitiated;
-    [[JSCOperationCoordinator sharedInstance] registerScheduler:localDataOperationQueue
-                                            schedulerIdentifier:kJSCLocalDataOperationSchedulerTypeIdentifier];
-    
     self.window.backgroundColor = [UIColor clearColor];
     self.window.clipsToBounds = NO;
+    
+    [self registerQueues];
     
     /**
      For the sake of the exercise, I will get rid of everything on startup
@@ -90,6 +84,23 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [[CDSServiceManager sharedInstance] saveMainManagedObjectContext];
+}
+
+#pragma mark - RegisterQueues
+
+-(void)registerQueues
+{
+    NSOperationQueue *networkDataOperationQueue = [[NSOperationQueue alloc] init];
+    
+    networkDataOperationQueue.qualityOfService = NSQualityOfServiceUserInitiated;
+    [[JSCOperationCoordinator sharedInstance] registerQueue:networkDataOperationQueue
+                                        schedulerIdentifier:kJSCNetworkDataOperationSchedulerTypeIdentifier];
+    
+    NSOperationQueue *localDataOperationQueue = [[NSOperationQueue alloc] init];
+    
+    localDataOperationQueue.qualityOfService = NSQualityOfServiceUserInitiated;
+    [[JSCOperationCoordinator sharedInstance] registerQueue:localDataOperationQueue
+                                        schedulerIdentifier:kJSCLocalDataOperationSchedulerTypeIdentifier];
 }
 
 #pragma mark - Window

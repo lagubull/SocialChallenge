@@ -16,19 +16,12 @@ extern NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier;
  */
 extern NSString * const kJSCLocalDataOperationSchedulerTypeIdentifier;
 
-#import "JSCOperationScheduler.h"
-
 @class JSCOperation;
 
 /**
  This class handles the schedulers that run the operations.
  */
 @interface JSCOperationCoordinator : NSObject
-
-/**
- Contains the schedulers in the app.
- */
-@property (nonatomic, strong, readonly) NSDictionary *schedulerTable;
 
 /**
  Creates or returns an instance of the class
@@ -49,10 +42,10 @@ extern NSString * const kJSCLocalDataOperationSchedulerTypeIdentifier;
 /**
  Registers a Scheduler with the coordinator.
  
- @param scheduler           Scheduler to register with the coordinator.
- @param schedulerIdentifier Scheduler identifier to register the coordinator under.
+ @param queue - queue to register with the coordinator.
+ @param schedulerIdentifier - scheduler identifier to register the coordinator under.
  */
-- (void)registerScheduler:(id<JSCOperationScheduler>)scheduler
-      schedulerIdentifier:(NSString *)schedulerIdentifier;
+- (void)registerQueue:(NSOperationQueue *)queue
+  schedulerIdentifier:(NSString *)schedulerIdentifier;
 
 @end

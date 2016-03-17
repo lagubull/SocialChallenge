@@ -9,8 +9,6 @@
 #import "JSCOperationCoordinator.h"
 
 #import "JSCOperation.h"
-#import "JSCOperationScheduler.h"
-
 
 NSString * const kJSCNetworkDataOperationSchedulerTypeIdentifier = @"kJSCNetworkDataOperationSchedulerTypeIdentifier";
 
@@ -19,8 +17,8 @@ NSString * const kJSCLocalDataOperationSchedulerTypeIdentifier = @"kJSCLocalData
 @interface JSCOperationCoordinator ()
 
 /**
-Contains the schedulers in the app.
-*/
+ Contains the schedulers in the app.
+ */
 @property (nonatomic, strong) NSMutableDictionary *mutableSchedulerTable;
 
 /**
@@ -28,12 +26,12 @@ Contains the schedulers in the app.
  and coalesce with it.
  
  @param operation - opearation to coaleque with.
- @param scheduler - Scheduler to coalesce the operation on.
+ @param queue - queue to coalesce the operation on.
  
  @return the coalesced operation
  */
 - (JSCOperation *)coalesceOperation:(JSCOperation *)newOperation
-                          scheduler:(id<JSCOperationScheduler>)scheduler;
+                              queue:(NSOperationQueue *)queue;
 
 @end
 
@@ -69,47 +67,35 @@ Contains the schedulers in the app.
     return self;
 }
 
-#pragma mark - Schedulers
-
-- (NSArray *)schedulers
-{
-    return [_mutableSchedulerTable allValues];
-}
-
-- (NSDictionary *)schedulerTable
-{
-    return [self.mutableSchedulerTable copy];
-}
-
 #pragma mark - Register
 
-- (void)registerScheduler:(id<JSCOperationScheduler>)scheduler
-      schedulerIdentifier:(NSString *)schedulerIdentifier
+- (void)registerQueue:(NSOperationQueue *)queue
+  schedulerIdentifier:(NSString *)schedulerIdentifier
 {
-    self.mutableSchedulerTable[schedulerIdentifier] = scheduler;
+    self.mutableSchedulerTable[schedulerIdentifier] = queue;
 }
 
 #pragma mark - Add
 
 - (void)addOperation:(JSCOperation *)operation
 {
-    id<JSCOperationScheduler> scheduler = self.mutableSchedulerTable[operation.targetSchedulerIdentifier];
+    NSOperationQueue *queue = self.mutableSchedulerTable[operation.targetSchedulerIdentifier];
     
     JSCOperation *coalescedOperation = [self coalesceOperation:operation
-                                                     scheduler:scheduler];
+                                                         queue:queue];
     
     if (!coalescedOperation)
     {
-        [scheduler addOperation:operation];
+        [queue addOperation:operation];
     }
 }
 
 #pragma mark - Coalescing
 
 - (JSCOperation *)coalesceOperation:(JSCOperation *)newOperation
-                          scheduler:(id<JSCOperationScheduler>)scheduler
+                              queue:(NSOperationQueue *)queue
 {
-    NSArray *operations = [scheduler operations];
+    NSArray *operations = [queue operations];
     
     for (JSCOperation *operation in operations)
     {

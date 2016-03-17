@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ RootNavigationController for the app.
+ */
 @interface JSCRootNavigationController : UINavigationController
 
 @end

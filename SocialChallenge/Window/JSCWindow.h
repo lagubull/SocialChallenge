@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSCWindow : UIWindow
+/**
+ Custom Window, used to show a custom splash animation.
+ */
+ @interface JSCWindow : UIWindow
 
 /**
  View controller to show when the app starts up.
