@@ -10,11 +10,8 @@
 #import <Foundation/Foundation.h>
 #import "JSCJSONManager.h"
 #import "JSCSession.h"
-#import "JSCMediaManager.h"
 #import "UINavigationBar+JSCCustomHeight.h"
-#import "JSCOperationCoordinator.h"
 #import "JSCFileManager.h"
-#import "NSOperationQueue+JSCOperationScheduler.h"
 #import "UIImage+JSCRoundImage.h"
 #import "UIImage+JSCScaleImage.h"
 

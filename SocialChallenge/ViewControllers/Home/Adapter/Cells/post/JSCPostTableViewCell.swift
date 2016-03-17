@@ -327,13 +327,13 @@ class JSCPostTableViewCell: UITableViewCell {
         
         self.avatar.image = UIImage.init(named:"avatarPlaceHolderIcon")
         
-        JSCMediaManager.retrieveMediaForPost(post, retrievalRequired: { [weak self] (postId: String!) in
+        JSCMediaManager.retrieveMediaForPost(post, retrievalRequired: { [weak self] (postId) -> Void in
             
             if self!.post!.postId == postId {
                 
                 self!.avatarLoadingView.startAnimating()
             }
-            }, success: { [weak self] (result: AnyObject!, postId: String!) in
+            }, success: { [weak self] (result, postId) -> Void in
                 
                 if self!.post!.postId == postId {
                     
@@ -341,14 +341,17 @@ class JSCPostTableViewCell: UITableViewCell {
                     
                     self!.avatar.image = result as? UIImage
                 }
-            }, failure: { [weak self] (error: NSError!, postId: String!) in
+            }, failure: { [weak self] (error, postId) -> Void in
                 
                 if self!.post!.postId == postId {
                     
                     self!.avatarLoadingView.stopAnimating()
                 }
                 
-                NSLog("ERROR: \(error)")
+                if let error: NSError = error {
+                    
+                    NSLog("ERROR: \(error)")
+                }
             })
         
         self.authorLabel.text = post.userName();

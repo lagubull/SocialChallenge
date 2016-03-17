@@ -54,12 +54,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let networkDataOperationQueue = NSOperationQueue.init()
         
         networkDataOperationQueue.qualityOfService = .UserInitiated
-        JSCOperationCoordinator.sharedInstance().registerScheduler(networkDataOperationQueue, schedulerIdentifier:kJSCNetworkDataOperationSchedulerTypeIdentifier)
+        JSCOperationCoordinator.sharedInstance.registerScheduler(networkDataOperationQueue, schedulerIdentifier: kJSCNetworkDataOperationSchedulerTypeIdentifier)
         
         let localDataOperationQueue = NSOperationQueue.init()
         
         localDataOperationQueue.qualityOfService = .UserInitiated;
-        JSCOperationCoordinator.sharedInstance().registerScheduler(localDataOperationQueue, schedulerIdentifier:kJSCLocalDataOperationSchedulerTypeIdentifier)
+        JSCOperationCoordinator.sharedInstance.registerScheduler(localDataOperationQueue, schedulerIdentifier: kJSCLocalDataOperationSchedulerTypeIdentifier)
         
         self.window!.backgroundColor = .clearColor()
         self.window!.clipsToBounds = false

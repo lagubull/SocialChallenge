@@ -37,7 +37,7 @@ class JSCPostPageParser: JSCParser {
     */
     func parsePage(pageDictionary: [String: AnyObject]) -> JSCPostPage! {
         
-        let postDictionaries = pageDictionary[kJSCPosts]![kJSCData] as! [[String: AnyObject]]
+        let postDictionaries = pageDictionary[kJSCPosts]![kJSCData] as! Array <Dictionary <String, AnyObject>>
         
         var page: JSCPostPage?
 
@@ -45,7 +45,7 @@ class JSCPostPageParser: JSCParser {
             
             let parser = JSCPostParser(managedObjectContext: self.managedObjectContext)
             
-            let parsedPosts = parser.parsePosts(postDictionaries) as [JSCPost]
+            let parsedPosts = parser.parsePosts(postDictionaries) as Array <JSCPost>
             
             for post in parsedPosts {
                 
@@ -53,7 +53,7 @@ class JSCPostPageParser: JSCParser {
                     
                     if page == nil {
                         
-                        let metaDictionary = pageDictionary[kJSCPosts]![kJSCPagination] as! [String: AnyObject]
+                        let metaDictionary = pageDictionary[kJSCPosts]![kJSCPagination] as! Dictionary <String, AnyObject>
                         
                         page = self.parseMetaDictionary(metaDictionary)
                     }
@@ -62,7 +62,7 @@ class JSCPostPageParser: JSCParser {
                 }
                 else {
                     
-                    let metaDictionary = pageDictionary[kJSCPosts]![kJSCPagination] as! [String: AnyObject]
+                    let metaDictionary = pageDictionary[kJSCPosts]![kJSCPagination] as! Dictionary <String, AnyObject>
 
                     page = self.parseMetaDictionary(metaDictionary)
                 }
@@ -81,7 +81,7 @@ class JSCPostPageParser: JSCParser {
     
      - Returns: JSCPostPage instance that was parsed.
      */
-    func parseMetaDictionary(metaDictionary: [String: AnyObject]) -> JSCPostPage! {
+    func parseMetaDictionary(metaDictionary: Dictionary <String, AnyObject>) -> JSCPostPage! {
         
         let page = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPostPage.self), inManagedObjectContext: self.managedObjectContext) as! JSCPostPage
         
