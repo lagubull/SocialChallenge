@@ -8,7 +8,6 @@
 #pragma mark - prefix Imports
 
 #import <Foundation/Foundation.h>
-#import "JSCJSONManager.h"
 #import "JSCSession.h"
 #import "UINavigationBar+JSCCustomHeight.h"
 #import "JSCFileManager.h"
