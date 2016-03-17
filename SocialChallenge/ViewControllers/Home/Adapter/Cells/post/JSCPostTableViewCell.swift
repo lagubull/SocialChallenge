@@ -326,7 +326,7 @@ class JSCPostTableViewCell: UITableViewCell {
         self.contentLabel.text = post.content;
         
         self.avatar.image = UIImage.init(named:"avatarPlaceHolderIcon")
-
+        
         JSCMediaManager.retrieveMediaForPost(post, retrievalRequired: { [weak self] (postId) -> Void in
             
             if self!.post!.postId == postId {
@@ -349,7 +349,7 @@ class JSCPostTableViewCell: UITableViewCell {
                 }
                 
                 if let error: NSError = error {
-
+                    
                     NSLog("ERROR: \(error)")
                 }
             })
