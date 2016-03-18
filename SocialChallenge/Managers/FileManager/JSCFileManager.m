@@ -29,15 +29,6 @@ static NSString * const kJSCLocalDirectory = @"SocialChallenge";
 + (NSString *)documentsDirectoryPathForResourceWithPath:(NSString *)path;
 
 /**
- Retrieves data to path in document directory for this particular application.
- 
- @param path - path that will be combined documents path.
- 
- @return NSData that was retrieved.
- */
-+ (NSData *)retrieveDataFromDocumentsDirectoryWithPath:(NSString *)path;
-
-/**
  Save data to path on filesystem.
  
  If the directory doesn't exist it will be created.
