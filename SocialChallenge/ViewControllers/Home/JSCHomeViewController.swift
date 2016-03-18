@@ -20,7 +20,7 @@ let kJSCNavigationBarHeight = 44.0 as CGFloat
  Landing viewController.
  */
 class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
-    
+   
     //MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -28,6 +28,7 @@ class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
         super.viewDidLoad()
         
         self.navigationController!.navigationBar.jsc_setHeight(kJSCNavigationBarHeight)
+        
         self.navigationController!.navigationBar.translucent = false
         self.navigationController!.navigationBar.barTintColor = .blueColor()
         

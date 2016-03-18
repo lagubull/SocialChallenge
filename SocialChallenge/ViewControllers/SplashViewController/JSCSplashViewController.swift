@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  View controller to show on app start up.
