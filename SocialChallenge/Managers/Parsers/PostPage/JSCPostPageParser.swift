@@ -35,7 +35,7 @@ class JSCPostPageParser: JSCParser {
      
      - Returns: JSCPostPage instance that was parsed.
     */
-    func parsePage(pageDictionary: [String: AnyObject]) -> JSCPostPage! {
+    func parsePage(pageDictionary: Dictionary <String, AnyObject>) -> JSCPostPage! {
         
         let postDictionaries = pageDictionary[kJSCPosts]![kJSCData] as! Array <Dictionary <String, AnyObject>>
         

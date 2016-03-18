@@ -17,9 +17,9 @@
 		3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
 		3B316EE11C88686B0052F19A /* UINavigationBar+JSCCustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */; };
 		3B316EE31C88686B0052F19A /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
-		3B316EE71C88686B0052F19A /* JSCJSONManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD850D91B7F3BE10077868E /* JSCJSONManager.m */; };
 		3B316EF31C88686B0052F19A /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
+		3B31FEB11C9B185E001E8C34 /* JSCJSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31FEB01C9B185E001E8C34 /* JSCJSONManager.swift */; };
 		3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */; };
 		3B33AC681C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */; };
 		3B3781A21C748DB300D12BB3 /* JSCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3781A11C748DB300D12BB3 /* JSCFileManager.m */; };
@@ -44,7 +44,6 @@
 		3B7C51131C944C72000AACB5 /* JSCHomeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C51121C944C72000AACB5 /* JSCHomeAdapter.swift */; };
 		3B7C51151C946BBF000AACB5 /* JSCFeedAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C51141C946BBF000AACB5 /* JSCFeedAPIManager.swift */; };
 		3B7C51371C94756D000AACB5 /* JSCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C51361C94756D000AACB5 /* JSCAppDelegate.swift */; };
-		3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD850D91B7F3BE10077868E /* JSCJSONManager.m */; };
 		3BF0A15D1C92E70F004E9E50 /* JSCWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF0A15C1C92E70F004E9E50 /* JSCWindow.swift */; };
 		3BF0A1671C933CC9004E9E50 /* JSCLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF0A1661C933CC9004E9E50 /* JSCLoadingView.swift */; };
 		3BF0A1681C933D8B004E9E50 /* JSCEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF0A1601C9306AA004E9E50 /* JSCEmptyView.swift */; };
@@ -88,6 +87,7 @@
 		3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B316ED81C88569F0052F19A /* JSCPostParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParserTests.m; sourceTree = "<group>"; };
 		3B316EDA1C8859150052F19A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		3B31FEB01C9B185E001E8C34 /* JSCJSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCJSONManager.swift; sourceTree = "<group>"; };
 		3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRequest.swift; sourceTree = "<group>"; };
 		3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRetrievalOperation.swift; sourceTree = "<group>"; };
 		3B3781A01C748DB300D12BB3 /* JSCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCFileManager.h; sourceTree = "<group>"; };
@@ -115,8 +115,6 @@
 		3B7C51121C944C72000AACB5 /* JSCHomeAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCHomeAdapter.swift; sourceTree = "<group>"; };
 		3B7C51141C946BBF000AACB5 /* JSCFeedAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedAPIManager.swift; sourceTree = "<group>"; };
 		3B7C51361C94756D000AACB5 /* JSCAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCAppDelegate.swift; sourceTree = "<group>"; };
-		3BD850D81B7F3BE10077868E /* JSCJSONManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCJSONManager.h; sourceTree = "<group>"; };
-		3BD850D91B7F3BE10077868E /* JSCJSONManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCJSONManager.m; sourceTree = "<group>"; };
 		3BF0A15C1C92E70F004E9E50 /* JSCWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCWindow.swift; sourceTree = "<group>"; };
 		3BF0A1601C9306AA004E9E50 /* JSCEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCEmptyView.swift; sourceTree = "<group>"; };
 		3BF0A1661C933CC9004E9E50 /* JSCLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCLoadingView.swift; sourceTree = "<group>"; };
@@ -558,8 +556,7 @@
 		3BD850D71B7F3BC50077868E /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				3BD850D81B7F3BE10077868E /* JSCJSONManager.h */,
-				3BD850D91B7F3BE10077868E /* JSCJSONManager.m */,
+				3B31FEB01C9B185E001E8C34 /* JSCJSONManager.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -909,8 +906,8 @@
 				3B7C51151C946BBF000AACB5 /* JSCFeedAPIManager.swift in Sources */,
 				3B5F36B91C99DBB9009E7F7D /* JSCSplashViewController.swift in Sources */,
 				3B5867141C98682D005BCDEB /* JSCRootNavigationController.swift in Sources */,
-				3BD850DA1B7F3BE10077868E /* JSCJSONManager.m in Sources */,
 				3BFF18A71C9436B600638549 /* JSCHomeViewController.swift in Sources */,
+				3B31FEB11C9B185E001E8C34 /* JSCJSONManager.swift in Sources */,
 				3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */,
 				3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */,
 				3B7C51371C94756D000AACB5 /* JSCAppDelegate.swift in Sources */,
@@ -943,7 +940,6 @@
 				3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */,
 				3B316EE11C88686B0052F19A /* UINavigationBar+JSCCustomHeight.m in Sources */,
 				3B316EE31C88686B0052F19A /* JSCFileManager.m in Sources */,
-				3B316EE71C88686B0052F19A /* JSCJSONManager.m in Sources */,
 				3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */,
 				3B316EF31C88686B0052F19A /* JSCSession.m in Sources */,
 				3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */,

@@ -83,7 +83,7 @@ class JSCFeedRetrievalOperation: JSCCDSOperation {
             
             if error == nil {
                 
-                let feed = JSCJSONManager.processJSONData(data) as! [String: AnyObject]!
+                let feed = JSCJSONManager.processJSONData(data!)
                 
                 let pageParser = JSCPostPageParser.parserWithContext(CDSServiceManager.sharedInstance().backgroundManagedObjectContext)
                 
