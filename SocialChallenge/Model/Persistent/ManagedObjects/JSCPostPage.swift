@@ -10,6 +10,8 @@ import Foundation
 import CoreData
 import CoreDataServices
 
+@objc(JSCPostPage)
+
 class JSCPostPage: NSManagedObject {
     
     /**
