@@ -13,7 +13,6 @@
 		3B30E6D21C99CA1D00DFE289 /* JSCMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30E6D11C99CA1D00DFE289 /* JSCMediaManager.swift */; };
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
-		3B316EDF1C88686B0052F19A /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
 		3B316EE11C88686B0052F19A /* UINavigationBar+JSCCustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */; };
 		3B316EF31C88686B0052F19A /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
@@ -22,6 +21,7 @@
 		3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */; };
 		3B33AC681C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */; };
 		3B3917EB1C9C0BFD00D5C699 /* JSCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3917EA1C9C0BFD00D5C699 /* JSCFileManager.swift */; };
+		3B3917ED1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3917EC1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift */; };
 		3B4287EF1C89A7F200D3D4EF /* JSCPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */; };
 		3B4288001C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */; };
 		3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */; };
@@ -38,7 +38,6 @@
 		3B5867181C9871B7005BCDEB /* JSCOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5867171C9871B7005BCDEB /* JSCOperation.swift */; };
 		3B5F36B91C99DBB9009E7F7D /* JSCSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F36B81C99DBB9009E7F7D /* JSCSplashViewController.swift */; };
 		3B70D2571C8600B100A6AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B70D2591C8600B100A6AB11 /* Localizable.strings */; };
-		3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */; };
 		3B70D2661C8721F000A6AB11 /* UIImage+JSCScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */; };
 		3B7C51131C944C72000AACB5 /* JSCHomeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C51121C944C72000AACB5 /* JSCHomeAdapter.swift */; };
 		3B7C51151C946BBF000AACB5 /* JSCFeedAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C51141C946BBF000AACB5 /* JSCFeedAPIManager.swift */; };
@@ -90,6 +89,7 @@
 		3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRequest.swift; sourceTree = "<group>"; };
 		3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRetrievalOperation.swift; sourceTree = "<group>"; };
 		3B3917EA1C9C0BFD00D5C699 /* JSCFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFileManager.swift; sourceTree = "<group>"; };
+		3B3917EC1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+JSCRoundImage.swift"; sourceTree = "<group>"; };
 		3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPost.swift; sourceTree = "<group>"; };
 		3B4287F01C89A83600D3D4EF /* SocialChallenge-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SocialChallenge-Bridging-Header.h"; path = "SocialChallenge/SupportingFiles/SocialChallenge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSCPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -106,8 +106,6 @@
 		3B5867171C9871B7005BCDEB /* JSCOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCOperation.swift; sourceTree = "<group>"; };
 		3B5F36B81C99DBB9009E7F7D /* JSCSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCSplashViewController.swift; sourceTree = "<group>"; };
 		3B70D2581C8600B100A6AB11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3B70D2611C8721DD00A6AB11 /* UIImage+JSCRoundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSCRoundImage.h"; sourceTree = "<group>"; };
-		3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCRoundImage.m"; sourceTree = "<group>"; };
 		3B70D2641C8721F000A6AB11 /* UIImage+JSCScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JSCScaleImage.h"; sourceTree = "<group>"; };
 		3B70D2651C8721F000A6AB11 /* UIImage+JSCScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JSCScaleImage.m"; sourceTree = "<group>"; };
 		3B7C51121C944C72000AACB5 /* JSCHomeAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCHomeAdapter.swift; sourceTree = "<group>"; };
@@ -476,8 +474,7 @@
 		3B70D2601C8721DD00A6AB11 /* Round */ = {
 			isa = PBXGroup;
 			children = (
-				3B70D2611C8721DD00A6AB11 /* UIImage+JSCRoundImage.h */,
-				3B70D2621C8721DD00A6AB11 /* UIImage+JSCRoundImage.m */,
+				3B3917EC1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift */,
 			);
 			path = Round;
 			sourceTree = "<group>";
@@ -893,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5867181C9871B7005BCDEB /* JSCOperation.swift in Sources */,
+				3B3917ED1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift in Sources */,
 				3B30E6D01C99BCEA00DFE289 /* JSCOperationCoordinator.swift in Sources */,
 				3BFF18A51C941C3D00638549 /* JSCPostTableViewCell.swift in Sources */,
 				3B4288001C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */,
@@ -916,7 +914,6 @@
 				3BF19AFA1C92090A006F4AC1 /* JSCCDSOperation.swift in Sources */,
 				3BF0A1681C933D8B004E9E50 /* JSCEmptyView.swift in Sources */,
 				3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */,
-				3B70D2631C8721DD00A6AB11 /* UIImage+JSCRoundImage.m in Sources */,
 				3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */,
 				3B33AC681C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift in Sources */,
 				3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */,
@@ -933,7 +930,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B4288041C89C6C500D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */,
-				3B316EDF1C88686B0052F19A /* UIImage+JSCRoundImage.m in Sources */,
 				3B316EE01C88686B0052F19A /* UIImage+JSCScaleImage.m in Sources */,
 				3B316EE11C88686B0052F19A /* UINavigationBar+JSCCustomHeight.m in Sources */,
 				3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */,
