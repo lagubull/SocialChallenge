@@ -8,10 +8,19 @@
 
 import Foundation
 
+/**
+ Category to round an image.
+ */
 extension UIImage {
     
     //MARK: Mask
     
+    /**
+    Changes an image to be become a circle.
+    - Paameter image - image to transform.
+    
+    - Returns: rounded image.
+    */
     class func jsc_roundImage(image: UIImage) -> UIImage
     {
         var finalImage:UIImage?
