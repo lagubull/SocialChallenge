@@ -10,7 +10,6 @@
 #import <Foundation/Foundation.h>
 #import "JSCSession.h"
 #import "UINavigationBar+JSCCustomHeight.h"
-#import "JSCFileManager.h"
 #import "UIImage+JSCRoundImage.h"
 #import "UIImage+JSCScaleImage.h"
 

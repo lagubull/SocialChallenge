@@ -258,7 +258,7 @@ class JSCOperation:  NSOperation {
     
     override func start() {
         
-        if self.executing == false {
+        if !self.executing {
             
             super.start()
             
