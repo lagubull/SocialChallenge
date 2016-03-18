@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ Manages the encoding and decoding of JSON files.
+*/
 class JSCJSONManager {
     
     /**
