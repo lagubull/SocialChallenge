@@ -13,8 +13,6 @@ HTTP GET Method.
 */
 let kJSCHTTPRequestMethodGet = "GET" as String!
 
-@objc(JSCFeedRequest)
-
 /**
 Request to retrieve a feed.
 */

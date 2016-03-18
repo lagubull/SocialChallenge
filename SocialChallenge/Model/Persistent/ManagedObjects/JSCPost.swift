@@ -10,8 +10,6 @@ import Foundation
 import CoreData
 import CoreDataServices
 
-@objc(JSCPost)
-
 class JSCPost: NSManagedObject {
     
     // MARK: Post
