@@ -9,11 +9,6 @@
 import Foundation
 
 /**
-Identifier for network based operations.
-*/
-let kJSCNetworkDataOperationSchedulerTypeIdentifier = "kJSCNetworkDataOperationSchedulerTypeIdentifier"
-
-/**
 Identifier for local operations.
 */
 let kJSCLocalDataOperationSchedulerTypeIdentifier = "kJSCLocalDataOperationSchedulerTypeIdentifier"
@@ -38,12 +33,12 @@ class JSCOperationCoordinator {
     //MARK: Register
     
     /**
-    Registers a Scheduler with the coordinator.
+    Registers a queue with the coordinator.
     
     - Parameter queue -  Scheduler to register with the coordinator.
     - Parameter schedulerIdentifier Scheduler identifier to register the coordinator under.
     */
-    func registerScheduler(queue: NSOperationQueue, schedulerIdentifier: String) {
+    func registerQueue(queue: NSOperationQueue, schedulerIdentifier: String) {
         
         self.schedulerDictionary[schedulerIdentifier] = queue
     }

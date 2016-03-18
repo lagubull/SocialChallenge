@@ -26,7 +26,7 @@ extension UIImage {
         var finalImage:UIImage?
         
         autoreleasepool {
-    
+            
             let deviceScale = UIScreen.mainScreen().scale as CGFloat
             
             let finalDimension = ceil(kJSCPostAvatardimension * deviceScale)
@@ -34,7 +34,7 @@ extension UIImage {
             let contextSize = CGSizeMake(finalDimension, finalDimension)
             
             var context: CGContextRef?
-
+            
             // Create circle mask to use for the rounding:
             var imageMask: CGImageRef?
             UIGraphicsBeginImageContextWithOptions(contextSize, false, 0.0)
@@ -59,7 +59,7 @@ extension UIImage {
             
             let circleMask = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-
+            
             let maskReference = circleMask.CGImage
             imageMask = CGImageMaskCreate(CGImageGetWidth(maskReference),
                 CGImageGetHeight(maskReference),
@@ -85,5 +85,5 @@ extension UIImage {
         
         return finalImage!
     }
-
+    
 }
