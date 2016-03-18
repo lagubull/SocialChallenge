@@ -13,6 +13,9 @@ Root directory for the contents of the app.
 */
 let kJSCLocalDirectory: String = "SocialChallenge"
 
+/**
+ Manages the disk access to read/write files.
+ */
 class JSCFileManager {
     
     //MARK: Documents
@@ -20,7 +23,7 @@ class JSCFileManager {
     /**
     Path of documents directory.
     
-    - Returns NSString instance.
+    - Returns: NSString instance.
     */
     class func documentsDirectoryPath() -> NSURL!
     {
@@ -43,7 +46,7 @@ class JSCFileManager {
         documentsDirectory = documentsDirectory.URLByAppendingPathComponent(kJSCLocalDirectory)
         
         if let path = path {
-
+            
             documentsDirectory.URLByAppendingPathComponent(path)
         }
         
@@ -124,7 +127,6 @@ class JSCFileManager {
                         
                         NSLog("Error when attempting to write data to directory \(nserror), \(nserror.userInfo)")
                     }
-                    
                 }
             }
         }
@@ -185,7 +187,7 @@ class JSCFileManager {
      
      - Parameter path - path to the file.
      
-     - Returns YES whether deletion was successful.
+     - Returns: YES whether deletion was successful.
      */
     class func deleteDataAtPath(path: String) -> Bool {
         
