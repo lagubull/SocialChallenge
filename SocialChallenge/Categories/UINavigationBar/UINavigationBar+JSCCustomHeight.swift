@@ -9,19 +9,21 @@
 import Foundation
 import UIKit
 
-var AssociatedObjectHandle: UInt8 = 0
 /**
 constant for the height.
 */
-let kJSCHeightKey: String = "Height"
+var AssociatedHeightHandle: UInt8 = 0
 
+/**
+allows to define a custom size for the navigation bar.
+*/
 extension UINavigationBar {
     
     var height: CGFloat {
         
         get {
             
-            if let unwrappedHeight = objc_getAssociatedObject(self, &AssociatedObjectHandle)
+            if let unwrappedHeight = objc_getAssociatedObject(self, &AssociatedHeightHandle)
             {
                 return unwrappedHeight as! CGFloat
             }
@@ -32,7 +34,7 @@ extension UINavigationBar {
         }
         set {
             
-            objc_setAssociatedObject(self, &AssociatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedHeightHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 
