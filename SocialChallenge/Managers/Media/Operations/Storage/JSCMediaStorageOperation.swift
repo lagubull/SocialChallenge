@@ -76,23 +76,30 @@ class JSCMediaStorageOperation: JSCOperation {
         //Images in this API are too big to have on a performant cell,
         //in a real app we would keep the original and store also a smaller resolution copy to improve performance, for the test I will only keep the preview
         
-        var image = UIImage.init(data: self.data!)
-        
-        if image != nil {
+        if let unwrappedData = self.data {
             
-            image = UIImage.jsc_scaleImage(image)
-            image = UIImage.jsc_roundImage(image)
+            let image = UIImage.init(data: unwrappedData)
             
-            let imageData = UIImageJPEGRepresentation(image!, 1.0)
-            
-            success = JSCFileManager.saveData(imageData, toDocumentsDirectoryPath: self.postId)
+            if var unwrappedImage = image {
+                
+                unwrappedImage = UIImage.jsc_scaleImage(unwrappedImage)
+                unwrappedImage = UIImage.jsc_roundImage(unwrappedImage)
+                
+                let imageData = UIImageJPEGRepresentation(unwrappedImage, 1.0)
+                
+                if let unwrappedImageData = imageData {
+                    
+                    success = JSCFileManager.saveData(unwrappedImageData, toDocumentsDirectoryPath: self.postId!)
+                    
+                    if success {
+                        
+                        self.didSucceedWithResult(unwrappedImage)
+                    }
+                }
+            }
         }
         
-        if success == true {
-            
-            self.didSucceedWithResult(image)
-        }
-        else {
+        if !success {
             
             self.didFailWithError(nil)
         }

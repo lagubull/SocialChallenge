@@ -63,7 +63,7 @@ class JSCLocalImageAssetRetrievalOperation: JSCOperation {
         
         let imageData = JSCFileManager.retrieveDataFromDocumentsDirectoryWithPath(self.postId!)
         
-        if imageData != nil {
+        if let imageData = imageData {
             
             imageFromDisk = UIImage.init(data: imageData)
         }
