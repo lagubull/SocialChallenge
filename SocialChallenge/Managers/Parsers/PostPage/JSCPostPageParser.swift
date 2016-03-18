@@ -19,8 +19,6 @@ let kJSCPagination = "pagination" as String
 let kJSCcurrentPage = "current_page" as String
 let kJSCNextPage = "next_page" as String
 
-@objc(JSCPostPageParser)
-
 /**
  Extracts a PostPage.
 */

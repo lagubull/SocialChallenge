@@ -20,15 +20,7 @@
 #ifdef __OBJC__
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
-#import <UIKit/UIKit.h>
-#import <PureLayout/PureLayout.h>
 
 #import "SocialChallenge-Swift.h"
-
-/**
- Constant for the dimmensions of the images to display in the cell.
- */
-static const CGFloat kJSCPostAvatardimension = 25.0f;
 
 #endif

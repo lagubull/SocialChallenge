@@ -8,11 +8,9 @@
 
 import Foundation
 
-@objc(JSCWindow)
-
 /**
-Custom Window.
-*/
+ Custom Window.
+ */
 class JSCWindow: UIWindow {
     
     /**

@@ -9,8 +9,6 @@
 import Foundation
 import CoreDataServices
 
-@objc(JSCCDSOperation)
-
 /**
  Code base for a core data opration.
  */

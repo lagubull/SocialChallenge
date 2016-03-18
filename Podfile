@@ -10,7 +10,7 @@ def socialChallenge_pods
     pod 'EasyAlert'
     pod 'Reveal-iOS-SDK', '~> 1.6', :configurations => ['Debug']
     pod 'SimpleTableView', '~>1.0.3'
-    pod 'EasyDownloadSession', '1.0.4'
+    pod 'EasyDownloadSession', :git => "https://github.com/lagubull/EasyDownloadSession"
     pod 'OCMock', '~>3.2'
 end
 

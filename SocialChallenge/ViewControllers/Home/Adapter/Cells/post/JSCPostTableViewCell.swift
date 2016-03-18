@@ -27,7 +27,7 @@ let kJSCPostAvatardimension = 25.0 as CGFloat
 /**
  Actions from the cell.
  */
-@objc protocol JSCPostTableViewCellDelegate {
+protocol JSCPostTableViewCellDelegate {
     
     /**
      User pressed on the favorites button.
@@ -44,11 +44,9 @@ let kJSCPostAvatardimension = 25.0 as CGFloat
     func didPressCommentsButton(post: JSCPost)
 }
 
-@objc (JSCPostTableViewCell)
-
 /**
-Representation for a post.
-*/
+ Representation for a post.
+ */
 class JSCPostTableViewCell: UITableViewCell {
     
     /**

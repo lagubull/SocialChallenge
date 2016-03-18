@@ -25,8 +25,6 @@ Convenient method to check if a value is not nil and returns ir or the default
     return value
 }
 
-@objc(JSCParser)
-
 /**
 Code base for the parsers.
 */

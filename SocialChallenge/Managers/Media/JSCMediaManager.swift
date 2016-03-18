@@ -45,8 +45,8 @@ class JSCMediaManager {
                             retrievalRequired(postId: post.postId!);
                     }
                     
-                    EDSDownloadSession .scheduleDownloadWithId(post.postId, fromURL: NSURL.init(string: post.userAvatarRemoteURL!), progress: nil, success: { (taskInfo, responseData) -> Void in
-                        
+                    EDSDownloadSession.scheduleDownloadWithId(post.postId, fromURL: NSURL.init(string: post.userAvatarRemoteURL!), stackIdentifier: kJSCMediaDownloadStack, progress: nil, success: { (taskInfo, responseData) -> Void in
+
                         let storeOperation = JSCMediaStorageOperation.init(postId: post.postId!, data: responseData)
                         
                         storeOperation.onSuccess = { JSCOperationOnSuccessCallback in

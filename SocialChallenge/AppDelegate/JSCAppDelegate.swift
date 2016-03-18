@@ -11,6 +11,19 @@ import UIKit
 import CoreDataServices
 import EasyDownloadSession
 
+/**
+Constant to define the stack for API calls.
+*/
+let kJSCApiDownloadStack: String = "kJSCApiDownloadStack"
+
+/**
+Constant to define the stack for media download calls.
+*/
+let kJSCMediaDownloadStack: String = "kJSCMediaDownloadStack"
+
+/**
+ Inline function for printing log messages only while on debug configuration.
+ */
 func DLog(message: String, function: String = __FUNCTION__) {
     #if DEBUG
         print("\(function): \(message)")
@@ -46,20 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        //TODO: Restore once EDSDownloadSession v1.0.5 is out
-//        EDSDownloadSession.sharedInstance().maxDownloads = 4
-        
         CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
-        
-        let networkDataOperationQueue = NSOperationQueue.init()
-        
-        networkDataOperationQueue.qualityOfService = .UserInitiated
-        JSCOperationCoordinator.sharedInstance.registerScheduler(networkDataOperationQueue, schedulerIdentifier: kJSCNetworkDataOperationSchedulerTypeIdentifier)
-        
-        let localDataOperationQueue = NSOperationQueue.init()
-        
-        localDataOperationQueue.qualityOfService = .UserInitiated;
-        JSCOperationCoordinator.sharedInstance.registerScheduler(localDataOperationQueue, schedulerIdentifier: kJSCLocalDataOperationSchedulerTypeIdentifier)
         
         self.window!.backgroundColor = .clearColor()
         self.window!.clipsToBounds = false
@@ -71,6 +71,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CDSServiceManager.sharedInstance().mainManagedObjectContext.cds_deleteEntriesForEntityClass(JSCPostPage.self)
         
         JSCFileManager.deleteDataFromDocumentDirectoryWithPath(nil)
+        
+        self.registerQueues()
+        self.registerStacks()
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
@@ -99,5 +102,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    //MARK: RegisterQueues
+    
+    /**
+    Registering operation queues.
+    */
+    func registerQueues() {
+        
+        let localDataOperationQueue = NSOperationQueue()
+        
+        localDataOperationQueue.qualityOfService = .UserInitiated
+        JSCOperationCoordinator.sharedInstance.registerQueue(localDataOperationQueue, schedulerIdentifier: kJSCLocalDataOperationSchedulerTypeIdentifier)
+    }
+    
+    //MARK: RegisterStacks
+    
+    /**
+    Registering operation stacks.
+    */
+    func registerStacks() {
+        
+        let apiStack = EDSStack()
+        
+        EDSDownloadSession.sharedInstance().registerStack(apiStack, stackIdentifier:kJSCApiDownloadStack)
+        
+        let mediaStack = EDSStack()
+        
+        mediaStack.maxDownloads = 4;
+        
+        EDSDownloadSession.sharedInstance().registerStack(mediaStack, stackIdentifier:kJSCMediaDownloadStack)
     }
 }

@@ -14,11 +14,10 @@
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
 		3B316EE11C88686B0052F19A /* UINavigationBar+JSCCustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF799571C83741C009DDA66 /* UINavigationBar+JSCCustomHeight.m */; };
-		3B316EF31C88686B0052F19A /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B31FEB11C9B185E001E8C34 /* JSCJSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31FEB01C9B185E001E8C34 /* JSCJSONManager.swift */; };
 		3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */; };
-		3B33AC681C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */; };
+		3B33AC681C91BE2B0010F219 /* JSCFeedParsingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC671C91BE2B0010F219 /* JSCFeedParsingOperation.swift */; };
 		3B3917EB1C9C0BFD00D5C699 /* JSCFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3917EA1C9C0BFD00D5C699 /* JSCFileManager.swift */; };
 		3B3917ED1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3917EC1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift */; };
 		3B3917EF1C9C3F8500D5C699 /* UIImage+JSCScaleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3917EE1C9C3F8500D5C699 /* UIImage+JSCScaleImage.swift */; };
@@ -31,7 +30,6 @@
 		3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */; };
 		3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */; };
 		3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42880A1C89FCCF00D3D4EF /* JSCPostPageParser.swift */; };
-		3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B488FD41C80BC6E003DA767 /* JSCSession.m */; };
 		3B4E80211C8DA1A600ECFCD0 /* JSCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E80201C8DA1A600ECFCD0 /* JSCParser.swift */; };
 		3B4E80281C8DE70600ECFCD0 /* JSCDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */; };
 		3B5867141C98682D005BCDEB /* JSCRootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5867131C98682D005BCDEB /* JSCRootNavigationController.swift */; };
@@ -86,7 +84,7 @@
 		3B316EDA1C8859150052F19A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		3B31FEB01C9B185E001E8C34 /* JSCJSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCJSONManager.swift; sourceTree = "<group>"; };
 		3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRequest.swift; sourceTree = "<group>"; };
-		3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRetrievalOperation.swift; sourceTree = "<group>"; };
+		3B33AC671C91BE2B0010F219 /* JSCFeedParsingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedParsingOperation.swift; sourceTree = "<group>"; };
 		3B3917EA1C9C0BFD00D5C699 /* JSCFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFileManager.swift; sourceTree = "<group>"; };
 		3B3917EC1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+JSCRoundImage.swift"; sourceTree = "<group>"; };
 		3B3917EE1C9C3F8500D5C699 /* UIImage+JSCScaleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+JSCScaleImage.swift"; sourceTree = "<group>"; };
@@ -98,8 +96,6 @@
 		3B4288051C89C9D200D3D4EF /* SocialChallenge-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialChallenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		3B42880A1C89FCCF00D3D4EF /* JSCPostPageParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostPageParser.swift; sourceTree = "<group>"; };
 		3B42880E1C8A501A00D3D4EF /* JSCFeedRetrieveOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFeedRetrieveOperationTests.m; sourceTree = "<group>"; };
-		3B488FD31C80BC6E003DA767 /* JSCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCSession.h; sourceTree = "<group>"; };
-		3B488FD41C80BC6E003DA767 /* JSCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCSession.m; sourceTree = "<group>"; };
 		3B4E80201C8DA1A600ECFCD0 /* JSCParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCParser.swift; sourceTree = "<group>"; };
 		3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCDateFormatter.swift; sourceTree = "<group>"; };
 		3B5867131C98682D005BCDEB /* JSCRootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCRootNavigationController.swift; sourceTree = "<group>"; };
@@ -308,7 +304,6 @@
 		3B3111C01B6E127D008E374E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3B488FD21C80BC20003DA767 /* Session */,
 				3BD89C551B775EEC0084FA63 /* OperationCoordinator */,
 				3BD963311B76CFF2005365EF /* Operation */,
 			);
@@ -432,15 +427,6 @@
 				3B42880E1C8A501A00D3D4EF /* JSCFeedRetrieveOperationTests.m */,
 			);
 			path = FeedRetrieve;
-			sourceTree = "<group>";
-		};
-		3B488FD21C80BC20003DA767 /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				3B488FD31C80BC6E003DA767 /* JSCSession.h */,
-				3B488FD41C80BC6E003DA767 /* JSCSession.m */,
-			);
-			path = Session;
 			sourceTree = "<group>";
 		};
 		3B5F36B71C99DBB9009E7F7D /* SplashViewController */ = {
@@ -600,7 +586,7 @@
 		3BD9632A1B76CCE8005365EF /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				3B33AC671C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift */,
+				3B33AC671C91BE2B0010F219 /* JSCFeedParsingOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -911,8 +897,7 @@
 				3BF19AFA1C92090A006F4AC1 /* JSCCDSOperation.swift in Sources */,
 				3BF0A1681C933D8B004E9E50 /* JSCEmptyView.swift in Sources */,
 				3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */,
-				3B488FD51C80BC6E003DA767 /* JSCSession.m in Sources */,
-				3B33AC681C91BE2B0010F219 /* JSCFeedRetrievalOperation.swift in Sources */,
+				3B33AC681C91BE2B0010F219 /* JSCFeedParsingOperation.swift in Sources */,
 				3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */,
 				3B30E6D21C99CA1D00DFE289 /* JSCMediaManager.swift in Sources */,
 				3B4288071C89E80F00D3D4EF /* JSCPostPage.swift in Sources */,
@@ -929,7 +914,6 @@
 				3B4288041C89C6C500D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */,
 				3B316EE11C88686B0052F19A /* UINavigationBar+JSCCustomHeight.m in Sources */,
 				3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */,
-				3B316EF31C88686B0052F19A /* JSCSession.m in Sources */,
 				3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */,
 				3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
 				3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */,
