@@ -45,12 +45,14 @@ class JSCFileManager {
         
         documentsDirectory = documentsDirectory.URLByAppendingPathComponent(kJSCLocalDirectory)
         
+        var documentsDirectoryString = documentsDirectory.path
+        
         if let path = path {
             
-            documentsDirectory.URLByAppendingPathComponent(path)
+            documentsDirectoryString = "\(documentsDirectoryString!)/\(path))"
         }
         
-        return documentsDirectory.path!
+        return documentsDirectoryString!
     }
     
     //MARK: Retrieval
