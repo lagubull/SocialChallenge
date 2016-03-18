@@ -7,11 +7,8 @@
 
 #pragma mark - prefix Imports
 
-#import <Foundation/Foundation.h>
 #import "JSCSession.h"
 #import "UINavigationBar+JSCCustomHeight.h"
-#import "UIImage+JSCRoundImage.h"
-#import "UIImage+JSCScaleImage.h"
 
 #endif /* SocialChallenge_Bridging_Header_h */
 
