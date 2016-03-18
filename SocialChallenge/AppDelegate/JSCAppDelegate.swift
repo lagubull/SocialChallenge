@@ -21,10 +21,9 @@ Constant to define the stack for media download calls.
 */
 let kJSCMediaDownloadStack: String = "kJSCMediaDownloadStack"
 
-
 /**
  Inline function for printing log messages only while on debug configuration.
-*/
+ */
 func DLog(message: String, function: String = __FUNCTION__) {
     #if DEBUG
         print("\(function): \(message)")
@@ -105,7 +104,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    
     //MARK: RegisterQueues
     
     /**
@@ -127,8 +125,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func registerStacks() {
         
         let apiStack = EDSStack()
-        
-        apiStack.maxDownloads = 10
         
         EDSDownloadSession.sharedInstance().registerStack(apiStack, stackIdentifier:kJSCApiDownloadStack)
         
