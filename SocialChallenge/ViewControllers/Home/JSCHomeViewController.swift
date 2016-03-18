@@ -12,7 +12,7 @@ import SimpleTableView
 import EasyAlert
 
 /**
-Constant to define the height of the navigation bar.s
+Constant to define the height of the navigation bar.
 */
 let kJSCNavigationBarHeight = 44.0 as CGFloat
 

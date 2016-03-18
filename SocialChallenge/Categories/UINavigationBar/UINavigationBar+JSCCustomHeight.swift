@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 /**
-constant for the height.
+Constant for the height.
 */
 var AssociatedHeightHandle: UInt8 = 0
 
 /**
-allows to define a custom size for the navigation bar.
-*/
+ Allows to define a custom size for the navigation bar.
+ */
 extension UINavigationBar {
     
     var height: CGFloat {
@@ -37,7 +37,7 @@ extension UINavigationBar {
             objc_setAssociatedObject(self, &AssociatedHeightHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-
+    
     /**
      Sets the height of the Navigation Bar.
      
