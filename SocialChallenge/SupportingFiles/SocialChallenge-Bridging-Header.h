@@ -7,7 +7,5 @@
 
 #pragma mark - prefix Imports
 
-#import "UINavigationBar+JSCCustomHeight.h"
-
 #endif /* SocialChallenge_Bridging_Header_h */
 

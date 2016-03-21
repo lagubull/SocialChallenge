@@ -99,7 +99,7 @@
 
 - (JSCSession *)setSession
 {
-    if (!_session)
+    if !_session
     {
         _session = [JSCSession defaultSession];
     }

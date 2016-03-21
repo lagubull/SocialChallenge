@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  Operation to retrieve an asset from disk.

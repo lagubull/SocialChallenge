@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  Handles the navigation in the app.

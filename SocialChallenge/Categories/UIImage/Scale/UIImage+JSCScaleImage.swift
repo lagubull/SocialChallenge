@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  Category to scale an image.
