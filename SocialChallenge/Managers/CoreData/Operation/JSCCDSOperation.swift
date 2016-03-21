@@ -42,7 +42,7 @@ class JSCCDSOperation: JSCOperation {
                 didSave = false
             }
             
-            if (didSave) {
+            if didSave {
                 
                 /*
                 Coredata will delay cascading deletes for performance so we force them to happen.
@@ -66,7 +66,7 @@ class JSCCDSOperation: JSCOperation {
                 
                 if let unwrappedResult = result {
 
-                    if (unwrappedResult.isKindOfClass(NSError.self)) {
+                    if unwrappedResult.isKindOfClass(NSError.self) {
                         
                         self.didFailWithError(unwrappedResult as? NSError)
                     }
@@ -100,7 +100,7 @@ class JSCCDSOperation: JSCOperation {
             
             if let unwrappedResult = result {
                 
-                if (unwrappedResult.isKindOfClass(NSError.self)) {
+                if unwrappedResult.isKindOfClass(NSError.self) {
                     
                     self.didFailWithError(unwrappedResult as? NSError)
                 }

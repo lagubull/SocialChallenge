@@ -54,7 +54,7 @@ extension UINavigationBar {
         
         var newSize: CGSize = super.sizeThatFits(size)
         
-        if (height > 0)
+        if height > 0
         {
             newSize = CGSizeMake(newSize.width, height)
         }

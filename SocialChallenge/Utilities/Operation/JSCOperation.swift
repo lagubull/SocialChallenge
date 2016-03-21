@@ -313,7 +313,7 @@ class JSCOperation:  NSOperation {
         
         self.finish()
         
-        if (self.onFailure != nil) {
+        if self.onFailure != nil {
             
             self.callbackQueue!.addOperationWithBlock({
                 
@@ -331,7 +331,7 @@ class JSCOperation:  NSOperation {
         
         self.finish()
         
-        if (self.onCompletion != nil) {
+        if self.onCompletion != nil {
             
             self.callbackQueue!.addOperationWithBlock({
                 

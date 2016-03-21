@@ -65,7 +65,7 @@ class JSCPostParser: JSCParser {
         
         var post: JSCPost!
         
-        if (postDictionary[kJSCPostId]) != nil {
+        if postDictionary[kJSCPostId] != nil {
             
             let postId = "\(postDictionary[kJSCPostId]!)"
             
@@ -88,9 +88,13 @@ class JSCPostParser: JSCParser {
             
             post.commentCount = JSCValueOrDefault(postDictionary[kJSCCommentCount], defaultValue: post.commentCount)  as? NSNumber
             
-            post.userAvatarRemoteURL = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCAvatar], defaultValue: post.userAvatarRemoteURL) as? String
-            post.userFirstName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCFirstName], defaultValue: post.userFirstName) as? String
-            post.userLastName = JSCValueOrDefault(postDictionary[kJSCUser]![kJSCLastName], defaultValue: post.userLastName) as? String
+            if let userDictionary = postDictionary[kJSCUser] {
+                
+                post.userAvatarRemoteURL = JSCValueOrDefault(userDictionary[kJSCAvatar], defaultValue: post.userAvatarRemoteURL) as? String
+                post.userFirstName = JSCValueOrDefault(userDictionary[kJSCFirstName], defaultValue: post.userFirstName) as? String
+                post.userLastName = JSCValueOrDefault(userDictionary[kJSCLastName], defaultValue: post.userLastName) as? String
+            }
+            
         }
         
         return post;
