@@ -73,8 +73,7 @@ class JSCPostParser: JSCParser {
             
             if post == nil {
                 
-                post = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPost.self), inManagedObjectContext: self.managedObjectContext) as! JSCPost
-                
+                post = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPost.self, inManagedObjectContext: self.managedObjectContext) as!JSCPost
                 post.postId = postId
             }
             

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
-    <entity name="JSCPost" representedClassName="JSCPost" syncable="YES">
+    <entity name="JSCPost" representedClassName=".JSCPost" syncable="YES">
         <attribute name="commentCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
@@ -11,7 +11,7 @@
         <attribute name="userLastName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="page" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSCPostPage" inverseName="post" inverseEntity="JSCPostPage" syncable="YES"/>
     </entity>
-    <entity name="JSCPostPage" representedClassName="JSCPostPage" syncable="YES">
+    <entity name="JSCPostPage" representedClassName=".JSCPostPage" syncable="YES">
         <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="nextPageRequestPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="postPageId" optional="YES" attributeType="String" syncable="YES"/>

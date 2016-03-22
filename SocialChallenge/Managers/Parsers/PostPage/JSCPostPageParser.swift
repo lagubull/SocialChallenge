@@ -81,7 +81,7 @@ class JSCPostPageParser: JSCParser {
      */
     func parseMetaDictionary(metaDictionary: Dictionary <String, AnyObject>) -> JSCPostPage! {
         
-        let page = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPostPage.self), inManagedObjectContext: self.managedObjectContext) as! JSCPostPage
+        let page = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: self.managedObjectContext) as! JSCPostPage
         
         page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[kJSCNextPage], defaultValue: nil) as? String
         page.index = JSCValueOrDefault(metaDictionary[kJSCcurrentPage], defaultValue: nil) as? NSNumber

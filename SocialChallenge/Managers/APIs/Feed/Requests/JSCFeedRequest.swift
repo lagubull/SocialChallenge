@@ -27,7 +27,7 @@ class JSCFeedRequest: NSMutableURLRequest {
     */
     class func requestToRetrieveFeed () -> JSCFeedRequest {
         
-        return self.requestToRetrieveFeedNexPageWithURL(API_END_POINT)
+        return self.requestToRetrieveFeedNexPageWithURL("http://unii-interview.herokuapp.com/api/v1/posts")
     }
     
     /**
