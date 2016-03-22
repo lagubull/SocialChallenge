@@ -58,8 +58,6 @@ class JSCPostParserTests: XCTestCase {
             kJSCUser : userDictionary ]
         
         nilPostJSON = [ "id" : self.postId! ]
-        
-        
     }
     
     override func tearDown() {
