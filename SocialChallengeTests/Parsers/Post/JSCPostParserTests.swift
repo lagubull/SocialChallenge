@@ -35,7 +35,7 @@ class JSCPostParserTests: XCTestCase {
         
         CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
         
-        self.parser = JSCPostParser.parserWithContext(CDSServiceManager.sharedInstance().backgroundManagedObjectContext)
+        self.parser = JSCPostParser.parserWithContext(CDSServiceManager.sharedInstance().mainManagedObjectContext)
         
         self.postId = "1"
         self.createdAt = "2016-03-03 12:00:00"
@@ -146,7 +146,7 @@ class JSCPostParserTests: XCTestCase {
         
         let post = self.parser!.parsePost(self.postJSON!)
         
-        XCTAssertEqual(post.userAvatarRemoteURL, self.userAvatarRemoteURL, "Content property was not set properly. Was set to: \(post.userAvatarRemoteURL) rather than: \(self.userAvatarRemoteURL!)")
+        XCTAssertEqual(post.userAvatarRemoteURL, self.userAvatarRemoteURL, "userAvatarRemoteURL property was not set properly. Was set to: \(post.userAvatarRemoteURL) rather than: \(self.userAvatarRemoteURL!)")
     }
     
     //MARK: PropertiesNegativePath
@@ -270,6 +270,6 @@ class JSCPostParserTests: XCTestCase {
         _ = self.parser!.parsePost(self.postJSON!)
         let post = self.parser!.parsePost(self.nilPostJSON!)
         
-        XCTAssertEqual(post.userAvatarRemoteURL, self.userAvatarRemoteURL, "Content property was not set properly. Was set to: \(post.userAvatarRemoteURL) rather than: \(self.userAvatarRemoteURL!)")
+        XCTAssertEqual(post.userAvatarRemoteURL, self.userAvatarRemoteURL, "userAvatarRemoteURL property was not set properly. Was set to: \(post.userAvatarRemoteURL) rather than: \(self.userAvatarRemoteURL!)")
     }
 }

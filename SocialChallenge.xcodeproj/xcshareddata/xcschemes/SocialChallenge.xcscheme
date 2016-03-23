@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B3111A21B6E110B008E374E"
+               BlueprintIdentifier = "3B3F58581CA1B61D00C1766E"
                BuildableName = "SocialChallengeTests.xctest"
                BlueprintName = "SocialChallengeTests"
                ReferencedContainer = "container:SocialChallenge.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B3111A21B6E110B008E374E"
+               BlueprintIdentifier = "3B3F58581CA1B61D00C1766E"
                BuildableName = "SocialChallengeTests.xctest"
                BlueprintName = "SocialChallengeTests"
                ReferencedContainer = "container:SocialChallenge.xcodeproj">
@@ -88,7 +88,7 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-com.apple.CoreData.ConcurrencyDebug 1"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

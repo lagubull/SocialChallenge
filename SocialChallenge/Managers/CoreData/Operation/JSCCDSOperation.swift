@@ -30,6 +30,34 @@ class JSCCDSOperation: JSCOperation {
             do {
                 
                 try CDSServiceManager.sharedInstance().backgroundManagedObjectContext.save()
+                
+                /*
+                Coredata will delay cascading deletes for performance so we force them to happen.
+                */
+                CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
+                    
+                    CDSServiceManager.sharedInstance().backgroundManagedObjectContext.processPendingChanges()
+                }
+                
+                //Don't want changes to be lost if the app crashes so let's save these changes to the persistent store
+                CDSServiceManager.sharedInstance().mainManagedObjectContext.performBlockAndWait {
+                    
+                    do {
+                        
+                        try CDSServiceManager.sharedInstance().mainManagedObjectContext.save()
+                        
+                        CDSServiceManager.sharedInstance().mainManagedObjectContext.processPendingChanges()
+                    }
+                    catch {
+                        
+                        let nserror = error as NSError
+                        NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                        
+                        self.didFailWithError(nserror)
+                        
+                        didSave = false
+                    }
+                }
             }
             catch {
                 
@@ -44,28 +72,8 @@ class JSCCDSOperation: JSCOperation {
             
             if didSave {
                 
-                /*
-                Coredata will delay cascading deletes for performance so we force them to happen.
-                */
-                CDSServiceManager.sharedInstance().backgroundManagedObjectContext.processPendingChanges()
-                
-                CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
-                    
-                    do {
-                        
-                        try CDSServiceManager.sharedInstance().backgroundManagedObjectContext.save()
-                    }
-                    catch {
-                        
-                        let nserror = error as NSError
-                        NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                        
-                        self.didFailWithError(nserror)
-                    }
-                }
-                
                 if let unwrappedResult = result {
-
+                    
                     if unwrappedResult.isKindOfClass(NSError.self) {
                         
                         self.didFailWithError(unwrappedResult as? NSError)
@@ -112,7 +120,7 @@ class JSCCDSOperation: JSCOperation {
             else {
                 
                 self.didSucceedWithResult(result)
-            }    
+            }
         }
     }
 }
