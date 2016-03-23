@@ -27,12 +27,12 @@ class JSCFeedRequest: NSMutableURLRequest {
     */
     class func requestToRetrieveFeed () -> JSCFeedRequest {
         
-        return self.requestToRetrieveFeedNexPageWithURL("http://unii-interview.herokuapp.com/api/v1/posts")
+        return self.requestToRetrieveFeedNexPageWithURL(API_END_POINT)
     }
     
     /**
     Creates a request for downloading a page of content.
-    
+
     - Parameter URL - URL to download the content from.
     
     - Returns: an instance of the class.
