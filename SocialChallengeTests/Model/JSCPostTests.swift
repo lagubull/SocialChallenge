@@ -47,8 +47,8 @@ class JSCPostTests: XCTestCase {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         dateFormatter.locale = NSLocale.init(localeIdentifier: "en_GB")
         
-        page  = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as?JSCPostPage
-        post = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPost.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as?JSCPost
+        page  = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as? JSCPostPage
+        post = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPost.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as? JSCPost
         
         post?.postId = self.postId!
         post?.commentCount = commentCount!
