@@ -35,8 +35,8 @@ class JSCOperationCoordinator {
     /**
     Registers a queue with the coordinator.
     
-    - Parameter queue -  Scheduler to register with the coordinator.
-    - Parameter schedulerIdentifier Scheduler identifier to register the coordinator under.
+    - Parameter queue: Scheduler to register with the coordinator.
+    - Parameter schedulerIdentifier: Scheduler identifier to register the coordinator under.
     */
     func registerQueue(queue: NSOperationQueue, schedulerIdentifier: String) {
         
@@ -49,7 +49,7 @@ class JSCOperationCoordinator {
     Adds operation to the scheduler, if an operation with the same identifier is on the scheduler then the coordinator
     will perform coalescing.
     
-    - Parameter operation - operation to add.
+    - Parameter operation: operation to add.
     */
     func addOperation(operation: JSCOperation) {
         
@@ -69,8 +69,8 @@ class JSCOperationCoordinator {
     Finds the first operation which can coalesce the passed in operation
     and coalesce with it.
     
-    - Parameter operation - opearation to coaleque with.
-    - Parameter scheduler - Scheduler to coalesce the operation on.
+    - Parameter operation: opearation to coaleque with.
+    - Parameter scheduler: Scheduler to coalesce the operation on.
     
     - Returns: the coalesced operation
     */

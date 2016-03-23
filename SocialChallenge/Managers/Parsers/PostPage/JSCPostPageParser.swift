@@ -29,7 +29,7 @@ class JSCPostPageParser: JSCParser {
     /**
      Parse Page.
      
-     - Parameter pageDictionary JSON containing a page.
+     - Parameter pageDictionary: JSON containing a page.
      
      - Returns: JSCPostPage instance that was parsed.
     */
@@ -75,7 +75,7 @@ class JSCPostPageParser: JSCParser {
      /**
      Parse meta data about the page.
     
-     - Parameter metaDictionary JSON containing a page meta data.
+     - Parameter metaDictionary: JSON containing a page meta data.
     
      - Returns: JSCPostPage instance that was parsed.
      */

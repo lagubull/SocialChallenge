@@ -24,7 +24,7 @@ class JSCLocalImageAssetRetrievalOperation: JSCOperation {
     /**
     Creates an operation to retrieve an asset from disk.
     
-    - Parameter postId - indicates the post the asset is related to.
+    - Parameter postId: indicates the post the asset is related to.
     */
     convenience required init(postId: String) {
     

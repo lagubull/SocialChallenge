@@ -33,7 +33,7 @@ class JSCFeedRequest: NSMutableURLRequest {
     /**
     Creates a request for downloading a page of content.
 
-    - Parameter URL - URL to download the content from.
+    - Parameter URL: URL to download the content from.
     
     - Returns: an instance of the class.
     */

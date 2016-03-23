@@ -28,7 +28,8 @@ class JSCFeedAPIManager: NSObject {
     /**
     Gets a request depending on the mode.
     
-    - Parameter mode Can be either first page or any other page.
+    - Parameter mode: Can be either first page or any other page.
+    
     - Returns: JSCFeedRequest to retrieve the data from.
     */
     private class func requestForMode(mode: JSCDataRetrievalOperationMode) -> JSCFeedRequest {

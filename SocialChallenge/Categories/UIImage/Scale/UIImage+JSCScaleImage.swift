@@ -19,7 +19,7 @@ extension UIImage {
     /**
     Reduces the dimensions of an image.
     
-    - Parameter image - image to transform.
+    - Parameter image: image to transform.
     
     - Returns: smaller image.
     */
@@ -47,7 +47,7 @@ extension UIImage {
     /**
     Crops the image to ensure that when is scaled it doesn't appear stretched
 
-    - Parameter image - image to transform.
+    - Parameter image: image to transform.
     
     - Returns: cropped image.
     */
@@ -68,7 +68,7 @@ extension UIImage {
     /**
     Calculates the dimensions the image needs to be cropped to.
      
-     - Parameter image - image to transform.
+     - Parameter image: image to transform.
      
      - Returns: dimension to crop the image to.
      */

@@ -34,7 +34,7 @@ class JSCPostParser: JSCParser {
     /**
     Parse array of posts.
     
-    - Parameter postsDictionaries - array of dictionaries with posts.
+    - Parameter postsDictionaries: array of dictionaries with posts.
     
     - Returns: NSArray of posts.
     */
@@ -57,7 +57,7 @@ class JSCPostParser: JSCParser {
     /**
     Parse Post.
     
-    - Parameter postDictionary - JSON containing a post.
+    - Parameter postDictionary: JSON containing a post.
     
     - Returns: JSCPostPage instance that was parsed.
     */

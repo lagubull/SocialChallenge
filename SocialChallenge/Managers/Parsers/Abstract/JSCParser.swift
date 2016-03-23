@@ -40,7 +40,7 @@ class JSCParser: NSObject {
     /**
     Initialises the parser.
     
-    - Parameter managedContext - Context for the parser to access CoreData.
+    - Parameter managedContext: Context for the parser to access CoreData.
     
     - Returns: FSNParser instance.
     */
@@ -54,7 +54,7 @@ class JSCParser: NSObject {
     /**
     Convenient initialiser the parser.
     
-    - Parameter managedContext - Context for the parser to access CoreData.
+    - Parameter managedContext: Context for the parser to access CoreData.
     
     - Returns: FSNParser instance.
     */

@@ -19,14 +19,14 @@ protocol JSCHomeAdapterDelegate {
     /**
      User pressed on the favorites button.
      
-     - Parameter post - post cell is showing.
+     - Parameter post: post cell is showing.
      */
     func didPressFavoritesButton(post: JSCPost)
     
     /**
      User pressed on the comments button.
      
-     - Parameter post - post cell is showing.
+     - Parameter post: post cell is showing.
      */
     func didPressCommentsButton(post: JSCPost)
 }

@@ -17,8 +17,8 @@ class JSCPost: NSManagedObject {
     /**
     Retrieves a JSCPOST from DB based on ID provided.
     
-    - Parameter postId - ID of the post to be retrieved.
-    - Parameter managedObjectContext - context that should be used to access persistent store.
+    - Parameter postId: ID of the post to be retrieved.
+    - Parameter managedObjectContext: context that should be used to access persistent store.
     
     - Returns: JSCPOST instance or nil if POST can't be found.
     */
@@ -36,7 +36,7 @@ class JSCPost: NSManagedObject {
     /**
      Retrieves a JSCPOST from DB based on ID provided, looking in the mainContext.
      
-     - Parameter postId - ID of the post to be retrieved.
+     - Parameter postId: ID of the post to be retrieved.
      
      - Returns: JSCPOST instance or nil if POST can't be found.
      */
