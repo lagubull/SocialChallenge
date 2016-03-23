@@ -19,7 +19,7 @@ class JSCCDSOperation: JSCOperation {
     /**
     Saves the parent managed context if there is changes.
     
-    - Parameter result - result to finish with and pass to on success callback.
+    - Parameter result: result to finish with and pass to on success callback.
     */
     func saveLocalContextChangesToMainContext(result: AnyObject?) {
         
@@ -86,7 +86,7 @@ class JSCCDSOperation: JSCOperation {
     /**
      Saves the local managed object context and finishes the execution of the operation.
      
-     - Parameter result - result to finish with and pass to on success callback.
+     - Parameter result: result to finish with and pass to on success callback.
      */
     func saveContextAndFinishWithResult(result: AnyObject?) {
         

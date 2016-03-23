@@ -29,7 +29,7 @@ class JSCPostPageParser: JSCParser {
     /**
      Parse Page.
      
-     - Parameter pageDictionary JSON containing a page.
+     - Parameter pageDictionary: JSON containing a page.
      
      - Returns: JSCPostPage instance that was parsed.
     */
@@ -75,13 +75,13 @@ class JSCPostPageParser: JSCParser {
      /**
      Parse meta data about the page.
     
-     - Parameter metaDictionary JSON containing a page meta data.
+     - Parameter metaDictionary: JSON containing a page meta data.
     
      - Returns: JSCPostPage instance that was parsed.
      */
     func parseMetaDictionary(metaDictionary: Dictionary <String, AnyObject>) -> JSCPostPage! {
         
-        let page = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(JSCPostPage.self), inManagedObjectContext: self.managedObjectContext) as! JSCPostPage
+        let page = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: self.managedObjectContext) as! JSCPostPage
         
         page.nextPageRequestPath = JSCValueOrDefault(metaDictionary[kJSCNextPage], defaultValue: nil) as? String
         page.index = JSCValueOrDefault(metaDictionary[kJSCcurrentPage], defaultValue: nil) as? NSNumber

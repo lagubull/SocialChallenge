@@ -35,7 +35,7 @@ class JSCFileManager {
     /**
      Path of resource in documents directory.
      
-     - Parameter path - path that will be combined documents path.
+     - Parameter path: path that will be combined documents path.
      
      - Returns: Combined path.
      */
@@ -60,7 +60,7 @@ class JSCFileManager {
     /**
     Retrieves data to path in document directory for this particular application.
     
-    - Parameter path - path that will be combined documents path.
+    - Parameter path: path that will be combined documents path.
     
     - Returns: NSData that was retrieved.
     */
@@ -76,8 +76,8 @@ class JSCFileManager {
     /**
     Save data to path in document directory.
     
-    - Parameter data - data to be saved.
-    - Parameter toDocumentsDirectoryPath - path that will be combined documents path.
+    - Parameter data: data to be saved.
+    - Parameter toDocumentsDirectoryPath: path that will be combined documents path.
     
     - Returns: YES whether save was successful.
     */
@@ -93,8 +93,8 @@ class JSCFileManager {
      
      If the directory doesn't exist it will be created.
      
-     - Parameter data - data to be saved.
-     - parameter path - path that the data will be saved to.
+     - Parameter data: data to be saved.
+     - parameter path: path that the data will be saved to.
      
      - Returns: BOOL whether save was successful.
      */
@@ -141,7 +141,7 @@ class JSCFileManager {
      
      If the directory doesn't exist it will be created.
      
-     - Parameter path - path that will be created.
+     - Parameter path: path that will be created.
      
      - Returns: YES whether creation was successful.
      */
@@ -173,7 +173,7 @@ class JSCFileManager {
     /**
     Delete data from path in document directory.
     
-    - Parameter path - path that will be combined documents path.
+    - Parameter path: path that will be combined documents path.
     
     - Returns: YES whether deletion was successful.
     */
@@ -187,7 +187,7 @@ class JSCFileManager {
     /**
      Delete data from path.
      
-     - Parameter path - path to the file.
+     - Parameter path: path to the file.
      
      - Returns: YES whether deletion was successful.
      */

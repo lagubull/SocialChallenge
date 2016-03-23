@@ -11,7 +11,7 @@ PODS:
     - PureLayout
 
 DEPENDENCIES:
-  - CoreDataServices (= 1.1.4)
+  - CoreDataServices
   - EasyAlert
   - EasyDownloadSession (from `https://github.com/lagubull/EasyDownloadSession`)
   - OCMock (~> 3.2)

@@ -18,10 +18,10 @@ class JSCMediaManager {
     /**
      Retrieves a media for a post.
      
-     - Parameter post - post which we want media for.
-     - Parameter retrievalRequired - block to execute while a download is in progress.
-     - Parameter succes - closure to execute in case of success.
-     - Parameter failure - closure to execute on failure.
+     - Parameter post: post which we want media for.
+     - Parameter retrievalRequired: block to execute while a download is in progress.
+     - Parameter succes: closure to execute in case of success.
+     - Parameter failure: closure to execute on failure.
      */
     class func retrieveMediaForPost(post: JSCPost, retrievalRequired: ((postId: String) -> Void)?, success: ((result: AnyObject?, postId: String) -> Void)?, failure: ((error: NSError?, postId: String) -> Void)?) {
         

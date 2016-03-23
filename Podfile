@@ -4,20 +4,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
 
-def socialChallenge_pods
-    pod 'CoreDataServices', '1.1.4'
-    pod 'PureLayout'
-    pod 'EasyAlert'
-    pod 'Reveal-iOS-SDK', '~> 1.6', :configurations => ['Debug']
-    pod 'SimpleTableView', '~>1.0.3'
-    pod 'EasyDownloadSession', :git => "https://github.com/lagubull/EasyDownloadSession"
-    pod 'OCMock', '~>3.2'
-end
+pod 'CoreDataServices'
+pod 'PureLayout'
+pod 'EasyAlert'
+pod 'Reveal-iOS-SDK', '~> 1.6', :configurations => ['Debug']
+pod 'SimpleTableView', '~>1.0.3'
+pod 'EasyDownloadSession', :git => "https://github.com/lagubull/EasyDownloadSession"
+pod 'OCMock', '~>3.2'
 
-target 'SocialChallenge' do
-    socialChallenge_pods
-end
-
-target 'SocialChallengeTests' do
-    socialChallenge_pods
-end

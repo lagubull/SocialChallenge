@@ -16,7 +16,7 @@ class JSCJSONManager {
     /**
      Reads the data and deserialises it in a NSdictionary
      
-     - Parameter data - data to process
+     - Parameter data: data to process
      
      - Returns: Dictionary with the processed information
      */
@@ -43,7 +43,7 @@ class JSCJSONManager {
     /**
      Applies UTF8 encoding to the data
      
-     - Parameter Data without UTF8 encoding
+     - Parameter data: data without UTF8 encoding
      
      - Returns: data with UTF8 enconding
      */
@@ -61,7 +61,7 @@ class JSCJSONManager {
     /**
      Reads the deserialised data in a NSdictionary
      
-     - Parameter data to process
+     - Parameter data: data to process
      
      - Returns: Dictionary with the processed information
      */

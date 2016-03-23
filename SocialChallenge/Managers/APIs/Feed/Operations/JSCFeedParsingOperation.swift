@@ -29,8 +29,8 @@ class JSCFeedParsingOperation: JSCCDSOperation {
     /**
     Creates an operation to retrieve a feed.
     
-    - Parameter: data - actual data to parse.
-    - Parameter: mode - indicates whether should be the first the page or second.
+    - Parameter: data: actual data to parse.
+    - Parameter: mode: indicates whether should be the first the page or second.
     
     - Returns: an instance of the class.
     */

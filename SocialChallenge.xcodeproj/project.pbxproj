@@ -13,7 +13,6 @@
 		3B30E6D21C99CA1D00DFE289 /* JSCMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30E6D11C99CA1D00DFE289 /* JSCMediaManager.swift */; };
 		3B3111C81B6E127D008E374E /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B3111C91B6E127D008E374E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3111BF1B6E127D008E374E /* Images.xcassets */; };
-		3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3111BB1B6E127D008E374E /* SocialChallenge.xcdatamodeld */; };
 		3B31FEB11C9B185E001E8C34 /* JSCJSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31FEB01C9B185E001E8C34 /* JSCJSONManager.swift */; };
 		3B33AC661C91B2A70010F219 /* JSCFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */; };
 		3B33AC681C91BE2B0010F219 /* JSCFeedParsingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33AC671C91BE2B0010F219 /* JSCFeedParsingOperation.swift */; };
@@ -21,14 +20,11 @@
 		3B3917ED1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3917EC1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift */; };
 		3B3917F11C9C763900D5C699 /* UIImage+JSCScaleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3917EE1C9C3F8500D5C699 /* UIImage+JSCScaleImage.swift */; };
 		3B3917F31C9C77BE00D5C699 /* UINavigationBar+JSCCustomHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3917F21C9C77BE00D5C699 /* UINavigationBar+JSCCustomHeight.swift */; };
+		3B3F58631CA1B64700C1766E /* JSCPostParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B481F101CA0632B00C91E63 /* JSCPostParserTests.swift */; };
 		3B4287EF1C89A7F200D3D4EF /* JSCPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */; };
 		3B4288001C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */; };
-		3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */; };
-		3B4288041C89C6C500D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */; };
 		3B4288061C89E80D00D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */; };
 		3B4288071C89E80F00D3D4EF /* JSCPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */; };
-		3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */; };
-		3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */; };
 		3B42880B1C89FCCF00D3D4EF /* JSCPostPageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42880A1C89FCCF00D3D4EF /* JSCPostPageParser.swift */; };
 		3B4E80211C8DA1A600ECFCD0 /* JSCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E80201C8DA1A600ECFCD0 /* JSCParser.swift */; };
 		3B4E80281C8DE70600ECFCD0 /* JSCDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */; };
@@ -48,15 +44,14 @@
 		3BFF18A71C9436B600638549 /* JSCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFF18A61C9436B600638549 /* JSCHomeViewController.swift */; };
 		688E4A7F2D96FE901926B777 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */; };
 		6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */; };
-		770B219FC566D19B21A8575E /* Pods_SocialChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA029AF9B63B12404DD97E5 /* Pods_SocialChallengeTests.framework */; };
+		AFC02515028F674F69A28856 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1281F7FA650B40490DA7EC82 /* Pods.framework */; };
 		BA544E9361EAF529778588A5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C9187E6B5128FE05C33908 /* CoreText.framework */; };
-		BF340CE7BC2D9A3C8D2C7B29 /* Pods_SocialChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B861B73D88BD87B5AA7820B /* Pods_SocialChallenge.framework */; };
 		BF487C44F0E59E581C2A3BD5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */; };
 		D980C4EDBB68412EEA73790C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B3111A41B6E110B008E374E /* PBXContainerItemProxy */ = {
+		3B3F585E1CA1B61D00C1766E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B31117A1B6E1095008E374E /* Project object */;
 			proxyType = 1;
@@ -67,20 +62,18 @@
 
 /* Begin PBXFileReference section */
 		10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		36111EF044CFE5564B49FEE5 /* Pods-SocialChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1281F7FA650B40490DA7EC82 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		287EE8E2B0E7510D34C9CF91 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2E73AAD5DB1DBD17B4F05771 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3B30E6C41C996E0500DFE289 /* JSCMediaStorageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCMediaStorageOperation.swift; sourceTree = "<group>"; };
 		3B30E6C61C9984B400DFE289 /* JSCLocalImageAssetRetrievalOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCLocalImageAssetRetrievalOperation.swift; sourceTree = "<group>"; };
 		3B30E6CF1C99BCEA00DFE289 /* JSCOperationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCOperationCoordinator.swift; sourceTree = "<group>"; };
 		3B30E6D11C99CA1D00DFE289 /* JSCMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCMediaManager.swift; sourceTree = "<group>"; };
 		3B3111841B6E110B008E374E /* SocialChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3111881B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B3111A31B6E110B008E374E /* SocialChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B3111A81B6E110B008E374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B3111BC1B6E127D008E374E /* SocialChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialChallenge.xcdatamodel; sourceTree = "<group>"; };
 		3B3111BF1B6E127D008E374E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B3111CA1B6E12F0008E374E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		3B316ED81C88569F0052F19A /* JSCPostParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCPostParserTests.m; sourceTree = "<group>"; };
-		3B316EDA1C8859150052F19A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		3B31FEB01C9B185E001E8C34 /* JSCJSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCJSONManager.swift; sourceTree = "<group>"; };
 		3B33AC651C91B2A70010F219 /* JSCFeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedRequest.swift; sourceTree = "<group>"; };
 		3B33AC671C91BE2B0010F219 /* JSCFeedParsingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCFeedParsingOperation.swift; sourceTree = "<group>"; };
@@ -88,14 +81,16 @@
 		3B3917EC1C9C2C7600D5C699 /* UIImage+JSCRoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+JSCRoundImage.swift"; sourceTree = "<group>"; };
 		3B3917EE1C9C3F8500D5C699 /* UIImage+JSCScaleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+JSCScaleImage.swift"; sourceTree = "<group>"; };
 		3B3917F21C9C77BE00D5C699 /* UINavigationBar+JSCCustomHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+JSCCustomHeight.swift"; sourceTree = "<group>"; };
+		3B3F58591CA1B61D00C1766E /* SocialChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3F585D1CA1B61D00C1766E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B4287EE1C89A7F200D3D4EF /* JSCPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPost.swift; sourceTree = "<group>"; };
-		3B4287F01C89A83600D3D4EF /* SocialChallenge-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SocialChallenge-Bridging-Header.h"; path = "SocialChallenge/SupportingFiles/SocialChallenge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		3B4287FD1C89A8AF00D3D4EF /* JSCPost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSCPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3B4287FE1C89A8AF00D3D4EF /* JSCPostPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostPage.swift; sourceTree = "<group>"; };
 		3B4287FF1C89A8AF00D3D4EF /* JSCPostPage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSCPostPage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3B4288051C89C9D200D3D4EF /* SocialChallenge-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialChallenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		3B42880A1C89FCCF00D3D4EF /* JSCPostPageParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostPageParser.swift; sourceTree = "<group>"; };
 		3B42880E1C8A501A00D3D4EF /* JSCFeedRetrieveOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCFeedRetrieveOperationTests.m; sourceTree = "<group>"; };
+		3B481F101CA0632B00C91E63 /* JSCPostParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostParserTests.swift; sourceTree = "<group>"; };
 		3B4E80201C8DA1A600ECFCD0 /* JSCParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCParser.swift; sourceTree = "<group>"; };
 		3B4E80271C8DE70600ECFCD0 /* JSCDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCDateFormatter.swift; sourceTree = "<group>"; };
 		3B5867131C98682D005BCDEB /* JSCRootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCRootNavigationController.swift; sourceTree = "<group>"; };
@@ -112,16 +107,11 @@
 		3BF46A8F1C8C811200DD55EA /* JSCPostParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostParser.swift; sourceTree = "<group>"; };
 		3BFF18A41C941C3D00638549 /* JSCPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCPostTableViewCell.swift; sourceTree = "<group>"; };
 		3BFF18A61C9436B600638549 /* JSCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSCHomeViewController.swift; sourceTree = "<group>"; };
-		42A9A7C4DAFAB50F0FF69D29 /* Pods-SocialChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
-		692522B6086335AFDFD58A1C /* Pods-SocialChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		7B861B73D88BD87B5AA7820B /* Pods_SocialChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6768CF6A78C7DF15507DFA /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
-		A2B07248FC846BD636877C79 /* Pods-SocialChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C1C9187E6B5128FE05C33908 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		CCA029AF9B63B12404DD97E5 /* Pods_SocialChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,15 +124,14 @@
 				6E406D150E25D851AF9BA65E /* CoreTelephony.framework in Frameworks */,
 				688E4A7F2D96FE901926B777 /* SystemConfiguration.framework in Frameworks */,
 				D980C4EDBB68412EEA73790C /* QuartzCore.framework in Frameworks */,
-				BF340CE7BC2D9A3C8D2C7B29 /* Pods_SocialChallenge.framework in Frameworks */,
+				AFC02515028F674F69A28856 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B3111A01B6E110B008E374E /* Frameworks */ = {
+		3B3F58561CA1B61D00C1766E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770B219FC566D19B21A8575E /* Pods_SocialChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				3B3111861B6E110B008E374E /* SocialChallenge */,
-				3B3111A61B6E110B008E374E /* SocialChallengeTests */,
+				3B3F585A1CA1B61D00C1766E /* SocialChallengeTests */,
 				3B3111851B6E110B008E374E /* Products */,
 				E329036832D4BECC41E1C2D0 /* Pods */,
 				E5C92224D8C24ABAB9801BE1 /* Frameworks */,
@@ -164,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				3B3111841B6E110B008E374E /* SocialChallenge.app */,
-				3B3111A31B6E110B008E374E /* SocialChallengeTests.xctest */,
+				3B3F58591CA1B61D00C1766E /* SocialChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,25 +185,6 @@
 			);
 			name = "Supporting Files";
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		3B3111A61B6E110B008E374E /* SocialChallengeTests */ = {
-			isa = PBXGroup;
-			children = (
-				3B316F041C8888DA0052F19A /* Operations */,
-				3B316ED61C88565C0052F19A /* Parsers */,
-				3B3111A71B6E110B008E374E /* Supporting Files */,
-			);
-			path = SocialChallengeTests;
-			sourceTree = "<group>";
-		};
-		3B3111A71B6E110B008E374E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3B4287F01C89A83600D3D4EF /* SocialChallenge-Bridging-Header.h */,
-				3B3111A81B6E110B008E374E /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3B3111B11B6E127D008E374E /* AppDelegate */ = {
@@ -355,7 +325,7 @@
 		3B316ED71C88566F0052F19A /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				3B316ED81C88569F0052F19A /* JSCPostParserTests.m */,
+				3B481F101CA0632B00C91E63 /* JSCPostParserTests.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -409,6 +379,16 @@
 				3B30E6C61C9984B400DFE289 /* JSCLocalImageAssetRetrievalOperation.swift */,
 			);
 			path = LocalRetrieval;
+			sourceTree = "<group>";
+		};
+		3B3F585A1CA1B61D00C1766E /* SocialChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B316F041C8888DA0052F19A /* Operations */,
+				3B316ED61C88565C0052F19A /* Parsers */,
+				3B3F585D1CA1B61D00C1766E /* Info.plist */,
+			);
+			path = SocialChallengeTests;
 			sourceTree = "<group>";
 		};
 		3B3FAA3D1C60B5950019D0D0 /* NSDateFormatter */ = {
@@ -648,10 +628,8 @@
 		E329036832D4BECC41E1C2D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				692522B6086335AFDFD58A1C /* Pods-SocialChallenge.debug.xcconfig */,
-				A2B07248FC846BD636877C79 /* Pods-SocialChallenge.release.xcconfig */,
-				36111EF044CFE5564B49FEE5 /* Pods-SocialChallengeTests.debug.xcconfig */,
-				42A9A7C4DAFAB50F0FF69D29 /* Pods-SocialChallengeTests.release.xcconfig */,
+				2E73AAD5DB1DBD17B4F05771 /* Pods.debug.xcconfig */,
+				287EE8E2B0E7510D34C9CF91 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -659,15 +637,13 @@
 		E5C92224D8C24ABAB9801BE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B316EDA1C8859150052F19A /* libPods.a */,
 				8F6768CF6A78C7DF15507DFA /* BuddyBuildSDK.framework */,
 				10F4D3D95F7F7974853D95B9 /* AssetsLibrary.framework */,
 				C1C9187E6B5128FE05C33908 /* CoreText.framework */,
 				74C96BA68FDBF442184EEF8B /* CoreTelephony.framework */,
 				ADC6FD99435A1465FF5C03EE /* SystemConfiguration.framework */,
 				A6CB6A70FA358AC88A18E033 /* QuartzCore.framework */,
-				7B861B73D88BD87B5AA7820B /* Pods_SocialChallenge.framework */,
-				CCA029AF9B63B12404DD97E5 /* Pods_SocialChallengeTests.framework */,
+				1281F7FA650B40490DA7EC82 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -695,25 +671,22 @@
 			productReference = 3B3111841B6E110B008E374E /* SocialChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3B3111A21B6E110B008E374E /* SocialChallengeTests */ = {
+		3B3F58581CA1B61D00C1766E /* SocialChallengeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B3111AE1B6E110B008E374E /* Build configuration list for PBXNativeTarget "SocialChallengeTests" */;
+			buildConfigurationList = 3B3F58601CA1B61D00C1766E /* Build configuration list for PBXNativeTarget "SocialChallengeTests" */;
 			buildPhases = (
-				07DAE80DC85610A9A2D439FD /* Check Pods Manifest.lock */,
-				3B31119F1B6E110B008E374E /* Sources */,
-				3B3111A01B6E110B008E374E /* Frameworks */,
-				3B3111A11B6E110B008E374E /* Resources */,
-				DE803ACFCAF73043206758E3 /* Embed Pods Frameworks */,
-				F93E816469795AC0DE817A5E /* Copy Pods Resources */,
+				3B3F58551CA1B61D00C1766E /* Sources */,
+				3B3F58561CA1B61D00C1766E /* Frameworks */,
+				3B3F58571CA1B61D00C1766E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3B3111A51B6E110B008E374E /* PBXTargetDependency */,
+				3B3F585F1CA1B61D00C1766E /* PBXTargetDependency */,
 			);
 			name = SocialChallengeTests;
 			productName = SocialChallengeTests;
-			productReference = 3B3111A31B6E110B008E374E /* SocialChallengeTests.xctest */;
+			productReference = 3B3F58591CA1B61D00C1766E /* SocialChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -723,13 +696,15 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JSC;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				TargetAttributes = {
 					3B3111831B6E110B008E374E = {
 						CreatedOnToolsVersion = 6.3;
 					};
-					3B3111A21B6E110B008E374E = {
-						CreatedOnToolsVersion = 6.3;
+					3B3F58581CA1B61D00C1766E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 3B3111831B6E110B008E374E;
 					};
 				};
 			};
@@ -747,7 +722,7 @@
 			projectRoot = "";
 			targets = (
 				3B3111831B6E110B008E374E /* SocialChallenge */,
-				3B3111A21B6E110B008E374E /* SocialChallengeTests */,
+				3B3F58581CA1B61D00C1766E /* SocialChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -762,7 +737,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B3111A11B6E110B008E374E /* Resources */ = {
+		3B3F58571CA1B61D00C1766E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -772,21 +747,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07DAE80DC85610A9A2D439FD /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		36E9D7E2BAAA1A9C330C9E76 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -799,7 +759,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		38F5A9356B0110BAEEC9B438 /* Check Pods Manifest.lock */ = {
@@ -829,37 +789,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallenge/Pods-SocialChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE803ACFCAF73043206758E3 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F93E816469795AC0DE817A5E /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialChallengeTests/Pods-SocialChallengeTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -904,25 +834,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B31119F1B6E110B008E374E /* Sources */ = {
+		3B3F58551CA1B61D00C1766E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B4288041C89C6C500D3D4EF /* JSCPost+CoreDataProperties.swift in Sources */,
-				3B316EFC1C886B4B0052F19A /* SocialChallenge.xcdatamodeld in Sources */,
-				3B4288031C89C6BD00D3D4EF /* JSCPost.swift in Sources */,
-				3B4288091C89E81200D3D4EF /* JSCPostPage+CoreDataProperties.swift in Sources */,
-				3B4288081C89E81000D3D4EF /* JSCPostPage.swift in Sources */,
+				3B3F58631CA1B64700C1766E /* JSCPostParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B3111A51B6E110B008E374E /* PBXTargetDependency */ = {
+		3B3F585F1CA1B61D00C1766E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B3111831B6E110B008E374E /* SocialChallenge */;
-			targetProxy = 3B3111A41B6E110B008E374E /* PBXContainerItemProxy */;
+			targetProxy = 3B3F585E1CA1B61D00C1766E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -950,13 +876,14 @@
 		3B31117F1B6E1095008E374E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 			};
 			name = Release;
 		};
 		3B3111AC1B6E110B008E374E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 692522B6086335AFDFD58A1C /* Pods-SocialChallenge.debug.xcconfig */;
+			baseConfigurationReference = 2E73AAD5DB1DBD17B4F05771 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -990,8 +917,8 @@
 				GCC_PREFIX_HEADER = SocialChallenge/SupportingFIles/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"API_END_POINT=@\\\"http://unii-interview.herokuapp.com/api/v1/posts\\\"",
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1018,7 +945,7 @@
 		};
 		3B3111AD1B6E110B008E374E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2B07248FC846BD636877C79 /* Pods-SocialChallenge.release.xcconfig */;
+			baseConfigurationReference = 287EE8E2B0E7510D34C9CF91 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1074,11 +1001,11 @@
 			};
 			name = Release;
 		};
-		3B3111AF1B6E110B008E374E /* Debug */ = {
+		3B3F58611CA1B61D00C1766E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36111EF044CFE5564B49FEE5 /* Pods-SocialChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1092,58 +1019,42 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods",
-					"$(PROJECT_DIR)",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREFIX_HEADER = SocialChallenge/SupportingFIles/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"API_END_POINT=@\\\"http://unii-interview.herokuapp.com/api/v1/posts\\\"",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Reveal-iOS-SDK\"",
-					"\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"",
-				);
 				INFOPLIST_FILE = SocialChallengeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lagusoft.SocialChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialChallenge.app/SocialChallenge";
 			};
 			name = Debug;
 		};
-		3B3111B01B6E110B008E374E /* Release */ = {
+		3B3F58621CA1B61D00C1766E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42A9A7C4DAFAB50F0FF69D29 /* Pods-SocialChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1157,24 +1068,13 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods",
-					"$(PROJECT_DIR)",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = SocialChallenge/SupportingFIles/PrefixHeader.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"API_END_POINT=@\\\"http://unii-interview.herokuapp.com/api/v1/posts\\\"",
-				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1182,16 +1082,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = SocialChallengeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "unii.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lagusoft.SocialChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialChallenge.app/SocialChallenge";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1217,11 +1115,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		3B3111AE1B6E110B008E374E /* Build configuration list for PBXNativeTarget "SocialChallengeTests" */ = {
+		3B3F58601CA1B61D00C1766E /* Build configuration list for PBXNativeTarget "SocialChallengeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B3111AF1B6E110B008E374E /* Debug */,
-				3B3111B01B6E110B008E374E /* Release */,
+				3B3F58611CA1B61D00C1766E /* Debug */,
+				3B3F58621CA1B61D00C1766E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

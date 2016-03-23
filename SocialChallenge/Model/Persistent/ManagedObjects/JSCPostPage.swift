@@ -10,14 +10,12 @@ import Foundation
 import CoreData
 import CoreDataServices
 
-@objc(JSCPostPage)
-
 class JSCPostPage: NSManagedObject {
     
     /**
      Retrieves the last page of posts stored in the context.
      
-     - Parameter context in which we want to perform the search.
+     - Parameter context: context in which we want to perform the search.
      
      - Returns: JSCPostPage - instace of the JSCPostPage class
      */
