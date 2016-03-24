@@ -14,11 +14,10 @@
     <entity name="JSCPostPage" representedClassName=".JSCPostPage" syncable="YES">
         <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="nextPageRequestPath" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="postPageId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSCPost" inverseName="page" inverseEntity="JSCPost" syncable="YES"/>
     </entity>
     <elements>
         <element name="JSCPost" positionX="25" positionY="45" width="128" height="180"/>
-        <element name="JSCPostPage" positionX="214" positionY="-18" width="128" height="105"/>
+        <element name="JSCPostPage" positionX="214" positionY="-18" width="128" height="90"/>
     </elements>
 </model>

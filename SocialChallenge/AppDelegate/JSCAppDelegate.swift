@@ -24,9 +24,9 @@ let kJSCMediaDownloadStack: String = "kJSCMediaDownloadStack"
 /**
  Inline function for printing log messages only while on debug configuration.
  */
-func DLog(message: String, function: String = __FUNCTION__) {
+func DLog(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
     #if DEBUG
-        print("\(function): \(message)")
+        NSLog("[\(NSURL(fileURLWithPath: filename).lastPathComponent!):\(line)] \(function) - \(message)")
     #endif
 }
 

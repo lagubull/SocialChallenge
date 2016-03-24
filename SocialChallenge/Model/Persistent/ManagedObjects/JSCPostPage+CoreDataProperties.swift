@@ -16,7 +16,6 @@ extension JSCPostPage {
 
     @NSManaged var index: NSNumber?
     @NSManaged var nextPageRequestPath: String?
-    @NSManaged var postPageId: String?
     @NSManaged var post: JSCPost?
 
 }
