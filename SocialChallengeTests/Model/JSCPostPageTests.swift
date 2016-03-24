@@ -25,6 +25,8 @@ class JSCPostPageTests: XCTestCase {
         
         super.setUp()
         
+        CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
+        
         page  = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as? JSCPostPage
         post = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPost.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as? JSCPost
         

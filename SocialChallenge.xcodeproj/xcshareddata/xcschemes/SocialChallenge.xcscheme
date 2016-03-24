@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B3F58581CA1B61D00C1766E"
+               BlueprintIdentifier = "3B52DA5E1CA446180003899F"
                BuildableName = "SocialChallengeTests.xctest"
                BlueprintName = "SocialChallengeTests"
                ReferencedContainer = "container:SocialChallenge.xcodeproj">
@@ -47,7 +47,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B3F58581CA1B61D00C1766E"
+               BlueprintIdentifier = "3B52DA6C1CA446720003899F"
                BuildableName = "SocialChallengeTests.xctest"
                BlueprintName = "SocialChallengeTests"
                ReferencedContainer = "container:SocialChallenge.xcodeproj">
