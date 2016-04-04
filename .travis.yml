@@ -10,4 +10,4 @@ notifications:
   slack: unii:uiIBwCLf7BZh2scuao41N9by
 
 script:    
-    xctool -workspace SocialChallenge.xcworkspace -scheme SocialChallenge build test -sdk iphonesimulator
+    xctool -workspace SocialChallenge.xcworkspace -scheme SocialChallenge build -sdk iphonesimulator
