@@ -14,6 +14,11 @@ HTTP GET Method.
 let kJSCHTTPRequestMethodGet = "GET" as String!
 
 /**
+ API end point URL.
+ */
+let kJSCApiEndPoint = "http://unii-interview.herokuapp.com/api/v1/posts"
+
+/**
 Request to retrieve a feed.
 */
 class JSCFeedRequest: NSMutableURLRequest {
@@ -27,7 +32,7 @@ class JSCFeedRequest: NSMutableURLRequest {
     */
     class func requestToRetrieveFeed () -> JSCFeedRequest {
         
-        return self.requestToRetrieveFeedNexPageWithURL(API_END_POINT)
+        return self.requestToRetrieveFeedNexPageWithURL(kJSCApiEndPoint)
     }
     
     /**
@@ -47,5 +52,4 @@ class JSCFeedRequest: NSMutableURLRequest {
         
         return request
     }
-    
 }

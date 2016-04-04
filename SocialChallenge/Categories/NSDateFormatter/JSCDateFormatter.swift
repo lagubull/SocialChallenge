@@ -25,7 +25,7 @@ extension NSDateFormatter {
     
     - Returns: NSDateFormmater of the thread we are on.
     */
-    class func jsc_dateFormatter () -> NSDateFormatter {
+    class func jsc_dateFormatter() -> NSDateFormatter {
         
         if NSThread.currentThread().threadDictionary[kJSCDateFormatterKey] == nil {
             

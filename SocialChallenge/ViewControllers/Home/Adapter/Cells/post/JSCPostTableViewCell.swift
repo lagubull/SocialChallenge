@@ -176,7 +176,7 @@ class JSCPostTableViewCell: UITableViewCell {
         
         _favoritesButton.setImage(UIImage.init(named: "favoritesIcon"), forState: .Normal)
         
-        _favoritesButton.addTarget(self, action: "favoritesButtonPressed", forControlEvents : .TouchUpInside)
+        _favoritesButton.addTarget(self, action: #selector(favoritesButtonPressed), forControlEvents : .TouchUpInside)
         
         return _favoritesButton;
     }()
@@ -203,7 +203,7 @@ class JSCPostTableViewCell: UITableViewCell {
         
         _commentsButton.setImage(UIImage.init(named: "commentsIcon"), forState: .Normal)
         
-        _commentsButton.addTarget(self, action: "commentsButtonPressed", forControlEvents : .TouchUpInside)
+        _commentsButton.addTarget(self, action: #selector(commentsButtonPressed), forControlEvents : .TouchUpInside)
         
         return _commentsButton
     }()

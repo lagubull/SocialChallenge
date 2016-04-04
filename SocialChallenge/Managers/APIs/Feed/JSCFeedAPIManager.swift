@@ -56,11 +56,11 @@ class JSCFeedAPIManager: NSObject {
     }
     
     /**
-     Creates and queues an operation for retrieving the feed
+     Creates and queues an operation for retrieving the feed.
      
-     @param mode first page or a next page
-     @param success callback if the request is successful
-     @param failture callback if the request fails
+     - Parameter mode: first page or a next page.
+     - Parameter success: callback if the request is successful.
+     - Parameter failture: callback if the request fails.
      */
     class func retrieveFeedWithMode(mode: JSCDataRetrievalOperationMode, success: JSCOperationOnSuccessCallback, failure: JSCOperationOnFailureCallback) {
         

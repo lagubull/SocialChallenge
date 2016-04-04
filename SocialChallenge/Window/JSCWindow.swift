@@ -39,7 +39,7 @@ class JSCWindow: UIWindow {
             
             self.splashViewController!.view.alpha = 0.0
             },
-            completion: { (BOOL finished) in
+            completion: { (finished) in
                 
                 self.splashViewController!.view.removeFromSuperview()
                 self.splashViewController = nil;

@@ -20,7 +20,7 @@ let kJSCNavigationBarHeight = 44.0 as CGFloat
  Landing viewController.
  */
 class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
-   
+    
     //MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -127,8 +127,8 @@ class JSCHomeViewController: UIViewController, JSCHomeAdapterDelegate {
     
     //MARK: JSCHomeAdapterDelegate
     
-    func didPressCommentsButton(post: JSCPost)
-    {
+    func didPressCommentsButton(post: JSCPost) {
+        
         LEAAlertController.dismissibleAlertViewWithTitle(NSLocalizedString("CommentsMessageTitle", comment: ""), message: NSLocalizedString("CommentsMessageBody", comment: ""), cancelButtonTitle: NSLocalizedString("AcceptNav", comment: "")).showInViewController(self)
     }
     
