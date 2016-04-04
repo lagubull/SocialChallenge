@@ -232,7 +232,7 @@ class JSCOperation:  NSOperation {
             
             if let theirCompletionClosure: JSCOperationOnCompletionCallback = operation.onCompletion {
                 
-                self.onFailure =  { result in
+                self.onCompletion =  { result in
                     
                     myCompletionClosure(result)
                     theirCompletionClosure(result)

@@ -65,11 +65,13 @@ class JSCPostParser: JSCParser {
         
         var post: JSCPost!
         
+        guard let managedObjectContext = self.managedObjectContext else { return post }
+        
         if postDictionary[kJSCPostId] != nil {
             
             let postId = "\(postDictionary[kJSCPostId]!)"
             
-            post = JSCPost.fetchPostWithId(postId, managedObjectContext: self.managedObjectContext)
+            post = JSCPost.fetchPostWithId(postId, managedObjectContext: managedObjectContext)
             
             if post == nil {
                 

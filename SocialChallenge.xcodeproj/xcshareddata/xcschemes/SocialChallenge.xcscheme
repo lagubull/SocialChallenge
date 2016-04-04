@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B52DA5E1CA446180003899F"
+               BlueprintIdentifier = "3B52DA6C1CA446720003899F"
                BuildableName = "SocialChallengeTests.xctest"
                BlueprintName = "SocialChallengeTests"
                ReferencedContainer = "container:SocialChallenge.xcodeproj">

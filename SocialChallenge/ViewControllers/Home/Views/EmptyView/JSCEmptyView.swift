@@ -56,4 +56,3 @@ class JSCEmptyView: UIView {
         super.updateConstraints()
     }
 }
-
