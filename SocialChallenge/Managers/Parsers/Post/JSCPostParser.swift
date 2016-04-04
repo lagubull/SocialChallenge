@@ -25,8 +25,6 @@ let kJSCCreatedAt = "created_at" as String
 /**
  Extracts a Post.
  */
-@objc(JSCPostParser)
-
 class JSCPostParser: JSCParser {
     
     //MARK: Posts

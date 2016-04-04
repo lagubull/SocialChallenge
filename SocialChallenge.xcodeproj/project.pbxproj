@@ -715,7 +715,6 @@
 				TargetAttributes = {
 					3B3111831B6E110B008E374E = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 2ZD7MNBBZQ;
 					};
 					3B52DA6C1CA446720003899F = {
 						CreatedOnToolsVersion = 7.2;
@@ -933,7 +932,6 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = SocialChallenge/SupportingFIles/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"API_END_POINT=@\\\"http://unii-interview.herokuapp.com/api/v1/posts\\\"",
 					"$(inherited)",
 					"DEBUG=1",
 				);
@@ -952,7 +950,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.unii.fling;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lagusoft.socialchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialChallenge/SupportingFiles/SocialChallenge-Bridging-Header.h";
@@ -1007,7 +1005,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.unii.fling;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lagusoft.socialchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialChallenge/SupportingFiles/SocialChallenge-Bridging-Header.h";
