@@ -68,7 +68,8 @@ class JSCFeedAPIManager: NSObject {
         
         let request = self.requestForMode(mode)
         
-        DownloadSession.scheduleDownloadWithId("retrieveFeed \(mode.rawValue)", request: request,
+        DownloadSession.scheduleDownloadWithId("retrieveFeed \(mode.rawValue)",
+                                               request: request,
                                                stackIdentifier: kJSCMediaDownloadStack,
                                                progress: nil,
                                                success: { (taskInfo: DownloadTaskInfo!, responseData: NSData?) -> Void in
