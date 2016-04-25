@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
+        ServiceManager.sharedInstance.setupModel("SocialChallenge")
         
         self.window!.backgroundColor = .clearColor()
         self.window!.clipsToBounds = false
@@ -67,8 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /**
         For the sake of the exercise, I will get rid of everything on startup
         */
-        CDSServiceManager.sharedInstance().mainManagedObjectContext.cds_deleteEntriesForEntityClass(JSCPost.self)
-        CDSServiceManager.sharedInstance().mainManagedObjectContext.cds_deleteEntriesForEntityClass(JSCPostPage.self)
+        ServiceManager.sharedInstance.mainManagedObjectContext.deleteEntries(JSCPost.self)
+        ServiceManager.sharedInstance.mainManagedObjectContext.deleteEntries(JSCPostPage.self)
         
         JSCFileManager.deleteDataFromDocumentDirectoryWithPath(nil)
         
@@ -124,14 +124,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     */
     func registerStacks() {
         
-        let apiStack = EDSStack()
+        let apiStack = Stack()
         
-        EDSDownloadSession.sharedInstance().registerStack(apiStack, stackIdentifier:kJSCApiDownloadStack)
+        DownloadSession.sharedInstance.registerStack(stack: apiStack,
+                                                       stackIdentifier:kJSCApiDownloadStack)
         
-        let mediaStack = EDSStack()
+        let mediaStack = Stack()
         
         mediaStack.maxDownloads = 4;
         
-        EDSDownloadSession.sharedInstance().registerStack(mediaStack, stackIdentifier:kJSCMediaDownloadStack)
+        DownloadSession.sharedInstance.registerStack(stack: mediaStack,
+                                                     stackIdentifier:kJSCMediaDownloadStack)
     }
 }

@@ -45,7 +45,11 @@ class JSCMediaManager {
                             retrievalRequired(postId: post.postId!);
                     }
                     
-                    EDSDownloadSession.scheduleDownloadWithId(post.postId, fromURL: NSURL.init(string: post.userAvatarRemoteURL!), stackIdentifier: kJSCMediaDownloadStack, progress: nil, success: { (taskInfo, responseData) -> Void in
+                    DownloadSession.scheduleDownloadWithId(post.postId!,
+                                                           fromURL: NSURL.init(string: post.userAvatarRemoteURL!)!,
+                                                           stackIdentifier: kJSCMediaDownloadStack,
+                                                           progress: nil,
+                                                           success: { (taskInfo: DownloadTaskInfo!, responseData: NSData?) -> Void in
 
                         let storeOperation = JSCMediaStorageOperation.init(postId: post.postId!, data: responseData)
                         
@@ -78,7 +82,8 @@ class JSCMediaManager {
                         storeOperation.targetSchedulerIdentifier = kJSCLocalDataOperationSchedulerTypeIdentifier;
                     
                         JSCOperationCoordinator.sharedInstance.addOperation(storeOperation)
-                        }, failure: { (taskInfo, error) -> Void in
+                        },
+                                                           failure: { (taskInfo, error) -> Void in
                             
                             if let failure: (error: NSError?, postId: String) -> Void = failure {
                                 

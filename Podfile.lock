@@ -1,8 +1,10 @@
 PODS:
-  - CoreDataServices (1.1.4)
+  - ConvenientFileManager (2.0.7)
+  - CoreDataServices (2.0.6):
+    - ConvenientFileManager (~> 2.0)
   - EasyAlert (1.0.1)
   - EasyDownloadSession (1.0.5)
-  - OCMock (3.2.2)
+  - OCMock (3.3)
   - PureLayout (3.0.1)
   - Reveal-iOS-SDK (1.6.2)
   - SimpleTableView (1.0.3):
@@ -13,7 +15,8 @@ PODS:
 DEPENDENCIES:
   - CoreDataServices
   - EasyAlert
-  - EasyDownloadSession (from `https://github.com/lagubull/EasyDownloadSession`)
+  - EasyDownloadSession (from `https://github.com/lagubull/EasyDownloadSession`, branch
+    `f/downloadSessionSwift`)
   - OCMock (~> 3.2)
   - PureLayout
   - Reveal-iOS-SDK (~> 1.6)
@@ -21,18 +24,20 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   EasyDownloadSession:
+    :branch: f/downloadSessionSwift
     :git: https://github.com/lagubull/EasyDownloadSession
 
 CHECKOUT OPTIONS:
   EasyDownloadSession:
-    :commit: a2da036d3ecc5f5ac93ff872a47bf1d649dfffde
+    :commit: c9c99aff659cb8382aba3b3903a9431e3731f3a9
     :git: https://github.com/lagubull/EasyDownloadSession
 
 SPEC CHECKSUMS:
-  CoreDataServices: d4ae6543e2d330a69a609dd34f30dda40c00565c
+  ConvenientFileManager: fbe505538cff2822268d451e6c5644d5651d93d2
+  CoreDataServices: 2e5547400800d78218975abc8c094e69d6726b4f
   EasyAlert: 837fa8d271786f3feedd83ca6bccc2e090abd091
-  EasyDownloadSession: 2742231943c9cc481e1c26ed541af5fc338789a5
-  OCMock: 18c9b7e67d4c2770e95bb77a9cc1ae0c91fe3835
+  EasyDownloadSession: 99ce2302dc7f771d7b8d74f23f1ec4732457deab
+  OCMock: d68685bde31f69cb61d518dcb39269080c78b5ed
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SimpleTableView: d5c86cffbe961311e4059e87a8c1550142470c71

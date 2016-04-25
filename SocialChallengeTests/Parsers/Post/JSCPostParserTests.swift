@@ -33,9 +33,9 @@ class JSCPostParserTests: XCTestCase {
         
         super.setUp()
         
-        CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
+        ServiceManager.sharedInstance.setupModelURLWithModelName("SocialChallenge")
         
-        self.parser = JSCPostParser.parserWithContext(CDSServiceManager.sharedInstance().mainManagedObjectContext)
+        self.parser = JSCPostParser.parserWithContext(ServiceManager.sharedInstance.mainManagedObjectContext)
         
         self.postId = "1"
         self.createdAt = "2016-03-03 12:00:00"
@@ -62,7 +62,7 @@ class JSCPostParserTests: XCTestCase {
     
     override func tearDown() {
         
-        CDSServiceManager.sharedInstance().clear()
+        ServiceManager.sharedInstance.clear()
         
         self.createdAt = nil
         self.likeCount = nil

@@ -23,30 +23,30 @@ class JSCCDSOperation: JSCOperation {
     */
     func saveLocalContextChangesToMainContext(result: AnyObject?) {
         
-        CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
+        ServiceManager.sharedInstance.backgroundManagedObjectContext.performBlockAndWait {
             
             var didSave = true
             
             do {
                 
-                try CDSServiceManager.sharedInstance().backgroundManagedObjectContext.save()
+                try ServiceManager.sharedInstance.backgroundManagedObjectContext.save()
                 
                 /*
                 Coredata will delay cascading deletes for performance so we force them to happen.
                 */
-                CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
+                ServiceManager.sharedInstance.backgroundManagedObjectContext.performBlockAndWait {
                     
-                    CDSServiceManager.sharedInstance().backgroundManagedObjectContext.processPendingChanges()
+                    ServiceManager.sharedInstance.backgroundManagedObjectContext.processPendingChanges()
                 }
                 
                 //Don't want changes to be lost if the app crashes so let's save these changes to the persistent store
-                CDSServiceManager.sharedInstance().mainManagedObjectContext.performBlockAndWait {
+                ServiceManager.sharedInstance.mainManagedObjectContext.performBlockAndWait {
                     
                     do {
                         
-                        try CDSServiceManager.sharedInstance().mainManagedObjectContext.save()
+                        try ServiceManager.sharedInstance.mainManagedObjectContext.save()
                         
-                        CDSServiceManager.sharedInstance().mainManagedObjectContext.processPendingChanges()
+                        ServiceManager.sharedInstance.mainManagedObjectContext.processPendingChanges()
                     }
                     catch {
                         
@@ -98,7 +98,7 @@ class JSCCDSOperation: JSCOperation {
      */
     func saveContextAndFinishWithResult(result: AnyObject?) {
         
-        let hasChanges = CDSServiceManager.sharedInstance().backgroundManagedObjectContext.hasChanges;
+        let hasChanges = ServiceManager.sharedInstance.backgroundManagedObjectContext.hasChanges;
         
         if hasChanges {
             

@@ -9,6 +9,6 @@ pod 'PureLayout'
 pod 'EasyAlert'
 pod 'Reveal-iOS-SDK', '~> 1.6', :configurations => ['Debug']
 pod 'SimpleTableView', '~>1.0.3'
-pod 'EasyDownloadSession', :git => "https://github.com/lagubull/EasyDownloadSession"
+pod 'EasyDownloadSession', :git => "https://github.com/lagubull/EasyDownloadSession", :branch => "f/downloadSessionSwift"
 pod 'OCMock', '~>3.2'
 

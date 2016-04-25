@@ -25,7 +25,9 @@ class JSCPostPage: NSManagedObject {
         
         let sortDescriptors = [retrievedPagesSortDescriptor]
         
-        return managedObjectContext.cds_retrieveFirstEntryForEntityClass(JSCPostPage.self, predicate: nil, sortDescriptors: sortDescriptors) as! JSCPostPage
+        return managedObjectContext.retrieveFirstEntry(JSCPostPage.self,
+                                                       predicate: nil,
+                                                       sortDescriptors: sortDescriptors) as! JSCPostPage
     }
     
 }
