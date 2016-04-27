@@ -28,7 +28,8 @@ class JSCPost: NSManagedObject {
         
         var post: JSCPost?
         
-        post = managedObjectContext.cds_retrieveFirstEntryForEntityClass(JSCPost.self, predicate: predicate) as? JSCPost
+        post = managedObjectContext.retrieveFirstEntry(JSCPost.self,
+                                                       predicate: predicate) as? JSCPost
         
         return post
     }
@@ -44,7 +45,7 @@ class JSCPost: NSManagedObject {
         
         var post: JSCPost?
         
-        post = JSCPost.fetchPostWithId(postId, managedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext)
+        post = JSCPost.fetchPostWithId(postId, managedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext)
         
         return post
     }

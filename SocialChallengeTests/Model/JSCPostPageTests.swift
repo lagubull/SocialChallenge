@@ -25,10 +25,10 @@ class JSCPostPageTests: XCTestCase {
         
         super.setUp()
         
-        CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
+        ServiceManager.sharedInstance.setupModelURLWithModelName("SocialChallenge")
         
-        page  = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as? JSCPostPage
-        post = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPost.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as? JSCPost
+        page  = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext) as? JSCPostPage
+        post = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPost.self, inManagedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext) as? JSCPost
         
         index = -1
         nextPageRequestPath = "new request"
@@ -37,12 +37,12 @@ class JSCPostPageTests: XCTestCase {
         page?.index = index!
         page?.post = post!
         
-        CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
+        ServiceManager.sharedInstance.setupModelURLWithModelName("SocialChallenge")
     }
     
     override func tearDown() {
         
-        CDSServiceManager.sharedInstance().clear()
+        ServiceManager.sharedInstance.clear()
         
         page  = nil
         post = nil
@@ -69,15 +69,15 @@ class JSCPostPageTests: XCTestCase {
     
     func test_postPage_shouldFetcheLastPage() {
         
-        let page1 = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as! JSCPostPage
-        let page2 = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as! JSCPostPage
-        let page3 = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as! JSCPostPage
+        let page1 = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext) as! JSCPostPage
+        let page2 = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext) as! JSCPostPage
+        let page3 = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext) as! JSCPostPage
         
         page1.index = 1
         page2.index = 2
         page3.index = 3
         
-        let lastPage = JSCPostPage.fetchLastPageInContext( CDSServiceManager.sharedInstance().mainManagedObjectContext)
+        let lastPage = JSCPostPage.fetchLastPageInContext( ServiceManager.sharedInstance.mainManagedObjectContext)
         
         XCTAssertEqual(lastPage.objectID, page3.objectID, "Last Page should be fetched.")
     }

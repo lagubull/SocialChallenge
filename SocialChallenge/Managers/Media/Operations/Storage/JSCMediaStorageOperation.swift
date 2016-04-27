@@ -37,7 +37,7 @@ class JSCMediaStorageOperation: JSCOperation {
      @param postId - indicates the post the asset is related to.
      @param location - indicates where the object has been stored by default.
      */
-    convenience init (postId: String, data: NSData) {
+    convenience init (postId: String, data: NSData?) {
         
         self.init()
         

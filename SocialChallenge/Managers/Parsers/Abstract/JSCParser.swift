@@ -14,8 +14,8 @@ import CoreData
 /**
  Convenient method to check if a value is not nil and returns ir or the default
  */
-@inline(__always) func JSCValueOrDefault(value: AnyObject?, defaultValue: AnyObject?) -> AnyObject?
-{
+@inline(__always) func JSCValueOrDefault(value: AnyObject?, defaultValue: AnyObject?) -> AnyObject? {
+
     if value == nil ||
         value is NSNull {
         

@@ -73,7 +73,7 @@ class JSCHomeAdapter: NSObject, UITableViewDataSource, UITableViewDelegate, STVD
     */
     lazy var fetchedResultsController: NSFetchedResultsController = {
         
-        let _fetchedResultsController = NSFetchedResultsController.init(fetchRequest: self.fetchRequest, managedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        let _fetchedResultsController = NSFetchedResultsController.init(fetchRequest: self.fetchRequest, managedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
         do {
             
@@ -96,7 +96,8 @@ class JSCHomeAdapter: NSObject, UITableViewDataSource, UITableViewDelegate, STVD
         
         let _fetchRequest = NSFetchRequest.init()
         
-        _fetchRequest.entity = NSEntityDescription.cds_entityForClass(JSCPost.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext)
+        _fetchRequest.entity = NSEntityDescription.entityFor(JSCPost.self,
+                                                                  managedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext)
         
         _fetchRequest.sortDescriptors = self.sortDescriptorsForFetchRequest
         

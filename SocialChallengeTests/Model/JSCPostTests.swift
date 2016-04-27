@@ -30,7 +30,7 @@ class JSCPostTests: XCTestCase {
         
         super.setUp()
        
-        CDSServiceManager.sharedInstance().setupModelURLWithModelName("SocialChallenge")
+        ServiceManager.sharedInstance.setupModelURLWithModelName("SocialChallenge")
         
         postId = "1"
         createdAt = "2016-03-03 12:00:00"
@@ -47,8 +47,8 @@ class JSCPostTests: XCTestCase {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         dateFormatter.locale = NSLocale.init(localeIdentifier: "en_GB")
         
-        page  = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as? JSCPostPage
-        post = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPost.self, inManagedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext) as? JSCPost
+        page  = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPostPage.self, inManagedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext) as? JSCPostPage
+        post = NSEntityDescription.cds_insertNewObjectForEntityForClass(JSCPost.self, inManagedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext) as? JSCPost
         
         post?.postId = self.postId!
         post?.commentCount = commentCount!
@@ -63,7 +63,7 @@ class JSCPostTests: XCTestCase {
     
     override func tearDown() {
         
-        CDSServiceManager.sharedInstance().clear()
+        ServiceManager.sharedInstance.clear()
         
         self.createdAt = nil
         self.likeCount = nil
@@ -138,7 +138,7 @@ class JSCPostTests: XCTestCase {
     
     func test_post_shouldBeFetchedWithId_inAContext() {
         
-        let insertedPost = JSCPost.fetchPostWithId(self.postId!, managedObjectContext: CDSServiceManager.sharedInstance().mainManagedObjectContext)
+        let insertedPost = JSCPost.fetchPostWithId(self.postId!, managedObjectContext: ServiceManager.sharedInstance.mainManagedObjectContext)
         
         XCTAssertEqual(insertedPost?.objectID, self.post!.objectID, "Post should be fetched by Id in a context.")
     }

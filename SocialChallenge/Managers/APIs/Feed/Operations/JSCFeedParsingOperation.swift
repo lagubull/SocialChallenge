@@ -34,7 +34,7 @@ class JSCFeedParsingOperation: JSCCDSOperation {
     
     - Returns: an instance of the class.
     */
-    required convenience init(data: NSData, mode: JSCDataRetrievalOperationMode) {
+    required convenience init(data: NSData?, mode: JSCDataRetrievalOperationMode) {
         
         self.init()
         
@@ -69,16 +69,23 @@ class JSCFeedParsingOperation: JSCCDSOperation {
         
         super.start()
         
-        let feed = JSCJSONManager.processJSONData(self.data!)
-        
-        let pageParser = JSCPostPageParser.parserWithContext(CDSServiceManager.sharedInstance().backgroundManagedObjectContext)
-        
-        CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
+        if let unwrappedData = data {
             
-            pageParser.parsePage(feed)
+            let feed = JSCJSONManager.processJSONData(unwrappedData)
             
-            self.saveContextAndFinishWithResult(nil)
+            let pageParser = JSCPostPageParser.parserWithContext(ServiceManager.sharedInstance.backgroundManagedObjectContext)
+            
+            ServiceManager.sharedInstance.backgroundManagedObjectContext.performBlockAndWait {
+                
+                pageParser.parsePage(feed)
+                
+                self.saveContextAndFinishWithResult(nil)
+            }
         }
+        else {
+                
+                self.didFailWithError(nil)
+            }
     }
     
     //MARK: Cancel

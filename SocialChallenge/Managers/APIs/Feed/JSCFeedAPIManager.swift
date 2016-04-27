@@ -44,9 +44,9 @@ class JSCFeedAPIManager: NSObject {
             
         case .NextPage:
             
-            CDSServiceManager.sharedInstance().backgroundManagedObjectContext.performBlockAndWait {
+            ServiceManager.sharedInstance.backgroundManagedObjectContext.performBlockAndWait {
                 
-                let page = JSCPostPage.fetchLastPageInContext(CDSServiceManager.sharedInstance().mainManagedObjectContext)
+                let page = JSCPostPage.fetchLastPageInContext(ServiceManager.sharedInstance.mainManagedObjectContext)
                 
                 request = JSCFeedRequest.requestToRetrieveFeedNexPageWithURL(page.nextPageRequestPath!)
             }
@@ -68,7 +68,11 @@ class JSCFeedAPIManager: NSObject {
         
         let request = self.requestForMode(mode)
         
-        EDSDownloadSession.scheduleDownloadWithId("retrieveFeed \(mode.rawValue)", request: request, stackIdentifier: kJSCMediaDownloadStack, progress: nil, success: { (taskInfo, responseData) -> Void in
+        DownloadSession.scheduleDownloadWithId("retrieveFeed \(mode.rawValue)",
+                                               request: request,
+                                               stackIdentifier: kJSCMediaDownloadStack,
+                                               progress: nil,
+                                               success: { (taskInfo: DownloadTaskInfo!, responseData: NSData?) -> Void in
             
             let operation = JSCFeedParsingOperation.init(data: responseData, mode: mode)
             
@@ -79,7 +83,8 @@ class JSCFeedAPIManager: NSObject {
             
             JSCOperationCoordinator.sharedInstance.addOperation(operation)
             
-            }, failure: { (taskInfo, error) -> Void in
+            },
+                                               failure: { (taskInfo: DownloadTaskInfo!, error: NSError?) -> Void in
                 
                 if let failure: JSCOperationOnFailureCallback = failure {
                     
