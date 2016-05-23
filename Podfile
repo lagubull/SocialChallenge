@@ -9,6 +9,6 @@ pod 'PureLayout'
 pod 'EasyAlert'
 pod 'Reveal-iOS-SDK', '~> 1.6', :configurations => ['Debug']
 pod 'SimpleTableView', '~>1.0.3'
-pod 'EasyDownloadSession', '2.0.0'
+pod 'EasyDownloadSession', '2.0.2'
 pod 'OCMock', '~>3.2'
 

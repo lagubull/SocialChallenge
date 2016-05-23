@@ -43,11 +43,6 @@ class JSCMediaManager {
                     
                     retrievalRequired?(postId: post.postId!)
                     
-                    DownloadSession.resumeDownloadsInStack(kJSCMediaDownloadStack)
-                    
-                    DownloadSession.cancelDownload(post.postId!,
-                                                   stackIdentifier: kJSCMediaDownloadStack)
-                    
                     DownloadSession.scheduleDownloadWithId(post.postId!,
                                                            fromURL: NSURL.init(string: post.userAvatarRemoteURL!)!,
                                                            stackIdentifier: kJSCMediaDownloadStack,
