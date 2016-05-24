@@ -188,62 +188,48 @@ class JSCOperation:  NSOperation {
     func coalesceWithOperation(operation: JSCOperation) {
         
         // Success coalescing
-        if let mySuccessClosure: JSCOperationOnSuccessCallback = self.onSuccess {
+        let mySuccess = self.onSuccess
+        let theirSuccess = operation.onSuccess
+        
+        if mySuccess != nil ||
+            theirSuccess != nil {
             
-            if let theirSuccessClosure: JSCOperationOnSuccessCallback = operation.onSuccess {
+            self.onSuccess = { result in
                 
-                self.onSuccess = { result in
-                    
-                    mySuccessClosure(result)
-                    theirSuccessClosure(result)
-                }
-            }
-        }
-        else
-        {
-            if let theirSuccessClosure: JSCOperationOnSuccessCallback = operation.onSuccess {
+                mySuccess?(result)
                 
-                self.onSuccess = theirSuccessClosure
+                theirSuccess?(result)
             }
         }
         
         // Failure coalescing
-        if let myFailureClosure: JSCOperationOnFailureCallback = self.onFailure {
+        
+        let myFailure = self.onFailure
+        let theirFailure = operation.onFailure
+        
+        if myFailure != nil ||
+            theirFailure != nil {
             
-            if let theirFailureClosure: JSCOperationOnFailureCallback = operation.onFailure {
+            self.onFailure = { error in
                 
-                self.onFailure =  { error in
-                    
-                    myFailureClosure(error)
-                    theirFailureClosure(error)
-                }
-            }
-        }
-        else
-        {
-            if let theirFailureClosure: JSCOperationOnFailureCallback = operation.onFailure {
+                myFailure?(error)
                 
-                self.onFailure = theirFailureClosure
+                theirFailure?(error)
             }
         }
         
         // Completion coalescing
-        if let myCompletionClosure: JSCOperationOnCompletionCallback = self.onCompletion {
+        let myCompletion = self.onCompletion
+        let theirCompletion = operation.onCompletion
+        
+        if myCompletion != nil ||
+            theirCompletion != nil {
             
-            if let theirCompletionClosure: JSCOperationOnCompletionCallback = operation.onCompletion {
+            self.onCompletion = { result in
                 
-                self.onCompletion =  { result in
-                    
-                    myCompletionClosure(result)
-                    theirCompletionClosure(result)
-                }
-            }
-        }
-        else
-        {
-            if let theirCompletionClosure: JSCOperationOnCompletionCallback = operation.onCompletion {
+                myCompletion?(result)
                 
-                self.onCompletion = theirCompletionClosure
+                theirCompletion?(result)
             }
         }
         
