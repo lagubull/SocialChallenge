@@ -36,8 +36,6 @@ class JSCPostPageTests: XCTestCase {
         page?.nextPageRequestPath = nextPageRequestPath!
         page?.index = index!
         page?.post = post!
-        
-        ServiceManager.sharedInstance.setupModelURLWithModelName("SocialChallenge")
     }
     
     override func tearDown() {
